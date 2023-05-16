@@ -33,6 +33,18 @@
     <ClCompile Include="SubMenuFact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SubMenuReps.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SubMenuSucs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SubMenuAbout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SubMenuCont.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MenuPrincipal.h">
@@ -51,6 +63,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SubMenuFact.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SubMenuReps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SubMenuSucs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SubMenuAbout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SubMenuCont.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

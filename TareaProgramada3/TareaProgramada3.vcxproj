@@ -125,13 +125,23 @@
     <ClCompile Include="Controlador.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MenuPrincipal.cpp" />
+    <ClCompile Include="SubMenuAbout.cpp" />
+    <ClCompile Include="SubMenuCont.cpp" />
     <ClCompile Include="SubMenuFact.cpp" />
     <ClCompile Include="SubMenuMant.cpp" />
+    <ClCompile Include="SubMenuReps.cpp" />
+    <ClCompile Include="SubMenuSucs.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Contactos.h" />
     <ClInclude Include="Controlador.h" />
     <ClInclude Include="MenuPrincipal.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="SubMenuAbout.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="SubMenuCont.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="SubMenuFact.h">
@@ -141,13 +151,34 @@
     <ClInclude Include="SubMenuMant.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="SubMenuReps.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="SubMenuSucs.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubMenuAbout.resx">
+      <DependentUpon>SubMenuAbout.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubMenuCont.resx">
+      <DependentUpon>SubMenuCont.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubMenuFact.resx">
+      <DependentUpon>SubMenuFact.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubMenuMant.resx">
       <DependentUpon>SubMenuMant.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubMenuReps.resx">
+      <DependentUpon>SubMenuReps.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubMenuSucs.resx">
+      <DependentUpon>SubMenuSucs.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

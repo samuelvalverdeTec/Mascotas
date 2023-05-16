@@ -12,13 +12,13 @@ namespace TareaProgramada3 {
 	/// <summary>
 	/// Summary for MyForm
 	/// </summary>
-	public ref class subMenuFact : public System::Windows::Forms::Form
+	public ref class SubMenuFact : public System::Windows::Forms::Form
 	{
 
 	private: System::Windows::Forms::Form^ menu;
 
 	public:
-		subMenuFact(System::Windows::Forms::Form^ m)
+		SubMenuFact(System::Windows::Forms::Form^ m)
 		{
 			menu = m;
 			InitializeComponent();
@@ -31,7 +31,7 @@ namespace TareaProgramada3 {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~subMenuFact()
+		~SubMenuFact()
 		{
 			if (components)
 			{
@@ -61,7 +61,7 @@ namespace TareaProgramada3 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(subMenuFact::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(SubMenuFact::typeid));
 			this->titleMenu = (gcnew System::Windows::Forms::Label());
 			this->bFacturacion = (gcnew System::Windows::Forms::Button());
 			this->bDescuentos = (gcnew System::Windows::Forms::Button());
@@ -83,7 +83,7 @@ namespace TareaProgramada3 {
 			this->titleMenu->TabIndex = 2;
 			this->titleMenu->Text = L"Facturación";
 			this->titleMenu->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			this->titleMenu->Click += gcnew System::EventHandler(this, &subMenuFact::titleMenu_Click);
+			this->titleMenu->Click += gcnew System::EventHandler(this, &SubMenuFact::titleMenu_Click);
 			// 
 			// bFacturacion
 			// 
@@ -100,7 +100,7 @@ namespace TareaProgramada3 {
 			this->bFacturacion->Text = L"3. Facturación";
 			this->bFacturacion->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bFacturacion->UseVisualStyleBackColor = false;
-			this->bFacturacion->Click += gcnew System::EventHandler(this, &subMenuFact::bFacturacion_Click);
+			this->bFacturacion->Click += gcnew System::EventHandler(this, &SubMenuFact::bFacturacion_Click);
 			// 
 			// bDescuentos
 			// 
@@ -117,7 +117,7 @@ namespace TareaProgramada3 {
 			this->bDescuentos->Text = L"2. Descuentos";
 			this->bDescuentos->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bDescuentos->UseVisualStyleBackColor = false;
-			this->bDescuentos->Click += gcnew System::EventHandler(this, &subMenuFact::bDescuentos_Click);
+			this->bDescuentos->Click += gcnew System::EventHandler(this, &SubMenuFact::bDescuentos_Click);
 			// 
 			// bSaldos
 			// 
@@ -134,7 +134,7 @@ namespace TareaProgramada3 {
 			this->bSaldos->Text = L"1. Saldos";
 			this->bSaldos->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bSaldos->UseVisualStyleBackColor = false;
-			this->bSaldos->Click += gcnew System::EventHandler(this, &subMenuFact::bSaldos_Click);
+			this->bSaldos->Click += gcnew System::EventHandler(this, &SubMenuFact::bSaldos_Click);
 			// 
 			// bSalir
 			// 
@@ -149,7 +149,7 @@ namespace TareaProgramada3 {
 			this->bSalir->TabIndex = 8;
 			this->bSalir->Text = L"Salir";
 			this->bSalir->UseVisualStyleBackColor = false;
-			this->bSalir->Click += gcnew System::EventHandler(this, &subMenuFact::bSalir_Click);
+			this->bSalir->Click += gcnew System::EventHandler(this, &SubMenuFact::bSalir_Click);
 			// 
 			// subMenuFact
 			// 
