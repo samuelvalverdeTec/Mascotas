@@ -122,18 +122,32 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Contactos.cpp" />
+    <ClCompile Include="Controlador.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="MenuPrincipal.cpp" />
+    <ClCompile Include="SubMenuFact.cpp" />
+    <ClCompile Include="SubMenuMant.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Contactos.h" />
+    <ClInclude Include="Controlador.h" />
     <ClInclude Include="MenuPrincipal.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="SubMenuFact.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="NodoContactos.h" />
+    <ClInclude Include="SubMenuMant.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubMenuMant.resx">
+      <DependentUpon>SubMenuMant.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
