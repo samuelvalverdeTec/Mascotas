@@ -79,6 +79,8 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Label^ lblSucs;
 	private: System::Windows::Forms::Label^ lblFact;
 	private: System::Windows::Forms::Label^ lblClts;
+	private: System::Windows::Forms::Label^ label1;
+
 
 
 	protected:
@@ -122,6 +124,7 @@ namespace TareaProgramada3 {
 			this->lblSucs = (gcnew System::Windows::Forms::Label());
 			this->lblFact = (gcnew System::Windows::Forms::Label());
 			this->lblClts = (gcnew System::Windows::Forms::Label());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->mainPanel->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -129,14 +132,14 @@ namespace TareaProgramada3 {
 			// 
 			this->titleMenu->AutoSize = true;
 			this->titleMenu->BackColor = System::Drawing::Color::Transparent;
-			this->titleMenu->Font = (gcnew System::Drawing::Font(L"Segoe UI", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->titleMenu->Font = (gcnew System::Drawing::Font(L"Segoe Print", 48, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->titleMenu->ForeColor = System::Drawing::Color::White;
-			this->titleMenu->Location = System::Drawing::Point(32, 315);
+			this->titleMenu->Location = System::Drawing::Point(734, 310);
 			this->titleMenu->Name = L"titleMenu";
-			this->titleMenu->Size = System::Drawing::Size(457, 65);
+			this->titleMenu->Size = System::Drawing::Size(381, 112);
 			this->titleMenu->TabIndex = 0;
-			this->titleMenu->Text = L"Mundo de Mascotas";
+			this->titleMenu->Text = L"Fauna Life";
 			this->titleMenu->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			this->titleMenu->Click += gcnew System::EventHandler(this, &MenuPrincipal::titleMenu_Click);
 			// 
@@ -147,7 +150,7 @@ namespace TareaProgramada3 {
 			this->subtitleMenu->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->subtitleMenu->ForeColor = System::Drawing::Color::White;
-			this->subtitleMenu->Location = System::Drawing::Point(864, 621);
+			this->subtitleMenu->Location = System::Drawing::Point(12, 621);
 			this->subtitleMenu->Name = L"subtitleMenu";
 			this->subtitleMenu->Size = System::Drawing::Size(234, 20);
 			this->subtitleMenu->TabIndex = 6;
@@ -163,7 +166,7 @@ namespace TareaProgramada3 {
 			this->bMainLugs->Font = (gcnew System::Drawing::Font(L"Cascadia Code", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->bMainLugs->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bMainLugs.Image")));
-			this->bMainLugs->Location = System::Drawing::Point(43, 418);
+			this->bMainLugs->Location = System::Drawing::Point(469, 453);
 			this->bMainLugs->Name = L"bMainLugs";
 			this->bMainLugs->Size = System::Drawing::Size(110, 110);
 			this->bMainLugs->TabIndex = 1;
@@ -178,7 +181,7 @@ namespace TareaProgramada3 {
 			this->bMainClnc->Font = (gcnew System::Drawing::Font(L"Cascadia Code", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->bMainClnc->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bMainClnc.Image")));
-			this->bMainClnc->Location = System::Drawing::Point(168, 418);
+			this->bMainClnc->Location = System::Drawing::Point(594, 453);
 			this->bMainClnc->Name = L"bMainClnc";
 			this->bMainClnc->Size = System::Drawing::Size(110, 110);
 			this->bMainClnc->TabIndex = 2;
@@ -194,7 +197,7 @@ namespace TareaProgramada3 {
 				static_cast<System::Byte>(0)));
 			this->bMainFact->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->bMainFact->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bMainFact.Image")));
-			this->bMainFact->Location = System::Drawing::Point(293, 418);
+			this->bMainFact->Location = System::Drawing::Point(719, 453);
 			this->bMainFact->Name = L"bMainFact";
 			this->bMainFact->Size = System::Drawing::Size(110, 110);
 			this->bMainFact->TabIndex = 3;
@@ -209,7 +212,7 @@ namespace TareaProgramada3 {
 			this->bMainSucs->Font = (gcnew System::Drawing::Font(L"Cascadia Code", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->bMainSucs->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bMainSucs.Image")));
-			this->bMainSucs->Location = System::Drawing::Point(419, 418);
+			this->bMainSucs->Location = System::Drawing::Point(845, 453);
 			this->bMainSucs->Name = L"bMainSucs";
 			this->bMainSucs->Size = System::Drawing::Size(110, 110);
 			this->bMainSucs->TabIndex = 7;
@@ -224,7 +227,7 @@ namespace TareaProgramada3 {
 			this->bMainClts->Font = (gcnew System::Drawing::Font(L"Cascadia Code", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->bMainClts->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bMainClts.Image")));
-			this->bMainClts->Location = System::Drawing::Point(545, 418);
+			this->bMainClts->Location = System::Drawing::Point(971, 453);
 			this->bMainClts->Name = L"bMainClts";
 			this->bMainClts->Size = System::Drawing::Size(110, 110);
 			this->bMainClts->TabIndex = 5;
@@ -416,7 +419,7 @@ namespace TareaProgramada3 {
 			// 
 			this->lblClnc->AutoSize = true;
 			this->lblClnc->ForeColor = System::Drawing::Color::White;
-			this->lblClnc->Location = System::Drawing::Point(189, 531);
+			this->lblClnc->Location = System::Drawing::Point(615, 566);
 			this->lblClnc->Name = L"lblClnc";
 			this->lblClnc->Size = System::Drawing::Size(74, 30);
 			this->lblClnc->TabIndex = 15;
@@ -426,7 +429,7 @@ namespace TareaProgramada3 {
 			// 
 			this->lblLugs->AutoSize = true;
 			this->lblLugs->ForeColor = System::Drawing::Color::White;
-			this->lblLugs->Location = System::Drawing::Point(61, 531);
+			this->lblLugs->Location = System::Drawing::Point(487, 566);
 			this->lblLugs->Name = L"lblLugs";
 			this->lblLugs->Size = System::Drawing::Size(85, 30);
 			this->lblLugs->TabIndex = 16;
@@ -436,7 +439,7 @@ namespace TareaProgramada3 {
 			// 
 			this->lblSucs->AutoSize = true;
 			this->lblSucs->ForeColor = System::Drawing::Color::White;
-			this->lblSucs->Location = System::Drawing::Point(419, 531);
+			this->lblSucs->Location = System::Drawing::Point(845, 566);
 			this->lblSucs->Name = L"lblSucs";
 			this->lblSucs->Size = System::Drawing::Size(110, 30);
 			this->lblSucs->TabIndex = 17;
@@ -446,7 +449,7 @@ namespace TareaProgramada3 {
 			// 
 			this->lblFact->AutoSize = true;
 			this->lblFact->ForeColor = System::Drawing::Color::White;
-			this->lblFact->Location = System::Drawing::Point(288, 531);
+			this->lblFact->Location = System::Drawing::Point(714, 566);
 			this->lblFact->Name = L"lblFact";
 			this->lblFact->Size = System::Drawing::Size(119, 30);
 			this->lblFact->TabIndex = 18;
@@ -456,11 +459,25 @@ namespace TareaProgramada3 {
 			// 
 			this->lblClts->AutoSize = true;
 			this->lblClts->ForeColor = System::Drawing::Color::White;
-			this->lblClts->Location = System::Drawing::Point(559, 531);
+			this->lblClts->Location = System::Drawing::Point(985, 566);
 			this->lblClts->Name = L"lblClts";
 			this->lblClts->Size = System::Drawing::Size(86, 30);
 			this->lblClts->TabIndex = 19;
 			this->lblClts->Text = L"Clientes";
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::Transparent;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->ForeColor = System::Drawing::Color::White;
+			this->label1->Location = System::Drawing::Point(900, 397);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(181, 25);
+			this->label1->TabIndex = 20;
+			this->label1->Text = L"Clínica especializada";
+			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// MenuPrincipal
 			// 
@@ -470,6 +487,7 @@ namespace TareaProgramada3 {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->ClientSize = System::Drawing::Size(1110, 650);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->lblClts);
 			this->Controls->Add(this->lblFact);
 			this->Controls->Add(this->lblSucs);
@@ -581,6 +599,8 @@ private: System::Void pS_Paint(System::Object^ sender, System::Windows::Forms::P
 private: System::Void pAD_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 private: System::Void pC_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

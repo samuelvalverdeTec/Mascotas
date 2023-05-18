@@ -51,6 +51,7 @@ namespace TareaProgramada3 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(SubMenuClnc::typeid));
 			this->SuspendLayout();
 			// 
 			// SubMenuClnc
@@ -58,11 +59,12 @@ namespace TareaProgramada3 {
 			this->AutoScaleDimensions = System::Drawing::SizeF(11, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1110, 650);
 			this->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
-			this->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
+			this->Margin = System::Windows::Forms::Padding(6);
 			this->Name = L"SubMenuClnc";
 			this->Text = L"SubMenuClnc";
 			this->Load += gcnew System::EventHandler(this, &SubMenuClnc::SubMenuClnc_Load);

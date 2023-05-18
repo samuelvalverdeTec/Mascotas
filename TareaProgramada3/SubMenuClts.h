@@ -52,16 +52,23 @@ namespace TareaProgramada3 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(SubMenuClts::typeid));
 			this->SuspendLayout();
 			// 
-			// SubMenuCont
+			// SubMenuClts
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(11, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(284, 261);
+			this->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->ClientSize = System::Drawing::Size(1094, 611);
+			this->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->Name = L"SubMenuClts";
 			this->Text = L"SubMenuClts";
-			this->Load += gcnew System::EventHandler(this, &SubMenuCont::SubMenuClts_Load);
+			this->Load += gcnew System::EventHandler(this, &SubMenuClts::SubMenuClts_Load);
 			this->ResumeLayout(false);
 
 		}

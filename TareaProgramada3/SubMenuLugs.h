@@ -87,10 +87,10 @@ namespace TareaProgramada3 {
 			this->lblPaises = (gcnew System::Windows::Forms::Label());
 			this->lblCiudades = (gcnew System::Windows::Forms::Label());
 			this->pPaises = (gcnew System::Windows::Forms::Panel());
-			this->bpInser = (gcnew System::Windows::Forms::Button());
-			this->bpModif = (gcnew System::Windows::Forms::Button());
-			this->bpBusq = (gcnew System::Windows::Forms::Button());
 			this->bpElim = (gcnew System::Windows::Forms::Button());
+			this->bpBusq = (gcnew System::Windows::Forms::Button());
+			this->bpModif = (gcnew System::Windows::Forms::Button());
+			this->bpInser = (gcnew System::Windows::Forms::Button());
 			this->pCiudades = (gcnew System::Windows::Forms::Panel());
 			this->bcElim = (gcnew System::Windows::Forms::Button());
 			this->bcBusq = (gcnew System::Windows::Forms::Button());
@@ -107,7 +107,7 @@ namespace TareaProgramada3 {
 			this->titleMenu->Font = (gcnew System::Drawing::Font(L"Segoe UI", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->titleMenu->ForeColor = System::Drawing::Color::IndianRed;
-			this->titleMenu->Location = System::Drawing::Point(48, 61);
+			this->titleMenu->Location = System::Drawing::Point(632, 74);
 			this->titleMenu->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->titleMenu->Name = L"titleMenu";
 			this->titleMenu->Size = System::Drawing::Size(192, 65);
@@ -124,10 +124,10 @@ namespace TareaProgramada3 {
 				static_cast<System::Byte>(0)));
 			this->bPaises->ForeColor = System::Drawing::Color::White;
 			this->bPaises->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bPaises.Image")));
-			this->bPaises->Location = System::Drawing::Point(59, 195);
+			this->bPaises->Location = System::Drawing::Point(626, 179);
 			this->bPaises->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->bPaises->Name = L"bPaises";
-			this->bPaises->Size = System::Drawing::Size(110, 110);
+			this->bPaises->Size = System::Drawing::Size(110, 107);
 			this->bPaises->TabIndex = 2;
 			this->bPaises->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bPaises->UseVisualStyleBackColor = false;
@@ -141,10 +141,10 @@ namespace TareaProgramada3 {
 				static_cast<System::Byte>(0)));
 			this->bCiudades->ForeColor = System::Drawing::Color::White;
 			this->bCiudades->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bCiudades.Image")));
-			this->bCiudades->Location = System::Drawing::Point(59, 345);
+			this->bCiudades->Location = System::Drawing::Point(626, 372);
 			this->bCiudades->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->bCiudades->Name = L"bCiudades";
-			this->bCiudades->Size = System::Drawing::Size(110, 110);
+			this->bCiudades->Size = System::Drawing::Size(110, 89);
 			this->bCiudades->TabIndex = 3;
 			this->bCiudades->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bCiudades->UseVisualStyleBackColor = false;
@@ -156,7 +156,7 @@ namespace TareaProgramada3 {
 			this->bSalir->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->bSalir->ForeColor = System::Drawing::Color::IndianRed;
-			this->bSalir->Location = System::Drawing::Point(59, 559);
+			this->bSalir->Location = System::Drawing::Point(962, 557);
 			this->bSalir->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->bSalir->Name = L"bSalir";
 			this->bSalir->Size = System::Drawing::Size(84, 45);
@@ -172,7 +172,7 @@ namespace TareaProgramada3 {
 			this->lblPaises->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->lblPaises->ForeColor = System::Drawing::Color::White;
-			this->lblPaises->Location = System::Drawing::Point(83, 310);
+			this->lblPaises->Location = System::Drawing::Point(650, 291);
 			this->lblPaises->Name = L"lblPaises";
 			this->lblPaises->Size = System::Drawing::Size(69, 30);
 			this->lblPaises->TabIndex = 17;
@@ -186,11 +186,12 @@ namespace TareaProgramada3 {
 			this->lblCiudades->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->lblCiudades->ForeColor = System::Drawing::Color::White;
-			this->lblCiudades->Location = System::Drawing::Point(71, 459);
+			this->lblCiudades->Location = System::Drawing::Point(638, 465);
 			this->lblCiudades->Name = L"lblCiudades";
 			this->lblCiudades->Size = System::Drawing::Size(98, 30);
 			this->lblCiudades->TabIndex = 18;
 			this->lblCiudades->Text = L"Ciudades";
+			this->lblCiudades->Click += gcnew System::EventHandler(this, &SubMenuLugs::lblCiudades_Click);
 			// 
 			// pPaises
 			// 
@@ -201,53 +202,11 @@ namespace TareaProgramada3 {
 			this->pPaises->Controls->Add(this->bpModif);
 			this->pPaises->Controls->Add(this->bpInser);
 			this->pPaises->ForeColor = System::Drawing::Color::White;
-			this->pPaises->Location = System::Drawing::Point(189, 195);
+			this->pPaises->Location = System::Drawing::Point(756, 176);
 			this->pPaises->Name = L"pPaises";
 			this->pPaises->Size = System::Drawing::Size(148, 145);
 			this->pPaises->TabIndex = 19;
 			this->pPaises->Visible = false;
-			// 
-			// bpInser
-			// 
-			this->bpInser->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->bpInser->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->bpInser->ForeColor = System::Drawing::Color::White;
-			this->bpInser->Location = System::Drawing::Point(3, 3);
-			this->bpInser->Name = L"bpInser";
-			this->bpInser->Size = System::Drawing::Size(142, 31);
-			this->bpInser->TabIndex = 20;
-			this->bpInser->Text = L"-> Inserción";
-			this->bpInser->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->bpInser->UseVisualStyleBackColor = false;
-			this->bpInser->Visible = false;
-			// 
-			// bpModif
-			// 
-			this->bpModif->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->bpModif->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->bpModif->ForeColor = System::Drawing::Color::White;
-			this->bpModif->Location = System::Drawing::Point(3, 40);
-			this->bpModif->Name = L"bpModif";
-			this->bpModif->Size = System::Drawing::Size(142, 31);
-			this->bpModif->TabIndex = 21;
-			this->bpModif->Text = L"-> Modificación";
-			this->bpModif->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->bpModif->UseVisualStyleBackColor = false;
-			this->bpModif->Visible = false;
-			// 
-			// bpBusq
-			// 
-			this->bpBusq->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->bpBusq->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->bpBusq->ForeColor = System::Drawing::Color::White;
-			this->bpBusq->Location = System::Drawing::Point(3, 77);
-			this->bpBusq->Name = L"bpBusq";
-			this->bpBusq->Size = System::Drawing::Size(142, 31);
-			this->bpBusq->TabIndex = 22;
-			this->bpBusq->Text = L"-> Búsqueda";
-			this->bpBusq->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->bpBusq->UseVisualStyleBackColor = false;
-			this->bpBusq->Visible = false;
 			// 
 			// bpElim
 			// 
@@ -263,6 +222,48 @@ namespace TareaProgramada3 {
 			this->bpElim->UseVisualStyleBackColor = false;
 			this->bpElim->Visible = false;
 			// 
+			// bpBusq
+			// 
+			this->bpBusq->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->bpBusq->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->bpBusq->ForeColor = System::Drawing::Color::White;
+			this->bpBusq->Location = System::Drawing::Point(3, 77);
+			this->bpBusq->Name = L"bpBusq";
+			this->bpBusq->Size = System::Drawing::Size(142, 31);
+			this->bpBusq->TabIndex = 22;
+			this->bpBusq->Text = L"-> Búsqueda";
+			this->bpBusq->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->bpBusq->UseVisualStyleBackColor = false;
+			this->bpBusq->Visible = false;
+			// 
+			// bpModif
+			// 
+			this->bpModif->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->bpModif->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->bpModif->ForeColor = System::Drawing::Color::White;
+			this->bpModif->Location = System::Drawing::Point(3, 40);
+			this->bpModif->Name = L"bpModif";
+			this->bpModif->Size = System::Drawing::Size(142, 31);
+			this->bpModif->TabIndex = 21;
+			this->bpModif->Text = L"-> Modificación";
+			this->bpModif->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->bpModif->UseVisualStyleBackColor = false;
+			this->bpModif->Visible = false;
+			// 
+			// bpInser
+			// 
+			this->bpInser->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->bpInser->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->bpInser->ForeColor = System::Drawing::Color::White;
+			this->bpInser->Location = System::Drawing::Point(3, 3);
+			this->bpInser->Name = L"bpInser";
+			this->bpInser->Size = System::Drawing::Size(142, 31);
+			this->bpInser->TabIndex = 20;
+			this->bpInser->Text = L"-> Inserción";
+			this->bpInser->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->bpInser->UseVisualStyleBackColor = false;
+			this->bpInser->Visible = false;
+			// 
 			// pCiudades
 			// 
 			this->pCiudades->AutoScroll = true;
@@ -272,7 +273,7 @@ namespace TareaProgramada3 {
 			this->pCiudades->Controls->Add(this->bcModif);
 			this->pCiudades->Controls->Add(this->bcInser);
 			this->pCiudades->ForeColor = System::Drawing::Color::White;
-			this->pCiudades->Location = System::Drawing::Point(189, 345);
+			this->pCiudades->Location = System::Drawing::Point(756, 372);
 			this->pCiudades->Name = L"pCiudades";
 			this->pCiudades->Size = System::Drawing::Size(148, 145);
 			this->pCiudades->TabIndex = 20;
@@ -419,6 +420,8 @@ namespace TareaProgramada3 {
 
 	}
 private: System::Void lblLugs_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void lblCiudades_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
