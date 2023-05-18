@@ -39,13 +39,14 @@ namespace TareaProgramada3 {
 			}
 		}
 	private: System::Windows::Forms::Label^ titleMenu;
-	private: System::Windows::Forms::Button^ bFacturacion;
-
-	private: System::Windows::Forms::Button^ bDescuentos;
-
-	private: System::Windows::Forms::Button^ bSaldos;
-
 	private: System::Windows::Forms::Button^ bSalir;
+	private: System::Windows::Forms::Label^ lblFactura;
+	private: System::Windows::Forms::Button^ bDescuento;
+	private: System::Windows::Forms::Button^ bFactura;
+	private: System::Windows::Forms::Label^ lblSaldo;
+	private: System::Windows::Forms::Button^ bSaldo;
+	private: System::Windows::Forms::Label^ lblDescuentos;
+
 	protected:
 
 	private:
@@ -63,10 +64,13 @@ namespace TareaProgramada3 {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(SubMenuFact::typeid));
 			this->titleMenu = (gcnew System::Windows::Forms::Label());
-			this->bFacturacion = (gcnew System::Windows::Forms::Button());
-			this->bDescuentos = (gcnew System::Windows::Forms::Button());
-			this->bSaldos = (gcnew System::Windows::Forms::Button());
 			this->bSalir = (gcnew System::Windows::Forms::Button());
+			this->lblFactura = (gcnew System::Windows::Forms::Label());
+			this->bDescuento = (gcnew System::Windows::Forms::Button());
+			this->bFactura = (gcnew System::Windows::Forms::Button());
+			this->lblSaldo = (gcnew System::Windows::Forms::Label());
+			this->bSaldo = (gcnew System::Windows::Forms::Button());
+			this->lblDescuentos = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// titleMenu
@@ -76,7 +80,7 @@ namespace TareaProgramada3 {
 			this->titleMenu->Font = (gcnew System::Drawing::Font(L"Segoe UI", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->titleMenu->ForeColor = System::Drawing::Color::MediumTurquoise;
-			this->titleMenu->Location = System::Drawing::Point(779, 131);
+			this->titleMenu->Location = System::Drawing::Point(531, 55);
 			this->titleMenu->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->titleMenu->Name = L"titleMenu";
 			this->titleMenu->Size = System::Drawing::Size(268, 65);
@@ -85,64 +89,13 @@ namespace TareaProgramada3 {
 			this->titleMenu->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			this->titleMenu->Click += gcnew System::EventHandler(this, &SubMenuFact::titleMenu_Click);
 			// 
-			// bFacturacion
-			// 
-			this->bFacturacion->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->bFacturacion->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->bFacturacion->Font = (gcnew System::Drawing::Font(L"Segoe UI", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->bFacturacion->ForeColor = System::Drawing::Color::White;
-			this->bFacturacion->Location = System::Drawing::Point(876, 352);
-			this->bFacturacion->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->bFacturacion->Name = L"bFacturacion";
-			this->bFacturacion->Size = System::Drawing::Size(171, 45);
-			this->bFacturacion->TabIndex = 7;
-			this->bFacturacion->Text = L"3. Facturación";
-			this->bFacturacion->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->bFacturacion->UseVisualStyleBackColor = false;
-			this->bFacturacion->Click += gcnew System::EventHandler(this, &SubMenuFact::bFacturacion_Click);
-			// 
-			// bDescuentos
-			// 
-			this->bDescuentos->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->bDescuentos->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->bDescuentos->Font = (gcnew System::Drawing::Font(L"Segoe UI", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->bDescuentos->ForeColor = System::Drawing::Color::White;
-			this->bDescuentos->Location = System::Drawing::Point(876, 297);
-			this->bDescuentos->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->bDescuentos->Name = L"bDescuentos";
-			this->bDescuentos->Size = System::Drawing::Size(171, 45);
-			this->bDescuentos->TabIndex = 6;
-			this->bDescuentos->Text = L"2. Descuentos";
-			this->bDescuentos->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->bDescuentos->UseVisualStyleBackColor = false;
-			this->bDescuentos->Click += gcnew System::EventHandler(this, &SubMenuFact::bDescuentos_Click);
-			// 
-			// bSaldos
-			// 
-			this->bSaldos->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->bSaldos->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->bSaldos->Font = (gcnew System::Drawing::Font(L"Segoe UI", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->bSaldos->ForeColor = System::Drawing::Color::White;
-			this->bSaldos->Location = System::Drawing::Point(914, 242);
-			this->bSaldos->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->bSaldos->Name = L"bSaldos";
-			this->bSaldos->Size = System::Drawing::Size(133, 45);
-			this->bSaldos->TabIndex = 5;
-			this->bSaldos->Text = L"1. Saldos";
-			this->bSaldos->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->bSaldos->UseVisualStyleBackColor = false;
-			this->bSaldos->Click += gcnew System::EventHandler(this, &SubMenuFact::bSaldos_Click);
-			// 
 			// bSalir
 			// 
 			this->bSalir->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->bSalir->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->bSalir->ForeColor = System::Drawing::Color::MediumTurquoise;
-			this->bSalir->Location = System::Drawing::Point(963, 540);
+			this->bSalir->Location = System::Drawing::Point(954, 75);
 			this->bSalir->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->bSalir->Name = L"bSalir";
 			this->bSalir->Size = System::Drawing::Size(84, 45);
@@ -151,24 +104,124 @@ namespace TareaProgramada3 {
 			this->bSalir->UseVisualStyleBackColor = false;
 			this->bSalir->Click += gcnew System::EventHandler(this, &SubMenuFact::bSalir_Click);
 			// 
-			// subMenuFact
+			// lblFactura
+			// 
+			this->lblFactura->AutoSize = true;
+			this->lblFactura->BackColor = System::Drawing::Color::Black;
+			this->lblFactura->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lblFactura->ForeColor = System::Drawing::Color::White;
+			this->lblFactura->Location = System::Drawing::Point(949, 242);
+			this->lblFactura->Name = L"lblFactura";
+			this->lblFactura->Size = System::Drawing::Size(80, 30);
+			this->lblFactura->TabIndex = 23;
+			this->lblFactura->Text = L"Factura";
+			this->lblFactura->Click += gcnew System::EventHandler(this, &SubMenuFact::lblFactura_Click);
+			// 
+			// lblDescuentos
+			// 
+			this->lblDescuentos->AutoSize = true;
+			this->lblDescuentos->BackColor = System::Drawing::Color::Black;
+			this->lblDescuentos->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lblDescuentos->ForeColor = System::Drawing::Color::White;
+			this->lblDescuentos->Location = System::Drawing::Point(932, 380);
+			this->lblDescuentos->Name = L"lblDescuentos";
+			this->lblDescuentos->Size = System::Drawing::Size(121, 30);
+			this->lblDescuentos->TabIndex = 27;
+			this->lblDescuentos->Text = L"Descuentos";
+			this->lblDescuentos->Click += gcnew System::EventHandler(this, &SubMenuFact::lblDescuentos_Click);
+			// 
+			// lblSaldo
+			// 
+			this->lblSaldo->AutoSize = true;
+			this->lblSaldo->BackColor = System::Drawing::Color::Black;
+			this->lblSaldo->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lblSaldo->ForeColor = System::Drawing::Color::White;
+			this->lblSaldo->Location = System::Drawing::Point(958, 525);
+			this->lblSaldo->Name = L"lblSaldo";
+			this->lblSaldo->Size = System::Drawing::Size(64, 30);
+			this->lblSaldo->TabIndex = 26;
+			this->lblSaldo->Text = L"Saldo";
+			this->lblSaldo->Click += gcnew System::EventHandler(this, &SubMenuFact::lblSaldo_Click);
+			// 
+			// bFactura
+			// 
+			this->bFactura->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->bFactura->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->bFactura->Font = (gcnew System::Drawing::Font(L"Segoe UI", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bFactura->ForeColor = System::Drawing::Color::White;
+			this->bFactura->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bFactura.Image")));
+			this->bFactura->Location = System::Drawing::Point(937, 138);
+			this->bFactura->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bFactura->Name = L"bFactura";
+			this->bFactura->Size = System::Drawing::Size(110, 99);
+			this->bFactura->TabIndex = 21;
+			this->bFactura->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->bFactura->UseVisualStyleBackColor = false;
+			this->bFactura->Click += gcnew System::EventHandler(this, &SubMenuFact::bFactura_Click);
+			// 
+			// bDescuento
+			// 
+			this->bDescuento->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->bDescuento->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->bDescuento->Font = (gcnew System::Drawing::Font(L"Segoe UI", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bDescuento->ForeColor = System::Drawing::Color::White;
+			this->bDescuento->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bDescuento.Image")));
+			this->bDescuento->Location = System::Drawing::Point(937, 284);
+			this->bDescuento->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bDescuento->Name = L"bDescuento";
+			this->bDescuento->Size = System::Drawing::Size(110, 91);
+			this->bDescuento->TabIndex = 22;
+			this->bDescuento->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->bDescuento->UseVisualStyleBackColor = false;
+			this->bDescuento->Click += gcnew System::EventHandler(this, &SubMenuFact::bDescuento_Click);
+			// 
+			// bSaldo
+			// 
+			this->bSaldo->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->bSaldo->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->bSaldo->Font = (gcnew System::Drawing::Font(L"Segoe UI", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bSaldo->ForeColor = System::Drawing::Color::White;
+			this->bSaldo->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bSaldo.Image")));
+			this->bSaldo->Location = System::Drawing::Point(937, 429);
+			this->bSaldo->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bSaldo->Name = L"bSaldo";
+			this->bSaldo->Size = System::Drawing::Size(110, 91);
+			this->bSaldo->TabIndex = 25;
+			this->bSaldo->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->bSaldo->UseVisualStyleBackColor = false;
+			this->bSaldo->Click += gcnew System::EventHandler(this, &SubMenuFact::bSaldo_Click);
+			// 
+			// SubMenuFact
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(12, 30);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoSize = true;
+			this->BackColor = System::Drawing::Color::Black;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1110, 624);
+			this->Controls->Add(this->lblDescuentos);
+			this->Controls->Add(this->lblSaldo);
+			this->Controls->Add(this->bSaldo);
+			this->Controls->Add(this->lblFactura);
+			this->Controls->Add(this->bDescuento);
+			this->Controls->Add(this->bFactura);
 			this->Controls->Add(this->bSalir);
-			this->Controls->Add(this->bFacturacion);
-			this->Controls->Add(this->bDescuentos);
-			this->Controls->Add(this->bSaldos);
 			this->Controls->Add(this->titleMenu);
 			this->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->ForeColor = System::Drawing::Color::White;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->Location = System::Drawing::Point(935, 380);
 			this->Margin = System::Windows::Forms::Padding(6, 7, 6, 7);
 			this->MaximumSize = System::Drawing::Size(1110, 624);
 			this->MinimumSize = System::Drawing::Size(1110, 624);
-			this->Name = L"subMenuFact";
+			this->Name = L"SubMenuFact";
 			this->Text = L"subMenuFact";
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -177,16 +230,22 @@ namespace TareaProgramada3 {
 #pragma endregion
 	private: System::Void titleMenu_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-	private: System::Void bSaldos_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void bFactura_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-	private: System::Void bDescuentos_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void bDescuento_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-	private: System::Void bFacturacion_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void bSaldo_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void bSalir_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Hide();
 		menu->Show();
 
 	}
+private: System::Void lblFactura_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void lblDescuentos_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void lblSaldo_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

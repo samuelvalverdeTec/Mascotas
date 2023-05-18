@@ -1,11 +1,10 @@
 #pragma once
 
-#include "SubMenuMant.h"
+#include "SubMenuLugs.h"
+#include "SubMenuClnc.h"
 #include "SubMenuFact.h"
-#include "SubMenuReps.h"
 #include "SubMenuSucs.h"
-#include "SubMenuAbout.h"
-#include "SubMenuCont.h"
+#include "SubMenuClts.h"
 
 namespace TareaProgramada3 {
 
@@ -43,15 +42,18 @@ namespace TareaProgramada3 {
 		}
 	private: System::Windows::Forms::Label^ titleMenu;
 	private: System::Windows::Forms::Label^ subtitleMenu;
+	private: System::Windows::Forms::Button^ bMainLugs;
+	private: System::Windows::Forms::Button^ bMainClnc;
 	protected:
 
 
-	private: System::Windows::Forms::Button^ bMainMant;
-	private: System::Windows::Forms::Button^ bMainReps;
+
+
 	private: System::Windows::Forms::Button^ bMainFact;
 	private: System::Windows::Forms::Button^ bMainSucs;
-	private: System::Windows::Forms::Button^ bMainAbout;
-	private: System::Windows::Forms::Button^ bMainCont;
+	private: System::Windows::Forms::Button^ bMainClts;
+
+
 	private: System::Windows::Forms::Panel^ mainPanel;
 
 
@@ -72,6 +74,11 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Panel^ pSucursales;
 	private: System::Windows::Forms::Panel^ pAcercaDe;
 	private: System::Windows::Forms::Panel^ pContactos;
+	private: System::Windows::Forms::Label^ lblClnc;
+	private: System::Windows::Forms::Label^ lblLugs;
+	private: System::Windows::Forms::Label^ lblSucs;
+	private: System::Windows::Forms::Label^ lblFact;
+	private: System::Windows::Forms::Label^ lblClts;
 
 
 	protected:
@@ -92,12 +99,11 @@ namespace TareaProgramada3 {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MenuPrincipal::typeid));
 			this->titleMenu = (gcnew System::Windows::Forms::Label());
 			this->subtitleMenu = (gcnew System::Windows::Forms::Label());
-			this->bMainMant = (gcnew System::Windows::Forms::Button());
-			this->bMainReps = (gcnew System::Windows::Forms::Button());
+			this->bMainLugs = (gcnew System::Windows::Forms::Button());
+			this->bMainClnc = (gcnew System::Windows::Forms::Button());
 			this->bMainFact = (gcnew System::Windows::Forms::Button());
 			this->bMainSucs = (gcnew System::Windows::Forms::Button());
-			this->bMainAbout = (gcnew System::Windows::Forms::Button());
-			this->bMainCont = (gcnew System::Windows::Forms::Button());
+			this->bMainClts = (gcnew System::Windows::Forms::Button());
 			this->mainPanel = (gcnew System::Windows::Forms::Panel());
 			this->bContactos = (gcnew System::Windows::Forms::Button());
 			this->bAcercaDe = (gcnew System::Windows::Forms::Button());
@@ -111,6 +117,11 @@ namespace TareaProgramada3 {
 			this->pSucursales = (gcnew System::Windows::Forms::Panel());
 			this->pAcercaDe = (gcnew System::Windows::Forms::Panel());
 			this->pContactos = (gcnew System::Windows::Forms::Panel());
+			this->lblClnc = (gcnew System::Windows::Forms::Label());
+			this->lblLugs = (gcnew System::Windows::Forms::Label());
+			this->lblSucs = (gcnew System::Windows::Forms::Label());
+			this->lblFact = (gcnew System::Windows::Forms::Label());
+			this->lblClts = (gcnew System::Windows::Forms::Label());
 			this->mainPanel->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -121,7 +132,7 @@ namespace TareaProgramada3 {
 			this->titleMenu->Font = (gcnew System::Drawing::Font(L"Segoe UI", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->titleMenu->ForeColor = System::Drawing::Color::White;
-			this->titleMenu->Location = System::Drawing::Point(48, 248);
+			this->titleMenu->Location = System::Drawing::Point(32, 315);
 			this->titleMenu->Name = L"titleMenu";
 			this->titleMenu->Size = System::Drawing::Size(457, 65);
 			this->titleMenu->TabIndex = 0;
@@ -136,7 +147,7 @@ namespace TareaProgramada3 {
 			this->subtitleMenu->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->subtitleMenu->ForeColor = System::Drawing::Color::White;
-			this->subtitleMenu->Location = System::Drawing::Point(54, 313);
+			this->subtitleMenu->Location = System::Drawing::Point(864, 621);
 			this->subtitleMenu->Name = L"subtitleMenu";
 			this->subtitleMenu->Size = System::Drawing::Size(234, 20);
 			this->subtitleMenu->TabIndex = 6;
@@ -144,35 +155,35 @@ namespace TareaProgramada3 {
 			this->subtitleMenu->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			this->subtitleMenu->Click += gcnew System::EventHandler(this, &MenuPrincipal::subtitleMenu_Click);
 			// 
-			// bMainMant
+			// bMainLugs
 			// 
-			this->bMainMant->BackColor = System::Drawing::Color::Transparent;
-			this->bMainMant->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->bMainMant->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->bMainMant->Font = (gcnew System::Drawing::Font(L"Cascadia Code", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->bMainLugs->BackColor = System::Drawing::Color::Transparent;
+			this->bMainLugs->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->bMainLugs->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->bMainLugs->Font = (gcnew System::Drawing::Font(L"Cascadia Code", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->bMainMant->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bMainMant.Image")));
-			this->bMainMant->Location = System::Drawing::Point(168, 359);
-			this->bMainMant->Name = L"bMainMant";
-			this->bMainMant->Size = System::Drawing::Size(110, 110);
-			this->bMainMant->TabIndex = 1;
-			this->bMainMant->UseVisualStyleBackColor = false;
-			this->bMainMant->Click += gcnew System::EventHandler(this, &MenuPrincipal::bMainMant_Click);
+			this->bMainLugs->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bMainLugs.Image")));
+			this->bMainLugs->Location = System::Drawing::Point(43, 418);
+			this->bMainLugs->Name = L"bMainLugs";
+			this->bMainLugs->Size = System::Drawing::Size(110, 110);
+			this->bMainLugs->TabIndex = 1;
+			this->bMainLugs->UseVisualStyleBackColor = false;
+			this->bMainLugs->Click += gcnew System::EventHandler(this, &MenuPrincipal::bMainLugs_Click);
 			// 
-			// bMainReps
+			// bMainClnc
 			// 
-			this->bMainReps->BackColor = System::Drawing::Color::Transparent;
-			this->bMainReps->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->bMainReps->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->bMainReps->Font = (gcnew System::Drawing::Font(L"Cascadia Code", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->bMainClnc->BackColor = System::Drawing::Color::Transparent;
+			this->bMainClnc->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->bMainClnc->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->bMainClnc->Font = (gcnew System::Drawing::Font(L"Cascadia Code", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->bMainReps->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bMainReps.Image")));
-			this->bMainReps->Location = System::Drawing::Point(340, 359);
-			this->bMainReps->Name = L"bMainReps";
-			this->bMainReps->Size = System::Drawing::Size(110, 110);
-			this->bMainReps->TabIndex = 2;
-			this->bMainReps->UseVisualStyleBackColor = false;
-			this->bMainReps->Click += gcnew System::EventHandler(this, &MenuPrincipal::bMainReps_Click);
+			this->bMainClnc->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bMainClnc.Image")));
+			this->bMainClnc->Location = System::Drawing::Point(168, 418);
+			this->bMainClnc->Name = L"bMainClnc";
+			this->bMainClnc->Size = System::Drawing::Size(110, 110);
+			this->bMainClnc->TabIndex = 2;
+			this->bMainClnc->UseVisualStyleBackColor = false;
+			this->bMainClnc->Click += gcnew System::EventHandler(this, &MenuPrincipal::bMainClnc_Click);
 			// 
 			// bMainFact
 			// 
@@ -183,7 +194,7 @@ namespace TareaProgramada3 {
 				static_cast<System::Byte>(0)));
 			this->bMainFact->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->bMainFact->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bMainFact.Image")));
-			this->bMainFact->Location = System::Drawing::Point(516, 359);
+			this->bMainFact->Location = System::Drawing::Point(293, 418);
 			this->bMainFact->Name = L"bMainFact";
 			this->bMainFact->Size = System::Drawing::Size(110, 110);
 			this->bMainFact->TabIndex = 3;
@@ -198,42 +209,27 @@ namespace TareaProgramada3 {
 			this->bMainSucs->Font = (gcnew System::Drawing::Font(L"Cascadia Code", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->bMainSucs->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bMainSucs.Image")));
-			this->bMainSucs->Location = System::Drawing::Point(82, 486);
+			this->bMainSucs->Location = System::Drawing::Point(419, 418);
 			this->bMainSucs->Name = L"bMainSucs";
 			this->bMainSucs->Size = System::Drawing::Size(110, 110);
 			this->bMainSucs->TabIndex = 7;
 			this->bMainSucs->UseVisualStyleBackColor = false;
 			this->bMainSucs->Click += gcnew System::EventHandler(this, &MenuPrincipal::bMainSucs_Click);
 			// 
-			// bMainAbout
+			// bMainClts
 			// 
-			this->bMainAbout->BackColor = System::Drawing::Color::Transparent;
-			this->bMainAbout->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->bMainAbout->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->bMainAbout->Font = (gcnew System::Drawing::Font(L"Cascadia Code", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->bMainClts->BackColor = System::Drawing::Color::Transparent;
+			this->bMainClts->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->bMainClts->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->bMainClts->Font = (gcnew System::Drawing::Font(L"Cascadia Code", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->bMainAbout->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bMainAbout.Image")));
-			this->bMainAbout->Location = System::Drawing::Point(259, 486);
-			this->bMainAbout->Name = L"bMainAbout";
-			this->bMainAbout->Size = System::Drawing::Size(110, 110);
-			this->bMainAbout->TabIndex = 4;
-			this->bMainAbout->UseVisualStyleBackColor = false;
-			this->bMainAbout->Click += gcnew System::EventHandler(this, &MenuPrincipal::bMainAbout_Click);
-			// 
-			// bMainCont
-			// 
-			this->bMainCont->BackColor = System::Drawing::Color::Transparent;
-			this->bMainCont->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->bMainCont->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->bMainCont->Font = (gcnew System::Drawing::Font(L"Cascadia Code", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->bMainCont->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bMainCont.Image")));
-			this->bMainCont->Location = System::Drawing::Point(435, 486);
-			this->bMainCont->Name = L"bMainCont";
-			this->bMainCont->Size = System::Drawing::Size(110, 110);
-			this->bMainCont->TabIndex = 5;
-			this->bMainCont->UseVisualStyleBackColor = false;
-			this->bMainCont->Click += gcnew System::EventHandler(this, &MenuPrincipal::bMainCont_Click);
+			this->bMainClts->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bMainClts.Image")));
+			this->bMainClts->Location = System::Drawing::Point(545, 418);
+			this->bMainClts->Name = L"bMainClts";
+			this->bMainClts->Size = System::Drawing::Size(110, 110);
+			this->bMainClts->TabIndex = 5;
+			this->bMainClts->UseVisualStyleBackColor = false;
+			this->bMainClts->Click += gcnew System::EventHandler(this, &MenuPrincipal::bMainClts_Click);
 			// 
 			// mainPanel
 			// 
@@ -279,7 +275,7 @@ namespace TareaProgramada3 {
 			this->bAcercaDe->Name = L"bAcercaDe";
 			this->bAcercaDe->Size = System::Drawing::Size(93, 41);
 			this->bAcercaDe->TabIndex = 13;
-			this->bAcercaDe->Text = L"Acerca De";
+			this->bAcercaDe->Text = L"Acerca de";
 			this->bAcercaDe->UseVisualStyleBackColor = false;
 			this->bAcercaDe->Click += gcnew System::EventHandler(this, &MenuPrincipal::bAD_Click);
 			// 
@@ -290,7 +286,7 @@ namespace TareaProgramada3 {
 			this->bSucursales->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->bSucursales->ForeColor = System::Drawing::Color::White;
-			this->bSucursales->Location = System::Drawing::Point(473, -2);
+			this->bSucursales->Location = System::Drawing::Point(482, -2);
 			this->bSucursales->Name = L"bSucursales";
 			this->bSucursales->Size = System::Drawing::Size(100, 41);
 			this->bSucursales->TabIndex = 12;
@@ -320,7 +316,7 @@ namespace TareaProgramada3 {
 			this->bFacturacion->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->bFacturacion->ForeColor = System::Drawing::Color::White;
-			this->bFacturacion->Location = System::Drawing::Point(186, -2);
+			this->bFacturacion->Location = System::Drawing::Point(177, -2);
 			this->bFacturacion->Name = L"bFacturacion";
 			this->bFacturacion->Size = System::Drawing::Size(100, 41);
 			this->bFacturacion->TabIndex = 10;
@@ -335,7 +331,7 @@ namespace TareaProgramada3 {
 			this->bMantenimiento->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->bMantenimiento->ForeColor = System::Drawing::Color::White;
-			this->bMantenimiento->Location = System::Drawing::Point(11, -2);
+			this->bMantenimiento->Location = System::Drawing::Point(0, -2);
 			this->bMantenimiento->Name = L"bMantenimiento";
 			this->bMantenimiento->Size = System::Drawing::Size(145, 41);
 			this->bMantenimiento->TabIndex = 9;
@@ -372,6 +368,7 @@ namespace TareaProgramada3 {
 			this->pReportes->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			this->pReportes->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->pReportes->ForeColor = System::Drawing::Color::White;
 			this->pReportes->Location = System::Drawing::Point(309, 37);
 			this->pReportes->Name = L"pReportes";
 			this->pReportes->Size = System::Drawing::Size(148, 208);
@@ -415,6 +412,56 @@ namespace TareaProgramada3 {
 			this->pContactos->Visible = false;
 			this->pContactos->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MenuPrincipal::pC_Paint);
 			// 
+			// lblClnc
+			// 
+			this->lblClnc->AutoSize = true;
+			this->lblClnc->ForeColor = System::Drawing::Color::White;
+			this->lblClnc->Location = System::Drawing::Point(189, 531);
+			this->lblClnc->Name = L"lblClnc";
+			this->lblClnc->Size = System::Drawing::Size(74, 30);
+			this->lblClnc->TabIndex = 15;
+			this->lblClnc->Text = L"Clínica";
+			// 
+			// lblLugs
+			// 
+			this->lblLugs->AutoSize = true;
+			this->lblLugs->ForeColor = System::Drawing::Color::White;
+			this->lblLugs->Location = System::Drawing::Point(61, 531);
+			this->lblLugs->Name = L"lblLugs";
+			this->lblLugs->Size = System::Drawing::Size(85, 30);
+			this->lblLugs->TabIndex = 16;
+			this->lblLugs->Text = L"Lugares";
+			// 
+			// lblSucs
+			// 
+			this->lblSucs->AutoSize = true;
+			this->lblSucs->ForeColor = System::Drawing::Color::White;
+			this->lblSucs->Location = System::Drawing::Point(419, 531);
+			this->lblSucs->Name = L"lblSucs";
+			this->lblSucs->Size = System::Drawing::Size(110, 30);
+			this->lblSucs->TabIndex = 17;
+			this->lblSucs->Text = L"Sucursales";
+			// 
+			// lblFact
+			// 
+			this->lblFact->AutoSize = true;
+			this->lblFact->ForeColor = System::Drawing::Color::White;
+			this->lblFact->Location = System::Drawing::Point(288, 531);
+			this->lblFact->Name = L"lblFact";
+			this->lblFact->Size = System::Drawing::Size(119, 30);
+			this->lblFact->TabIndex = 18;
+			this->lblFact->Text = L"Facturación";
+			// 
+			// lblClts
+			// 
+			this->lblClts->AutoSize = true;
+			this->lblClts->ForeColor = System::Drawing::Color::White;
+			this->lblClts->Location = System::Drawing::Point(559, 531);
+			this->lblClts->Name = L"lblClts";
+			this->lblClts->Size = System::Drawing::Size(86, 30);
+			this->lblClts->TabIndex = 19;
+			this->lblClts->Text = L"Clientes";
+			// 
 			// MenuPrincipal
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
@@ -423,6 +470,11 @@ namespace TareaProgramada3 {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->ClientSize = System::Drawing::Size(1110, 650);
+			this->Controls->Add(this->lblClts);
+			this->Controls->Add(this->lblFact);
+			this->Controls->Add(this->lblSucs);
+			this->Controls->Add(this->lblLugs);
+			this->Controls->Add(this->lblClnc);
 			this->Controls->Add(this->pContactos);
 			this->Controls->Add(this->pAcercaDe);
 			this->Controls->Add(this->pSucursales);
@@ -432,11 +484,10 @@ namespace TareaProgramada3 {
 			this->Controls->Add(this->mainPanel);
 			this->Controls->Add(this->bMainSucs);
 			this->Controls->Add(this->subtitleMenu);
-			this->Controls->Add(this->bMainCont);
-			this->Controls->Add(this->bMainAbout);
+			this->Controls->Add(this->bMainClts);
 			this->Controls->Add(this->bMainFact);
-			this->Controls->Add(this->bMainReps);
-			this->Controls->Add(this->bMainMant);
+			this->Controls->Add(this->bMainClnc);
+			this->Controls->Add(this->bMainLugs);
 			this->Controls->Add(this->titleMenu);
 			this->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -462,12 +513,19 @@ namespace TareaProgramada3 {
 	private: System::Void subtitleMenu_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	}
-	private: System::Void bMainMant_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void bMainLugs_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		SubMenuMant^ sMM = gcnew SubMenuMant(this);
-		sMM->Show();
+		SubMenuLugs^ sMLugs = gcnew SubMenuLugs(this);
+		sMLugs->Show();
 		this->Hide();
 
+	}
+	private: System::Void bMainClnc_Click(System::Object^ sender, System::EventArgs^ e) {
+		
+		SubMenuClnc^ sMClnc = gcnew SubMenuClnc(this);
+		sMClnc->Show();
+		this->Hide();
+		
 	}
 	private: System::Void bMainFact_Click(System::Object^ sender, System::EventArgs^ e) {
 
@@ -476,13 +534,6 @@ namespace TareaProgramada3 {
 		this->Hide();
 
 	}
-	private: System::Void bMainReps_Click(System::Object^ sender, System::EventArgs^ e) {
-		
-		SubMenuReps^ sMR = gcnew SubMenuReps(this);
-		sMR->Show();
-		this->Hide();
-		
-	}
 	private: System::Void bMainSucs_Click(System::Object^ sender, System::EventArgs^ e) {
 		
 		SubMenuSucs^ sMS = gcnew SubMenuSucs(this);
@@ -490,20 +541,14 @@ namespace TareaProgramada3 {
 		this->Hide();
 		
 	}
-	private: System::Void bMainAbout_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void bMainClts_Click(System::Object^ sender, System::EventArgs^ e) {
 		
-		SubMenuAbout^ sMA = gcnew SubMenuAbout(this);
-		sMA->Show();
+		SubMenuClts^ sMClts = gcnew SubMenuClts(this);
+		sMClts->Show();
 		this->Hide();
 		
 	}
-	private: System::Void bMainCont_Click(System::Object^ sender, System::EventArgs^ e) {
-		
-		SubMenuCont^ sMC = gcnew SubMenuCont(this);
-		sMC->Show();
-		this->Hide();
-		
-	}
+
 // *****************************************************************************************************
 private: System::Void mainPanel_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }

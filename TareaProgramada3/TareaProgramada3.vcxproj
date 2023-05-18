@@ -123,13 +123,11 @@
   <ItemGroup>
     <ClCompile Include="Contactos.cpp" />
     <ClCompile Include="Controlador.cpp" />
-    <ClCompile Include="Main.cpp" />
     <ClCompile Include="MenuPrincipal.cpp" />
-    <ClCompile Include="SubMenuAbout.cpp" />
-    <ClCompile Include="SubMenuCont.cpp" />
+    <ClCompile Include="SubMenuClnc.cpp" />
+    <ClCompile Include="SubMenuClts.cpp" />
     <ClCompile Include="SubMenuFact.cpp" />
-    <ClCompile Include="SubMenuMant.cpp" />
-    <ClCompile Include="SubMenuReps.cpp" />
+    <ClCompile Include="SubMenuLugs.cpp" />
     <ClCompile Include="SubMenuSucs.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -138,20 +136,17 @@
     <ClInclude Include="MenuPrincipal.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="SubMenuAbout.h">
+    <ClInclude Include="SubMenuClnc.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="SubMenuCont.h">
+    <ClInclude Include="SubMenuClts.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="SubMenuFact.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="NodoContactos.h" />
-    <ClInclude Include="SubMenuMant.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="SubMenuReps.h">
+    <ClInclude Include="SubMenuLugs.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="SubMenuSucs.h">
@@ -162,20 +157,17 @@
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubMenuAbout.resx">
-      <DependentUpon>SubMenuAbout.h</DependentUpon>
+    <EmbeddedResource Include="SubMenuClnc.resx">
+      <DependentUpon>SubMenuClnc.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubMenuCont.resx">
-      <DependentUpon>SubMenuCont.h</DependentUpon>
+    <EmbeddedResource Include="SubMenuClts.resx">
+      <DependentUpon>SubMenuClts.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubMenuFact.resx">
       <DependentUpon>SubMenuFact.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubMenuMant.resx">
-      <DependentUpon>SubMenuMant.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SubMenuReps.resx">
-      <DependentUpon>SubMenuReps.h</DependentUpon>
+    <EmbeddedResource Include="SubMenuLugs.resx">
+      <DependentUpon>SubMenuLugs.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubMenuSucs.resx">
       <DependentUpon>SubMenuSucs.h</DependentUpon>

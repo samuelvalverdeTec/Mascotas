@@ -1,4 +1,4 @@
-#include "SubMenuMant.h"
+#include "SubMenuLugs.h"
 
 /*void SubMenuMant::imprimir() {
 

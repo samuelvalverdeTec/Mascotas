@@ -10,17 +10,16 @@ namespace TareaProgramada3 {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Summary for SubMenuSucs
+	/// Summary for SubMenuClnc
 	/// </summary>
-	public ref class SubMenuSucs : public System::Windows::Forms::Form
+	public ref class SubMenuClnc : public System::Windows::Forms::Form
 	{
-
 	private: System::Windows::Forms::Form^ menu;
 
 	public:
-		SubMenuSucs(System::Windows::Forms::Form^ m)
+		SubMenuClnc(System::Windows::Forms::Form^ m)
 		{
-			menu = m;
+			menu = m; 
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
@@ -31,7 +30,7 @@ namespace TareaProgramada3 {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~SubMenuSucs()
+		~SubMenuClnc()
 		{
 			if (components)
 			{
@@ -52,29 +51,26 @@ namespace TareaProgramada3 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(SubMenuSucs::typeid));
 			this->SuspendLayout();
 			// 
-			// SubMenuSucs
+			// SubMenuClnc
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(11, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->ClientSize = System::Drawing::Size(1110, 650);
 			this->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
-			this->Name = L"SubMenuSucs";
-			this->Text = L"SubMenuSucs";
-			this->Load += gcnew System::EventHandler(this, &SubMenuSucs::SubMenuSucs_Load);
+			this->Name = L"SubMenuClnc";
+			this->Text = L"SubMenuClnc";
+			this->Load += gcnew System::EventHandler(this, &SubMenuClnc::SubMenuClnc_Load);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
-	private: System::Void SubMenuSucs_Load(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void SubMenuClnc_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	};
 }

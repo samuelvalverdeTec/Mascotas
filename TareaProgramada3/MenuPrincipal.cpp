@@ -1,3 +1,10 @@
+//	****************************
+//	* Tarea Programada 3	   *
+//	* Estructuras de Datos	   *
+//	* Samuel Valverde Arguedas *
+//	* Erick Kauffmann Porcar   *
+//	****************************
+
 #include "MenuPrincipal.h"
 
 using namespace System;

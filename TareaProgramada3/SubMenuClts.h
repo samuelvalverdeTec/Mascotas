@@ -12,13 +12,13 @@ namespace TareaProgramada3 {
 	/// <summary>
 	/// Summary for SubMenuCont
 	/// </summary>
-	public ref class SubMenuCont : public System::Windows::Forms::Form
+	public ref class SubMenuClts : public System::Windows::Forms::Form
 	{
 
 	private: System::Windows::Forms::Form^ menu;
 
 	public:
-		SubMenuCont(System::Windows::Forms::Form^ m)
+		SubMenuClts(System::Windows::Forms::Form^ m)
 		{
 			menu = m;
 			InitializeComponent();
@@ -31,7 +31,7 @@ namespace TareaProgramada3 {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~SubMenuCont()
+		~SubMenuClts()
 		{
 			if (components)
 			{
@@ -59,14 +59,14 @@ namespace TareaProgramada3 {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(284, 261);
-			this->Name = L"SubMenuCont";
-			this->Text = L"SubMenuCont";
-			this->Load += gcnew System::EventHandler(this, &SubMenuCont::SubMenuCont_Load);
+			this->Name = L"SubMenuClts";
+			this->Text = L"SubMenuClts";
+			this->Load += gcnew System::EventHandler(this, &SubMenuCont::SubMenuClts_Load);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
-	private: System::Void SubMenuCont_Load(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void SubMenuClts_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	};
 }

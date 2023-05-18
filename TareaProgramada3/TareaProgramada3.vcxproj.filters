@@ -21,10 +21,7 @@
     <ClCompile Include="Contactos.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SubMenuMant.cpp">
+    <ClCompile Include="SubMenuLugs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Controlador.cpp">
@@ -33,16 +30,13 @@
     <ClCompile Include="SubMenuFact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SubMenuReps.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SubMenuSucs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SubMenuAbout.cpp">
+    <ClCompile Include="SubMenuClts.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SubMenuCont.cpp">
+    <ClCompile Include="SubMenuClnc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -56,7 +50,7 @@
     <ClInclude Include="NodoContactos.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SubMenuMant.h">
+    <ClInclude Include="SubMenuLugs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Controlador.h">
@@ -65,16 +59,13 @@
     <ClInclude Include="SubMenuFact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SubMenuReps.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SubMenuSucs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SubMenuAbout.h">
+    <ClInclude Include="SubMenuClts.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SubMenuCont.h">
+    <ClInclude Include="SubMenuClnc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

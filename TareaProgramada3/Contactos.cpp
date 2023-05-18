@@ -35,7 +35,7 @@ void Lista::InsertarInicio(int v)//3 10 265
     if (ListaVacia())
     {
 
-        primero = new nodo(v);//6
+        primero = new Contacto(v);//6
 
     }
     else
@@ -43,7 +43,7 @@ void Lista::InsertarInicio(int v)//3 10 265
         //primera forma
     //  primero=new nodo (v,primero);
        //segunda forma
-        pnodo nuevo = new nodo(v);
+        pnodo nuevo = new Contacto(v);
         nuevo->siguiente = primero;
         primero = nuevo;
 
@@ -56,7 +56,7 @@ void Lista::InsertarInicio(int v)//3 10 265
 void Lista::InsertarFinal(int v)//76
 {
     if (ListaVacia())
-        primero = new nodo(v);
+        primero = new Contacto(v);
     else
     {
         //primera forma
@@ -69,7 +69,7 @@ void Lista::InsertarFinal(int v)//76
         pnodo aux = primero;
         while (aux->siguiente != NULL)
             aux = aux->siguiente;
-        pnodo nuevo = new Nodo(v);
+        pnodo nuevo = new Contacto(v);
         aux->siguiente = nuevo;
     }
 }
@@ -130,7 +130,7 @@ void Lista::BorrarInicio()
 
 void Lista::Mostrar()
 {
-    Nodo* aux;
+    pnodo aux;
     if (primero == NULL)
         cout << "No hay elementos AQUI";
     else
