@@ -153,6 +153,7 @@ namespace TareaProgramada3 {
 			// bSalir
 			// 
 			this->bSalir->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->bSalir->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->bSalir->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->bSalir->ForeColor = System::Drawing::Color::IndianRed;
@@ -416,7 +417,7 @@ namespace TareaProgramada3 {
 		this->Hide();
 		menu->Show();
 
-		Controlador::imprimir();
+		//Controlador::imprimir();
 
 	}
 private: System::Void lblLugs_Click(System::Object^ sender, System::EventArgs^ e) {

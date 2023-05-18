@@ -38,6 +38,8 @@ namespace TareaProgramada3 {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Label^ titleMenu;
+	protected:
 
 	private:
 		/// <summary>
@@ -53,7 +55,23 @@ namespace TareaProgramada3 {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(SubMenuSucs::typeid));
+			this->titleMenu = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
+			// 
+			// titleMenu
+			// 
+			this->titleMenu->AutoSize = true;
+			this->titleMenu->BackColor = System::Drawing::Color::Transparent;
+			this->titleMenu->Font = (gcnew System::Drawing::Font(L"Segoe UI", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->titleMenu->ForeColor = System::Drawing::Color::RoyalBlue;
+			this->titleMenu->Location = System::Drawing::Point(799, 66);
+			this->titleMenu->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->titleMenu->Name = L"titleMenu";
+			this->titleMenu->Size = System::Drawing::Size(248, 65);
+			this->titleMenu->TabIndex = 2;
+			this->titleMenu->Text = L"Sucursales";
+			this->titleMenu->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// SubMenuSucs
 			// 
@@ -63,6 +81,7 @@ namespace TareaProgramada3 {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->ClientSize = System::Drawing::Size(1110, 650);
+			this->Controls->Add(this->titleMenu);
 			this->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
@@ -71,6 +90,7 @@ namespace TareaProgramada3 {
 			this->Text = L"SubMenuSucs";
 			this->Load += gcnew System::EventHandler(this, &SubMenuSucs::SubMenuSucs_Load);
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
