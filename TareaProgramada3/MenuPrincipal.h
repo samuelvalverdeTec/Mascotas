@@ -248,7 +248,7 @@ namespace TareaProgramada3 {
 			this->mainPanel->Controls->Add(this->bMantenimiento);
 			this->mainPanel->Location = System::Drawing::Point(-1, -2);
 			this->mainPanel->Name = L"mainPanel";
-			this->mainPanel->Size = System::Drawing::Size(880, 41);
+			this->mainPanel->Size = System::Drawing::Size(890, 41);
 			this->mainPanel->TabIndex = 8;
 			this->mainPanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MenuPrincipal::mainPanel_Paint);
 			// 
@@ -410,7 +410,7 @@ namespace TareaProgramada3 {
 			this->pContactos->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->pContactos->Location = System::Drawing::Point(748, 37);
 			this->pContactos->Name = L"pContactos";
-			this->pContactos->Size = System::Drawing::Size(131, 208);
+			this->pContactos->Size = System::Drawing::Size(140, 208);
 			this->pContactos->TabIndex = 14;
 			this->pContactos->Visible = false;
 			this->pContactos->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MenuPrincipal::pC_Paint);
