@@ -259,7 +259,7 @@ namespace TareaProgramada3 {
 			this->bContactos->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->bContactos->ForeColor = System::Drawing::Color::White;
-			this->bContactos->Location = System::Drawing::Point(752, -2);
+			this->bContactos->Location = System::Drawing::Point(765, -2);
 			this->bContactos->Name = L"bContactos";
 			this->bContactos->Size = System::Drawing::Size(100, 41);
 			this->bContactos->TabIndex = 14;
@@ -274,7 +274,7 @@ namespace TareaProgramada3 {
 			this->bAcercaDe->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->bAcercaDe->ForeColor = System::Drawing::Color::White;
-			this->bAcercaDe->Location = System::Drawing::Point(620, -2);
+			this->bAcercaDe->Location = System::Drawing::Point(628, -2);
 			this->bAcercaDe->Name = L"bAcercaDe";
 			this->bAcercaDe->Size = System::Drawing::Size(93, 41);
 			this->bAcercaDe->TabIndex = 13;

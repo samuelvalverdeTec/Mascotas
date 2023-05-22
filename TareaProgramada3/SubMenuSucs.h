@@ -39,6 +39,7 @@ namespace TareaProgramada3 {
 			}
 		}
 	private: System::Windows::Forms::Label^ titleMenu;
+	private: System::Windows::Forms::Button^ bSalir;
 	protected:
 
 	private:
@@ -56,6 +57,7 @@ namespace TareaProgramada3 {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(SubMenuSucs::typeid));
 			this->titleMenu = (gcnew System::Windows::Forms::Label());
+			this->bSalir = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// titleMenu
@@ -73,6 +75,22 @@ namespace TareaProgramada3 {
 			this->titleMenu->Text = L"Sucursales";
 			this->titleMenu->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
+			// bSalir
+			// 
+			this->bSalir->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->bSalir->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bSalir->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bSalir->ForeColor = System::Drawing::Color::RoyalBlue;
+			this->bSalir->Location = System::Drawing::Point(963, 554);
+			this->bSalir->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bSalir->Name = L"bSalir";
+			this->bSalir->Size = System::Drawing::Size(84, 45);
+			this->bSalir->TabIndex = 7;
+			this->bSalir->Text = L"Salir";
+			this->bSalir->UseVisualStyleBackColor = false;
+			this->bSalir->Click += gcnew System::EventHandler(this, &SubMenuSucs::bSalir_Click);
+			// 
 			// SubMenuSucs
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(11, 25);
@@ -81,6 +99,7 @@ namespace TareaProgramada3 {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->ClientSize = System::Drawing::Size(1110, 650);
+			this->Controls->Add(this->bSalir);
 			this->Controls->Add(this->titleMenu);
 			this->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -96,5 +115,14 @@ namespace TareaProgramada3 {
 #pragma endregion
 	private: System::Void SubMenuSucs_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
+
+	private: System::Void bSalir_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Hide();
+		menu->Show();
+
+		//Controlador::imprimir();
+
+	}
+
 	};
 }

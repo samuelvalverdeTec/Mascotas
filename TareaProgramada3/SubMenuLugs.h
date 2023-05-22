@@ -61,6 +61,8 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Button^ bcBusq;
 	private: System::Windows::Forms::Button^ bcModif;
 	private: System::Windows::Forms::Button^ bcInser;
+	private: System::Windows::Forms::Panel^ panel1;
+
 
 
 
@@ -96,6 +98,7 @@ namespace TareaProgramada3 {
 			this->bcBusq = (gcnew System::Windows::Forms::Button());
 			this->bcModif = (gcnew System::Windows::Forms::Button());
 			this->bcInser = (gcnew System::Windows::Forms::Button());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->pPaises->SuspendLayout();
 			this->pCiudades->SuspendLayout();
 			this->SuspendLayout();
@@ -107,7 +110,7 @@ namespace TareaProgramada3 {
 			this->titleMenu->Font = (gcnew System::Drawing::Font(L"Segoe UI", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->titleMenu->ForeColor = System::Drawing::Color::IndianRed;
-			this->titleMenu->Location = System::Drawing::Point(632, 74);
+			this->titleMenu->Location = System::Drawing::Point(544, 79);
 			this->titleMenu->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->titleMenu->Name = L"titleMenu";
 			this->titleMenu->Size = System::Drawing::Size(192, 65);
@@ -124,7 +127,7 @@ namespace TareaProgramada3 {
 				static_cast<System::Byte>(0)));
 			this->bPaises->ForeColor = System::Drawing::Color::White;
 			this->bPaises->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bPaises.Image")));
-			this->bPaises->Location = System::Drawing::Point(626, 179);
+			this->bPaises->Location = System::Drawing::Point(538, 184);
 			this->bPaises->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->bPaises->Name = L"bPaises";
 			this->bPaises->Size = System::Drawing::Size(110, 107);
@@ -141,7 +144,7 @@ namespace TareaProgramada3 {
 				static_cast<System::Byte>(0)));
 			this->bCiudades->ForeColor = System::Drawing::Color::White;
 			this->bCiudades->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bCiudades.Image")));
-			this->bCiudades->Location = System::Drawing::Point(626, 372);
+			this->bCiudades->Location = System::Drawing::Point(538, 377);
 			this->bCiudades->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->bCiudades->Name = L"bCiudades";
 			this->bCiudades->Size = System::Drawing::Size(110, 89);
@@ -173,7 +176,7 @@ namespace TareaProgramada3 {
 			this->lblPaises->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->lblPaises->ForeColor = System::Drawing::Color::White;
-			this->lblPaises->Location = System::Drawing::Point(650, 291);
+			this->lblPaises->Location = System::Drawing::Point(562, 296);
 			this->lblPaises->Name = L"lblPaises";
 			this->lblPaises->Size = System::Drawing::Size(69, 30);
 			this->lblPaises->TabIndex = 17;
@@ -187,7 +190,7 @@ namespace TareaProgramada3 {
 			this->lblCiudades->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->lblCiudades->ForeColor = System::Drawing::Color::White;
-			this->lblCiudades->Location = System::Drawing::Point(638, 465);
+			this->lblCiudades->Location = System::Drawing::Point(550, 470);
 			this->lblCiudades->Name = L"lblCiudades";
 			this->lblCiudades->Size = System::Drawing::Size(98, 30);
 			this->lblCiudades->TabIndex = 18;
@@ -203,7 +206,7 @@ namespace TareaProgramada3 {
 			this->pPaises->Controls->Add(this->bpModif);
 			this->pPaises->Controls->Add(this->bpInser);
 			this->pPaises->ForeColor = System::Drawing::Color::White;
-			this->pPaises->Location = System::Drawing::Point(756, 176);
+			this->pPaises->Location = System::Drawing::Point(668, 181);
 			this->pPaises->Name = L"pPaises";
 			this->pPaises->Size = System::Drawing::Size(148, 145);
 			this->pPaises->TabIndex = 19;
@@ -274,7 +277,7 @@ namespace TareaProgramada3 {
 			this->pCiudades->Controls->Add(this->bcModif);
 			this->pCiudades->Controls->Add(this->bcInser);
 			this->pCiudades->ForeColor = System::Drawing::Color::White;
-			this->pCiudades->Location = System::Drawing::Point(756, 372);
+			this->pCiudades->Location = System::Drawing::Point(668, 377);
 			this->pCiudades->Name = L"pCiudades";
 			this->pCiudades->Size = System::Drawing::Size(148, 145);
 			this->pCiudades->TabIndex = 20;
@@ -336,6 +339,17 @@ namespace TareaProgramada3 {
 			this->bcInser->UseVisualStyleBackColor = false;
 			this->bcInser->Visible = false;
 			// 
+			// panel1
+			// 
+			this->panel1->AutoScroll = true;
+			this->panel1->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->panel1->ForeColor = System::Drawing::Color::White;
+			this->panel1->Location = System::Drawing::Point(876, 184);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(170, 250);
+			this->panel1->TabIndex = 24;
+			this->panel1->Visible = false;
+			// 
 			// SubMenuLugs
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 21);
@@ -343,6 +357,7 @@ namespace TareaProgramada3 {
 			this->AutoSize = true;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1110, 641);
+			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->pCiudades);
 			this->Controls->Add(this->pPaises);
 			this->Controls->Add(this->lblCiudades);
