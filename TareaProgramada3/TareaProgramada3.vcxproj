@@ -84,6 +84,7 @@
       <AdditionalDependencies />
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>main</EntryPointSymbol>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -121,7 +122,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Contactos.cpp" />
     <ClCompile Include="Controlador.cpp" />
     <ClCompile Include="MenuPrincipal.cpp" />
     <ClCompile Include="SubMenuClnc.cpp" />
@@ -131,7 +131,6 @@
     <ClCompile Include="SubMenuSucs.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Contactos.h" />
     <ClInclude Include="Controlador.h" />
     <ClInclude Include="MenuPrincipal.h">
       <FileType>CppForm</FileType>

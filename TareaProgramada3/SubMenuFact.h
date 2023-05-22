@@ -224,6 +224,7 @@ namespace TareaProgramada3 {
 			this->MinimumSize = System::Drawing::Size(1110, 624);
 			this->Name = L"SubMenuFact";
 			this->Text = L"subMenuFact";
+			this->Load += gcnew System::EventHandler(this, &SubMenuFact::SubMenuFact_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -247,6 +248,8 @@ private: System::Void lblFactura_Click(System::Object^ sender, System::EventArgs
 private: System::Void lblDescuentos_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void lblSaldo_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void SubMenuFact_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
