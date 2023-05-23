@@ -122,8 +122,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AA.cpp" />
+    <ClCompile Include="ABB.cpp" />
+    <ClCompile Include="AVL.cpp" />
+    <ClCompile Include="B.cpp" />
     <ClCompile Include="Controlador.cpp" />
+    <ClCompile Include="Funciones.cpp" />
     <ClCompile Include="MenuPrincipal.cpp" />
+    <ClCompile Include="RN.cpp" />
     <ClCompile Include="SubMenuClnc.cpp" />
     <ClCompile Include="SubMenuClts.cpp" />
     <ClCompile Include="SubMenuFact.cpp" />
@@ -131,10 +137,20 @@
     <ClCompile Include="SubMenuSucs.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AA.h" />
+    <ClInclude Include="AVL.h" />
+    <ClInclude Include="B.h" />
+    <ClInclude Include="Binario.h" />
     <ClInclude Include="Controlador.h" />
     <ClInclude Include="MenuPrincipal.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="NodoAA.h" />
+    <ClInclude Include="NodoAVL.h" />
+    <ClInclude Include="NodoB.h" />
+    <ClInclude Include="NodoBinario.h" />
+    <ClInclude Include="NodoRN.h" />
+    <ClInclude Include="RN.h" />
     <ClInclude Include="SubMenuClnc.h">
       <FileType>CppForm</FileType>
     </ClInclude>

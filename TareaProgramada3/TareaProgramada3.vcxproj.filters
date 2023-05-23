@@ -36,6 +36,24 @@
     <ClCompile Include="SubMenuClnc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ABB.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AVL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RN.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="B.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Funciones.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MenuPrincipal.h">
@@ -60,6 +78,36 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SubMenuClnc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NodoBinario.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Binario.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NodoAVL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AVL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NodoRN.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RN.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NodoAA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NodoB.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="B.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
