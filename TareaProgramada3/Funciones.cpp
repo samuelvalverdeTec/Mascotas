@@ -601,8 +601,9 @@ void RecorreArbolClientes(NodoBCliente* R, string STR, string nomArch) {
 		return;
 	}
 	else {
-		STR += "Codigo Cliente: " + to_string(R->valor) + "\nNombre: " + R->nombre + "\nDireccion: " + R->direccion + "\nCodigo Pais: " + to_string(R->codigoPais) + "\nCodigo Ciudad: " +
-			to_string(R->codigoCiudad) + "\nTelefono: " + to_string(R->telefono) + "\nUltima Visita: " + R->ultimavisita + "\n" + "------------------------------------" + "\n";
+		STR += "Codigo Cliente: " + to_string(R->valor) + "\nNombre: " + R->nombre + "\nDireccion: " + R->direccion + "\nCodigo Pais: " + to_string(R->codigoPais)
+			+ "\nCodigo Ciudad: " + to_string(R->codigoCiudad) + "\nTelefono: " + to_string(R->telefono) + "\nUltima Visita: " + R->ultimavisita
+			+ "\nDescuento: " + to_string(R->descuento) + "\nSaldo: " + to_string(R->saldo) + "\n" + "------------------------------------" + "\n";
 		EscribeReporte(nomArch, STR);
 		RecorreArbolClientes(R->Hizq, STR, nomArch);
 		RecorreArbolClientes(R->Hder, STR, nomArch);
@@ -723,7 +724,7 @@ void CreaReporte8(string nombre) {
 
 	ofstream fout(nombre + ".txt");		// se crea el archivo
 
-	fout << "Reporte - Cliente con mas saldo" << endl;
+	fout << "Reporte - Cliente con Mas Saldo" << endl;
 	fout << "\n" << endl;
 
 	fout << endl;
@@ -803,40 +804,4 @@ void RecorreArbolVisitasMascotasClientes(NodoBinarioVisitas* R, AVLMascotas arbo
 		RecorreArbolVisitasMascotasClientes(R->Hizq, arbolMascotas, arbolClientes, STR, nomArch);
 		RecorreArbolVisitasMascotasClientes(R->Hder, arbolMascotas, arbolClientes, STR, nomArch);
 	}
-}
-
-void CreaReporte10(string nombre) {
-
-	ofstream fout(nombre + ".txt");		// se crea el archivo
-
-	fout << "Reporte - Cliente con mas descuento" << endl;
-	fout << "\n" << endl;
-
-	fout << endl;
-	fout.close();
-
-}
-
-void CreaReporte11(string nombre) {
-
-	ofstream fout(nombre + ".txt");		// se crea el archivo
-
-	fout << "Reporte - Ultimo tratamiento" << endl;
-	fout << "\n" << endl;
-
-	fout << endl;
-	fout.close();
-
-}
-
-void CreaReporte12(string nombre) {
-
-	ofstream fout(nombre + ".txt");		// se crea el archivo
-
-	fout << "Reporte - Tratamiento mas usado" << endl;
-	fout << "\n" << endl;
-
-	fout << endl;
-	fout.close();
-
 }

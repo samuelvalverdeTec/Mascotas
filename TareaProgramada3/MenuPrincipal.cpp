@@ -8,9 +8,11 @@
 
 #include <iostream>
 #include <fstream>
-#include <cstring> 
+#include <cstring>
 #include <string>
 #include <iomanip>
+
+#include "Funciones.cpp"
 
 #include "Binario.h"	// Paises, Ciudades & Visitas
 #include "NodoBinario.h"
@@ -28,7 +30,7 @@
 #include "NodoAA.h"
 #include "AA.cpp"
 
-#include "Funciones.cpp"
+//#include "Funciones.cpp"
 
 #include "MenuPrincipal.h"
 

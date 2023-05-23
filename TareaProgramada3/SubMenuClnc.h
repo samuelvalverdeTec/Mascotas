@@ -68,6 +68,36 @@ namespace TareaProgramada3 {
 
 	private: System::Windows::Forms::Button^ bTrat;
 	private: System::Windows::Forms::Button^ bSalir;
+	private: System::Windows::Forms::Panel^ ptInser;
+	private: System::Windows::Forms::TextBox^ vInserTxtbx4;
+	private: System::Windows::Forms::Label^ tInserLbl4;
+	private: System::Windows::Forms::TextBox^ vInserTxtbx3;
+	private: System::Windows::Forms::Label^ tInserLbl3;
+	private: System::Windows::Forms::Label^ tInserLbl2;
+	private: System::Windows::Forms::Label^ tInserLbl1;
+	private: System::Windows::Forms::TextBox^ vInserTxtbx2;
+	private: System::Windows::Forms::TextBox^ vInserTxtbx1;
+	private: System::Windows::Forms::Panel^ pmInser;
+	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::TextBox^ textBox3;
+	private: System::Windows::Forms::TextBox^ textBox4;
+	private: System::Windows::Forms::Panel^ ptBusq;
+
+	private: System::Windows::Forms::Label^ tBusqLbl1;
+	private: System::Windows::Forms::TextBox^ tBusqTxtbx1;
+
+
+	private: System::Windows::Forms::Panel^ pmBusq;
+	private: System::Windows::Forms::Label^ mBusqLbl1;
+	private: System::Windows::Forms::TextBox^ mBusqTxtbx1;
+
+
+
 
 	protected:
 
@@ -101,8 +131,36 @@ namespace TareaProgramada3 {
 			this->bMeds = (gcnew System::Windows::Forms::Button());
 			this->bTrat = (gcnew System::Windows::Forms::Button());
 			this->bSalir = (gcnew System::Windows::Forms::Button());
+			this->ptInser = (gcnew System::Windows::Forms::Panel());
+			this->vInserTxtbx4 = (gcnew System::Windows::Forms::TextBox());
+			this->tInserLbl4 = (gcnew System::Windows::Forms::Label());
+			this->vInserTxtbx3 = (gcnew System::Windows::Forms::TextBox());
+			this->tInserLbl3 = (gcnew System::Windows::Forms::Label());
+			this->tInserLbl2 = (gcnew System::Windows::Forms::Label());
+			this->tInserLbl1 = (gcnew System::Windows::Forms::Label());
+			this->vInserTxtbx2 = (gcnew System::Windows::Forms::TextBox());
+			this->vInserTxtbx1 = (gcnew System::Windows::Forms::TextBox());
+			this->pmInser = (gcnew System::Windows::Forms::Panel());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->ptBusq = (gcnew System::Windows::Forms::Panel());
+			this->tBusqLbl1 = (gcnew System::Windows::Forms::Label());
+			this->tBusqTxtbx1 = (gcnew System::Windows::Forms::TextBox());
+			this->pmBusq = (gcnew System::Windows::Forms::Panel());
+			this->mBusqLbl1 = (gcnew System::Windows::Forms::Label());
+			this->mBusqTxtbx1 = (gcnew System::Windows::Forms::TextBox());
 			this->pMeds->SuspendLayout();
 			this->pTrat->SuspendLayout();
+			this->ptInser->SuspendLayout();
+			this->pmInser->SuspendLayout();
+			this->ptBusq->SuspendLayout();
+			this->pmBusq->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// titleMenu
@@ -277,11 +335,11 @@ namespace TareaProgramada3 {
 			this->lblMeds->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->lblMeds->ForeColor = System::Drawing::Color::White;
-			this->lblMeds->Location = System::Drawing::Point(58, 500);
+			this->lblMeds->Location = System::Drawing::Point(70, 501);
 			this->lblMeds->Name = L"lblMeds";
-			this->lblMeds->Size = System::Drawing::Size(150, 30);
+			this->lblMeds->Size = System::Drawing::Size(120, 30);
 			this->lblMeds->TabIndex = 24;
-			this->lblMeds->Text = L"Medicamentos";
+			this->lblMeds->Text = L"Medicación";
 			// 
 			// lblTrat
 			// 
@@ -346,6 +404,271 @@ namespace TareaProgramada3 {
 			this->bSalir->UseVisualStyleBackColor = false;
 			this->bSalir->Click += gcnew System::EventHandler(this, &SubMenuClnc::bSalir_Click);
 			// 
+			// ptInser
+			// 
+			this->ptInser->AutoScroll = true;
+			this->ptInser->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->ptInser->Controls->Add(this->vInserTxtbx4);
+			this->ptInser->Controls->Add(this->tInserLbl4);
+			this->ptInser->Controls->Add(this->vInserTxtbx3);
+			this->ptInser->Controls->Add(this->tInserLbl3);
+			this->ptInser->Controls->Add(this->tInserLbl2);
+			this->ptInser->Controls->Add(this->tInserLbl1);
+			this->ptInser->Controls->Add(this->vInserTxtbx2);
+			this->ptInser->Controls->Add(this->vInserTxtbx1);
+			this->ptInser->ForeColor = System::Drawing::Color::White;
+			this->ptInser->Location = System::Drawing::Point(631, 192);
+			this->ptInser->Name = L"ptInser";
+			this->ptInser->Size = System::Drawing::Size(222, 145);
+			this->ptInser->TabIndex = 43;
+			this->ptInser->Visible = false;
+			// 
+			// vInserTxtbx4
+			// 
+			this->vInserTxtbx4->Location = System::Drawing::Point(0, 250);
+			this->vInserTxtbx4->Name = L"vInserTxtbx4";
+			this->vInserTxtbx4->Size = System::Drawing::Size(204, 33);
+			this->vInserTxtbx4->TabIndex = 31;
+			// 
+			// tInserLbl4
+			// 
+			this->tInserLbl4->AutoSize = true;
+			this->tInserLbl4->BackColor = System::Drawing::Color::Black;
+			this->tInserLbl4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->tInserLbl4->ForeColor = System::Drawing::Color::White;
+			this->tInserLbl4->Location = System::Drawing::Point(51, 217);
+			this->tInserLbl4->Name = L"tInserLbl4";
+			this->tInserLbl4->Size = System::Drawing::Size(96, 30);
+			this->tInserLbl4->TabIndex = 29;
+			this->tInserLbl4->Text = L"Cantidad";
+			// 
+			// vInserTxtbx3
+			// 
+			this->vInserTxtbx3->Location = System::Drawing::Point(0, 182);
+			this->vInserTxtbx3->Name = L"vInserTxtbx3";
+			this->vInserTxtbx3->Size = System::Drawing::Size(201, 33);
+			this->vInserTxtbx3->TabIndex = 28;
+			// 
+			// tInserLbl3
+			// 
+			this->tInserLbl3->AutoSize = true;
+			this->tInserLbl3->BackColor = System::Drawing::Color::Black;
+			this->tInserLbl3->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->tInserLbl3->ForeColor = System::Drawing::Color::White;
+			this->tInserLbl3->Location = System::Drawing::Point(36, 149);
+			this->tInserLbl3->Name = L"tInserLbl3";
+			this->tInserLbl3->Size = System::Drawing::Size(138, 25);
+			this->tInserLbl3->TabIndex = 27;
+			this->tInserLbl3->Text = L"Precio Unitario";
+			// 
+			// tInserLbl2
+			// 
+			this->tInserLbl2->AutoSize = true;
+			this->tInserLbl2->BackColor = System::Drawing::Color::Black;
+			this->tInserLbl2->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->tInserLbl2->ForeColor = System::Drawing::Color::White;
+			this->tInserLbl2->Location = System::Drawing::Point(58, 79);
+			this->tInserLbl2->Name = L"tInserLbl2";
+			this->tInserLbl2->Size = System::Drawing::Size(89, 30);
+			this->tInserLbl2->TabIndex = 26;
+			this->tInserLbl2->Text = L"Nombre";
+			// 
+			// tInserLbl1
+			// 
+			this->tInserLbl1->AutoSize = true;
+			this->tInserLbl1->BackColor = System::Drawing::Color::Black;
+			this->tInserLbl1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->tInserLbl1->ForeColor = System::Drawing::Color::White;
+			this->tInserLbl1->Location = System::Drawing::Point(3, 3);
+			this->tInserLbl1->Name = L"tInserLbl1";
+			this->tInserLbl1->Size = System::Drawing::Size(195, 30);
+			this->tInserLbl1->TabIndex = 25;
+			this->tInserLbl1->Text = L"Código Tratamiento";
+			// 
+			// vInserTxtbx2
+			// 
+			this->vInserTxtbx2->Location = System::Drawing::Point(0, 113);
+			this->vInserTxtbx2->Name = L"vInserTxtbx2";
+			this->vInserTxtbx2->Size = System::Drawing::Size(201, 33);
+			this->vInserTxtbx2->TabIndex = 1;
+			// 
+			// vInserTxtbx1
+			// 
+			this->vInserTxtbx1->Location = System::Drawing::Point(-3, 43);
+			this->vInserTxtbx1->Name = L"vInserTxtbx1";
+			this->vInserTxtbx1->Size = System::Drawing::Size(207, 33);
+			this->vInserTxtbx1->TabIndex = 0;
+			// 
+			// pmInser
+			// 
+			this->pmInser->AutoScroll = true;
+			this->pmInser->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->pmInser->Controls->Add(this->textBox1);
+			this->pmInser->Controls->Add(this->label1);
+			this->pmInser->Controls->Add(this->textBox2);
+			this->pmInser->Controls->Add(this->label2);
+			this->pmInser->Controls->Add(this->label3);
+			this->pmInser->Controls->Add(this->label4);
+			this->pmInser->Controls->Add(this->textBox3);
+			this->pmInser->Controls->Add(this->textBox4);
+			this->pmInser->ForeColor = System::Drawing::Color::White;
+			this->pmInser->Location = System::Drawing::Point(628, 388);
+			this->pmInser->Name = L"pmInser";
+			this->pmInser->Size = System::Drawing::Size(222, 145);
+			this->pmInser->TabIndex = 44;
+			this->pmInser->Visible = false;
+			// 
+			// textBox1
+			// 
+			this->textBox1->Location = System::Drawing::Point(0, 250);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(204, 33);
+			this->textBox1->TabIndex = 31;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::Black;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->ForeColor = System::Drawing::Color::White;
+			this->label1->Location = System::Drawing::Point(51, 217);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(96, 30);
+			this->label1->TabIndex = 29;
+			this->label1->Text = L"Cantidad";
+			// 
+			// textBox2
+			// 
+			this->textBox2->Location = System::Drawing::Point(0, 182);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(201, 33);
+			this->textBox2->TabIndex = 28;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->BackColor = System::Drawing::Color::Black;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->ForeColor = System::Drawing::Color::White;
+			this->label2->Location = System::Drawing::Point(36, 149);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(138, 25);
+			this->label2->TabIndex = 27;
+			this->label2->Text = L"Precio Unitario";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->BackColor = System::Drawing::Color::Black;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label3->ForeColor = System::Drawing::Color::White;
+			this->label3->Location = System::Drawing::Point(58, 79);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(89, 30);
+			this->label3->TabIndex = 26;
+			this->label3->Text = L"Nombre";
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->BackColor = System::Drawing::Color::Black;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label4->ForeColor = System::Drawing::Color::White;
+			this->label4->Location = System::Drawing::Point(3, 3);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(195, 30);
+			this->label4->TabIndex = 25;
+			this->label4->Text = L"Código Tratamiento";
+			// 
+			// textBox3
+			// 
+			this->textBox3->Location = System::Drawing::Point(0, 113);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(201, 33);
+			this->textBox3->TabIndex = 1;
+			// 
+			// textBox4
+			// 
+			this->textBox4->Location = System::Drawing::Point(-3, 43);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(207, 33);
+			this->textBox4->TabIndex = 0;
+			// 
+			// ptBusq
+			// 
+			this->ptBusq->AutoScroll = true;
+			this->ptBusq->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->ptBusq->Controls->Add(this->tBusqLbl1);
+			this->ptBusq->Controls->Add(this->tBusqTxtbx1);
+			this->ptBusq->ForeColor = System::Drawing::Color::White;
+			this->ptBusq->Location = System::Drawing::Point(885, 192);
+			this->ptBusq->Name = L"ptBusq";
+			this->ptBusq->Size = System::Drawing::Size(213, 77);
+			this->ptBusq->TabIndex = 45;
+			this->ptBusq->Visible = false;
+			// 
+			// tBusqLbl1
+			// 
+			this->tBusqLbl1->AutoSize = true;
+			this->tBusqLbl1->BackColor = System::Drawing::Color::Black;
+			this->tBusqLbl1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->tBusqLbl1->ForeColor = System::Drawing::Color::White;
+			this->tBusqLbl1->Location = System::Drawing::Point(13, 4);
+			this->tBusqLbl1->Name = L"tBusqLbl1";
+			this->tBusqLbl1->Size = System::Drawing::Size(195, 30);
+			this->tBusqLbl1->TabIndex = 25;
+			this->tBusqLbl1->Text = L"Código Tratamiento";
+			this->tBusqLbl1->Click += gcnew System::EventHandler(this, &SubMenuClnc::cBusqLbl1_Click);
+			// 
+			// tBusqTxtbx1
+			// 
+			this->tBusqTxtbx1->Location = System::Drawing::Point(0, 43);
+			this->tBusqTxtbx1->Name = L"tBusqTxtbx1";
+			this->tBusqTxtbx1->Size = System::Drawing::Size(208, 33);
+			this->tBusqTxtbx1->TabIndex = 0;
+			// 
+			// pmBusq
+			// 
+			this->pmBusq->AutoScroll = true;
+			this->pmBusq->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->pmBusq->Controls->Add(this->mBusqLbl1);
+			this->pmBusq->Controls->Add(this->mBusqTxtbx1);
+			this->pmBusq->ForeColor = System::Drawing::Color::White;
+			this->pmBusq->Location = System::Drawing::Point(885, 391);
+			this->pmBusq->Name = L"pmBusq";
+			this->pmBusq->Size = System::Drawing::Size(213, 77);
+			this->pmBusq->TabIndex = 46;
+			this->pmBusq->Visible = false;
+			// 
+			// mBusqLbl1
+			// 
+			this->mBusqLbl1->AutoSize = true;
+			this->mBusqLbl1->BackColor = System::Drawing::Color::Black;
+			this->mBusqLbl1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->mBusqLbl1->ForeColor = System::Drawing::Color::White;
+			this->mBusqLbl1->Location = System::Drawing::Point(13, 4);
+			this->mBusqLbl1->Name = L"mBusqLbl1";
+			this->mBusqLbl1->Size = System::Drawing::Size(192, 30);
+			this->mBusqLbl1->TabIndex = 25;
+			this->mBusqLbl1->Text = L"Código Medicacion";
+			// 
+			// mBusqTxtbx1
+			// 
+			this->mBusqTxtbx1->Location = System::Drawing::Point(0, 43);
+			this->mBusqTxtbx1->Name = L"mBusqTxtbx1";
+			this->mBusqTxtbx1->Size = System::Drawing::Size(208, 33);
+			this->mBusqTxtbx1->TabIndex = 0;
+			// 
 			// SubMenuClnc
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(11, 25);
@@ -353,6 +676,10 @@ namespace TareaProgramada3 {
 			this->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1110, 650);
+			this->Controls->Add(this->pmBusq);
+			this->Controls->Add(this->ptBusq);
+			this->Controls->Add(this->pmInser);
+			this->Controls->Add(this->ptInser);
 			this->Controls->Add(this->bSalir);
 			this->Controls->Add(this->pMeds);
 			this->Controls->Add(this->pTrat);
@@ -370,6 +697,14 @@ namespace TareaProgramada3 {
 			this->Load += gcnew System::EventHandler(this, &SubMenuClnc::SubMenuClnc_Load);
 			this->pMeds->ResumeLayout(false);
 			this->pTrat->ResumeLayout(false);
+			this->ptInser->ResumeLayout(false);
+			this->ptInser->PerformLayout();
+			this->pmInser->ResumeLayout(false);
+			this->pmInser->PerformLayout();
+			this->ptBusq->ResumeLayout(false);
+			this->ptBusq->PerformLayout();
+			this->pmBusq->ResumeLayout(false);
+			this->pmBusq->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -393,19 +728,23 @@ namespace TareaProgramada3 {
 	}
 	// *************
 	private: System::Void btInser_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->ptInser->Show();
 	}
 	private: System::Void btModif_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void btBusq_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->ptBusq->Show();
 	}
 	private: System::Void btElim_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	// *************
 	private: System::Void bmInser_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->pmInser->Show();
 	}
 	private: System::Void bmModif_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void bmBusq_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->pmBusq->Show();
 	}
 	private: System::Void bmElim_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
@@ -414,5 +753,7 @@ namespace TareaProgramada3 {
 		this->Hide();
 		menu->Show();
 	}
+private: System::Void cBusqLbl1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
