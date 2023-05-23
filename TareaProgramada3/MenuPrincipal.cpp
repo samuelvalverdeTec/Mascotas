@@ -11,7 +11,7 @@
 #include <cstring> 
 #include <string>
 #include <iomanip>
-/*
+
 #include "Binario.h"	// Paises, Ciudades & Visitas
 #include "NodoBinario.h"
 #include "ABB.cpp"
@@ -29,7 +29,7 @@
 #include "AA.cpp"
 
 #include "Funciones.cpp"
-*/
+
 #include "MenuPrincipal.h"
 
 using namespace System;
