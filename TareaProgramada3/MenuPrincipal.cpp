@@ -37,7 +37,7 @@
 using namespace System;
 using namespace System::Windows::Forms;
 
-void main(array<System::String^>^ args) {
+void main(array<String^>^ args) {
 	/*
 	BinarioPaises arbolPaises;
 	BinarioCiudades arbolCiudades;
