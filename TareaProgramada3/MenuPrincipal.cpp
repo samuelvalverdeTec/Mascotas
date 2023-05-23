@@ -12,7 +12,7 @@
 #include <string>
 #include <iomanip>
 
-#include "Funciones.cpp"
+//#include "Funciones.cpp"
 
 #include "Binario.h"	// Paises, Ciudades & Visitas
 #include "NodoBinario.h"
@@ -37,8 +37,8 @@
 using namespace System;
 using namespace System::Windows::Forms;
 
-void main(array<String^>^ args) {
-	
+void main(array<System::String^>^ args) {
+	/*
 	BinarioPaises arbolPaises;
 	BinarioCiudades arbolCiudades;
 	BCliente arbolClientes;
@@ -202,7 +202,7 @@ void main(array<String^>^ args) {
 			}
 		}
 	}
-	archivo7.close();
+	archivo7.close();*/
 
 	// **************************************************************
 
