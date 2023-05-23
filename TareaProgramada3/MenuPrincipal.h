@@ -80,6 +80,7 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Label^ lblFact;
 	private: System::Windows::Forms::Label^ lblClts;
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Button^ bSalir;
 
 
 
@@ -125,6 +126,7 @@ namespace TareaProgramada3 {
 			this->lblFact = (gcnew System::Windows::Forms::Label());
 			this->lblClts = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->bSalir = (gcnew System::Windows::Forms::Button());
 			this->mainPanel->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -479,6 +481,22 @@ namespace TareaProgramada3 {
 			this->label1->Text = L"Clínica especializada";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
+			// bSalir
+			// 
+			this->bSalir->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->bSalir->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->bSalir->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bSalir->ForeColor = System::Drawing::Color::White;
+			this->bSalir->Location = System::Drawing::Point(1061, -1);
+			this->bSalir->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bSalir->Name = L"bSalir";
+			this->bSalir->Size = System::Drawing::Size(54, 40);
+			this->bSalir->TabIndex = 35;
+			this->bSalir->Text = L"X";
+			this->bSalir->UseVisualStyleBackColor = false;
+			this->bSalir->Click += gcnew System::EventHandler(this, &MenuPrincipal::bSalir_Click);
+			// 
 			// MenuPrincipal
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
@@ -487,6 +505,7 @@ namespace TareaProgramada3 {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->ClientSize = System::Drawing::Size(1110, 650);
+			this->Controls->Add(this->bSalir);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->lblClts);
 			this->Controls->Add(this->lblFact);
@@ -601,6 +620,11 @@ private: System::Void pAD_Paint(System::Object^ sender, System::Windows::Forms::
 private: System::Void pC_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void bSalir_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	this->Close();
+
 }
 };
 }
