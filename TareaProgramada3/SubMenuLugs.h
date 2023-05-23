@@ -61,7 +61,31 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Button^ bcBusq;
 	private: System::Windows::Forms::Button^ bcModif;
 	private: System::Windows::Forms::Button^ bcInser;
-	private: System::Windows::Forms::Panel^ panel1;
+	private: System::Windows::Forms::Panel^ ppInser;
+
+
+	private: System::Windows::Forms::Label^ pInserLbl1;
+	private: System::Windows::Forms::TextBox^ pInserTxtbx2;
+
+	private: System::Windows::Forms::TextBox^ pInserTxtbx1;
+
+
+
+
+
+	private: System::Windows::Forms::Label^ pInserLbl2;
+	private: System::Windows::Forms::Panel^ ppBusq;
+	private: System::Windows::Forms::Label^ pBusqLbl1;
+	private: System::Windows::Forms::TextBox^ pBusqTxtbx1;
+
+
+
+
+
+
+
+
+
 
 
 
@@ -98,9 +122,18 @@ namespace TareaProgramada3 {
 			this->bcBusq = (gcnew System::Windows::Forms::Button());
 			this->bcModif = (gcnew System::Windows::Forms::Button());
 			this->bcInser = (gcnew System::Windows::Forms::Button());
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->ppInser = (gcnew System::Windows::Forms::Panel());
+			this->ppBusq = (gcnew System::Windows::Forms::Panel());
+			this->pBusqLbl1 = (gcnew System::Windows::Forms::Label());
+			this->pBusqTxtbx1 = (gcnew System::Windows::Forms::TextBox());
+			this->pInserLbl2 = (gcnew System::Windows::Forms::Label());
+			this->pInserLbl1 = (gcnew System::Windows::Forms::Label());
+			this->pInserTxtbx2 = (gcnew System::Windows::Forms::TextBox());
+			this->pInserTxtbx1 = (gcnew System::Windows::Forms::TextBox());
 			this->pPaises->SuspendLayout();
 			this->pCiudades->SuspendLayout();
+			this->ppInser->SuspendLayout();
+			this->ppBusq->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// titleMenu
@@ -211,6 +244,7 @@ namespace TareaProgramada3 {
 			this->pPaises->Size = System::Drawing::Size(148, 145);
 			this->pPaises->TabIndex = 19;
 			this->pPaises->Visible = false;
+			this->pPaises->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &SubMenuLugs::pPaises_Paint);
 			// 
 			// bpElim
 			// 
@@ -224,7 +258,6 @@ namespace TareaProgramada3 {
 			this->bpElim->Text = L"-> Eliminación";
 			this->bpElim->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bpElim->UseVisualStyleBackColor = false;
-			this->bpElim->Visible = false;
 			// 
 			// bpBusq
 			// 
@@ -238,7 +271,7 @@ namespace TareaProgramada3 {
 			this->bpBusq->Text = L"-> Búsqueda";
 			this->bpBusq->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bpBusq->UseVisualStyleBackColor = false;
-			this->bpBusq->Visible = false;
+			this->bpBusq->Click += gcnew System::EventHandler(this, &SubMenuLugs::bpBusq_Click);
 			// 
 			// bpModif
 			// 
@@ -252,7 +285,7 @@ namespace TareaProgramada3 {
 			this->bpModif->Text = L"-> Modificación";
 			this->bpModif->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bpModif->UseVisualStyleBackColor = false;
-			this->bpModif->Visible = false;
+			this->bpModif->Click += gcnew System::EventHandler(this, &SubMenuLugs::bpModif_Click);
 			// 
 			// bpInser
 			// 
@@ -266,7 +299,7 @@ namespace TareaProgramada3 {
 			this->bpInser->Text = L"-> Inserción";
 			this->bpInser->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bpInser->UseVisualStyleBackColor = false;
-			this->bpInser->Visible = false;
+			this->bpInser->Click += gcnew System::EventHandler(this, &SubMenuLugs::bpInser_Click);
 			// 
 			// pCiudades
 			// 
@@ -295,7 +328,6 @@ namespace TareaProgramada3 {
 			this->bcElim->Text = L"-> Eliminación";
 			this->bcElim->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bcElim->UseVisualStyleBackColor = false;
-			this->bcElim->Visible = false;
 			// 
 			// bcBusq
 			// 
@@ -309,7 +341,7 @@ namespace TareaProgramada3 {
 			this->bcBusq->Text = L"-> Búsqueda";
 			this->bcBusq->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bcBusq->UseVisualStyleBackColor = false;
-			this->bcBusq->Visible = false;
+			this->bcBusq->Click += gcnew System::EventHandler(this, &SubMenuLugs::bcBusq_Click);
 			// 
 			// bcModif
 			// 
@@ -323,7 +355,6 @@ namespace TareaProgramada3 {
 			this->bcModif->Text = L"-> Modificación";
 			this->bcModif->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bcModif->UseVisualStyleBackColor = false;
-			this->bcModif->Visible = false;
 			// 
 			// bcInser
 			// 
@@ -337,18 +368,98 @@ namespace TareaProgramada3 {
 			this->bcInser->Text = L"-> Inserción";
 			this->bcInser->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bcInser->UseVisualStyleBackColor = false;
-			this->bcInser->Visible = false;
+			this->bcInser->Click += gcnew System::EventHandler(this, &SubMenuLugs::bcInser_Click);
 			// 
-			// panel1
+			// ppInser
 			// 
-			this->panel1->AutoScroll = true;
-			this->panel1->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->panel1->ForeColor = System::Drawing::Color::White;
-			this->panel1->Location = System::Drawing::Point(876, 184);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(170, 250);
-			this->panel1->TabIndex = 24;
-			this->panel1->Visible = false;
+			this->ppInser->AutoScroll = true;
+			this->ppInser->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->ppInser->Controls->Add(this->pInserLbl2);
+			this->ppInser->Controls->Add(this->pInserLbl1);
+			this->ppInser->Controls->Add(this->pInserTxtbx2);
+			this->ppInser->Controls->Add(this->pInserTxtbx1);
+			this->ppInser->ForeColor = System::Drawing::Color::White;
+			this->ppInser->Location = System::Drawing::Point(876, 184);
+			this->ppInser->Name = L"ppInser";
+			this->ppInser->Size = System::Drawing::Size(170, 142);
+			this->ppInser->TabIndex = 24;
+			this->ppInser->Visible = false;
+			// 
+			// ppBusq
+			// 
+			this->ppBusq->AutoScroll = true;
+			this->ppBusq->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->ppBusq->Controls->Add(this->pBusqLbl1);
+			this->ppBusq->Controls->Add(this->pBusqTxtbx1);
+			this->ppBusq->ForeColor = System::Drawing::Color::White;
+			this->ppBusq->Location = System::Drawing::Point(876, 337);
+			this->ppBusq->Name = L"ppBusq";
+			this->ppBusq->Size = System::Drawing::Size(170, 74);
+			this->ppBusq->TabIndex = 27;
+			this->ppBusq->Visible = false;
+			// 
+			// pBusqLbl1
+			// 
+			this->pBusqLbl1->AutoSize = true;
+			this->pBusqLbl1->BackColor = System::Drawing::Color::Black;
+			this->pBusqLbl1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->pBusqLbl1->ForeColor = System::Drawing::Color::White;
+			this->pBusqLbl1->Location = System::Drawing::Point(45, 1);
+			this->pBusqLbl1->Name = L"pBusqLbl1";
+			this->pBusqLbl1->Size = System::Drawing::Size(79, 30);
+			this->pBusqLbl1->TabIndex = 25;
+			this->pBusqLbl1->Text = L"Codigo";
+			// 
+			// pBusqTxtbx1
+			// 
+			this->pBusqTxtbx1->Location = System::Drawing::Point(0, 43);
+			this->pBusqTxtbx1->Name = L"pBusqTxtbx1";
+			this->pBusqTxtbx1->Size = System::Drawing::Size(170, 29);
+			this->pBusqTxtbx1->TabIndex = 0;
+			this->pBusqTxtbx1->TextChanged += gcnew System::EventHandler(this, &SubMenuLugs::pBusqTxtbx1_TextChanged);
+			// 
+			// pInserLbl2
+			// 
+			this->pInserLbl2->AutoSize = true;
+			this->pInserLbl2->BackColor = System::Drawing::Color::Black;
+			this->pInserLbl2->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->pInserLbl2->ForeColor = System::Drawing::Color::White;
+			this->pInserLbl2->Location = System::Drawing::Point(45, 77);
+			this->pInserLbl2->Name = L"pInserLbl2";
+			this->pInserLbl2->Size = System::Drawing::Size(89, 30);
+			this->pInserLbl2->TabIndex = 26;
+			this->pInserLbl2->Text = L"Nombre";
+			// 
+			// pInserLbl1
+			// 
+			this->pInserLbl1->AutoSize = true;
+			this->pInserLbl1->BackColor = System::Drawing::Color::Black;
+			this->pInserLbl1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->pInserLbl1->ForeColor = System::Drawing::Color::White;
+			this->pInserLbl1->Location = System::Drawing::Point(45, 1);
+			this->pInserLbl1->Name = L"pInserLbl1";
+			this->pInserLbl1->Size = System::Drawing::Size(79, 30);
+			this->pInserLbl1->TabIndex = 25;
+			this->pInserLbl1->Text = L"Codigo";
+			// 
+			// pInserTxtbx2
+			// 
+			this->pInserTxtbx2->Location = System::Drawing::Point(0, 113);
+			this->pInserTxtbx2->Name = L"pInserTxtbx2";
+			this->pInserTxtbx2->Size = System::Drawing::Size(170, 29);
+			this->pInserTxtbx2->TabIndex = 1;
+			this->pInserTxtbx2->TextChanged += gcnew System::EventHandler(this, &SubMenuLugs::pInserTxtbx2_TextChanged);
+			// 
+			// pInserTxtbx1
+			// 
+			this->pInserTxtbx1->Location = System::Drawing::Point(-3, 43);
+			this->pInserTxtbx1->Name = L"pInserTxtbx1";
+			this->pInserTxtbx1->Size = System::Drawing::Size(173, 29);
+			this->pInserTxtbx1->TabIndex = 0;
+			this->pInserTxtbx1->TextChanged += gcnew System::EventHandler(this, &SubMenuLugs::pInserTxtbx1_TextChanged);
 			// 
 			// SubMenuLugs
 			// 
@@ -357,7 +468,8 @@ namespace TareaProgramada3 {
 			this->AutoSize = true;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1110, 641);
-			this->Controls->Add(this->panel1);
+			this->Controls->Add(this->ppBusq);
+			this->Controls->Add(this->ppInser);
 			this->Controls->Add(this->pCiudades);
 			this->Controls->Add(this->pPaises);
 			this->Controls->Add(this->lblCiudades);
@@ -377,6 +489,10 @@ namespace TareaProgramada3 {
 			this->Load += gcnew System::EventHandler(this, &SubMenuLugs::SubMenuLugs_Load);
 			this->pPaises->ResumeLayout(false);
 			this->pCiudades->ResumeLayout(false);
+			this->ppInser->ResumeLayout(false);
+			this->ppInser->PerformLayout();
+			this->ppBusq->ResumeLayout(false);
+			this->ppBusq->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -388,28 +504,21 @@ namespace TareaProgramada3 {
 	}
 	private: System::Void bPaises_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->pPaises->Show();
-		this->bpInser->Show();
-		this->bpModif->Show();
-		this->bpBusq->Show();
-		this->bpElim->Show();
 	}
 	private: System::Void bCiudades_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->pCiudades->Show();
-		this->bcInser->Show();
-		this->bcModif->Show();
-		this->bcBusq->Show();
-		this->bcElim->Show();
 	}
 		   /*	BOTONES PAISES	 */
 
 	private: System::Void bpInser_Click(System::Object^ sender, System::EventArgs^ e) {
-		
+		this->ppInser->Show();
 	}
 	private: System::Void bpModif_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	}
 	private: System::Void bpBusq_Click(System::Object^ sender, System::EventArgs^ e) {
-
+		this->ppBusq->BringToFront();
+		this->ppBusq->Show();
 	}
 	private: System::Void bpElim_Click(System::Object^ sender, System::EventArgs^ e) {
 
@@ -438,6 +547,14 @@ namespace TareaProgramada3 {
 private: System::Void lblLugs_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void lblCiudades_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void pInserTxtbx1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void pInserTxtbx2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void pBusqTxtbx1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void pPaises_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 };
 }
