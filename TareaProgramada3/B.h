@@ -36,31 +36,4 @@ public:
 
 };
 
-
-/*//******************************************ADMINISTRADORES*************************************************
-
-
-class BAdministrador {
-
-	public:
-		NodoBAdministrador* raiz;
-
-		BAdministrador():raiz(NULL){}
-
-		void InsertaNodo(int num, string nombre);
-
-		bool Hh;
-
-		void Borrar(NodoBAdministrador *nodoB, bool);
-		void BorrarBalanceado(NodoBAdministrador *r, bool, int eliminar);
-		void Equilibrar1(NodoBAdministrador *n, bool);
-		void Equilibrar2(NodoBAdministrador *n, bool);
-		void InsertarBalanceado(NodoBAdministrador * & r, bool, int num, string nombre);
-		void RotacionDobleIzquierda(NodoBAdministrador * &n1, NodoBAdministrador *n2);
-		void RotacionDobleDerecha(NodoBAdministrador * &n1, NodoBAdministrador *n2);
-		void RotacionSimpleIzquierda(NodoBAdministrador * &n1, NodoBAdministrador *n2);
-		void RotacionSimpleDerecha(NodoBAdministrador * &n1, NodoBAdministrador *n2);
-
-};*/
-
 #endif

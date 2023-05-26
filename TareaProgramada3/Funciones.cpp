@@ -1,4 +1,4 @@
-/*#include "Binario.h"
+#include "Binario.h"
 #include "NodoBinario.h"
 #include "ABB.cpp"
 #include "NodoB.h"
@@ -12,7 +12,7 @@
 #include "RN.cpp"
 #include "NodoAA.h"
 #include "AA.h"
-#include "AA.cpp"*/
+#include "AA.cpp"
 
 #include <iostream>
 #include <fstream>
@@ -26,8 +26,8 @@ using namespace std;
 
 string SeparaString1(string linea) {
 	char* ptr; // declare a ptr pointer 
-	int largolinea = linea.length();
-	char char_array[largolinea + 1];
+	const int largolinea = linea.length();
+	char* char_array = new char[largolinea + 1];
 	strcpy(char_array, linea.c_str());
 	ptr = strtok(char_array, ";");
 	//cout<<ptr<<endl;
@@ -36,8 +36,8 @@ string SeparaString1(string linea) {
 string SeparaString2(string linea) {
 	//char *ptr; // declare a ptr pointer 
 	char* ptr2;
-	int largolinea = linea.length();
-	char char_array[largolinea + 1];
+	const int largolinea = linea.length();
+	char* char_array = new char[largolinea + 1];
 	strcpy(char_array, linea.c_str());
 	ptr2 = strtok(char_array, ";");
 	ptr2 = strtok(NULL, ";");
@@ -47,8 +47,8 @@ string SeparaString2(string linea) {
 string SeparaString3(string linea) {
 	//char *ptr; // declare a ptr pointer 
 	char* ptr2;
-	int largolinea = linea.length();
-	char char_array[largolinea + 1];
+	const int largolinea = linea.length();
+	char* char_array = new char[largolinea + 1];
 	strcpy(char_array, linea.c_str());
 	ptr2 = strtok(char_array, ";");
 	ptr2 = strtok(NULL, ";");
@@ -59,8 +59,8 @@ string SeparaString3(string linea) {
 string SeparaString4(string linea) {
 	//char *ptr; // declare a ptr pointer 
 	char* ptr2;
-	int largolinea = linea.length();
-	char char_array[largolinea + 1];
+	const int largolinea = linea.length();
+	char* char_array = new char[largolinea + 1];
 	strcpy(char_array, linea.c_str());
 	ptr2 = strtok(char_array, ";");
 	ptr2 = strtok(NULL, ";");
@@ -72,8 +72,8 @@ string SeparaString4(string linea) {
 string SeparaString5(string linea) {
 	//char *ptr; // declare a ptr pointer 
 	char* ptr2;
-	int largolinea = linea.length();
-	char char_array[largolinea + 1];
+	const int largolinea = linea.length();
+	char* char_array = new char[largolinea + 1];
 	strcpy(char_array, linea.c_str());
 	ptr2 = strtok(char_array, ";");
 	ptr2 = strtok(NULL, ";");
@@ -86,8 +86,8 @@ string SeparaString5(string linea) {
 string SeparaString6(string linea) {
 	//char *ptr; // declare a ptr pointer 
 	char* ptr2;
-	int largolinea = linea.length();
-	char char_array[largolinea + 1];
+	const int largolinea = linea.length();
+	char* char_array = new char[largolinea + 1];
 	strcpy(char_array, linea.c_str());
 	ptr2 = strtok(char_array, ";");
 	ptr2 = strtok(NULL, ";");
@@ -101,8 +101,8 @@ string SeparaString6(string linea) {
 string SeparaString7(string linea) {
 	//char *ptr; // declare a ptr pointer 
 	char* ptr2;
-	int largolinea = linea.length();
-	char char_array[largolinea + 1];
+	const int largolinea = linea.length();
+	char* char_array = new char[largolinea + 1];
 	strcpy(char_array, linea.c_str());
 	ptr2 = strtok(char_array, ";");
 	ptr2 = strtok(NULL, ";");
@@ -117,8 +117,8 @@ string SeparaString7(string linea) {
 string SeparaString8(string linea) {
 	//char *ptr; // declare a ptr pointer 
 	char* ptr2;
-	int largolinea = linea.length();
-	char char_array[largolinea + 1];
+	const int largolinea = linea.length();
+	char* char_array = new char[largolinea + 1];
 	strcpy(char_array, linea.c_str());
 	ptr2 = strtok(char_array, ";");
 	ptr2 = strtok(NULL, ";");
@@ -134,8 +134,8 @@ string SeparaString8(string linea) {
 string SeparaString9(string linea) {
 	//char *ptr; // declare a ptr pointer 
 	char* ptr2;
-	int largolinea = linea.length();
-	char char_array[largolinea + 1];
+	const int largolinea = linea.length();
+	char* char_array = new char[largolinea + 1];
 	strcpy(char_array, linea.c_str());
 	ptr2 = strtok(char_array, ";");
 	ptr2 = strtok(NULL, ";");
@@ -152,8 +152,8 @@ string SeparaString9(string linea) {
 string SeparaString10(string linea) {
 	//char *ptr; // declare a ptr pointer 
 	char* ptr2;
-	int largolinea = linea.length();
-	char char_array[largolinea + 1];
+	const int largolinea = linea.length();
+	char* char_array = new char[largolinea + 1];
 	strcpy(char_array, linea.c_str());
 	ptr2 = strtok(char_array, ";");
 	ptr2 = strtok(NULL, ";");
@@ -171,8 +171,8 @@ string SeparaString10(string linea) {
 string SeparaString11(string linea) {
 	//char *ptr; // declare a ptr pointer 
 	char* ptr2;
-	int largolinea = linea.length();
-	char char_array[largolinea + 1];
+	const int largolinea = linea.length();
+	char* char_array = new char[largolinea + 1];
 	strcpy(char_array, linea.c_str());
 	ptr2 = strtok(char_array, ";");
 	ptr2 = strtok(NULL, ";");
@@ -191,8 +191,8 @@ string SeparaString11(string linea) {
 string SeparaString12(string linea) {
 	//char *ptr; // declare a ptr pointer 
 	char* ptr2;
-	int largolinea = linea.length();
-	char char_array[largolinea + 1];
+	const int largolinea = linea.length();
+	char* char_array = new char[largolinea + 1];
 	strcpy(char_array, linea.c_str());
 	ptr2 = strtok(char_array, ";");
 	ptr2 = strtok(NULL, ";");
@@ -212,8 +212,8 @@ string SeparaString12(string linea) {
 string SeparaString13(string linea) {
 	//char *ptr; // declare a ptr pointer 
 	char* ptr2;
-	int largolinea = linea.length();
-	char char_array[largolinea + 1];
+	const int largolinea = linea.length();
+	char* char_array = new char[largolinea + 1];
 	strcpy(char_array, linea.c_str());
 	ptr2 = strtok(char_array, ";");
 	ptr2 = strtok(NULL, ";");
@@ -234,8 +234,8 @@ string SeparaString13(string linea) {
 string SeparaString14(string linea) {
 	//char *ptr; // declare a ptr pointer 
 	char* ptr2;
-	int largolinea = linea.length();
-	char char_array[largolinea + 1];
+	const int largolinea = linea.length();
+	char* char_array = new char[largolinea + 1];
 	strcpy(char_array, linea.c_str());
 	ptr2 = strtok(char_array, ";");
 	ptr2 = strtok(NULL, ";");
@@ -265,8 +265,8 @@ string SeparaString14(string linea) {
 string SeparaString(string linea, int num) {
 
 	char* ptr;
-	int largolinea = linea.length();
-	char char_array[largolinea + 1];
+	const int largolinea = linea.length();
+	char* char_array = new char[largolinea + 1];
 	strcpy(char_array, linea.c_str());
 
 	ptr = strtok(char_array, ";");

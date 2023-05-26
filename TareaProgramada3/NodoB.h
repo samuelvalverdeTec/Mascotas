@@ -1,6 +1,5 @@
 #ifndef _NODOB_H
 #define	_NODOB_H
-//#include "Carrito.h"
 
 #include <iostream>
 #include <fstream>
@@ -48,44 +47,7 @@ NodoBCliente* buscaCliente(NodoBCliente* R, int cedula);
 NodoBCliente* buscaClienteRepetido(NodoBCliente* R, int cedula, int codPais, int codCiudad);
 //void ConsultarDescuento(pNodoBCliente R, int numCedula);
 //void ConsultarDescuento2(pNodoBCliente R);
-void ModificarDescuento(pNodoBCliente R);
-void RegistrarCliente(pNodoBCliente R);
+//void ModificarDescuento(pNodoBCliente R);
+//void RegistrarCliente(pNodoBCliente R);
 
-
-
-/*//*************************************************ADMINISTRADORES***************************************************
-
-
-
-class NodoBAdministrador {
-   public:
-
-    NodoBAdministrador(int num, string nombreA, NodoBAdministrador *der = NULL, NodoBAdministrador *izq = NULL, NodoBAdministrador *sig=NULL, NodoBAdministrador *ant=NULL):
-        Hizq(izq), Hder(der), valor(num), nombre(nombreA), siguiente(sig), anterior(ant), FB(0) {}
-
-
-    int valor;
-    string nombre;
-    int FB;
-    NodoBAdministrador *Hizq, *Hder, *siguiente, *anterior;
-
-
-    friend class BinarioPasillo;
-    friend class AVLProducto;
-    friend class RNMarca;
-    friend class BinarioPasilloInventario;
-    friend class AVLProductoInventario;
-    friend class AAMarcaInventario;
-
-    void InsertaBinario(int num, string nombreA);
-};
-
-typedef NodoBAdministrador *pNodoBAdministrador;
-
-void PreordenRAdministradores(NodoBAdministrador* R);
-void InordenRAdministradores(NodoBAdministrador* R);
-void PostordenRAdministradores(NodoBAdministrador* R);
-NodoBAdministrador* buscaAdministrador(NodoBAdministrador* R, int num);
-
-*/
 #endif	
