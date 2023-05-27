@@ -88,7 +88,7 @@ void PostordenRClientes(NodoBCliente* R) {
 
 void BCliente::Borrar(NodoBCliente* D, bool Hh)
 {
-    NodoBCliente* q;
+    NodoBCliente* q = NULL;
     if (D->Hder != NULL) {
         Borrar(D->Hder, Hh);
         if (Hh) {
@@ -105,7 +105,7 @@ void BCliente::Borrar(NodoBCliente* D, bool Hh)
 
 void BCliente::BorrarBalanceado(NodoBCliente* raiz, bool Hh, int x)
 {
-    NodoBCliente* q;
+    NodoBCliente* q = NULL;
     if (raiz != NULL) {
         if (x < raiz->valor) {
             BorrarBalanceado(raiz->Hizq, Hh, x);

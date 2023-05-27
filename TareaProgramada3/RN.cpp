@@ -490,7 +490,7 @@ void PostordenRTratamientos(NodoRNTratamiento* R) {
 
 void RNTratamiento::Borrar(NodoRNTratamiento* D, bool Hh)
 {
-    NodoRNTratamiento* q;
+    NodoRNTratamiento* q = NULL;
     if (D->Hder != NULL) {
         Borrar(D->Hder, Hh);
         if (Hh) {
@@ -507,7 +507,7 @@ void RNTratamiento::Borrar(NodoRNTratamiento* D, bool Hh)
 
 void RNTratamiento::BorrarBalanceado(NodoRNTratamiento* raiz, bool Hh, int x)
 {
-    NodoRNTratamiento* q;
+    NodoRNTratamiento* q = NULL;
     if (raiz != NULL) {
         if (x < raiz->valor) {
             BorrarBalanceado(raiz->Hizq, Hh, x);

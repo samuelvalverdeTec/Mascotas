@@ -79,7 +79,7 @@ void PostordenRMascotas(NodoAVLMascotas* R) {
 
 void AVLMascotas::Borrar(NodoAVLMascotas* D, bool Hh)
 {
-    NodoAVLMascotas* q;
+    NodoAVLMascotas* q = NULL;
     if (D->Hder != NULL) {
         Borrar(D->Hder, Hh);
         if (Hh) {
@@ -96,7 +96,7 @@ void AVLMascotas::Borrar(NodoAVLMascotas* D, bool Hh)
 
 void AVLMascotas::BorrarBalanceado(NodoAVLMascotas* raiz, bool Hh, int x)
 {
-    NodoAVLMascotas* q;
+    NodoAVLMascotas* q = NULL;
     if (raiz != NULL) {
         if (x < raiz->valor) {
             BorrarBalanceado(raiz->Hizq, Hh, x);

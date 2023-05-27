@@ -82,7 +82,7 @@ void PostordenRMedicaciones(NodoAAMedicacion* R) {
 
 void AAMedicacion::Borrar(NodoAAMedicacion* D, bool Hh)
 {
-    NodoAAMedicacion* q;
+    NodoAAMedicacion* q = NULL;
     if (D->Hder != NULL) {
         Borrar(D->Hder, Hh);
         if (Hh) {
@@ -99,7 +99,7 @@ void AAMedicacion::Borrar(NodoAAMedicacion* D, bool Hh)
 
 void AAMedicacion::BorrarBalanceado(NodoAAMedicacion* raiz, bool Hh, int x)
 {
-    NodoAAMedicacion* q;
+    NodoAAMedicacion* q = NULL;
     if (raiz != NULL) {
         if (x < raiz->valor) {
             BorrarBalanceado(raiz->Hizq, Hh, x);
