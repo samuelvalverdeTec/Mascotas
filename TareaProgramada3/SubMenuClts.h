@@ -1,5 +1,15 @@
 #pragma once
 
+#include "Binario.h"	// Paises, Ciudades & Visitas
+#include "NodoBinario.h"
+#include "ABB.cpp"
+#include "B.h"		// Clientes
+#include "NodoB.h"
+#include "B.cpp"
+#include "AVL.h"	// Mascotas
+#include "NodoAVL.h"
+#include "AVL.cpp"
+
 namespace TareaProgramada3 {
 
 	using namespace System;
@@ -161,6 +171,15 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx2;
 
 
 private: System::Windows::Forms::TextBox^ vInserTxtbx1;
+private: System::Windows::Forms::Button^ bcBuscar;
+private: System::Windows::Forms::Button^ bmBuscar;
+private: System::Windows::Forms::Button^ bvBuscar;
+private: System::Windows::Forms::Button^ bcInsertar;
+private: System::Windows::Forms::Button^ bvInsertar;
+private: System::Windows::Forms::Button^ bmInsertar;
+
+
+
 
 
 
@@ -204,6 +223,7 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			this->bvModif = (gcnew System::Windows::Forms::Button());
 			this->bvInser = (gcnew System::Windows::Forms::Button());
 			this->pcInser = (gcnew System::Windows::Forms::Panel());
+			this->bcInsertar = (gcnew System::Windows::Forms::Button());
 			this->cInserTxtbx9 = (gcnew System::Windows::Forms::TextBox());
 			this->cInserLbl9 = (gcnew System::Windows::Forms::Label());
 			this->cInserTxtbx8 = (gcnew System::Windows::Forms::TextBox());
@@ -223,9 +243,11 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			this->cInserTxtbx2 = (gcnew System::Windows::Forms::TextBox());
 			this->cInserTxtbx1 = (gcnew System::Windows::Forms::TextBox());
 			this->pcBusq = (gcnew System::Windows::Forms::Panel());
+			this->bcBuscar = (gcnew System::Windows::Forms::Button());
 			this->cBusqLbl1 = (gcnew System::Windows::Forms::Label());
 			this->cBusqTxtbx1 = (gcnew System::Windows::Forms::TextBox());
 			this->pmInser = (gcnew System::Windows::Forms::Panel());
+			this->bmInsertar = (gcnew System::Windows::Forms::Button());
 			this->mInserTxtbx10 = (gcnew System::Windows::Forms::TextBox());
 			this->mInserLbl10 = (gcnew System::Windows::Forms::Label());
 			this->mInserTxtbx9 = (gcnew System::Windows::Forms::TextBox());
@@ -247,12 +269,15 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			this->mInserTxtbx2 = (gcnew System::Windows::Forms::TextBox());
 			this->mInserTxtbx1 = (gcnew System::Windows::Forms::TextBox());
 			this->pmBusq = (gcnew System::Windows::Forms::Panel());
+			this->bmBuscar = (gcnew System::Windows::Forms::Button());
 			this->mBusqLbl1 = (gcnew System::Windows::Forms::Label());
 			this->mBusqTxtbx1 = (gcnew System::Windows::Forms::TextBox());
 			this->pvBusq = (gcnew System::Windows::Forms::Panel());
+			this->bvBuscar = (gcnew System::Windows::Forms::Button());
 			this->vBusqLbl1 = (gcnew System::Windows::Forms::Label());
 			this->vBusqTxtbx1 = (gcnew System::Windows::Forms::TextBox());
 			this->pvInser = (gcnew System::Windows::Forms::Panel());
+			this->bvInsertar = (gcnew System::Windows::Forms::Button());
 			this->vInserTxtbx5 = (gcnew System::Windows::Forms::TextBox());
 			this->vInserTxtbx4 = (gcnew System::Windows::Forms::TextBox());
 			this->vInserLbl5 = (gcnew System::Windows::Forms::Label());
@@ -281,7 +306,7 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			this->titleMenu->Font = (gcnew System::Drawing::Font(L"Segoe UI", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->titleMenu->ForeColor = System::Drawing::Color::Gold;
-			this->titleMenu->Location = System::Drawing::Point(34, 40);
+			this->titleMenu->Location = System::Drawing::Point(48, 40);
 			this->titleMenu->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->titleMenu->Name = L"titleMenu";
 			this->titleMenu->Size = System::Drawing::Size(195, 65);
@@ -386,7 +411,7 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			this->bSalir->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->bSalir->ForeColor = System::Drawing::Color::Gold;
-			this->bSalir->Location = System::Drawing::Point(974, 522);
+			this->bSalir->Location = System::Drawing::Point(1101, 671);
 			this->bSalir->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->bSalir->Name = L"bSalir";
 			this->bSalir->Size = System::Drawing::Size(84, 45);
@@ -422,7 +447,6 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			this->bcElim->Text = L"-> Eliminación";
 			this->bcElim->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bcElim->UseVisualStyleBackColor = false;
-			this->bcElim->Visible = false;
 			this->bcElim->Click += gcnew System::EventHandler(this, &SubMenuClts::bcElim_Click);
 			// 
 			// bcBusq
@@ -437,7 +461,6 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			this->bcBusq->Text = L"-> Búsqueda";
 			this->bcBusq->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bcBusq->UseVisualStyleBackColor = false;
-			this->bcBusq->Visible = false;
 			this->bcBusq->Click += gcnew System::EventHandler(this, &SubMenuClts::bcBusq_Click);
 			// 
 			// bcModif
@@ -452,7 +475,6 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			this->bcModif->Text = L"-> Modificación";
 			this->bcModif->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bcModif->UseVisualStyleBackColor = false;
-			this->bcModif->Visible = false;
 			this->bcModif->Click += gcnew System::EventHandler(this, &SubMenuClts::bcModif_Click);
 			// 
 			// bcInser
@@ -467,7 +489,6 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			this->bcInser->Text = L"-> Inserción";
 			this->bcInser->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bcInser->UseVisualStyleBackColor = false;
-			this->bcInser->Visible = false;
 			this->bcInser->Click += gcnew System::EventHandler(this, &SubMenuClts::bcInser_Click);
 			// 
 			// pMascotas
@@ -497,7 +518,6 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			this->bmElim->Text = L"-> Eliminación";
 			this->bmElim->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bmElim->UseVisualStyleBackColor = false;
-			this->bmElim->Visible = false;
 			this->bmElim->Click += gcnew System::EventHandler(this, &SubMenuClts::bmElim_Click);
 			// 
 			// bmBusq
@@ -512,7 +532,6 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			this->bmBusq->Text = L"-> Búsqueda";
 			this->bmBusq->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bmBusq->UseVisualStyleBackColor = false;
-			this->bmBusq->Visible = false;
 			this->bmBusq->Click += gcnew System::EventHandler(this, &SubMenuClts::bmBusq_Click);
 			// 
 			// bmModif
@@ -527,7 +546,6 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			this->bmModif->Text = L"-> Modificación";
 			this->bmModif->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bmModif->UseVisualStyleBackColor = false;
-			this->bmModif->Visible = false;
 			this->bmModif->Click += gcnew System::EventHandler(this, &SubMenuClts::bmModif_Click);
 			// 
 			// bmInser
@@ -542,7 +560,6 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			this->bmInser->Text = L"-> Inserción";
 			this->bmInser->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bmInser->UseVisualStyleBackColor = false;
-			this->bmInser->Visible = false;
 			this->bmInser->Click += gcnew System::EventHandler(this, &SubMenuClts::bmInser_Click);
 			// 
 			// pVisitas
@@ -572,7 +589,6 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			this->bvElim->Text = L"-> Eliminación";
 			this->bvElim->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bvElim->UseVisualStyleBackColor = false;
-			this->bvElim->Visible = false;
 			this->bvElim->Click += gcnew System::EventHandler(this, &SubMenuClts::bvElim_Click);
 			// 
 			// bvBusq
@@ -587,7 +603,6 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			this->bvBusq->Text = L"-> Búsqueda";
 			this->bvBusq->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bvBusq->UseVisualStyleBackColor = false;
-			this->bvBusq->Visible = false;
 			this->bvBusq->Click += gcnew System::EventHandler(this, &SubMenuClts::bvBusq_Click);
 			// 
 			// bvModif
@@ -602,7 +617,6 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			this->bvModif->Text = L"-> Modificación";
 			this->bvModif->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bvModif->UseVisualStyleBackColor = false;
-			this->bvModif->Visible = false;
 			this->bvModif->Click += gcnew System::EventHandler(this, &SubMenuClts::bvModif_Click);
 			// 
 			// bvInser
@@ -617,13 +631,13 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			this->bvInser->Text = L"-> Inserción";
 			this->bvInser->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bvInser->UseVisualStyleBackColor = false;
-			this->bvInser->Visible = false;
 			this->bvInser->Click += gcnew System::EventHandler(this, &SubMenuClts::bvInser_Click);
 			// 
 			// pcInser
 			// 
 			this->pcInser->AutoScroll = true;
 			this->pcInser->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->pcInser->Controls->Add(this->bcInsertar);
 			this->pcInser->Controls->Add(this->cInserTxtbx9);
 			this->pcInser->Controls->Add(this->cInserLbl9);
 			this->pcInser->Controls->Add(this->cInserTxtbx8);
@@ -643,11 +657,27 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			this->pcInser->Controls->Add(this->cInserTxtbx2);
 			this->pcInser->Controls->Add(this->cInserTxtbx1);
 			this->pcInser->ForeColor = System::Drawing::Color::White;
-			this->pcInser->Location = System::Drawing::Point(377, 133);
+			this->pcInser->Location = System::Drawing::Point(378, 133);
 			this->pcInser->Name = L"pcInser";
-			this->pcInser->Size = System::Drawing::Size(214, 145);
+			this->pcInser->Size = System::Drawing::Size(214, 148);
 			this->pcInser->TabIndex = 38;
 			this->pcInser->Visible = false;
+			// 
+			// bcInsertar
+			// 
+			this->bcInsertar->BackColor = System::Drawing::Color::DimGray;
+			this->bcInsertar->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bcInsertar->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bcInsertar->ForeColor = System::Drawing::Color::Gold;
+			this->bcInsertar->Location = System::Drawing::Point(3, 628);
+			this->bcInsertar->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bcInsertar->Name = L"bcInsertar";
+			this->bcInsertar->Size = System::Drawing::Size(193, 45);
+			this->bcInsertar->TabIndex = 52;
+			this->bcInsertar->Text = L"Insertar";
+			this->bcInsertar->UseVisualStyleBackColor = false;
+			this->bcInsertar->Click += gcnew System::EventHandler(this, &SubMenuClts::bcInsertar_Click);
 			// 
 			// cInserTxtbx9
 			// 
@@ -733,14 +763,14 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			// 
 			this->cInserTxtbx5->Location = System::Drawing::Point(0, 322);
 			this->cInserTxtbx5->Name = L"cInserTxtbx5";
-			this->cInserTxtbx5->Size = System::Drawing::Size(193, 33);
+			this->cInserTxtbx5->Size = System::Drawing::Size(196, 33);
 			this->cInserTxtbx5->TabIndex = 32;
 			// 
 			// cInserTxtbx4
 			// 
 			this->cInserTxtbx4->Location = System::Drawing::Point(0, 250);
 			this->cInserTxtbx4->Name = L"cInserTxtbx4";
-			this->cInserTxtbx4->Size = System::Drawing::Size(193, 33);
+			this->cInserTxtbx4->Size = System::Drawing::Size(196, 33);
 			this->cInserTxtbx4->TabIndex = 31;
 			// 
 			// cInserLbl5
@@ -773,7 +803,7 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			// 
 			this->cInserTxtbx3->Location = System::Drawing::Point(0, 182);
 			this->cInserTxtbx3->Name = L"cInserTxtbx3";
-			this->cInserTxtbx3->Size = System::Drawing::Size(193, 33);
+			this->cInserTxtbx3->Size = System::Drawing::Size(196, 33);
 			this->cInserTxtbx3->TabIndex = 28;
 			// 
 			// cInserLbl3
@@ -819,12 +849,12 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			// 
 			this->cInserTxtbx2->Location = System::Drawing::Point(0, 113);
 			this->cInserTxtbx2->Name = L"cInserTxtbx2";
-			this->cInserTxtbx2->Size = System::Drawing::Size(193, 33);
+			this->cInserTxtbx2->Size = System::Drawing::Size(196, 33);
 			this->cInserTxtbx2->TabIndex = 1;
 			// 
 			// cInserTxtbx1
 			// 
-			this->cInserTxtbx1->Location = System::Drawing::Point(-3, 43);
+			this->cInserTxtbx1->Location = System::Drawing::Point(0, 43);
 			this->cInserTxtbx1->Name = L"cInserTxtbx1";
 			this->cInserTxtbx1->Size = System::Drawing::Size(196, 33);
 			this->cInserTxtbx1->TabIndex = 0;
@@ -833,14 +863,31 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			// 
 			this->pcBusq->AutoScroll = true;
 			this->pcBusq->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->pcBusq->Controls->Add(this->bcBuscar);
 			this->pcBusq->Controls->Add(this->cBusqLbl1);
 			this->pcBusq->Controls->Add(this->cBusqTxtbx1);
 			this->pcBusq->ForeColor = System::Drawing::Color::White;
-			this->pcBusq->Location = System::Drawing::Point(624, 134);
+			this->pcBusq->Location = System::Drawing::Point(848, 133);
 			this->pcBusq->Name = L"pcBusq";
-			this->pcBusq->Size = System::Drawing::Size(182, 77);
+			this->pcBusq->Size = System::Drawing::Size(182, 120);
 			this->pcBusq->TabIndex = 39;
 			this->pcBusq->Visible = false;
+			// 
+			// bcBuscar
+			// 
+			this->bcBuscar->BackColor = System::Drawing::Color::DimGray;
+			this->bcBuscar->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bcBuscar->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bcBuscar->ForeColor = System::Drawing::Color::Gold;
+			this->bcBuscar->Location = System::Drawing::Point(0, 73);
+			this->bcBuscar->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bcBuscar->Name = L"bcBuscar";
+			this->bcBuscar->Size = System::Drawing::Size(182, 45);
+			this->bcBuscar->TabIndex = 49;
+			this->bcBuscar->Text = L"Buscar";
+			this->bcBuscar->UseVisualStyleBackColor = false;
+			this->bcBuscar->Click += gcnew System::EventHandler(this, &SubMenuClts::bcBuscar_Click);
 			// 
 			// cBusqLbl1
 			// 
@@ -857,7 +904,7 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			// 
 			// cBusqTxtbx1
 			// 
-			this->cBusqTxtbx1->Location = System::Drawing::Point(0, 43);
+			this->cBusqTxtbx1->Location = System::Drawing::Point(0, 42);
 			this->cBusqTxtbx1->Name = L"cBusqTxtbx1";
 			this->cBusqTxtbx1->Size = System::Drawing::Size(182, 33);
 			this->cBusqTxtbx1->TabIndex = 0;
@@ -866,6 +913,7 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			// 
 			this->pmInser->AutoScroll = true;
 			this->pmInser->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->pmInser->Controls->Add(this->bmInsertar);
 			this->pmInser->Controls->Add(this->mInserTxtbx10);
 			this->pmInser->Controls->Add(this->mInserLbl10);
 			this->pmInser->Controls->Add(this->mInserTxtbx9);
@@ -892,6 +940,22 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			this->pmInser->Size = System::Drawing::Size(213, 145);
 			this->pmInser->TabIndex = 41;
 			this->pmInser->Visible = false;
+			// 
+			// bmInsertar
+			// 
+			this->bmInsertar->BackColor = System::Drawing::Color::DimGray;
+			this->bmInsertar->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bmInsertar->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bmInsertar->ForeColor = System::Drawing::Color::Gold;
+			this->bmInsertar->Location = System::Drawing::Point(3, 692);
+			this->bmInsertar->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bmInsertar->Name = L"bmInsertar";
+			this->bmInsertar->Size = System::Drawing::Size(193, 45);
+			this->bmInsertar->TabIndex = 53;
+			this->bmInsertar->Text = L"Insertar";
+			this->bmInsertar->UseVisualStyleBackColor = false;
+			this->bmInsertar->Click += gcnew System::EventHandler(this, &SubMenuClts::bmInsertar_Click);
 			// 
 			// mInserTxtbx10
 			// 
@@ -1090,21 +1154,38 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			// 
 			this->mInserTxtbx1->Location = System::Drawing::Point(-3, 43);
 			this->mInserTxtbx1->Name = L"mInserTxtbx1";
-			this->mInserTxtbx1->Size = System::Drawing::Size(196, 33);
+			this->mInserTxtbx1->Size = System::Drawing::Size(199, 33);
 			this->mInserTxtbx1->TabIndex = 0;
 			// 
 			// pmBusq
 			// 
 			this->pmBusq->AutoScroll = true;
 			this->pmBusq->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->pmBusq->Controls->Add(this->bmBuscar);
 			this->pmBusq->Controls->Add(this->mBusqLbl1);
 			this->pmBusq->Controls->Add(this->mBusqTxtbx1);
 			this->pmBusq->ForeColor = System::Drawing::Color::White;
-			this->pmBusq->Location = System::Drawing::Point(624, 288);
+			this->pmBusq->Location = System::Drawing::Point(848, 287);
 			this->pmBusq->Name = L"pmBusq";
-			this->pmBusq->Size = System::Drawing::Size(189, 77);
+			this->pmBusq->Size = System::Drawing::Size(182, 126);
 			this->pmBusq->TabIndex = 40;
 			this->pmBusq->Visible = false;
+			// 
+			// bmBuscar
+			// 
+			this->bmBuscar->BackColor = System::Drawing::Color::DimGray;
+			this->bmBuscar->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bmBuscar->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bmBuscar->ForeColor = System::Drawing::Color::Gold;
+			this->bmBuscar->Location = System::Drawing::Point(0, 81);
+			this->bmBuscar->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bmBuscar->Name = L"bmBuscar";
+			this->bmBuscar->Size = System::Drawing::Size(182, 45);
+			this->bmBuscar->TabIndex = 50;
+			this->bmBuscar->Text = L"Buscar";
+			this->bmBuscar->UseVisualStyleBackColor = false;
+			this->bmBuscar->Click += gcnew System::EventHandler(this, &SubMenuClts::bmBuscar_Click);
 			// 
 			// mBusqLbl1
 			// 
@@ -1113,7 +1194,7 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			this->mBusqLbl1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->mBusqLbl1->ForeColor = System::Drawing::Color::White;
-			this->mBusqLbl1->Location = System::Drawing::Point(13, 4);
+			this->mBusqLbl1->Location = System::Drawing::Point(13, 10);
 			this->mBusqLbl1->Name = L"mBusqLbl1";
 			this->mBusqLbl1->Size = System::Drawing::Size(164, 30);
 			this->mBusqLbl1->TabIndex = 25;
@@ -1123,21 +1204,38 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			// 
 			this->mBusqTxtbx1->Location = System::Drawing::Point(0, 43);
 			this->mBusqTxtbx1->Name = L"mBusqTxtbx1";
-			this->mBusqTxtbx1->Size = System::Drawing::Size(189, 33);
+			this->mBusqTxtbx1->Size = System::Drawing::Size(182, 33);
 			this->mBusqTxtbx1->TabIndex = 0;
 			// 
 			// pvBusq
 			// 
 			this->pvBusq->AutoScroll = true;
 			this->pvBusq->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->pvBusq->Controls->Add(this->bvBuscar);
 			this->pvBusq->Controls->Add(this->vBusqLbl1);
 			this->pvBusq->Controls->Add(this->vBusqTxtbx1);
 			this->pvBusq->ForeColor = System::Drawing::Color::White;
-			this->pvBusq->Location = System::Drawing::Point(624, 441);
+			this->pvBusq->Location = System::Drawing::Point(848, 440);
 			this->pvBusq->Name = L"pvBusq";
-			this->pvBusq->Size = System::Drawing::Size(189, 77);
+			this->pvBusq->Size = System::Drawing::Size(182, 126);
 			this->pvBusq->TabIndex = 41;
 			this->pvBusq->Visible = false;
+			// 
+			// bvBuscar
+			// 
+			this->bvBuscar->BackColor = System::Drawing::Color::DimGray;
+			this->bvBuscar->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bvBuscar->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bvBuscar->ForeColor = System::Drawing::Color::Gold;
+			this->bvBuscar->Location = System::Drawing::Point(0, 75);
+			this->bvBuscar->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bvBuscar->Name = L"bvBuscar";
+			this->bvBuscar->Size = System::Drawing::Size(182, 45);
+			this->bvBuscar->TabIndex = 51;
+			this->bvBuscar->Text = L"Buscar";
+			this->bvBuscar->UseVisualStyleBackColor = false;
+			this->bvBuscar->Click += gcnew System::EventHandler(this, &SubMenuClts::bvBuscar_Click);
 			// 
 			// vBusqLbl1
 			// 
@@ -1156,13 +1254,14 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			// 
 			this->vBusqTxtbx1->Location = System::Drawing::Point(0, 43);
 			this->vBusqTxtbx1->Name = L"vBusqTxtbx1";
-			this->vBusqTxtbx1->Size = System::Drawing::Size(186, 33);
+			this->vBusqTxtbx1->Size = System::Drawing::Size(182, 33);
 			this->vBusqTxtbx1->TabIndex = 0;
 			// 
 			// pvInser
 			// 
 			this->pvInser->AutoScroll = true;
 			this->pvInser->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->pvInser->Controls->Add(this->bvInsertar);
 			this->pvInser->Controls->Add(this->vInserTxtbx5);
 			this->pvInser->Controls->Add(this->vInserTxtbx4);
 			this->pvInser->Controls->Add(this->vInserLbl5);
@@ -1174,11 +1273,27 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			this->pvInser->Controls->Add(this->vInserTxtbx2);
 			this->pvInser->Controls->Add(this->vInserTxtbx1);
 			this->pvInser->ForeColor = System::Drawing::Color::White;
-			this->pvInser->Location = System::Drawing::Point(377, 442);
+			this->pvInser->Location = System::Drawing::Point(378, 441);
 			this->pvInser->Name = L"pvInser";
-			this->pvInser->Size = System::Drawing::Size(214, 145);
+			this->pvInser->Size = System::Drawing::Size(214, 152);
 			this->pvInser->TabIndex = 42;
 			this->pvInser->Visible = false;
+			// 
+			// bvInsertar
+			// 
+			this->bvInsertar->BackColor = System::Drawing::Color::DimGray;
+			this->bvInsertar->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bvInsertar->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bvInsertar->ForeColor = System::Drawing::Color::Gold;
+			this->bvInsertar->Location = System::Drawing::Point(0, 350);
+			this->bvInsertar->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bvInsertar->Name = L"bvInsertar";
+			this->bvInsertar->Size = System::Drawing::Size(196, 45);
+			this->bvInsertar->TabIndex = 51;
+			this->bvInsertar->Text = L"Insertar";
+			this->bvInsertar->UseVisualStyleBackColor = false;
+			this->bvInsertar->Click += gcnew System::EventHandler(this, &SubMenuClts::bvInsertar_Click);
 			// 
 			// vInserTxtbx5
 			// 
@@ -1286,7 +1401,7 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(1110, 650);
+			this->ClientSize = System::Drawing::Size(1225, 743);
 			this->Controls->Add(this->pvInser);
 			this->Controls->Add(this->pvBusq);
 			this->Controls->Add(this->pmBusq);
@@ -1335,24 +1450,12 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 	}
 	private: System::Void bClientes_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->pClientes->Show();
-		this->bcInser->Show();
-		this->bcModif->Show();
-		this->bcBusq->Show();
-		this->bcElim->Show();
 	}
 	private: System::Void bMascotas_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->pMascotas->Show();
-		this->bmInser->Show();
-		this->bmModif->Show();
-		this->bmBusq->Show();
-		this->bmElim->Show();
 	}
 	private: System::Void bVisitas_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->pVisitas->Show();
-		this->bvInser->Show();
-		this->bvModif->Show();
-		this->bvBusq->Show();
-		this->bvElim->Show();
 	}
 		   /*	BOTONES CLIENTES	 */
 
@@ -1384,7 +1487,7 @@ private: System::Windows::Forms::TextBox^ vInserTxtbx1;
 		this->pvInser->Show();
 	}
 	private: System::Void bvModif_Click(System::Object^ sender, System::EventArgs^ e) {
-
+	
 	}
 	private: System::Void bvBusq_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->pvBusq->Show();
@@ -1398,11 +1501,63 @@ private: System::Void bSalir_Click(System::Object^ sender, System::EventArgs^ e)
 		menu->Show();
 
 	}
-/*private: System::Void lblClientes_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void lblMascotas_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void lblVisitas_Click(System::Object^ sender, System::EventArgs^ e) {
-}*/
-	};
+
+								/*	FUNCIONES  */
+
+	private: System::Void bcInsertar_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ numCliente = this->cInserTxtbx1->Text;
+		String^ nombre = this->cInserTxtbx2->Text;
+		String^ direccion = this->cInserTxtbx3->Text;
+		String^ codpais = this->cInserTxtbx4->Text;
+		String^ codciudad = this->cInserTxtbx5->Text;
+		String^ telefono = this->cInserTxtbx6->Text;
+		String^ fuv = this->cInserTxtbx7->Text;
+	}
+	private: System::Void bmInsertar_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ numCliente = this->mInserTxtbx1->Text;
+		String^ id = this->mInserTxtbx2->Text;
+		String^ nombre = this->mInserTxtbx3->Text;
+		String^ tipo = this->mInserTxtbx4->Text;
+		String^ raza = this->mInserTxtbx5->Text;
+		String^ fnacimiento = this->mInserTxtbx6->Text;
+		String^ sexo = this->mInserTxtbx7->Text;
+		String^ color = this->mInserTxtbx8->Text;
+		String^ castrado = this->mInserTxtbx9->Text;
+		String^ fuv = this->mInserTxtbx10->Text;
+	}
+	private: System::Void bvInsertar_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ codVisita = this->vInserTxtbx1->Text;
+		String^ idAnimal = this->vInserTxtbx2->Text;
+		String^ fuv = this->vInserTxtbx3->Text;
+		String^ totalFactura = this->vInserTxtbx4->Text;
+		String^ formaDePago = this->vInserTxtbx5->Text;
+	}/*
+	private: System::Void bcModif_Click(System::Object^ sender, System::EventArgs^ e) {
+		
+	}
+	private: System::Void bmModif_Click(System::Object^ sender, System::EventArgs^ e) {
+		
+	}
+	private: System::Void bvModif_Click(System::Object^ sender, System::EventArgs^ e) {
+		
+	}*/
+	private: System::Void bcBuscar_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ codCliente = this->cBusqTxtbx1->Text;
+	}
+	private: System::Void bmBuscar_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ codMascota = this->mBusqTxtbx1->Text;
+	}
+	private: System::Void bvBuscar_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ codVisita = this->vBusqTxtbx1->Text;
+	}/*
+	private: System::Void bcElim_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	}
+	private: System::Void bmElim_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	}
+	private: System::Void bvElim_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	}*/
+};
 }

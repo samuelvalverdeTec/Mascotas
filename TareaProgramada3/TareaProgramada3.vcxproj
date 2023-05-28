@@ -129,6 +129,7 @@
     <ClCompile Include="Controlador.cpp" />
     <ClCompile Include="Funciones.cpp" />
     <ClCompile Include="MenuPrincipal.cpp" />
+    <ClCompile Include="PopUpMenu.cpp" />
     <ClCompile Include="RN.cpp" />
     <ClCompile Include="SubMenuClnc.cpp" />
     <ClCompile Include="SubMenuClts.cpp" />
@@ -150,6 +151,9 @@
     <ClInclude Include="NodoB.h" />
     <ClInclude Include="NodoBinario.h" />
     <ClInclude Include="NodoRN.h" />
+    <ClInclude Include="PopUpMenu.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="RN.h" />
     <ClInclude Include="SubMenuClnc.h">
       <FileType>CppForm</FileType>
@@ -171,6 +175,9 @@
   <ItemGroup>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUpMenu.resx">
+      <DependentUpon>PopUpMenu.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubMenuClnc.resx">
       <DependentUpon>SubMenuClnc.h</DependentUpon>

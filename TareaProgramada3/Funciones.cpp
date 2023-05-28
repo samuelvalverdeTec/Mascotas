@@ -255,13 +255,6 @@ string SeparaString14(string linea) {
 	return ptr2;
 }
 
-
-
-
-
-
-
-
 string SeparaString(string linea, int num) {
 
 	char* ptr;

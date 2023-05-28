@@ -1,10 +1,33 @@
 #pragma once
 
+#include "Binario.h"	// Paises, Ciudades & Visitas
+#include "NodoBinario.h"
+#include "ABB.cpp"
+#include "B.h"		// Clientes
+#include "NodoB.h"
+#include "B.cpp"
+#include "AVL.h"	// Mascotas
+#include "NodoAVL.h"
+#include "AVL.cpp"
+#include "RN.h"    // Tratamientos
+#include "NodoRN.h"
+#include "RN.cpp"
+#include "AA.h"		// Medicacion
+#include "NodoAA.h"
+#include "AA.cpp"
+
+#include "Funciones.cpp"
+
+#include "PopUpMenu.h"
 #include "SubMenuLugs.h"
 #include "SubMenuClnc.h"
 #include "SubMenuFact.h"
 #include "SubMenuSucs.h"
 #include "SubMenuClts.h"
+
+#include <iostream>
+#include <fstream>
+#include <iomanip>
 
 namespace TareaProgramada3 {
 
@@ -15,6 +38,7 @@ namespace TareaProgramada3 {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
+	// **************************************************************
 	/// <summary>
 	/// Summary for MenuPrincipal
 	/// </summary>
@@ -54,7 +78,7 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Button^ bMainClts;
 
 
-	private: System::Windows::Forms::Panel^ mainPanel;
+
 
 
 	private: System::Windows::Forms::Button^ bMantenimiento;
@@ -68,21 +92,193 @@ namespace TareaProgramada3 {
 
 
 	private: System::Windows::Forms::Button^ bContactos;
-	private: System::Windows::Forms::Panel^ pMantenimiento;
-	private: System::Windows::Forms::Panel^ pFacturacion;
-	private: System::Windows::Forms::Panel^ pReportes;
-	private: System::Windows::Forms::Panel^ pSucursales;
-	private: System::Windows::Forms::Panel^ pAcercaDe;
-	private: System::Windows::Forms::Panel^ pContactos;
+
+
+
+
+
+
 	private: System::Windows::Forms::Label^ lblClnc;
 	private: System::Windows::Forms::Label^ lblLugs;
 	private: System::Windows::Forms::Label^ lblSucs;
 	private: System::Windows::Forms::Label^ lblFact;
 	private: System::Windows::Forms::Label^ lblClts;
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Button^ bPopUp;
+	private: System::Windows::Forms::Label^ popUpLbl;
+
 	private: System::Windows::Forms::Button^ bSalir;
 
+	public:
 
+		static void leerArchivos() {
+
+			BinarioPaises arbolPaises;
+			BinarioCiudades arbolCiudades;
+			BCliente arbolClientes;
+			AVLMascotas arbolMascotas;
+			BinarioVisitas arbolVisitas;
+			RNTratamiento arbolTratamientos;
+			AAMedicacion arbolMedicaciones;
+
+			string linea1;
+			string linea2;
+			string linea3;
+			string linea4;
+			string linea5;
+			string linea6;
+			string linea7;
+
+			ifstream archivo1("Paises.txt");
+			while (getline(archivo1, linea1)) {
+
+				int codPais = stoi(SeparaString1(linea1));//SeparaString(linea1, 1);
+				string nombrePais = SeparaString2(linea1);//SeparaString(linea1, 2);
+
+				pNodoBinarioPaises pais = buscaPais(arbolPaises.raiz, codPais);
+				if (pais == NULL) {
+					arbolPaises.InsertaNodoPaises(codPais, nombrePais);
+				}
+			}
+			archivo1.close();
+
+			// **************************************************************
+
+			ifstream archivo2("Ciudades.txt");
+			while (getline(archivo2, linea2)) {
+
+				int codPais = stoi(SeparaString1(linea2));
+				int codCiudad = stoi(SeparaString2(linea2));
+				string nombreCiudad = SeparaString3(linea2);
+
+				pNodoBinarioPaises pais = buscaPais(arbolPaises.raiz, codPais);
+				pNodoBinarioCiudades ciudad = buscaCiudad(arbolCiudades.raiz, codCiudad);
+				pNodoBinarioCiudades ciudadYpais = buscaCiudadRepetida(arbolCiudades.raiz, codPais, codCiudad);
+				if (pais != NULL) {
+					if (ciudadYpais == NULL) {
+						arbolCiudades.InsertaNodoCiudad(codPais, codCiudad, nombreCiudad);
+					}
+				}
+			}
+			archivo2.close();
+
+			// **************************************************************
+
+			ifstream archivo3("Clientes.txt");
+			while (getline(archivo3, linea3)) {
+
+				int codCliente = stoi(SeparaString1(linea3));
+				string nomCliente = SeparaString2(linea3);
+				string dirCliente = SeparaString3(linea3);
+				int codPais = stoi(SeparaString4(linea3));
+				int codCiudad = stoi(SeparaString5(linea3));
+				int tel = stoi(SeparaString6(linea3));
+				string ultVisita = fechaFormato(SeparaString7(linea3), SeparaString8(linea3), SeparaString9(linea3));
+				int desc = stoi(SeparaString10(linea3));
+				int saldo = stoi(SeparaString11(linea3));
+
+				pNodoBinarioPaises pais = buscaPais(arbolPaises.raiz, codPais);
+				pNodoBinarioCiudades ciudad = buscaCiudadRepetida(arbolCiudades.raiz, codPais, codCiudad);
+				pNodoBCliente cliente = buscaCliente(arbolClientes.raiz, codCliente);
+				if (pais != NULL) {
+					if (ciudad != NULL) {
+						if (cliente == NULL) {
+							arbolClientes.InsertaNodoCliente(codCliente, nomCliente, dirCliente, codPais, codCiudad, tel, ultVisita, desc, saldo);
+						}
+					}
+				}
+			}
+			archivo3.close();
+
+			// **************************************************************
+
+			ifstream archivo4("Mascotas.txt");
+			while (getline(archivo4, linea4)) {
+
+				int numCliente = stoi(SeparaString1(linea4));
+				int idAnimal = stoi(SeparaString2(linea4));
+				string nombre = SeparaString3(linea4);
+				string tipo = SeparaString4(linea4);
+				string raza = SeparaString5(linea4);
+				string fechaNacimiento = fechaFormato(SeparaString6(linea4), SeparaString7(linea4), SeparaString8(linea4));
+				string sexo = SeparaString9(linea4);
+				string color = SeparaString10(linea4);
+				string castrado = SeparaString11(linea4);
+				string ultimaVisita = fechaFormato(SeparaString12(linea4), SeparaString13(linea4), SeparaString14(linea4));
+
+				pNodoBCliente cliente = buscaCliente(arbolClientes.raiz, numCliente);
+				pNodoAVLMascotas mascota = buscaMascota(arbolMascotas.raiz, idAnimal);
+				if (cliente != NULL) {
+					if (mascota == NULL) {
+						arbolMascotas.InsertaNodoMascota(numCliente, idAnimal, nombre, tipo, raza, fechaNacimiento, sexo, color, castrado, ultimaVisita);
+					}
+				}
+			}
+			archivo4.close();
+
+			// **************************************************************
+
+			ifstream archivo5("Visitas.txt");
+			while (getline(archivo5, linea5)) {
+
+				int codVisita = stoi(SeparaString1(linea5));
+				int idAnimal = stoi(SeparaString2(linea5));
+				string ultimaVisita = fechaFormato(SeparaString3(linea5), SeparaString4(linea5), SeparaString5(linea5));
+				int totalFactura = stoi(SeparaString6(linea5));
+				int formaPago = stoi(SeparaString7(linea5));
+
+				pNodoAVLMascotas mascota = buscaMascota(arbolMascotas.raiz, idAnimal);
+				pNodoBinarioVisitas visita = buscaVisita(arbolVisitas.raiz, codVisita);
+				if (mascota != NULL) {
+					if (visita == NULL) {
+						arbolVisitas.InsertaNodoVisitas(codVisita, idAnimal, ultimaVisita, totalFactura, formaPago);
+					}
+				}
+			}
+			archivo5.close();
+
+			// **************************************************************
+
+			ifstream archivo6("Tratamiento.txt");
+			while (getline(archivo6, linea6)) {
+
+				int codTratamiento = stoi(SeparaString1(linea6));
+				string nombreTratamiento = SeparaString2(linea6);
+				int precio = stoi(SeparaString3(linea6));
+
+				pNodoRNTratamiento tratamiento = buscaTratamiento(arbolTratamientos.raiz, codTratamiento);
+
+				if (tratamiento == NULL) {
+					arbolTratamientos.InsertaNodoTratamiento(codTratamiento, nombreTratamiento, precio);
+				}
+			}
+			archivo6.close();
+
+			// **************************************************************
+
+			ifstream archivo7("Medicacion.txt");
+			while (getline(archivo7, linea7)) {
+
+				int idAnimal = stoi(SeparaString1(linea7));
+				int codMed = stoi(SeparaString2(linea7));
+				string ultVisita = fechaFormato(SeparaString3(linea7), SeparaString4(linea7), SeparaString5(linea7));
+				int LMed = stoi(SeparaString6(linea7));
+				int costU = stoi(SeparaString7(linea7));
+				int cant = stoi(SeparaString8(linea7));
+				int costT = stoi(SeparaString9(linea7));
+
+				pNodoAVLMascotas mascota = buscaMascota(arbolMascotas.raiz, idAnimal);
+				pNodoAAMedicacion med = buscaMedicacion(arbolMedicaciones.raiz, codMed);
+				pNodoAAMedicacion medicacionValida = buscaMedicacionRepetida(arbolMedicaciones.raiz, codMed, idAnimal, ultVisita);
+				if (mascota != NULL) {
+					if (medicacionValida == NULL) {
+						arbolMedicaciones.InsertaNodoMedicacion(idAnimal, codMed, ultVisita, LMed, costU, cant, costT);
+					}
+				}
+			}
+			archivo7.close();
+
+		}
 
 	protected:
 
@@ -92,7 +288,7 @@ namespace TareaProgramada3 {
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
-#pragma region Windows Form Designer generated code
+	#pragma region Windows Form Designer generated code
 		/// <summary>
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
@@ -107,19 +303,12 @@ namespace TareaProgramada3 {
 			this->bMainFact = (gcnew System::Windows::Forms::Button());
 			this->bMainSucs = (gcnew System::Windows::Forms::Button());
 			this->bMainClts = (gcnew System::Windows::Forms::Button());
-			this->mainPanel = (gcnew System::Windows::Forms::Panel());
 			this->bContactos = (gcnew System::Windows::Forms::Button());
 			this->bAcercaDe = (gcnew System::Windows::Forms::Button());
 			this->bSucursales = (gcnew System::Windows::Forms::Button());
 			this->bReportes = (gcnew System::Windows::Forms::Button());
 			this->bFacturacion = (gcnew System::Windows::Forms::Button());
 			this->bMantenimiento = (gcnew System::Windows::Forms::Button());
-			this->pMantenimiento = (gcnew System::Windows::Forms::Panel());
-			this->pFacturacion = (gcnew System::Windows::Forms::Panel());
-			this->pReportes = (gcnew System::Windows::Forms::Panel());
-			this->pSucursales = (gcnew System::Windows::Forms::Panel());
-			this->pAcercaDe = (gcnew System::Windows::Forms::Panel());
-			this->pContactos = (gcnew System::Windows::Forms::Panel());
 			this->lblClnc = (gcnew System::Windows::Forms::Label());
 			this->lblLugs = (gcnew System::Windows::Forms::Label());
 			this->lblSucs = (gcnew System::Windows::Forms::Label());
@@ -127,7 +316,8 @@ namespace TareaProgramada3 {
 			this->lblClts = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->bSalir = (gcnew System::Windows::Forms::Button());
-			this->mainPanel->SuspendLayout();
+			this->bPopUp = (gcnew System::Windows::Forms::Button());
+			this->popUpLbl = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// titleMenu
@@ -143,7 +333,6 @@ namespace TareaProgramada3 {
 			this->titleMenu->TabIndex = 0;
 			this->titleMenu->Text = L"Fauna Life";
 			this->titleMenu->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			this->titleMenu->Click += gcnew System::EventHandler(this, &MenuPrincipal::titleMenu_Click);
 			// 
 			// subtitleMenu
 			// 
@@ -158,7 +347,6 @@ namespace TareaProgramada3 {
 			this->subtitleMenu->TabIndex = 6;
 			this->subtitleMenu->Text = L"Samuel Valverde y Erick Kauffmann";
 			this->subtitleMenu->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			this->subtitleMenu->Click += gcnew System::EventHandler(this, &MenuPrincipal::subtitleMenu_Click);
 			// 
 			// bMainLugs
 			// 
@@ -236,186 +424,47 @@ namespace TareaProgramada3 {
 			this->bMainClts->UseVisualStyleBackColor = false;
 			this->bMainClts->Click += gcnew System::EventHandler(this, &MenuPrincipal::bMainClts_Click);
 			// 
-			// mainPanel
-			// 
-			this->mainPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->mainPanel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			this->mainPanel->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->mainPanel->Controls->Add(this->bContactos);
-			this->mainPanel->Controls->Add(this->bAcercaDe);
-			this->mainPanel->Controls->Add(this->bSucursales);
-			this->mainPanel->Controls->Add(this->bReportes);
-			this->mainPanel->Controls->Add(this->bFacturacion);
-			this->mainPanel->Controls->Add(this->bMantenimiento);
-			this->mainPanel->Location = System::Drawing::Point(-1, -2);
-			this->mainPanel->Name = L"mainPanel";
-			this->mainPanel->Size = System::Drawing::Size(890, 41);
-			this->mainPanel->TabIndex = 8;
-			this->mainPanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MenuPrincipal::mainPanel_Paint);
-			// 
 			// bContactos
 			// 
-			this->bContactos->BackColor = System::Drawing::Color::Transparent;
-			this->bContactos->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->bContactos->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->bContactos->ForeColor = System::Drawing::Color::White;
-			this->bContactos->Location = System::Drawing::Point(765, -2);
+			this->bContactos->Location = System::Drawing::Point(0, 0);
 			this->bContactos->Name = L"bContactos";
-			this->bContactos->Size = System::Drawing::Size(100, 41);
-			this->bContactos->TabIndex = 14;
-			this->bContactos->Text = L"Contactos";
-			this->bContactos->UseVisualStyleBackColor = false;
-			this->bContactos->Click += gcnew System::EventHandler(this, &MenuPrincipal::bC_Click);
+			this->bContactos->Size = System::Drawing::Size(75, 23);
+			this->bContactos->TabIndex = 0;
 			// 
 			// bAcercaDe
 			// 
-			this->bAcercaDe->BackColor = System::Drawing::Color::Transparent;
-			this->bAcercaDe->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->bAcercaDe->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->bAcercaDe->ForeColor = System::Drawing::Color::White;
-			this->bAcercaDe->Location = System::Drawing::Point(628, -2);
+			this->bAcercaDe->Location = System::Drawing::Point(0, 0);
 			this->bAcercaDe->Name = L"bAcercaDe";
-			this->bAcercaDe->Size = System::Drawing::Size(93, 41);
-			this->bAcercaDe->TabIndex = 13;
-			this->bAcercaDe->Text = L"Acerca de";
-			this->bAcercaDe->UseVisualStyleBackColor = false;
-			this->bAcercaDe->Click += gcnew System::EventHandler(this, &MenuPrincipal::bAD_Click);
+			this->bAcercaDe->Size = System::Drawing::Size(75, 23);
+			this->bAcercaDe->TabIndex = 0;
 			// 
 			// bSucursales
 			// 
-			this->bSucursales->BackColor = System::Drawing::Color::Transparent;
-			this->bSucursales->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->bSucursales->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->bSucursales->ForeColor = System::Drawing::Color::White;
-			this->bSucursales->Location = System::Drawing::Point(482, -2);
+			this->bSucursales->Location = System::Drawing::Point(0, 0);
 			this->bSucursales->Name = L"bSucursales";
-			this->bSucursales->Size = System::Drawing::Size(100, 41);
-			this->bSucursales->TabIndex = 12;
-			this->bSucursales->Text = L"Sucursales";
-			this->bSucursales->UseVisualStyleBackColor = false;
-			this->bSucursales->Click += gcnew System::EventHandler(this, &MenuPrincipal::bS_Click);
+			this->bSucursales->Size = System::Drawing::Size(75, 23);
+			this->bSucursales->TabIndex = 0;
 			// 
 			// bReportes
 			// 
-			this->bReportes->BackColor = System::Drawing::Color::Transparent;
-			this->bReportes->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->bReportes->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->bReportes->ForeColor = System::Drawing::Color::White;
-			this->bReportes->Location = System::Drawing::Point(329, -2);
+			this->bReportes->Location = System::Drawing::Point(0, 0);
 			this->bReportes->Name = L"bReportes";
-			this->bReportes->Size = System::Drawing::Size(100, 41);
-			this->bReportes->TabIndex = 11;
-			this->bReportes->Text = L"Reportes";
-			this->bReportes->UseVisualStyleBackColor = false;
-			this->bReportes->Click += gcnew System::EventHandler(this, &MenuPrincipal::bR_Click);
+			this->bReportes->Size = System::Drawing::Size(75, 23);
+			this->bReportes->TabIndex = 0;
 			// 
 			// bFacturacion
 			// 
-			this->bFacturacion->BackColor = System::Drawing::Color::Transparent;
-			this->bFacturacion->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->bFacturacion->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->bFacturacion->ForeColor = System::Drawing::Color::White;
-			this->bFacturacion->Location = System::Drawing::Point(177, -2);
+			this->bFacturacion->Location = System::Drawing::Point(0, 0);
 			this->bFacturacion->Name = L"bFacturacion";
-			this->bFacturacion->Size = System::Drawing::Size(100, 41);
-			this->bFacturacion->TabIndex = 10;
-			this->bFacturacion->Text = L"Facturación";
-			this->bFacturacion->UseVisualStyleBackColor = false;
-			this->bFacturacion->Click += gcnew System::EventHandler(this, &MenuPrincipal::bF_Click);
+			this->bFacturacion->Size = System::Drawing::Size(75, 23);
+			this->bFacturacion->TabIndex = 0;
 			// 
 			// bMantenimiento
 			// 
-			this->bMantenimiento->BackColor = System::Drawing::Color::Transparent;
-			this->bMantenimiento->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->bMantenimiento->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->bMantenimiento->ForeColor = System::Drawing::Color::White;
-			this->bMantenimiento->Location = System::Drawing::Point(0, -2);
+			this->bMantenimiento->Location = System::Drawing::Point(0, 0);
 			this->bMantenimiento->Name = L"bMantenimiento";
-			this->bMantenimiento->Size = System::Drawing::Size(145, 41);
-			this->bMantenimiento->TabIndex = 9;
-			this->bMantenimiento->Text = L"Mantenimiento";
-			this->bMantenimiento->UseVisualStyleBackColor = false;
-			this->bMantenimiento->Click += gcnew System::EventHandler(this, &MenuPrincipal::bM_Click);
-			// 
-			// pMantenimiento
-			// 
-			this->pMantenimiento->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->pMantenimiento->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pMantenimiento->Location = System::Drawing::Point(-1, 37);
-			this->pMantenimiento->Name = L"pMantenimiento";
-			this->pMantenimiento->Size = System::Drawing::Size(147, 208);
-			this->pMantenimiento->TabIndex = 9;
-			this->pMantenimiento->Visible = false;
-			this->pMantenimiento->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MenuPrincipal::pM_Paint);
-			// 
-			// pFacturacion
-			// 
-			this->pFacturacion->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->pFacturacion->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pFacturacion->Location = System::Drawing::Point(152, 37);
-			this->pFacturacion->Name = L"pFacturacion";
-			this->pFacturacion->Size = System::Drawing::Size(151, 208);
-			this->pFacturacion->TabIndex = 10;
-			this->pFacturacion->Visible = false;
-			this->pFacturacion->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MenuPrincipal::pF_Paint);
-			// 
-			// pReportes
-			// 
-			this->pReportes->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->pReportes->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pReportes->ForeColor = System::Drawing::Color::White;
-			this->pReportes->Location = System::Drawing::Point(309, 37);
-			this->pReportes->Name = L"pReportes";
-			this->pReportes->Size = System::Drawing::Size(148, 208);
-			this->pReportes->TabIndex = 11;
-			this->pReportes->Visible = false;
-			this->pReportes->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MenuPrincipal::pR_Paint);
-			// 
-			// pSucursales
-			// 
-			this->pSucursales->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->pSucursales->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pSucursales->Location = System::Drawing::Point(463, 37);
-			this->pSucursales->Name = L"pSucursales";
-			this->pSucursales->Size = System::Drawing::Size(142, 208);
-			this->pSucursales->TabIndex = 12;
-			this->pSucursales->Visible = false;
-			this->pSucursales->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MenuPrincipal::pS_Paint);
-			// 
-			// pAcercaDe
-			// 
-			this->pAcercaDe->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->pAcercaDe->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pAcercaDe->Location = System::Drawing::Point(611, 37);
-			this->pAcercaDe->Name = L"pAcercaDe";
-			this->pAcercaDe->Size = System::Drawing::Size(131, 208);
-			this->pAcercaDe->TabIndex = 13;
-			this->pAcercaDe->Visible = false;
-			this->pAcercaDe->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MenuPrincipal::pAD_Paint);
-			// 
-			// pContactos
-			// 
-			this->pContactos->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->pContactos->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pContactos->Location = System::Drawing::Point(748, 37);
-			this->pContactos->Name = L"pContactos";
-			this->pContactos->Size = System::Drawing::Size(140, 208);
-			this->pContactos->TabIndex = 14;
-			this->pContactos->Visible = false;
-			this->pContactos->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MenuPrincipal::pC_Paint);
+			this->bMantenimiento->Size = System::Drawing::Size(75, 23);
+			this->bMantenimiento->TabIndex = 0;
 			// 
 			// lblClnc
 			// 
@@ -497,6 +546,31 @@ namespace TareaProgramada3 {
 			this->bSalir->UseVisualStyleBackColor = false;
 			this->bSalir->Click += gcnew System::EventHandler(this, &MenuPrincipal::bSalir_Click);
 			// 
+			// bPopUp
+			// 
+			this->bPopUp->BackColor = System::Drawing::Color::Transparent;
+			this->bPopUp->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->bPopUp->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->bPopUp->Font = (gcnew System::Drawing::Font(L"Cascadia Code", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bPopUp->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bPopUp.Image")));
+			this->bPopUp->Location = System::Drawing::Point(971, 107);
+			this->bPopUp->Name = L"bPopUp";
+			this->bPopUp->Size = System::Drawing::Size(110, 110);
+			this->bPopUp->TabIndex = 36;
+			this->bPopUp->UseVisualStyleBackColor = false;
+			this->bPopUp->Click += gcnew System::EventHandler(this, &MenuPrincipal::bPopUp_Click);
+			// 
+			// popUpLbl
+			// 
+			this->popUpLbl->AutoSize = true;
+			this->popUpLbl->ForeColor = System::Drawing::Color::White;
+			this->popUpLbl->Location = System::Drawing::Point(941, 229);
+			this->popUpLbl->Name = L"popUpLbl";
+			this->popUpLbl->Size = System::Drawing::Size(140, 30);
+			this->popUpLbl->TabIndex = 37;
+			this->popUpLbl->Text = L"Menú Pop Up";
+			// 
 			// MenuPrincipal
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
@@ -505,6 +579,8 @@ namespace TareaProgramada3 {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->ClientSize = System::Drawing::Size(1110, 650);
+			this->Controls->Add(this->popUpLbl);
+			this->Controls->Add(this->bPopUp);
 			this->Controls->Add(this->bSalir);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->lblClts);
@@ -512,13 +588,6 @@ namespace TareaProgramada3 {
 			this->Controls->Add(this->lblSucs);
 			this->Controls->Add(this->lblLugs);
 			this->Controls->Add(this->lblClnc);
-			this->Controls->Add(this->pContactos);
-			this->Controls->Add(this->pAcercaDe);
-			this->Controls->Add(this->pSucursales);
-			this->Controls->Add(this->pReportes);
-			this->Controls->Add(this->pFacturacion);
-			this->Controls->Add(this->pMantenimiento);
-			this->Controls->Add(this->mainPanel);
 			this->Controls->Add(this->bMainSucs);
 			this->Controls->Add(this->subtitleMenu);
 			this->Controls->Add(this->bMainClts);
@@ -529,30 +598,36 @@ namespace TareaProgramada3 {
 			this->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
-			this->MaximumSize = System::Drawing::Size(1110, 650);
 			this->MinimumSize = System::Drawing::Size(1110, 650);
 			this->Name = L"MenuPrincipal";
 			this->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Menu Principal";
 			this->Load += gcnew System::EventHandler(this, &MenuPrincipal::MenuPrincipal_Load);
-			this->mainPanel->ResumeLayout(false);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
+
+	
+
 #pragma endregion
 	private: System::Void MenuPrincipal_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
-	private: System::Void titleMenu_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	}
-	private: System::Void subtitleMenu_Click(System::Object^ sender, System::EventArgs^ e) {
+	/*	POP UP MENU  */
 
+	private: System::Void bPopUp_Click(System::Object^ sender, System::EventArgs^ e) {
+		PopUpMenu^ popUpMenu = gcnew PopUpMenu(this);
+		popUpMenu->Show();
+		this->Hide();
 	}
+	
+	/*	ICON MENU  */
+
 	private: System::Void bMainLugs_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		SubMenuLugs^ sMLugs = gcnew SubMenuLugs(this);
+		SubMenuLugs^ sMLugs = gcnew SubMenuLugs(this/*, BinarioPaises arbolPaises, BinarioCiudades arbolCiudades*/);
 		sMLugs->Show();
 		this->Hide();
 
@@ -587,40 +662,7 @@ namespace TareaProgramada3 {
 	}
 
 // *****************************************************************************************************
-private: System::Void mainPanel_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-private: System::Void bM_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->pMantenimiento->Show();
-}
-private: System::Void bF_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->pFacturacion->Show();
-}
-private: System::Void bR_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->pReportes->Show();
-}
-private: System::Void bS_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->pSucursales->Show();
-}
-private: System::Void bAD_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->pAcercaDe->Show();
-}
-private: System::Void bC_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->pContactos->Show();
-}
-private: System::Void pM_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-private: System::Void pF_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-private: System::Void pR_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-private: System::Void pS_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-private: System::Void pAD_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-private: System::Void pC_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
-}
+
 private: System::Void bSalir_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	this->Close();

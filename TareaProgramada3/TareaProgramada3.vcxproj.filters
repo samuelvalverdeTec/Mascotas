@@ -54,6 +54,9 @@
     <ClCompile Include="Funciones.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PopUpMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MenuPrincipal.h">
@@ -108,6 +111,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="B.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PopUpMenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
