@@ -128,6 +128,7 @@
     <ClCompile Include="B.cpp" />
     <ClCompile Include="Controlador.cpp" />
     <ClCompile Include="Funciones.cpp" />
+    <ClCompile Include="IconMenu.cpp" />
     <ClCompile Include="MenuPrincipal.cpp" />
     <ClCompile Include="PopUpMenu.cpp" />
     <ClCompile Include="RN.cpp" />
@@ -143,6 +144,9 @@
     <ClInclude Include="B.h" />
     <ClInclude Include="Binario.h" />
     <ClInclude Include="Controlador.h" />
+    <ClInclude Include="IconMenu.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MenuPrincipal.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -173,6 +177,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="IconMenu.resx">
+      <DependentUpon>IconMenu.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.h</DependentUpon>
     </EmbeddedResource>

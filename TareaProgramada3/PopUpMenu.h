@@ -14,10 +14,13 @@ namespace TareaProgramada3 {
 	/// </summary>
 	public ref class PopUpMenu : public System::Windows::Forms::Form
 	{
+
 	private: System::Windows::Forms::Form^ menu;
 
 	public:
-		PopUpMenu(System::Windows::Forms::Form^ m)
+		PopUpMenu(System::Windows::Forms::Form^ m, BinarioPaises arbolPaises, BinarioCiudades arbolCiudades, 
+			BCliente arbolClientes, AVLMascotas arbolMascotas, BinarioVisitas arbolVisitas, RNTratamiento arbolTratamientos, 
+			AAMedicacion arbolMedicaciones)
 		{
 			menu = m; 
 			InitializeComponent();
@@ -51,6 +54,7 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Button^ bReportes;
 	private: System::Windows::Forms::Button^ bFacturacion;
 	private: System::Windows::Forms::Button^ bMantenimiento;
+	private: System::Windows::Forms::Button^ bSalir;
 
 	private:
 		/// <summary>
@@ -79,6 +83,7 @@ namespace TareaProgramada3 {
 			this->bReportes = (gcnew System::Windows::Forms::Button());
 			this->bFacturacion = (gcnew System::Windows::Forms::Button());
 			this->bMantenimiento = (gcnew System::Windows::Forms::Button());
+			this->bSalir = (gcnew System::Windows::Forms::Button());
 			this->mainPanel->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -87,9 +92,9 @@ namespace TareaProgramada3 {
 			this->pContactos->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			this->pContactos->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pContactos->Location = System::Drawing::Point(922, 48);
+			this->pContactos->Location = System::Drawing::Point(890, 48);
 			this->pContactos->Name = L"pContactos";
-			this->pContactos->Size = System::Drawing::Size(150, 210);
+			this->pContactos->Size = System::Drawing::Size(130, 210);
 			this->pContactos->TabIndex = 21;
 			this->pContactos->Visible = false;
 			// 
@@ -100,7 +105,7 @@ namespace TareaProgramada3 {
 			this->pAcercaDe->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->pAcercaDe->Location = System::Drawing::Point(739, 48);
 			this->pAcercaDe->Name = L"pAcercaDe";
-			this->pAcercaDe->Size = System::Drawing::Size(150, 210);
+			this->pAcercaDe->Size = System::Drawing::Size(130, 210);
 			this->pAcercaDe->TabIndex = 20;
 			this->pAcercaDe->Visible = false;
 			// 
@@ -109,9 +114,9 @@ namespace TareaProgramada3 {
 			this->pSucursales->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			this->pSucursales->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pSucursales->Location = System::Drawing::Point(555, 48);
+			this->pSucursales->Location = System::Drawing::Point(586, 48);
 			this->pSucursales->Name = L"pSucursales";
-			this->pSucursales->Size = System::Drawing::Size(150, 210);
+			this->pSucursales->Size = System::Drawing::Size(130, 210);
 			this->pSucursales->TabIndex = 19;
 			this->pSucursales->Visible = false;
 			// 
@@ -121,9 +126,9 @@ namespace TareaProgramada3 {
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			this->pReportes->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->pReportes->ForeColor = System::Drawing::Color::White;
-			this->pReportes->Location = System::Drawing::Point(370, 48);
+			this->pReportes->Location = System::Drawing::Point(434, 48);
 			this->pReportes->Name = L"pReportes";
-			this->pReportes->Size = System::Drawing::Size(150, 210);
+			this->pReportes->Size = System::Drawing::Size(130, 210);
 			this->pReportes->TabIndex = 18;
 			this->pReportes->Visible = false;
 			// 
@@ -132,9 +137,9 @@ namespace TareaProgramada3 {
 			this->pFacturacion->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			this->pFacturacion->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pFacturacion->Location = System::Drawing::Point(187, 48);
+			this->pFacturacion->Location = System::Drawing::Point(218, 48);
 			this->pFacturacion->Name = L"pFacturacion";
-			this->pFacturacion->Size = System::Drawing::Size(150, 210);
+			this->pFacturacion->Size = System::Drawing::Size(170, 210);
 			this->pFacturacion->TabIndex = 17;
 			this->pFacturacion->Visible = false;
 			// 
@@ -145,7 +150,7 @@ namespace TareaProgramada3 {
 			this->pMantenimiento->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->pMantenimiento->Location = System::Drawing::Point(0, 48);
 			this->pMantenimiento->Name = L"pMantenimiento";
-			this->pMantenimiento->Size = System::Drawing::Size(150, 210);
+			this->pMantenimiento->Size = System::Drawing::Size(170, 210);
 			this->pMantenimiento->TabIndex = 16;
 			this->pMantenimiento->Visible = false;
 			// 
@@ -163,7 +168,7 @@ namespace TareaProgramada3 {
 			this->mainPanel->Controls->Add(this->bMantenimiento);
 			this->mainPanel->Location = System::Drawing::Point(0, 1);
 			this->mainPanel->Name = L"mainPanel";
-			this->mainPanel->Size = System::Drawing::Size(1082, 41);
+			this->mainPanel->Size = System::Drawing::Size(1022, 41);
 			this->mainPanel->TabIndex = 15;
 			// 
 			// bContactos
@@ -173,7 +178,7 @@ namespace TareaProgramada3 {
 			this->bContactos->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->bContactos->ForeColor = System::Drawing::Color::White;
-			this->bContactos->Location = System::Drawing::Point(937, -2);
+			this->bContactos->Location = System::Drawing::Point(910, -2);
 			this->bContactos->Name = L"bContactos";
 			this->bContactos->Size = System::Drawing::Size(100, 41);
 			this->bContactos->TabIndex = 14;
@@ -188,7 +193,7 @@ namespace TareaProgramada3 {
 			this->bAcercaDe->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->bAcercaDe->ForeColor = System::Drawing::Color::White;
-			this->bAcercaDe->Location = System::Drawing::Point(751, -2);
+			this->bAcercaDe->Location = System::Drawing::Point(755, -2);
 			this->bAcercaDe->Name = L"bAcercaDe";
 			this->bAcercaDe->Size = System::Drawing::Size(93, 41);
 			this->bAcercaDe->TabIndex = 13;
@@ -203,7 +208,7 @@ namespace TareaProgramada3 {
 			this->bSucursales->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->bSucursales->ForeColor = System::Drawing::Color::White;
-			this->bSucursales->Location = System::Drawing::Point(584, -2);
+			this->bSucursales->Location = System::Drawing::Point(599, -2);
 			this->bSucursales->Name = L"bSucursales";
 			this->bSucursales->Size = System::Drawing::Size(100, 41);
 			this->bSucursales->TabIndex = 12;
@@ -218,7 +223,7 @@ namespace TareaProgramada3 {
 			this->bReportes->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->bReportes->ForeColor = System::Drawing::Color::White;
-			this->bReportes->Location = System::Drawing::Point(392, -2);
+			this->bReportes->Location = System::Drawing::Point(441, -2);
 			this->bReportes->Name = L"bReportes";
 			this->bReportes->Size = System::Drawing::Size(100, 41);
 			this->bReportes->TabIndex = 11;
@@ -233,7 +238,7 @@ namespace TareaProgramada3 {
 			this->bFacturacion->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->bFacturacion->ForeColor = System::Drawing::Color::White;
-			this->bFacturacion->Location = System::Drawing::Point(205, -2);
+			this->bFacturacion->Location = System::Drawing::Point(246, -2);
 			this->bFacturacion->Name = L"bFacturacion";
 			this->bFacturacion->Size = System::Drawing::Size(100, 41);
 			this->bFacturacion->TabIndex = 10;
@@ -248,13 +253,29 @@ namespace TareaProgramada3 {
 			this->bMantenimiento->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->bMantenimiento->ForeColor = System::Drawing::Color::White;
-			this->bMantenimiento->Location = System::Drawing::Point(-2, -2);
+			this->bMantenimiento->Location = System::Drawing::Point(10, -2);
 			this->bMantenimiento->Name = L"bMantenimiento";
 			this->bMantenimiento->Size = System::Drawing::Size(145, 41);
 			this->bMantenimiento->TabIndex = 9;
 			this->bMantenimiento->Text = L"Mantenimiento";
 			this->bMantenimiento->UseVisualStyleBackColor = false;
 			this->bMantenimiento->Click += gcnew System::EventHandler(this, &PopUpMenu::bM_Click);
+			// 
+			// bSalir
+			// 
+			this->bSalir->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->bSalir->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->bSalir->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bSalir->ForeColor = System::Drawing::Color::White;
+			this->bSalir->Location = System::Drawing::Point(1029, 2);
+			this->bSalir->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bSalir->Name = L"bSalir";
+			this->bSalir->Size = System::Drawing::Size(54, 40);
+			this->bSalir->TabIndex = 37;
+			this->bSalir->Text = L"X";
+			this->bSalir->UseVisualStyleBackColor = false;
+			this->bSalir->Click += gcnew System::EventHandler(this, &PopUpMenu::bSalir_Click);
 			// 
 			// PopUpMenu
 			// 
@@ -263,6 +284,7 @@ namespace TareaProgramada3 {
 			this->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1084, 611);
+			this->Controls->Add(this->bSalir);
 			this->Controls->Add(this->pContactos);
 			this->Controls->Add(this->pAcercaDe);
 			this->Controls->Add(this->pSucursales);
@@ -318,6 +340,10 @@ namespace TareaProgramada3 {
 	private: System::Void pAD_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 	}
 	private: System::Void pC_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+	}
+	private: System::Void bSalir_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Close();
+		menu->Show();
 	}
 };
 }
