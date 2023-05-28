@@ -23,11 +23,20 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Form^ menu;
 
 	public:
-		IconMenu(System::Windows::Forms::Form^ m, BinarioPaises arbolPaises, BinarioCiudades arbolCiudades,
-			BCliente arbolClientes, AVLMascotas arbolMascotas, BinarioVisitas arbolVisitas, RNTratamiento arbolTratamientos,
-			AAMedicacion arbolMedicaciones)
+		IconMenu(System::Windows::Forms::Form^ m, BinarioPaises* arbolPaises, BinarioCiudades* arbolCiudades,
+			BCliente* arbolClientes, AVLMascotas* arbolMascotas, BinarioVisitas* arbolVisitas, RNTratamiento* arbolTratamientos,
+			AAMedicacion* arbolMedicaciones)
 		{
 			menu = m; 
+
+			this->arbolPaises = arbolPaises;
+			this->arbolCiudades = arbolCiudades;
+			this->arbolClientes = arbolClientes;
+			this->arbolMascotas = arbolMascotas;
+			this->arbolVisitas = arbolVisitas;
+			this->arbolTratamientos = arbolTratamientos;
+			this->arbolMedicaciones = arbolMedicaciones;
+
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
@@ -57,6 +66,14 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Button^ bMainClnc;
 	private: System::Windows::Forms::Button^ bMainLugs;
 	private: System::Windows::Forms::Button^ bSalir;
+	
+	public: BinarioPaises* arbolPaises;
+	public: BinarioCiudades* arbolCiudades;
+	public: BCliente* arbolClientes;
+	public: AVLMascotas* arbolMascotas;
+	public: BinarioVisitas* arbolVisitas;
+	public: RNTratamiento* arbolTratamientos;
+	public: AAMedicacion* arbolMedicaciones;
 
 	protected:
 

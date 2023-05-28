@@ -18,11 +18,20 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Form^ menu;
 
 	public:
-		PopUpMenu(System::Windows::Forms::Form^ m, BinarioPaises arbolPaises, BinarioCiudades arbolCiudades, 
-			BCliente arbolClientes, AVLMascotas arbolMascotas, BinarioVisitas arbolVisitas, RNTratamiento arbolTratamientos, 
-			AAMedicacion arbolMedicaciones)
+		PopUpMenu(System::Windows::Forms::Form^ m, BinarioPaises* arbolPaises, BinarioCiudades* arbolCiudades,
+			BCliente* arbolClientes, AVLMascotas* arbolMascotas, BinarioVisitas* arbolVisitas, RNTratamiento* arbolTratamientos,
+			AAMedicacion* arbolMedicaciones)
 		{
 			menu = m; 
+
+			this->arbolPaises = arbolPaises;
+			this->arbolCiudades = arbolCiudades;
+			this->arbolClientes = arbolClientes;
+			this->arbolMascotas = arbolMascotas;
+			this->arbolVisitas = arbolVisitas;
+			this->arbolTratamientos = arbolTratamientos;
+			this->arbolMedicaciones = arbolMedicaciones;
+
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
@@ -55,6 +64,14 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Button^ bFacturacion;
 	private: System::Windows::Forms::Button^ bMantenimiento;
 	private: System::Windows::Forms::Button^ bSalir;
+	
+	public: BinarioPaises* arbolPaises;
+	public: BinarioCiudades* arbolCiudades;
+	public: BCliente* arbolClientes;
+	public: AVLMascotas* arbolMascotas;
+	public: BinarioVisitas* arbolVisitas;
+	public: RNTratamiento* arbolTratamientos;
+	public: AAMedicacion* arbolMedicaciones;
 
 	private:
 		/// <summary>
@@ -97,6 +114,7 @@ namespace TareaProgramada3 {
 			this->pContactos->Size = System::Drawing::Size(130, 210);
 			this->pContactos->TabIndex = 21;
 			this->pContactos->Visible = false;
+			this->pContactos->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &PopUpMenu::pContactos_Paint);
 			// 
 			// pAcercaDe
 			// 
@@ -126,7 +144,7 @@ namespace TareaProgramada3 {
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			this->pReportes->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->pReportes->ForeColor = System::Drawing::Color::White;
-			this->pReportes->Location = System::Drawing::Point(434, 48);
+			this->pReportes->Location = System::Drawing::Point(432, 48);
 			this->pReportes->Name = L"pReportes";
 			this->pReportes->Size = System::Drawing::Size(130, 210);
 			this->pReportes->TabIndex = 18;
@@ -345,5 +363,7 @@ namespace TareaProgramada3 {
 		this->Close();
 		menu->Show();
 	}
+private: System::Void pContactos_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
 };
 }

@@ -860,6 +860,7 @@ private: System::Void bmInsercion_Click(System::Object^ sender, System::EventArg
 		String^ precioUnitario = this->tInserTxtbx3->Text;
 		String^ cantidad = this->tInserTxtbx4->Text;
 
+
 	}
 	private: System::Void bmInsertar_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ idAnimal = this->mInserTxtbx1->Text;
