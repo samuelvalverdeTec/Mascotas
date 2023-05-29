@@ -65,7 +65,8 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Button^ bMainFact;
 	private: System::Windows::Forms::Button^ bMainClnc;
 	private: System::Windows::Forms::Button^ bMainLugs;
-	private: System::Windows::Forms::Button^ bSalir;
+	private: System::Windows::Forms::Button^ bExit;
+
 	
 	public: BinarioPaises* arbolPaises;
 	public: BinarioCiudades* arbolCiudades;
@@ -74,6 +75,10 @@ namespace TareaProgramada3 {
 	public: BinarioVisitas* arbolVisitas;
 	public: RNTratamiento* arbolTratamientos;
 	public: AAMedicacion* arbolMedicaciones;
+	private: System::Windows::Forms::Button^ bSalir;
+	public:
+
+	public:
 
 	protected:
 
@@ -101,6 +106,7 @@ namespace TareaProgramada3 {
 			this->bMainFact = (gcnew System::Windows::Forms::Button());
 			this->bMainClnc = (gcnew System::Windows::Forms::Button());
 			this->bMainLugs = (gcnew System::Windows::Forms::Button());
+			this->bExit = (gcnew System::Windows::Forms::Button());
 			this->bSalir = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
@@ -167,7 +173,7 @@ namespace TareaProgramada3 {
 			this->bMainSucs->Size = System::Drawing::Size(110, 110);
 			this->bMainSucs->TabIndex = 24;
 			this->bMainSucs->UseVisualStyleBackColor = false;
-			this->bMainSucs->Click += gcnew System::EventHandler(this, &MenuPrincipal::bMainSucs_Click);
+			this->bMainSucs->Click += gcnew System::EventHandler(this, &IconMenu::bMainSucs_Click);
 			// 
 			// bMainClts
 			// 
@@ -182,7 +188,7 @@ namespace TareaProgramada3 {
 			this->bMainClts->Size = System::Drawing::Size(110, 110);
 			this->bMainClts->TabIndex = 23;
 			this->bMainClts->UseVisualStyleBackColor = false;
-			this->bMainClts->Click += gcnew System::EventHandler(this, &MenuPrincipal::bMainClts_Click);
+			this->bMainClts->Click += gcnew System::EventHandler(this, &IconMenu::bMainClts_Click);
 			// 
 			// bMainFact
 			// 
@@ -198,7 +204,7 @@ namespace TareaProgramada3 {
 			this->bMainFact->Size = System::Drawing::Size(110, 110);
 			this->bMainFact->TabIndex = 22;
 			this->bMainFact->UseVisualStyleBackColor = false;
-			this->bMainFact->Click += gcnew System::EventHandler(this, &MenuPrincipal::bMainFact_Click);
+			this->bMainFact->Click += gcnew System::EventHandler(this, &IconMenu::bMainFact_Click);
 			// 
 			// bMainClnc
 			// 
@@ -213,7 +219,7 @@ namespace TareaProgramada3 {
 			this->bMainClnc->Size = System::Drawing::Size(110, 110);
 			this->bMainClnc->TabIndex = 21;
 			this->bMainClnc->UseVisualStyleBackColor = false;
-			this->bMainClnc->Click += gcnew System::EventHandler(this, &MenuPrincipal::bMainClnc_Click);
+			this->bMainClnc->Click += gcnew System::EventHandler(this, &IconMenu::bMainClnc_Click);
 			// 
 			// bMainLugs
 			// 
@@ -228,21 +234,37 @@ namespace TareaProgramada3 {
 			this->bMainLugs->Size = System::Drawing::Size(110, 110);
 			this->bMainLugs->TabIndex = 20;
 			this->bMainLugs->UseVisualStyleBackColor = false;
-			this->bMainLugs->Click += gcnew System::EventHandler(this, &MenuPrincipal::bMainLugs_Click);
+			this->bMainLugs->Click += gcnew System::EventHandler(this, &IconMenu::bMainLugs_Click);
+			// 
+			// bExit
+			// 
+			this->bExit->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->bExit->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->bExit->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bExit->ForeColor = System::Drawing::Color::White;
+			this->bExit->Location = System::Drawing::Point(1048, 2);
+			this->bExit->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bExit->Name = L"bExit";
+			this->bExit->Size = System::Drawing::Size(54, 40);
+			this->bExit->TabIndex = 36;
+			this->bExit->Text = L"X";
+			this->bExit->UseVisualStyleBackColor = false;
+			this->bExit->Click += gcnew System::EventHandler(this, &IconMenu::bExit_Click);
 			// 
 			// bSalir
 			// 
-			this->bSalir->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->bSalir->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->bSalir->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->bSalir->BackColor = System::Drawing::Color::Transparent;
+			this->bSalir->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bSalir->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->bSalir->ForeColor = System::Drawing::Color::White;
-			this->bSalir->Location = System::Drawing::Point(1048, 2);
+			this->bSalir->Location = System::Drawing::Point(964, 505);
 			this->bSalir->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->bSalir->Name = L"bSalir";
-			this->bSalir->Size = System::Drawing::Size(54, 40);
-			this->bSalir->TabIndex = 36;
-			this->bSalir->Text = L"X";
+			this->bSalir->Size = System::Drawing::Size(84, 45);
+			this->bSalir->TabIndex = 37;
+			this->bSalir->Text = L"Salir";
 			this->bSalir->UseVisualStyleBackColor = false;
 			this->bSalir->Click += gcnew System::EventHandler(this, &IconMenu::bSalir_Click);
 			// 
@@ -254,6 +276,7 @@ namespace TareaProgramada3 {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1100, 593);
 			this->Controls->Add(this->bSalir);
+			this->Controls->Add(this->bExit);
 			this->Controls->Add(this->lblClts);
 			this->Controls->Add(this->lblFact);
 			this->Controls->Add(this->lblSucs);
@@ -319,11 +342,13 @@ namespace TareaProgramada3 {
 
     // *****************************************************************************************************
 
+	private: System::Void bExit_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Close();
+		menu->Close();
+	}
 	private: System::Void bSalir_Click(System::Object^ sender, System::EventArgs^ e) {
-
 		this->Close();
 		menu->Show();
-
-}
+	}
 };
 }

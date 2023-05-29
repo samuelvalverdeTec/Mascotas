@@ -682,7 +682,7 @@ namespace TareaProgramada3 {
 	}
 
 	private: System::Void bSalir_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->Hide();
+		this->Close();
 		menu->Show();
 
 		//Controlador::imprimir();

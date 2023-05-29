@@ -82,6 +82,8 @@ namespace TareaProgramada3 {
 	public: RNTratamiento* arbolTratamientos;
 	public: AAMedicacion* arbolMedicaciones;
 
+	public:
+
 	protected:
 
 	private:
@@ -240,7 +242,7 @@ namespace TareaProgramada3 {
 			this->Name = L"MenuPrincipal";
 			this->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Menu Principal";
+			this->Text = L" ";
 			this->Load += gcnew System::EventHandler(this, &MenuPrincipal::MenuPrincipal_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();

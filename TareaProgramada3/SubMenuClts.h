@@ -1401,7 +1401,7 @@ private: System::Windows::Forms::Button^ bmInsertar;
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(1225, 743);
+			this->ClientSize = System::Drawing::Size(1225, 734);
 			this->Controls->Add(this->pvInser);
 			this->Controls->Add(this->pvBusq);
 			this->Controls->Add(this->pmBusq);
@@ -1497,7 +1497,7 @@ private: System::Windows::Forms::Button^ bmInsertar;
 	}
 	// ************
 private: System::Void bSalir_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->Hide();
+		this->Close();
 		menu->Show();
 
 	}
