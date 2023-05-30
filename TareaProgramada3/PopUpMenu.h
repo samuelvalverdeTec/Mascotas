@@ -1,5 +1,16 @@
 #pragma once
 
+#include "Binario.h"	// Paises, Ciudades & Visitas
+#include "NodoBinario.h"
+#include "B.h"		// Clientes
+#include "NodoB.h"
+#include "AVL.h"	// Mascotas
+#include "NodoAVL.h"
+#include "RN.h"    // Tratamientos
+#include "NodoRN.h"
+#include "AA.h"		// Medicacion
+#include "NodoAA.h"
+
 namespace TareaProgramada3 {
 
 	using namespace System;

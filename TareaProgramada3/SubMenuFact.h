@@ -1,5 +1,8 @@
 #pragma once
 
+#include "B.h"		// Clientes
+#include "NodoB.h"
+
 namespace TareaProgramada3 {
 
 	using namespace System;

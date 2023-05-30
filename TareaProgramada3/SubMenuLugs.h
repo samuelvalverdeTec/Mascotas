@@ -2,6 +2,9 @@
 
 #include "Controlador.h"
 
+#include "Binario.h"	// Paises, Ciudades & Visitas
+#include "NodoBinario.h"
+
 namespace TareaProgramada3 {
 
 	using namespace System;
