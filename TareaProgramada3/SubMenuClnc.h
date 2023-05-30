@@ -1,12 +1,12 @@
 #pragma once
-
+/*
 #include "RN.h"    // Tratamientos
 #include "NodoRN.h"
-#include "RN.cpp"
+//#include "RN.cpp"
 #include "AA.h"		// Medicacion
 #include "NodoAA.h"
-#include "AA.cpp"
-
+//#include "AA.cpp"
+*/
 namespace TareaProgramada3 {
 
 	using namespace System;
@@ -22,6 +22,9 @@ namespace TareaProgramada3 {
 	public ref class SubMenuClnc : public System::Windows::Forms::Form
 	{
 	private: System::Windows::Forms::Form^ menu;
+
+	public: RNTratamiento* arbolTratamientos;
+	public: AAMedicacion* arbolMedicaciones;
 
 	public:
 		SubMenuClnc(System::Windows::Forms::Form^ m, RNTratamiento* arbolTratamientos, AAMedicacion* arbolMedicaciones)
@@ -48,9 +51,6 @@ namespace TareaProgramada3 {
 				delete components;
 			}
 		}
-
-	public: RNTratamiento* arbolTratamientos;
-	public: AAMedicacion* arbolMedicaciones;
 
 	private: System::Windows::Forms::Label^ titleMenu;
 	private: System::Windows::Forms::Panel^ pMeds;

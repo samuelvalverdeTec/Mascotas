@@ -22,15 +22,9 @@ public:
     string nombre;
     NodoBinarioPaises* Hizq, * Hder, * siguiente, * anterior;
 
-    friend class BinarioPaises;/*
-    friend class AVLProductoInventario;
-    friend class AAMarcaInventario;
-    friend class RNMarca;
-    friend class Compra;
-    friend class listaDCCompra;*/
-
+    friend class BinarioPaises;
     void InsertaBinarioPais(int num, string nom);
-    //bool InsertarProductoInventario(int codProductoI, string nombreI);
+
 };
 
 typedef NodoBinarioPaises* pNodoBinarioPaises;

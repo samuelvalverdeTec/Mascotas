@@ -1,5 +1,5 @@
 #pragma once
-
+/*
 #include "Binario.h"	// Paises, Ciudades & Visitas
 #include "NodoBinario.h"
 #include "ABB.cpp"
@@ -9,7 +9,7 @@
 #include "AVL.h"	// Mascotas
 #include "NodoAVL.h"
 #include "AVL.cpp"
-
+*/
 namespace TareaProgramada3 {
 
 	using namespace System;
@@ -26,6 +26,10 @@ namespace TareaProgramada3 {
 	{
 
 	private: System::Windows::Forms::Form^ menu;
+
+	public: BCliente* arbolClientes;
+	public: AVLMascotas* arbolMascotas;
+	public: BinarioVisitas* arbolVisitas;
 
 	public:
 		SubMenuClts(System::Windows::Forms::Form^ m, BCliente* arbolClientes, AVLMascotas* arbolMascotas, BinarioVisitas* arbolVisitas)
@@ -53,10 +57,6 @@ namespace TareaProgramada3 {
 				delete components;
 			}
 		}
-
-	public: BCliente* arbolClientes; 
-	public: AVLMascotas* arbolMascotas;
-	public: BinarioVisitas* arbolVisitas;
 
 	private: System::Windows::Forms::Label^ titleMenu;
 	private: System::Windows::Forms::Label^ lblMascotas;

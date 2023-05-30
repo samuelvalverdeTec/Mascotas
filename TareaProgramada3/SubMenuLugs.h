@@ -1,10 +1,10 @@
 #pragma once
 
 #include "Controlador.h"
-
+/*
 #include "Binario.h"	// Paises, Ciudades & Visitas
 #include "NodoBinario.h"
-
+*/
 namespace TareaProgramada3 {
 
 	using namespace System;
@@ -21,6 +21,9 @@ namespace TareaProgramada3 {
 	{
 
 	private: System::Windows::Forms::Form^ menu;
+
+	public: BinarioPaises* arbolPaises;
+	public: BinarioCiudades* arbolCiudades;
 
 	public:
 		SubMenuLugs(System::Windows::Forms::Form^ m, BinarioPaises* arbolPaises, BinarioCiudades* arbolCiudades)
@@ -47,9 +50,6 @@ namespace TareaProgramada3 {
 				delete components;
 			}
 		}
-
-	public: BinarioPaises* arbolPaises;
-	public: BinarioCiudades* arbolCiudades;
 
 	private: System::Windows::Forms::Label^ titleMenu;
 	private: System::Windows::Forms::Button^ bPaises;

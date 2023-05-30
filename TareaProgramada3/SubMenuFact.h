@@ -1,7 +1,8 @@
 #pragma once
-
+/*
 #include "B.h"		// Clientes
 #include "NodoB.h"
+*/
 
 namespace TareaProgramada3 {
 
@@ -19,6 +20,8 @@ namespace TareaProgramada3 {
 	{
 
 	private: System::Windows::Forms::Form^ menu;
+
+	public: BCliente* arbolClientes;
 
 	public:
 		SubMenuFact(System::Windows::Forms::Form^ m, BCliente* arbolClientes)
@@ -44,8 +47,6 @@ namespace TareaProgramada3 {
 				delete components;
 			}
 		}
-
-	public: BCliente* arbolClientes;
 
 	private: System::Windows::Forms::Label^ titleMenu;
 	private: System::Windows::Forms::Button^ bSalir;

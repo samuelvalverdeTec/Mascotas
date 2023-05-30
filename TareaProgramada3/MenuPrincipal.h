@@ -123,7 +123,6 @@ namespace TareaProgramada3 {
 			this->titleMenu->TabIndex = 0;
 			this->titleMenu->Text = L"Fauna Life";
 			this->titleMenu->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			this->titleMenu->Click += gcnew System::EventHandler(this, &MenuPrincipal::titleMenu_Click);
 			// 
 			// nombres
 			// 
@@ -278,7 +277,6 @@ private: System::Void bSalir_Click(System::Object^ sender, System::EventArgs^ e)
 	this->Close();
 
 }
-private: System::Void titleMenu_Click(System::Object^ sender, System::EventArgs^ e) {
-}
+
 };
 }

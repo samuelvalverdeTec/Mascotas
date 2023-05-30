@@ -22,6 +22,14 @@ namespace TareaProgramada3 {
 	{
 	private: System::Windows::Forms::Form^ menu;
 
+	public: BinarioPaises* arbolPaises;
+	public: BinarioCiudades* arbolCiudades;
+	public: BCliente* arbolClientes;
+	public: AVLMascotas* arbolMascotas;
+	public: BinarioVisitas* arbolVisitas;
+	public: RNTratamiento* arbolTratamientos;
+	public: AAMedicacion* arbolMedicaciones;
+
 	public:
 		IconMenu(System::Windows::Forms::Form^ m, BinarioPaises* arbolPaises, BinarioCiudades* arbolCiudades,
 			BCliente* arbolClientes, AVLMascotas* arbolMascotas, BinarioVisitas* arbolVisitas, RNTratamiento* arbolTratamientos,
@@ -67,20 +75,7 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Button^ bMainLugs;
 	private: System::Windows::Forms::Button^ bExit;
 
-	
-	public: BinarioPaises* arbolPaises;
-	public: BinarioCiudades* arbolCiudades;
-	public: BCliente* arbolClientes;
-	public: AVLMascotas* arbolMascotas;
-	public: BinarioVisitas* arbolVisitas;
-	public: RNTratamiento* arbolTratamientos;
-	public: AAMedicacion* arbolMedicaciones;
 	private: System::Windows::Forms::Button^ bSalir;
-	public:
-
-	public:
-
-	protected:
 
 	private:
 		/// <summary>
