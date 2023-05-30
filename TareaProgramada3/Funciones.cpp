@@ -1,18 +1,18 @@
 #include "Binario.h"
 #include "NodoBinario.h"
-#include "ABB.cpp"
+//#include "ABB.cpp"
 #include "NodoB.h"
 #include "B.h"
-#include "B.cpp"
+//#include "B.cpp"
 #include "NodoAVL.h"
 #include "AVL.h"
-#include "AVL.cpp"
+//#include "AVL.cpp"
 #include "NodoRN.h"
 #include "RN.h"
-#include "RN.cpp"
+//#include "RN.cpp"
 #include "NodoAA.h"
 #include "AA.h"
-#include "AA.cpp"
+//#include "AA.cpp"
 
 #include <iostream>
 #include <fstream>
