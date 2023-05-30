@@ -256,8 +256,8 @@ namespace TareaProgramada3 {
 	/*	POP UP MENU  */
 
 	private: System::Void bPopUp_Click(System::Object^ sender, System::EventArgs^ e) {
-		PopUpMenu^ popUpMenu = gcnew PopUpMenu(this, this->arbolPaises, arbolCiudades,
-			arbolClientes, arbolMascotas, arbolVisitas, arbolTratamientos, arbolMedicaciones);
+		PopUpMenu^ popUpMenu = gcnew PopUpMenu(this, this->arbolPaises, this->arbolCiudades,
+			this->arbolClientes, this->arbolMascotas, this->arbolVisitas, this->arbolTratamientos, this->arbolMedicaciones);
 		popUpMenu->Show();
 		this->Hide();
 	}
@@ -265,8 +265,8 @@ namespace TareaProgramada3 {
 	/*	ICON MENU  */
 
 	private: System::Void bIcon_Click(System::Object^ sender, System::EventArgs^ e) {
-		IconMenu^ iconMenu = gcnew IconMenu(this, this->arbolPaises, arbolCiudades,
-			arbolClientes, arbolMascotas, arbolVisitas, arbolTratamientos, arbolMedicaciones);
+		IconMenu^ iconMenu = gcnew IconMenu(this, this->arbolPaises, this->arbolCiudades,
+			this->arbolClientes, this->arbolMascotas, this->arbolVisitas, this->arbolTratamientos, this->arbolMedicaciones);
 		iconMenu->Show();
 		this->Hide();
 	}

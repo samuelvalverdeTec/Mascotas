@@ -50,23 +50,7 @@ namespace TareaProgramada3 {
 			}
 		}
 	private: System::Windows::Forms::Button^ bExit;
-	protected:
 
-	protected:
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
 	public: BinarioPaises* arbolPaises;
 	public: BinarioCiudades* arbolCiudades;
 	public: BCliente* arbolClientes;
@@ -74,38 +58,19 @@ namespace TareaProgramada3 {
 	public: BinarioVisitas* arbolVisitas;
 	public: RNTratamiento* arbolTratamientos;
 	public: AAMedicacion* arbolMedicaciones;
+
 	private: System::Windows::Forms::TabPage^ btabCont;
-	public:
-
 	private: System::Windows::Forms::TabPage^ btabAD;
-	public:
-
-
 	private: System::Windows::Forms::TabPage^ btabSucs;
-	public:
-
-
 	private: System::Windows::Forms::TabPage^ btabReps;
-
-
 	private: System::Windows::Forms::TabPage^ btabFact;
-
-
-
 	private: System::Windows::Forms::TabControl^ tabPrincipal;
 	private: System::Windows::Forms::TabPage^ btabMant;
-
-
 	private: System::Windows::Forms::TabControl^ tabMantenimiento;
 	private: System::Windows::Forms::TabPage^ btabInser;
 	private: System::Windows::Forms::TabPage^ btabModif;
 	private: System::Windows::Forms::TabPage^ btabCons;
 	private: System::Windows::Forms::TabPage^ btabElim;
-
-
-
-
-
 	private: System::Windows::Forms::TabControl^ tabReportes;
 	private: System::Windows::Forms::TabPage^ tabR1;
 	private: System::Windows::Forms::TabPage^ tabR2;
@@ -129,83 +94,41 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::TabPage^ tabKruskal;
 	private: System::Windows::Forms::TabPage^ tabGrado;
 	private: System::Windows::Forms::TabPage^ tabCamino;
-private: System::Windows::Forms::Label^ AcercaDe;
-private: System::Windows::Forms::TabControl^ tabInsercion;
-private: System::Windows::Forms::TabPage^ btabInserPais;
-
-private: System::Windows::Forms::TabPage^ btabInserCdd;
-
-private: System::Windows::Forms::TabPage^ btabInserClt;
-
-private: System::Windows::Forms::TabPage^ btabInserMasc;
-
-private: System::Windows::Forms::TabPage^ btabInserVisita;
-
-private: System::Windows::Forms::TabPage^ btabInserTrat;
-
-private: System::Windows::Forms::TabPage^ btabInserMed;
-
-private: System::Windows::Forms::TabControl^ tabModificacion;
-private: System::Windows::Forms::TabPage^ btabModifPais;
-private: System::Windows::Forms::TabPage^ btabModifCdd;
-private: System::Windows::Forms::TabPage^ btabModifClt;
-private: System::Windows::Forms::TabPage^ btabModifMasc;
-private: System::Windows::Forms::TabPage^ btabModifVisita;
-private: System::Windows::Forms::TabPage^ btabModifTrat;
-private: System::Windows::Forms::TabPage^ btabModifMed;
-
-
-
-
-
-
-
-private: System::Windows::Forms::TabControl^ tabConsulta;
-private: System::Windows::Forms::TabPage^ btabConsPais;
-private: System::Windows::Forms::TabPage^ btabConsCdd;
-private: System::Windows::Forms::TabPage^ btabConsClt;
-private: System::Windows::Forms::TabPage^ btabConsMasc;
-private: System::Windows::Forms::TabPage^ btabConsVisita;
-private: System::Windows::Forms::TabPage^ btabConsTrat;
-private: System::Windows::Forms::TabPage^ btabConsMed;
-
-
-
-
-
-
-
-private: System::Windows::Forms::TabControl^ tabEliminacion;
-private: System::Windows::Forms::TabPage^ btabElimPais;
-private: System::Windows::Forms::TabPage^ btabElimCdd;
-private: System::Windows::Forms::TabPage^ btabElimClt;
-private: System::Windows::Forms::TabPage^ btabElimMasc;
-private: System::Windows::Forms::TabPage^ btabElimVisita;
-private: System::Windows::Forms::TabPage^ btabElimTrat;
-private: System::Windows::Forms::TabPage^ btabElimMed;
-private: System::Windows::Forms::Button^ bSalir;
-
-
-
-
-
-
-
-
-
-
-
-
-	public:
-
-	public:
-
-
-
-
-
-
-
+	private: System::Windows::Forms::Label^ AcercaDe;
+	private: System::Windows::Forms::TabControl^ tabInsercion;
+	private: System::Windows::Forms::TabPage^ btabInserPais;
+	private: System::Windows::Forms::TabPage^ btabInserCdd;
+	private: System::Windows::Forms::TabPage^ btabInserClt;
+	private: System::Windows::Forms::TabPage^ btabInserMasc;
+	private: System::Windows::Forms::TabPage^ btabInserVisita;
+	private: System::Windows::Forms::TabPage^ btabInserTrat;
+	private: System::Windows::Forms::TabPage^ btabInserMed;
+	private: System::Windows::Forms::TabControl^ tabModificacion;
+	private: System::Windows::Forms::TabPage^ btabModifPais;
+	private: System::Windows::Forms::TabPage^ btabModifCdd;
+	private: System::Windows::Forms::TabPage^ btabModifClt;
+	private: System::Windows::Forms::TabPage^ btabModifMasc;
+	private: System::Windows::Forms::TabPage^ btabModifVisita;
+	private: System::Windows::Forms::TabPage^ btabModifTrat;
+	private: System::Windows::Forms::TabPage^ btabModifMed;
+	private: System::Windows::Forms::TabControl^ tabConsulta;
+	private: System::Windows::Forms::TabPage^ btabConsPais;
+	private: System::Windows::Forms::TabPage^ btabConsCdd;
+	private: System::Windows::Forms::TabPage^ btabConsClt;
+	private: System::Windows::Forms::TabPage^ btabConsMasc;
+	private: System::Windows::Forms::TabPage^ btabConsVisita;
+	private: System::Windows::Forms::TabPage^ btabConsTrat;
+	private: System::Windows::Forms::TabPage^ btabConsMed;
+	private: System::Windows::Forms::TabControl^ tabEliminacion;
+	private: System::Windows::Forms::TabPage^ btabElimPais;
+	private: System::Windows::Forms::TabPage^ btabElimCdd;
+	private: System::Windows::Forms::TabPage^ btabElimClt;
+	private: System::Windows::Forms::TabPage^ btabElimMasc;
+	private: System::Windows::Forms::TabPage^ btabElimVisita;
+	private: System::Windows::Forms::TabPage^ btabElimTrat;
+	private: System::Windows::Forms::TabPage^ btabElimMed;
+	private: System::Windows::Forms::Button^ bSalir;
+	
 	private:
 		/// <summary>
 		/// Required designer variable.

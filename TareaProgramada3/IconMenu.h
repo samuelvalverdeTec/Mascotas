@@ -301,26 +301,24 @@ namespace TareaProgramada3 {
 #pragma endregion
 	private: System::Void IconMenu_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
-	
-
 
 	private: System::Void bMainLugs_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		SubMenuLugs^ sMLugs = gcnew SubMenuLugs(this/*, BinarioPaises arbolPaises, BinarioCiudades arbolCiudades*/);
+		SubMenuLugs^ sMLugs = gcnew SubMenuLugs(this, this->arbolPaises, this->arbolCiudades);
 		sMLugs->Show();
 		this->Hide();
 
 	}
 	private: System::Void bMainClnc_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		SubMenuClnc^ sMClnc = gcnew SubMenuClnc(this);
+		SubMenuClnc^ sMClnc = gcnew SubMenuClnc(this, this->arbolTratamientos, this->arbolMedicaciones);
 		sMClnc->Show();
 		this->Hide();
 
 	}
 	private: System::Void bMainFact_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		SubMenuFact^ sMF = gcnew SubMenuFact(this);
+		SubMenuFact^ sMF = gcnew SubMenuFact(this, this->arbolClientes);
 		sMF->Show();
 		this->Hide();
 
@@ -334,7 +332,7 @@ namespace TareaProgramada3 {
 	}
 	private: System::Void bMainClts_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		SubMenuClts^ sMClts = gcnew SubMenuClts(this);
+		SubMenuClts^ sMClts = gcnew SubMenuClts(this, this->arbolClientes, this->arbolMascotas, this->arbolVisitas);
 		sMClts->Show();
 		this->Hide();
 

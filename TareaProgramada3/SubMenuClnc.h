@@ -24,9 +24,13 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Form^ menu;
 
 	public:
-		SubMenuClnc(System::Windows::Forms::Form^ m)
+		SubMenuClnc(System::Windows::Forms::Form^ m, RNTratamiento* arbolTratamientos, AAMedicacion* arbolMedicaciones)
 		{
 			menu = m; 
+			
+			this->arbolTratamientos = arbolTratamientos;
+			this->arbolMedicaciones = arbolMedicaciones;
+			
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
@@ -44,88 +48,54 @@ namespace TareaProgramada3 {
 				delete components;
 			}
 		}
+
+	public: RNTratamiento* arbolTratamientos;
+	public: AAMedicacion* arbolMedicaciones;
+
 	private: System::Windows::Forms::Label^ titleMenu;
 	private: System::Windows::Forms::Panel^ pMeds;
-
-
 	private: System::Windows::Forms::Button^ bmElim;
-
 	private: System::Windows::Forms::Button^ bmBusq;
-
 	private: System::Windows::Forms::Button^ bmModif;
-
-
-
 	private: System::Windows::Forms::Button^ bmInser;
 	private: System::Windows::Forms::Panel^ pTrat;
-
-
 	private: System::Windows::Forms::Button^ btElim;
-
 	private: System::Windows::Forms::Button^ btBusq;
-
 	private: System::Windows::Forms::Button^ btModif;
-
 	private: System::Windows::Forms::Button^ btInser;
-
 	private: System::Windows::Forms::Label^ lblMeds;
-
 	private: System::Windows::Forms::Label^ lblTrat;
 	private: System::Windows::Forms::Button^ bMeds;
-
 	private: System::Windows::Forms::Button^ bTrat;
 	private: System::Windows::Forms::Button^ bSalir;
 	private: System::Windows::Forms::Panel^ ptInser;
 	private: System::Windows::Forms::TextBox^ tInserTxtbx4;
-
 	private: System::Windows::Forms::Label^ tInserLbl4;
 	private: System::Windows::Forms::TextBox^ tInserTxtbx3;
-
 	private: System::Windows::Forms::Label^ tInserLbl3;
 	private: System::Windows::Forms::Label^ tInserLbl2;
 	private: System::Windows::Forms::Label^ tInserLbl1;
 	private: System::Windows::Forms::TextBox^ tInserTxtbx2;
-
 	private: System::Windows::Forms::TextBox^ tInserTxtbx1;
-
 	private: System::Windows::Forms::Panel^ pmInser;
 	private: System::Windows::Forms::TextBox^ mInserTxtbx4;
 	private: System::Windows::Forms::Label^ mInserLbl4;
-
-
-
 	private: System::Windows::Forms::TextBox^ mInserTxtbx3;
 	private: System::Windows::Forms::Label^ mInserLbl3;
-
-
 	private: System::Windows::Forms::Label^ mInserLbl2;
-
 	private: System::Windows::Forms::Label^ mInserLbl1;
-
 	private: System::Windows::Forms::TextBox^ mInserTxtbx2;
-
 	private: System::Windows::Forms::TextBox^ mInserTxtbx1;
-
 	private: System::Windows::Forms::Panel^ ptBusq;
-
 	private: System::Windows::Forms::Label^ tBusqLbl1;
 	private: System::Windows::Forms::TextBox^ tBusqTxtbx1;
-
-
 	private: System::Windows::Forms::Panel^ pmBusq;
 	private: System::Windows::Forms::Label^ mBusqLbl1;
 	private: System::Windows::Forms::TextBox^ mBusqTxtbx1;
 	private: System::Windows::Forms::Button^ btInsertar;
 	private: System::Windows::Forms::Button^ bmInsertar;
-
-
 	private: System::Windows::Forms::Button^ btBuscar;
 	private: System::Windows::Forms::Button^ bmBuscar;
-
-
-
-
-	protected:
 
 	private:
 		/// <summary>

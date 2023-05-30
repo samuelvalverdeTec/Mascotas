@@ -18,9 +18,12 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Form^ menu;
 
 	public:
-		SubMenuFact(System::Windows::Forms::Form^ m)
+		SubMenuFact(System::Windows::Forms::Form^ m, BCliente* arbolClientes)
 		{
 			menu = m;
+
+			this->arbolClientes = arbolClientes;
+
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
@@ -38,6 +41,9 @@ namespace TareaProgramada3 {
 				delete components;
 			}
 		}
+
+	public: BCliente* arbolClientes;
+
 	private: System::Windows::Forms::Label^ titleMenu;
 	private: System::Windows::Forms::Button^ bSalir;
 	private: System::Windows::Forms::Label^ lblFactura;

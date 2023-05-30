@@ -1,4 +1,5 @@
 #pragma once
+
 #include "Controlador.h"
 
 namespace TareaProgramada3 {
@@ -19,9 +20,13 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Form^ menu;
 
 	public:
-		SubMenuLugs(System::Windows::Forms::Form^ m)
+		SubMenuLugs(System::Windows::Forms::Form^ m, BinarioPaises* arbolPaises, BinarioCiudades* arbolCiudades)
 		{
 			menu = m;
+
+			this->arbolPaises = arbolPaises;
+			this->arbolCiudades = arbolCiudades;
+
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
@@ -39,74 +44,44 @@ namespace TareaProgramada3 {
 				delete components;
 			}
 		}
+
+	public: BinarioPaises* arbolPaises;
+	public: BinarioCiudades* arbolCiudades;
+
 	private: System::Windows::Forms::Label^ titleMenu;
 	private: System::Windows::Forms::Button^ bPaises;
-
 	private: System::Windows::Forms::Button^ bCiudades;
-
-
-
 	private: System::Windows::Forms::Button^ bSalir;
 	private: System::Windows::Forms::Label^ lblPaises;
 	private: System::Windows::Forms::Label^ lblCiudades;
 	private: System::Windows::Forms::Panel^ pPaises;
-
 	private: System::Windows::Forms::Button^ bpElim;
 	private: System::Windows::Forms::Button^ bpBusq;
 	private: System::Windows::Forms::Button^ bpModif;
 	private: System::Windows::Forms::Button^ bpInser;
 	private: System::Windows::Forms::Panel^ pCiudades;
-
 	private: System::Windows::Forms::Button^ bcElim;
 	private: System::Windows::Forms::Button^ bcBusq;
 	private: System::Windows::Forms::Button^ bcModif;
 	private: System::Windows::Forms::Button^ bcInser;
 	private: System::Windows::Forms::Panel^ ppInser;
-
-
 	private: System::Windows::Forms::Label^ pInserLbl1;
 	private: System::Windows::Forms::TextBox^ pInserTxtbx2;
-
 	private: System::Windows::Forms::TextBox^ pInserTxtbx1;
-
-
-
-
-
 	private: System::Windows::Forms::Label^ pInserLbl2;
 	private: System::Windows::Forms::Panel^ ppBusq;
 	private: System::Windows::Forms::Label^ pBusqLbl1;
 	private: System::Windows::Forms::TextBox^ pBusqTxtbx1;
 	private: System::Windows::Forms::Panel^ pcInser;
 	private: System::Windows::Forms::TextBox^ cInserTxtbx3;
-
 	private: System::Windows::Forms::Label^ cInserLbl3;
 	private: System::Windows::Forms::Label^ cInserLbl2;
 	private: System::Windows::Forms::Label^ cInserLbl1;
 	private: System::Windows::Forms::TextBox^ cInserTxtbx2;
-
 	private: System::Windows::Forms::TextBox^ cInserTxtbx1;
-
 	private: System::Windows::Forms::Panel^ pcBusq;
-
 	private: System::Windows::Forms::Label^ cBusqLbl1;
 	private: System::Windows::Forms::TextBox^ cBusqTxtbx1;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	protected:
 
 	private:
 		/// <summary>
