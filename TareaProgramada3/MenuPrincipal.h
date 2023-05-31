@@ -204,7 +204,7 @@ namespace TareaProgramada3 {
 			this->bIcon->Font = (gcnew System::Drawing::Font(L"Cascadia Code", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->bIcon->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bIcon.Image")));
-			this->bIcon->Location = System::Drawing::Point(820, 283);
+			this->bIcon->Location = System::Drawing::Point(811, 283);
 			this->bIcon->Name = L"bIcon";
 			this->bIcon->Size = System::Drawing::Size(110, 110);
 			this->bIcon->TabIndex = 38;
@@ -253,7 +253,7 @@ namespace TareaProgramada3 {
 		popUpMenu->Show();
 		this->Hide();
 	}
-
+	
 		   /*	ICON MENU  */
 
 	private: System::Void bIcon_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -266,9 +266,7 @@ namespace TareaProgramada3 {
 		   // *****************************************************************************************************
 
 	private: System::Void bSalir_Click(System::Object^ sender, System::EventArgs^ e) {
-
 		this->Close();
-
 	}
 
 	};
