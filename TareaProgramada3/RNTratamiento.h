@@ -1,29 +1,11 @@
-#ifndef _RN_H
-#define	_RN_H
-#include "NodoRN.h"
-
+#pragma once
 #include <iostream>
 #include <fstream>
 #include <cstring> 
 #include <string>
+#include "NodoRNTratamiento.h"
 
 using namespace std;
-
-
-/*class RNTratamientos {
-	//private:
-	public:
-	pNodoRNTratamiento Raiz;
-	pNodoRNTratamiento TNULL;
-	public:
-	RNTratamiento() {
-	TNULL = new NodoRNTratamiento;
-	TNULL->color = 0;
-	TNULL->Hizq = nullptr;
-	TNULL->Hder = nullptr;
-	Raiz = TNULL;
-  }
-};*/
 
 class RNTratamiento {
 
@@ -47,5 +29,3 @@ public:
 	void RotacionSimpleDerecha(NodoRNTratamiento*& n1, NodoRNTratamiento* n2);
 
 };
-
-#endif

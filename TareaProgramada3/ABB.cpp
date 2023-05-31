@@ -1,12 +1,10 @@
-#include "NodoBinario.h"
-#include "Binario.h"
-//#include "AVL.h"
-//#include "NodoAVL.h"
-
 #include <iostream>
 #include <fstream>
 #include <cstring> 
 #include <string>
+#include "BinarioCiudades.h"
+#include "BinarioPaises.h"
+#include "BinarioVisitas.h"
 
 using namespace std;
 
@@ -41,8 +39,6 @@ void BinarioPaises::InsertaNodoPaises(int num, string nom)
         raiz->InsertaBinarioPais(num, nom);
     }
 }
-
-
 
 void PreordenRPaises(NodoBinarioPaises* R) {
 
@@ -83,49 +79,6 @@ void PostordenRPaises(NodoBinarioPaises* R) {
     }
 }
 
-
-
-/*void RecorreArbolPaises(NodoBinarioPaises *R, string STR, string nomArch){
-
-    if(R==NULL){
-        return;
-    }else{
-        //cout<<" "<<R->valor<<": "<<R->nombre<<" ->> ";
-        STR = STR + "Codigo Pais: " + to_string(R->valor) + "\n" + "Nombre Pais: " + R->nombre + "\n";
-        EscribeReporte1(nomArch, STR);
-        RecorreArbolPaises(R->Hizq, STR);
-        RecorreArbolPaises(R->Hder, STR);
-    }
-    //return STR;
-}*/
-
-
-
-/*bool buscaRepetidosI(NodoBinarioPasilloInventario *R, int codPasilloI){
-    bool existe = false;
-    if(R==NULL){
-        return existe;
-    }
-    else{
-        if(R->valor == codPasilloI){
-            existe = true;
-            return existe;
-        }
-        else{
-            existe = buscaRepetidosI(R->Hizq, codPasilloI);
-            if(existe){
-                return existe;
-            }
-            else{
-                existe = buscaRepetidosI(R->Hder, codPasilloI);
-                return existe;
-            }
-        }
-    }
-    //return existe;
-}*/
-
-
 pNodoBinarioPaises buscaPais(pNodoBinarioPaises R, int codPais) {
 
     pNodoBinarioPaises pais = NULL;
@@ -150,18 +103,6 @@ pNodoBinarioPaises buscaPais(pNodoBinarioPaises R, int codPais) {
     }
     return pais;
 }
-
-/*bool NodoBinarioPasilloInventario::InsertarProductoInventario(int codProductoI, string nombreI){
-    bool existe2 = buscaProductoInventario(arbolProductosPasillo.raiz, codProductoI)!=NULL;
-    bool insertado = false;
-    if(!existe2){
-        insertado = true;
-        //arbolProductosPasillo.InsertaNodo(valor, codProductoI, nombreI);
-        arbolProductosPasillo.InsertarBalanceado(arbolProductosPasillo.raiz, arbolProductosPasillo.Hh, valor, codProductoI, nombreI);
-    }
-    return insertado;
-}*/
-
 
 // ************************************* CIUDADES *************************************
 
@@ -194,8 +135,6 @@ void BinarioCiudades::InsertaNodoCiudad(int codPais, int codCiudad, string nom)
         raiz->InsertaBinarioCiudad(codPais, codCiudad, nom);
     }
 }
-
-
 
 void PreordenRCiudades(NodoBinarioCiudades* R) {
 
@@ -235,31 +174,6 @@ void PostordenRCiudades(NodoBinarioCiudades* R) {
         //PostordenRProductos(R->arbolProductosPasillo.raiz);
     }
 }
-
-/*bool buscaRepetidosI(NodoBinarioPasilloInventario *R, int codPasilloI){
-    bool existe = false;
-    if(R==NULL){
-        return existe;
-    }
-    else{
-        if(R->valor == codPasilloI){
-            existe = true;
-            return existe;
-        }
-        else{
-            existe = buscaRepetidosI(R->Hizq, codPasilloI);
-            if(existe){
-                return existe;
-            }
-            else{
-                existe = buscaRepetidosI(R->Hder, codPasilloI);
-                return existe;
-            }
-        }
-    }
-    //return existe;
-}*/
-
 
 pNodoBinarioCiudades buscaCiudad(pNodoBinarioCiudades R, int codCiudad) {
 

@@ -2,8 +2,7 @@
 #include "Binario.h"
 #include "AVL.h"
 #include "NodoAVL.h"*/
-#include "NodoRN.h"
-#include "RN.h"
+#include "RNTratamiento.h"
 /*#include "NodoAA.h"
 #include "AA.h"*/
 

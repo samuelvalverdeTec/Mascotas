@@ -1,12 +1,7 @@
 #pragma once
-/*
-#include "RN.h"    // Tratamientos
-#include "NodoRN.h"
-//#include "RN.cpp"
-#include "AA.h"		// Medicacion
-#include "NodoAA.h"
-//#include "AA.cpp"
-*/
+
+#include "RNTratamiento.h"
+#include "AAMedicacion.h"
 namespace TareaProgramada3 {
 
 	using namespace System;

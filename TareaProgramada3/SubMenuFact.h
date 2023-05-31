@@ -1,9 +1,6 @@
 #pragma once
-/*
-#include "B.h"		// Clientes
-#include "NodoB.h"
-*/
 
+#include "BCliente.h"
 namespace TareaProgramada3 {
 
 	using namespace System;

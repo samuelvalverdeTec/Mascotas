@@ -1,23 +1,11 @@
-/*#include "NodoBinario.h"
-#include "Binario.h"
-#include "AVL.h"
-#include "NodoAVL.h"
-#include "NodoRN.h"
-#include "RN.h"*/
-#include "NodoB.h"
-#include "B.h"
-
 #include <iostream>
 #include <fstream>
 #include <cstring> 
 #include <string>
-
+#include "BCliente.h"
 using namespace std;
 
-
-
 //*******************************************CLIENTES***************************************************************
-
 
 void NodoBCliente::InsertaBinario(int num, string nombreC, string dir, int codPais, int codCiudad, int telefono, string ultVisita, int descuento, int saldo)
 {

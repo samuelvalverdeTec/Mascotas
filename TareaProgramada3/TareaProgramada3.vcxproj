@@ -122,43 +122,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AA.cpp" />
+    <ClCompile Include="AAMedicacion.cpp" />
     <ClCompile Include="ABB.cpp" />
-    <ClCompile Include="AVL.cpp" />
-    <ClCompile Include="B.cpp" />
-    <ClCompile Include="Controlador.cpp" />
+    <ClCompile Include="AVLMascotas.cpp" />
+    <ClCompile Include="BCliente.cpp" />
     <ClCompile Include="Funciones.cpp" />
     <ClCompile Include="IconMenu.cpp" />
     <ClCompile Include="MenuPrincipal.cpp" />
     <ClCompile Include="PopUpMenu.cpp" />
-    <ClCompile Include="RN.cpp" />
-    <ClCompile Include="SubMenuClnc.cpp" />
-    <ClCompile Include="SubMenuClts.cpp" />
-    <ClCompile Include="SubMenuFact.cpp" />
-    <ClCompile Include="SubMenuLugs.cpp" />
-    <ClCompile Include="SubMenuSucs.cpp" />
+    <ClCompile Include="RNTratamiento.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AA.h" />
-    <ClInclude Include="AVL.h" />
-    <ClInclude Include="B.h" />
-    <ClInclude Include="Binario.h" />
-    <ClInclude Include="Controlador.h" />
+    <ClInclude Include="AAMedicacion.h" />
+    <ClInclude Include="AVLMascotas.h" />
+    <ClInclude Include="BCliente.h" />
+    <ClInclude Include="BinarioVisitas.h" />
+    <ClInclude Include="BinarioCiudades.h" />
+    <ClInclude Include="BinarioPaises.h" />
     <ClInclude Include="IconMenu.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MenuPrincipal.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="NodoAA.h" />
-    <ClInclude Include="NodoAVL.h" />
-    <ClInclude Include="NodoB.h" />
-    <ClInclude Include="NodoBinario.h" />
-    <ClInclude Include="NodoRN.h" />
+    <ClInclude Include="NodoAAMedicacion.h" />
+    <ClInclude Include="NodoAVLMascotas.h" />
+    <ClInclude Include="NodoBCliente.h" />
+    <ClInclude Include="NodoBinarioVisitas.h" />
+    <ClInclude Include="NodoBinarioCiudades.h" />
+    <ClInclude Include="NodoBinarioPaises.h" />
+    <ClInclude Include="NodoRNTratamiento.h" />
     <ClInclude Include="PopUpMenu.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="RN.h" />
+    <ClInclude Include="RNTratamiento.h" />
     <ClInclude Include="SubMenuClnc.h">
       <FileType>CppForm</FileType>
     </ClInclude>

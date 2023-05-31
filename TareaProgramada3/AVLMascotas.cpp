@@ -1,11 +1,8 @@
-#include "AVL.h"
-#include "NodoAVL.h"
-
 #include <iostream>
 #include <fstream>
 #include <cstring> 
 #include <string>
-
+#include "AVLMascotas.h"
 using namespace std;
 
 // ************************************* MASCOTAS *************************************
@@ -393,47 +390,3 @@ NodoAVLMascotas* buscaMascotaRepetida(NodoAVLMascotas* R, int IDAnimal, int codC
     }
     return mascota;
 }
-
-/*bool NodoAVLMascotas::InsertarMascota(int codC, int IDAnimal, string nom, string tipo, string rz, string fechaN, string sx, string clr, string cst, string ultimaV){
-
-    bool existe2 = buscaMascota(NodoAVLMascotas* R, IDAnimal)!=NULL;
-    bool insertado = false;
-    if(!existe2){
-        insertado = true;
-        arbolMarcasInventario.InsertaNodo(codPasillo, valor, codMarcaI, nombreI, cantidadI, canastaI);
-        //arbolMarcasProducto.InsertarBalanceado(arbolProductosPasillo.raiz, arbolProductosPasillo.Hh, valor, codProductoI, nombreI);
-    }
-    return insertado;
-}*/
-
-//********************************************PRUEBAS*******************************************************
-/*
-void RevisarGondolasProductos(NodoAVLProducto * R){//, NodoBinarioPasilloInventario * S){
-
-    if(R==NULL){
-        //cout<<"No hay elementos"<<endl;
-        //return;
-    }else{
-
-        RevisarGondolasMarcas(R->arbolMarcas.raiz);//, S);
-
-        RevisarGondolasProductos(R->Hizq);//, S);
-        RevisarGondolasProductos(R->Hder);//, S);
-    }
-
-}
-
-void VerificarInventarioProductos(NodoAVLProductoInventario *R){
-
-    if(R==NULL){
-        //cout<<"No hay elementos"<<endl;
-        //return;
-    }else{
-
-        VerificarInventarioMarcas(R->arbolMarcasInventario.raiz);
-
-        VerificarInventarioProductos(R->Hizq);
-        VerificarInventarioProductos(R->Hder);
-    }
-
-}*/

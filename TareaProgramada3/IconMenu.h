@@ -5,7 +5,13 @@
 #include "SubMenuFact.h"
 #include "SubMenuSucs.h"
 #include "SubMenuClts.h"
-
+#include "BinarioPaises.h"
+#include "BinarioCiudades.h"
+#include "BCliente.h"
+#include "AVLMascotas.h"
+#include "BinarioVisitas.h"
+#include "RNTratamiento.h"
+#include "AAMedicacion.h"
 namespace TareaProgramada3 {
 
 	using namespace System;
