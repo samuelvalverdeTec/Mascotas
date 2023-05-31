@@ -37,6 +37,12 @@ namespace TareaProgramada3 {
 	public: AVLMascotas* arbolMascotas;
 	public: BinarioVisitas* arbolVisitas;
 	public: RNTratamiento* arbolTratamientos;
+	private: System::Windows::Forms::Label^ errorModifCiudad1;
+	public:
+
+	private: System::Windows::Forms::Label^ errorModifPais;
+	private: System::Windows::Forms::Label^ errorModifCiudad2;
+	public:
 	public: AAMedicacion* arbolMedicaciones;
 
 	public:
@@ -152,7 +158,8 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Button^ bModifPais;
 	private: System::Windows::Forms::TextBox^ txtModifPais2;
 	private: System::Windows::Forms::Label^ lblModifPais2;
-	private: System::Windows::Forms::TextBox^ txtlModifCiudad3;
+private: System::Windows::Forms::TextBox^ txtModifCiudad3;
+
 	private: System::Windows::Forms::Label^ lblModifCiudad3;
 	private: System::Windows::Forms::TextBox^ txtModifCliente3;
 	private: System::Windows::Forms::Label^ lblModifCliente3;
@@ -258,13 +265,16 @@ namespace TareaProgramada3 {
 			this->btabModif = (gcnew System::Windows::Forms::TabPage());
 			this->tabModificacion = (gcnew System::Windows::Forms::TabControl());
 			this->btabModifPais = (gcnew System::Windows::Forms::TabPage());
+			this->errorModifPais = (gcnew System::Windows::Forms::Label());
 			this->txtModifPais2 = (gcnew System::Windows::Forms::TextBox());
 			this->lblModifPais2 = (gcnew System::Windows::Forms::Label());
 			this->bModifPais = (gcnew System::Windows::Forms::Button());
 			this->txtModifPais1 = (gcnew System::Windows::Forms::TextBox());
 			this->lblModifPais1 = (gcnew System::Windows::Forms::Label());
 			this->btabModifCdd = (gcnew System::Windows::Forms::TabPage());
-			this->txtlModifCiudad3 = (gcnew System::Windows::Forms::TextBox());
+			this->errorModifCiudad2 = (gcnew System::Windows::Forms::Label());
+			this->errorModifCiudad1 = (gcnew System::Windows::Forms::Label());
+			this->txtModifCiudad3 = (gcnew System::Windows::Forms::TextBox());
 			this->lblModifCiudad3 = (gcnew System::Windows::Forms::Label());
 			this->bModifCiudad = (gcnew System::Windows::Forms::Button());
 			this->txtModifCiudad2 = (gcnew System::Windows::Forms::TextBox());
@@ -852,6 +862,7 @@ namespace TareaProgramada3 {
 			// btabModifPais
 			// 
 			this->btabModifPais->BackColor = System::Drawing::Color::Teal;
+			this->btabModifPais->Controls->Add(this->errorModifPais);
 			this->btabModifPais->Controls->Add(this->txtModifPais2);
 			this->btabModifPais->Controls->Add(this->lblModifPais2);
 			this->btabModifPais->Controls->Add(this->bModifPais);
@@ -864,6 +875,19 @@ namespace TareaProgramada3 {
 			this->btabModifPais->Size = System::Drawing::Size(917, 457);
 			this->btabModifPais->TabIndex = 0;
 			this->btabModifPais->Text = L"País";
+			// 
+			// errorModifPais
+			// 
+			this->errorModifPais->AutoSize = true;
+			this->errorModifPais->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->errorModifPais->ForeColor = System::Drawing::Color::Red;
+			this->errorModifPais->Location = System::Drawing::Point(71, 130);
+			this->errorModifPais->Name = L"errorModifPais";
+			this->errorModifPais->Size = System::Drawing::Size(352, 21);
+			this->errorModifPais->TabIndex = 44;
+			this->errorModifPais->Text = L"El código de país ingresado no está registrado.";
+			this->errorModifPais->Visible = false;
 			// 
 			// txtModifPais2
 			// 
@@ -920,7 +944,9 @@ namespace TareaProgramada3 {
 			// btabModifCdd
 			// 
 			this->btabModifCdd->BackColor = System::Drawing::Color::Teal;
-			this->btabModifCdd->Controls->Add(this->txtlModifCiudad3);
+			this->btabModifCdd->Controls->Add(this->errorModifCiudad2);
+			this->btabModifCdd->Controls->Add(this->errorModifCiudad1);
+			this->btabModifCdd->Controls->Add(this->txtModifCiudad3);
 			this->btabModifCdd->Controls->Add(this->lblModifCiudad3);
 			this->btabModifCdd->Controls->Add(this->bModifCiudad);
 			this->btabModifCdd->Controls->Add(this->txtModifCiudad2);
@@ -934,12 +960,38 @@ namespace TareaProgramada3 {
 			this->btabModifCdd->TabIndex = 1;
 			this->btabModifCdd->Text = L"Ciudad";
 			// 
-			// txtlModifCiudad3
+			// errorModifCiudad2
 			// 
-			this->txtlModifCiudad3->Location = System::Drawing::Point(75, 257);
-			this->txtlModifCiudad3->Name = L"txtlModifCiudad3";
-			this->txtlModifCiudad3->Size = System::Drawing::Size(210, 35);
-			this->txtlModifCiudad3->TabIndex = 42;
+			this->errorModifCiudad2->AutoSize = true;
+			this->errorModifCiudad2->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->errorModifCiudad2->ForeColor = System::Drawing::Color::Red;
+			this->errorModifCiudad2->Location = System::Drawing::Point(71, 203);
+			this->errorModifCiudad2->Name = L"errorModifCiudad2";
+			this->errorModifCiudad2->Size = System::Drawing::Size(372, 21);
+			this->errorModifCiudad2->TabIndex = 44;
+			this->errorModifCiudad2->Text = L"El código de ciudad ingresado no está registrado.";
+			this->errorModifCiudad2->Visible = false;
+			// 
+			// errorModifCiudad1
+			// 
+			this->errorModifCiudad1->AutoSize = true;
+			this->errorModifCiudad1->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->errorModifCiudad1->ForeColor = System::Drawing::Color::Red;
+			this->errorModifCiudad1->Location = System::Drawing::Point(71, 110);
+			this->errorModifCiudad1->Name = L"errorModifCiudad1";
+			this->errorModifCiudad1->Size = System::Drawing::Size(352, 21);
+			this->errorModifCiudad1->TabIndex = 43;
+			this->errorModifCiudad1->Text = L"El código de país ingresado no está registrado.";
+			this->errorModifCiudad1->Visible = false;
+			// 
+			// txtModifCiudad3
+			// 
+			this->txtModifCiudad3->Location = System::Drawing::Point(75, 257);
+			this->txtModifCiudad3->Name = L"txtModifCiudad3";
+			this->txtModifCiudad3->Size = System::Drawing::Size(210, 35);
+			this->txtModifCiudad3->TabIndex = 42;
 			// 
 			// lblModifCiudad3
 			// 
@@ -966,6 +1018,7 @@ namespace TareaProgramada3 {
 			this->bModifCiudad->TabIndex = 40;
 			this->bModifCiudad->Text = L"Modificar";
 			this->bModifCiudad->UseVisualStyleBackColor = false;
+			this->bModifCiudad->Click += gcnew System::EventHandler(this, &PopUpMenu::bModifCiudad_Click);
 			// 
 			// txtModifCiudad2
 			// 
@@ -1819,10 +1872,30 @@ namespace TareaProgramada3 {
 		pNodoBinarioPaises paisBuscado = buscaPais(this->arbolPaises->raiz, codigo);
 		
 		if (paisBuscado == NULL) {
+			this->errorModifPais->Hide();
 			this->arbolPaises->InsertaNodoPaises(codigo, marshal_as<string, String^>(nombre));
 		}
 		else {
-			//this->
+			this->errorModifPais->Show();
+		}
+
+	}
+	private: System::Void bModifCiudad_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		String^ codPais = this->txtModifCiudad1->Text;
+		String^ codCiudad = this->txtModifCiudad2->Text;
+		String^ nombre = this->txtModifCiudad3->Text;
+
+		int codigo = stoi(marshal_as<string, String^>(codPais));
+
+		pNodoBinarioPaises paisBuscado = buscaPais(this->arbolPaises->raiz, codigo);
+
+		if (paisBuscado == NULL) {
+			this->errorModifPais->Hide();
+			this->arbolPaises->InsertaNodoPaises(codigo, marshal_as<string, String^>(nombre));
+		}
+		else {
+			this->errorModifPais->Show();
 		}
 
 	}
