@@ -913,7 +913,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->bModifPais->TabIndex = 41;
 			this->bModifPais->Text = L"Modificar";
 			this->bModifPais->UseVisualStyleBackColor = false;
-			this->bModifPais->Click += gcnew System::EventHandler(this, &PopUpMenu::bModifPais_Click);
+			//this->bModifPais->Click += gcnew System::EventHandler(this, &PopUpMenu::bModifPais_Click);
 			// 
 			// txtModifPais1
 			// 
@@ -1010,7 +1010,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->bModifCiudad->TabIndex = 40;
 			this->bModifCiudad->Text = L"Modificar";
 			this->bModifCiudad->UseVisualStyleBackColor = false;
-			this->bModifCiudad->Click += gcnew System::EventHandler(this, &PopUpMenu::bModifCiudad_Click);
+			//this->bModifCiudad->Click += gcnew System::EventHandler(this, &PopUpMenu::bModifCiudad_Click);
 			// 
 			// txtModifCiudad2
 			// 
@@ -1854,45 +1854,44 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 
 	/*	******************	*/
 
-	private: System::Void bModifPais_Click(System::Object^ sender, System::EventArgs^ e) {
+	//private: System::Void bModifPais_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		String^ codPais = this->txtModifPais1->Text;
-		String^ nombre = this->txtModifPais2->Text;
-		
-		//int codigo = stoi(marshal_as<string, String^>(codPais));
+	//	String^ codPais = this->txtModifPais1->Text;
+	//	String^ nombre = this->txtModifPais2->Text;
+	//	
+	//	//int codigo = stoi(marshal_as<string, String^>(codPais));
 
-		//pNodoBinarioPaises paisBuscado = buscaPais(this->arbolPaises->raiz, codigo);
-		
-		/*
-		if (paisBuscado == NULL) {
-			this->errorModifPais->Hide();
-			this->arbolPaises->InsertaNodoPaises(codigo, marshal_as<string, String^>(nombre));
-		}
-		else {
-			this->errorModifPais->Show();
-		}
+	//	//pNodoBinarioPaises paisBuscado = buscaPais(this->arbolPaises->raiz, codigo);
+	//	
+	//	
+	//	if (paisBuscado == NULL) {
+	//		this->errorModifPais->Hide();
+	//		this->arbolPaises->InsertaNodoPaises(codigo, marshal_as<string, String^>(nombre));
+	//	}
+	//	else {
+	//		this->errorModifPais->Show();
+	//	}
 
-	}
-	private: System::Void bModifCiudad_Click(System::Object^ sender, System::EventArgs^ e) {
+	//}
+	//private: System::Void bModifCiudad_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		String^ codPais = this->txtModifCiudad1->Text;
-		String^ codCiudad = this->txtModifCiudad2->Text;
-		String^ nombre = this->txtModifCiudad3->Text;
+	//	String^ codPais = this->txtModifCiudad1->Text;
+	//	String^ codCiudad = this->txtModifCiudad2->Text;
+	//	String^ nombre = this->txtModifCiudad3->Text;
 
-		int codigo = stoi(marshal_as<string, String^>(codPais));
+	//	int codigo = stoi(marshal_as<string, String^>(codPais));
 
-		pNodoBinarioPaises paisBuscado = buscaPais(this->arbolPaises->raiz, codigo);
+	//	pNodoBinarioPaises paisBuscado = buscaPais(this->arbolPaises->raiz, codigo);
 
-		if (paisBuscado == NULL) {
-			this->errorModifPais->Hide();
-			this->arbolPaises->InsertaNodoPaises(codigo, marshal_as<string, String^>(nombre));
-		}
-		else {
-			this->errorModifPais->Show();
-		}
-		*/
-		
+	//	if (paisBuscado == NULL) {
+	//		this->errorModifPais->Hide();
+	//		this->arbolPaises->InsertaNodoPaises(codigo, marshal_as<string, String^>(nombre));
+	//	}
+	//	else {
+	//		this->errorModifPais->Show();
+	//	}
+	//	
 
-	}
+	//}
 };
 }
