@@ -1,18 +1,11 @@
 #pragma once
-
-#include "msclr\marshal_cppstd.h"
-
-#include "Binario.h"	// Paises, Ciudades & Visitas
-#include "NodoBinario.h"
-#include "B.h"		// Clientes
-#include "NodoB.h"
-#include "AVL.h"	// Mascotas
-#include "NodoAVL.h"
-#include "RN.h"    // Tratamientos
-#include "NodoRN.h"
-#include "AA.h"		// Medicacion
-#include "NodoAA.h"
-
+#include "BinarioPaises.h"
+#include "BinarioCiudades.h"
+#include "BCliente.h"
+#include "AVLMascotas.h"
+#include "BinarioVisitas.h"
+#include "RNTratamiento.h"
+#include "AAMedicacion.h"
 namespace TareaProgramada3 {
 
 	using namespace System;
@@ -21,7 +14,6 @@ namespace TareaProgramada3 {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-	using namespace msclr::interop;
 
 	/// <summary>
 	/// Summary for PopUpMenu
@@ -1867,10 +1859,11 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 		String^ codPais = this->txtModifPais1->Text;
 		String^ nombre = this->txtModifPais2->Text;
 		
-		int codigo = stoi(marshal_as<string, String^>(codPais));
+		//int codigo = stoi(marshal_as<string, String^>(codPais));
 
-		pNodoBinarioPaises paisBuscado = buscaPais(this->arbolPaises->raiz, codigo);
+		//pNodoBinarioPaises paisBuscado = buscaPais(this->arbolPaises->raiz, codigo);
 		
+		/*
 		if (paisBuscado == NULL) {
 			this->errorModifPais->Hide();
 			this->arbolPaises->InsertaNodoPaises(codigo, marshal_as<string, String^>(nombre));
@@ -1897,6 +1890,8 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 		else {
 			this->errorModifPais->Show();
 		}
+		*/
+		
 
 	}
 };

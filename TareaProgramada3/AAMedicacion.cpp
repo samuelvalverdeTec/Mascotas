@@ -1,10 +1,4 @@
-//#include "NodoBinario.h"
-//#include "Binario.h"
-//#include "AVL.h"
-//#include "NodoAVL.h"
-#include "NodoAA.h"
-#include "AA.h"
-
+#include "AAMedicacion.h"
 #include <iostream>
 #include <fstream>
 #include <cstring> 
@@ -42,7 +36,6 @@ void AAMedicacion::InsertaNodoMedicacion(int idAnimal, int num, string ultVisita
         raiz->InsertaBinario(idAnimal, num, ultVisita, LMed, costU, cant, costT);
     }
 }
-
 
 void PreordenRMedicaciones(NodoAAMedicacion* R) {
 
@@ -337,7 +330,6 @@ void AAMedicacion::RotacionSimpleIzquierda(NodoAAMedicacion*& n, NodoAAMedicacio
     n = n1;
 }
 
-
 NodoAAMedicacion* buscaMedicacion(NodoAAMedicacion* R, int codigoMed) {
     NodoAAMedicacion* medicacion = NULL;
     if (R == NULL) {
@@ -409,114 +401,3 @@ NodoAAMedicacion* buscaMedicacionRepetida2(NodoAAMedicacion* R, int codigoMed, i
     }
     return medicacion;
 }
-
-
-/*string AAMarcaInventario::SeparaStringInventario(string linea){
-    char *ptr; // declare a ptr pointer
-    int largolinea = linea.length();
-    char char_array[largolinea + 1];
-    strcpy(char_array, linea.c_str());
-    ptr = strtok(char_array, ";");
-    //cout<<ptr<<endl;
-    return ptr;
-}
-string AAMarcaInventario::SeparaString2Inventario(string linea){
-    //char *ptr; // declare a ptr pointer
-    char *ptr2;
-    int largolinea = linea.length();
-    char char_array[largolinea + 1];
-    strcpy(char_array, linea.c_str());
-    ptr2 = strtok(char_array, ";");
-    ptr2 = strtok(NULL, ";");
-    //cout<<ptr2<<endl;
-    return ptr2;
-}
-string AAMarcaInventario::SeparaString3Inventario(string linea){
-    //char *ptr; // declare a ptr pointer
-    char *ptr3;
-    int largolinea = linea.length();
-    char char_array[largolinea + 1];
-    strcpy(char_array, linea.c_str());
-    ptr3 = strtok(char_array, ";");
-    ptr3 = strtok(NULL, ";");
-    ptr3 = strtok(NULL, ";");
-    //cout<<ptr3<<endl;
-    return ptr3;
-}
-string AAMarcaInventario::SeparaString4Inventario(string linea){
-    //char *ptr; // declare a ptr pointer
-    char *ptr4;
-    int largolinea = linea.length();
-    char char_array[largolinea + 1];
-    strcpy(char_array, linea.c_str());
-    ptr4 = strtok(char_array, ";");
-    ptr4 = strtok(NULL, ";");
-    ptr4 = strtok(NULL, ";");
-    ptr4 = strtok(NULL, ";");
-    //cout<<ptr4<<endl;
-    return ptr4;
-}
-string AAMarcaInventario::SeparaString5Inventario(string linea){
-    //char *ptr; // declare a ptr pointer
-    char *ptr5;
-    int largolinea = linea.length();
-    char char_array[largolinea + 1];
-    strcpy(char_array, linea.c_str());
-    ptr5 = strtok(char_array, ";");
-    ptr5 = strtok(NULL, ";");
-    ptr5 = strtok(NULL, ";");
-    ptr5 = strtok(NULL, ";");
-    ptr5 = strtok(NULL, ";");
-    //cout<<ptr5<<endl;
-    return ptr5;
-}
-string AAMarcaInventario::SeparaString6Inventario(string linea){
-    //char *ptr; // declare a ptr pointer
-    char *ptr6;
-    int largolinea = linea.length();
-    char char_array[largolinea + 1];
-    strcpy(char_array, linea.c_str());
-    ptr6 = strtok(char_array, ";");
-    ptr6 = strtok(NULL, ";");
-    ptr6 = strtok(NULL, ";");
-    ptr6 = strtok(NULL, ";");
-    ptr6 = strtok(NULL, ";");
-    ptr6 = strtok(NULL, ";");
-    //cout<<ptr6<<endl;
-    return ptr6;
-}*/
-
-
-//***********************************************PRUEBAS***********************************************
-
-/*void VerificarMarcasIFinal(NodoAAMarcaInventario *R){
-    int cantidadRellenar;
-    int cantidadStock = R->cantidad;
-    cout << "La marca " << R->nombreMarcaI << " tiene "<< cantidadStock << " unidades restantes en inventario." << endl;
-    if (cantidadStock <= 20) {
-        cout << "Ingrese la cantidad que desea rellenar: ";
-        cin >> cantidadRellenar;
-            cantidadStock = cantidadStock + cantidadRellenar;
-            int cantidadNuevaStock = cantidadStock;
-            R->cantidad = cantidadNuevaStock;
-            cout << "Unidades agregadas!" << endl;
-    }
-    else {
-        //cout << "Todavia hay suficientes elementos en inventario" << endl;
-    }
-}
-
-
-
-
-void VerificarInventarioMarcas(NodoAAMarcaInventario *R){
-
-    if(R==NULL){
-        //return;
-    }else{
-        VerificarMarcasIFinal(R);
-
-        VerificarInventarioMarcas(R->Hizq);
-        VerificarInventarioMarcas(R->Hder);
-    }
-}*/

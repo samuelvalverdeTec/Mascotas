@@ -1,24 +1,10 @@
-#include "Binario.h"
-#include "NodoBinario.h"
-//#include "ABB.cpp"
-#include "NodoB.h"
-#include "B.h"
-//#include "B.cpp"
-#include "NodoAVL.h"
-#include "AVL.h"
-//#include "AVL.cpp"
-#include "NodoRN.h"
-#include "RN.h"
-//#include "RN.cpp"
-#include "NodoAA.h"
-#include "AA.h"
-//#include "AA.cpp"
-
+#pragma once
 #include <iostream>
 #include <fstream>
 #include <cstring> 
 #include <string>
 #include <iomanip>
+
 
 using namespace std;
 
@@ -281,218 +267,81 @@ string fechaFormato(string dia, string mes, string anho) {
 	return fecha;
 
 }
-
-
-
-// ************************************************** Menu **************************************************
-
-void imprimirMenuPrincipal() {
-
-	cout << endl;
-	cout << "****************************************************" << endl;
-	cout << "               *   MENU PRINCIPAL   *               " << endl;
-	cout << "****************************************************" << endl;
-	cout << endl;
-
-	cout << "****************************************************" << endl;
-	cout << "*						   *" << endl;
-	cout << "*  -> 1 .  Mantenimiento de la Base de Datos       *" << endl;
-	cout << "*  -> 2 .  Reportes                                *" << endl;
-	cout << "*  -> 3 .  Salir del programa                      *" << endl;
-	cout << "*						   *" << endl;
-	cout << "****************************************************" << endl;
-	cout << endl;
-
-}
-
-void imprimirSubMenu() {
-
-	cout << endl;
-	cout << "****************************************************" << endl;
-	cout << "       *   MANTENIMIENTO DE BASE DE DATOS   *       " << endl;
-	cout << "****************************************************" << endl;
-	cout << endl;
-
-	cout << "****************************************************" << endl;
-	cout << "*						   *" << endl;
-	cout << "*  -> 1 .  Insercion                               *" << endl;
-	cout << "*  -> 2 .  Busqueda                                *" << endl;
-	cout << "*  -> 3 .  Modificar                               *" << endl;
-	cout << "*  -> 4 .  Salir                                   *" << endl;
-	cout << "*						   *" << endl;
-	cout << "****************************************************" << endl;
-	cout << endl;
-
-}
-
-void imprimirSubMenuInserciones() {
-	cout << endl;
-	cout << "****************************************************" << endl;
-	cout << "               *   INSERCIONES   *       " << endl;
-	cout << "****************************************************" << endl;
-	cout << endl;
-
-	cout << "****************************************************" << endl;
-	cout << "*						   *" << endl;
-	cout << "*  -> 1 .  Pais                                    *" << endl;
-	cout << "*  -> 2 .  Ciudad                                  *" << endl;
-	cout << "*  -> 3 .  Cliente                                 *" << endl;
-	cout << "*  -> 4 .  Mascota                                 *" << endl;
-	cout << "*  -> 5 .  Visita                                  *" << endl;
-	cout << "*  -> 6 .  Tratamiento                             *" << endl;
-	cout << "*  -> 7 .  Medicacion                              *" << endl;
-	cout << "*  -> 8 .  Salir                                   *" << endl;
-	cout << "*						   *" << endl;
-	cout << "****************************************************" << endl;
-	cout << endl;
-}
-
-void imprimirSubMenuBusquedas() {
-	cout << endl;
-	cout << "****************************************************" << endl;
-	cout << "               *   BUSQUEDAS   *       " << endl;
-	cout << "****************************************************" << endl;
-	cout << endl;
-
-	cout << "****************************************************" << endl;
-	cout << "*						   *" << endl;
-	cout << "*  -> 1 .  Pais                                    *" << endl;
-	cout << "*  -> 2 .  Ciudad                                  *" << endl;
-	cout << "*  -> 3 .  Cliente                                 *" << endl;
-	cout << "*  -> 4 .  Mascota                                 *" << endl;
-	cout << "*  -> 5 .  Visita                                  *" << endl;
-	cout << "*  -> 6 .  Tratamiento                             *" << endl;
-	cout << "*  -> 7 .  Medicacion                              *" << endl;
-	cout << "*  -> 8 .  Salir                                   *" << endl;
-	cout << "*						   *" << endl;
-	cout << "****************************************************" << endl;
-	cout << endl;
-}
-
-void imprimirSubMenuModificaciones() {
-	cout << endl;
-	cout << "****************************************************" << endl;
-	cout << "               *   MODIFICACIONES   *       " << endl;
-	cout << "****************************************************" << endl;
-	cout << endl;
-
-	cout << "****************************************************" << endl;
-	cout << "*						   *" << endl;
-	cout << "*  -> 1 .  Pais                                    *" << endl;
-	cout << "*  -> 2 .  Ciudad                                  *" << endl;
-	cout << "*  -> 3 .  Cliente                                 *" << endl;
-	cout << "*  -> 4 .  Mascota                                 *" << endl;
-	cout << "*  -> 5 .  Visita                                  *" << endl;
-	cout << "*  -> 6 .  Tratamiento                             *" << endl;
-	cout << "*  -> 7 .  Medicacion                              *" << endl;
-	cout << "*  -> 8 .  Salir                                   *" << endl;
-	cout << "*						   *" << endl;
-	cout << "****************************************************" << endl;
-	cout << endl;
-}
-
-void imprimirMenuReportes() {
-
-	cout << endl;
-	cout << "****************************************************" << endl;
-	cout << "          *       MENU DE REPORTES       *          " << endl;
-	cout << "****************************************************" << endl;
-	cout << endl;
-	cout << "****************************************************" << endl;
-	cout << "*						   *" << endl;
-	cout << "*  ->> 1 .  Paises			   	   *" << endl;
-	cout << "*  ->> 2 .  Ciudades de un Pais                    *" << endl;
-	cout << "*  ->> 3 .  Clientes	   			   *" << endl;
-	cout << "*  ->> 4 .  Mascotas de un Cliente                 *" << endl;
-	cout << "*  ->> 5 .  Visitas de una Mascota                 *" << endl;
-	cout << "*  ->> 6 .  Tratamientos			   *" << endl;
-	cout << "*  ->> 7 .  Medicaciones de una Mascota 	   *" << endl;
-	cout << "*  ->> 8 .  Cliente con mas Saldo		   *" << endl;
-	cout << "*  ->> 9 .  Clientes de Credito			   *" << endl;
-	cout << "*  ->> 10.  Clientes con mas Descuento             *" << endl;
-	cout << "*  ->> 11.  Ultimo Tratamiento			   *" << endl;
-	cout << "*  ->> 12.  Tratamiento mas Utilizado              *" << endl;
-	cout << "*  ->> 13.  Salir                                  *" << endl;
-	cout << "*						   *" << endl;
-	cout << "****************************************************" << endl;
-	cout << endl;
-
-}
-
-void busquedaPais(pNodoBinarioPaises paisBuscado) {
-
-	cout << "Codigo Pais: " << paisBuscado->valor << endl;
-	cout << "Nombre Pais: " << paisBuscado->nombre << endl;
-
-}
-
-void busquedaCiudad(pNodoBinarioCiudades ciudadBuscada) {
-
-	cout << "Codigo Pais: " << ciudadBuscada->codpais << endl;
-	cout << "Codigo Ciudad: " << ciudadBuscada->valor << endl;
-	cout << "Nombre Ciudad: " << ciudadBuscada->nombre << endl;
-
-}
-
-void busquedaCliente(pNodoBCliente clienteBuscado) {
-
-	cout << "Codigo Cliente: " << clienteBuscado->valor << endl;
-	cout << "Nombre Cliente: " << clienteBuscado->nombre << endl;
-	cout << "Direccion: " << clienteBuscado->direccion << endl;
-	cout << "Codigo Pais: " << clienteBuscado->codigoPais << endl;
-	cout << "Codigo Ciudad: " << clienteBuscado->codigoCiudad << endl;
-	cout << "Telefono: " << clienteBuscado->telefono << endl;
-	cout << "Ultima Visita: " << clienteBuscado->ultimavisita << endl;
-	cout << "Descuento: " << clienteBuscado->descuento << endl;
-	cout << "Saldo: " << clienteBuscado->saldo << endl;
-
-}
-
-void busquedaMascota(pNodoAVLMascotas mascotaBuscada) {
-
-	cout << "Codigo Cliente: " << mascotaBuscada->codCliente << endl;
-	cout << "Codigo Mascota: " << mascotaBuscada->valor << endl;
-	cout << "Nombre Mascota: " << mascotaBuscada->nombre << endl;
-	cout << "Tipo Mascota: " << mascotaBuscada->tipoMascota << endl;
-	cout << "Raza Mascota: " << mascotaBuscada->raza << endl;
-	cout << "Fecha Nacimiento: " << mascotaBuscada->fechaNacimiento << endl;
-	cout << "Sexo Mascota: " << mascotaBuscada->sexo << endl;
-	cout << "Color Mascota: " << mascotaBuscada->color << endl;
-	cout << "Castrado: " << mascotaBuscada->castrado << endl;
-	cout << "Ultima Visita: " << mascotaBuscada->ultimaVisita << endl;
-
-}
-
-void busquedaVisita(pNodoBinarioVisitas visitaBuscada) {
-
-	cout << "Codigo Visita: " << visitaBuscada->valor << endl;
-	cout << "Codigo Mascota: " << visitaBuscada->IDAnimal << endl;
-	cout << "Ultima Visita: " << visitaBuscada->ultimaVisita << endl;
-	cout << "Total Factura: " << visitaBuscada->totalFactura << endl;
-	cout << "Forma Pago: " << visitaBuscada->formaPago << endl;
-
-}
-
-void busquedaTratamiento(pNodoRNTratamiento tratamientoBuscado) {
-
-	cout << "Codigo Tratamiento: " << tratamientoBuscado->valor << endl;
-	cout << "Nombre Tratamiento: " << tratamientoBuscado->nombreTratamiento << endl;
-	cout << "Precio Tratamiento: " << tratamientoBuscado->precio << endl;
-
-}
-
-void busquedaMedicacion(pNodoAAMedicacion medicacionBuscada) {
-
-	cout << "Codigo Mascota: " << medicacionBuscada->IdAnimal << endl;
-	cout << "Codigo Medicacion: " << medicacionBuscada->valor << endl;
-	cout << "Ultima Visita: " << medicacionBuscada->ultimavisita << endl;
-	cout << "Lista Medicacion: " << medicacionBuscada->listaMed << endl;
-	cout << "Costo Unitario: " << medicacionBuscada->costoUnidad << endl;
-	cout << "Cantidad Medicacion: " << medicacionBuscada->cantidad << endl;
-	cout << "Costo Total: " << medicacionBuscada->costoTotal << endl;
-
-}
-
+//
+//void busquedaPais(pNodoBinarioPaises paisBuscado) {
+//
+//	cout << "Codigo Pais: " << paisBuscado->valor << endl;
+//	cout << "Nombre Pais: " << paisBuscado->nombre << endl;
+//
+//}
+//
+//void busquedaCiudad(pNodoBinarioCiudades ciudadBuscada) {
+//
+//	cout << "Codigo Pais: " << ciudadBuscada->codpais << endl;
+//	cout << "Codigo Ciudad: " << ciudadBuscada->valor << endl;
+//	cout << "Nombre Ciudad: " << ciudadBuscada->nombre << endl;
+//
+//}
+//
+//void busquedaCliente(pNodoBCliente clienteBuscado) {
+//
+//	cout << "Codigo Cliente: " << clienteBuscado->valor << endl;
+//	cout << "Nombre Cliente: " << clienteBuscado->nombre << endl;
+//	cout << "Direccion: " << clienteBuscado->direccion << endl;
+//	cout << "Codigo Pais: " << clienteBuscado->codigoPais << endl;
+//	cout << "Codigo Ciudad: " << clienteBuscado->codigoCiudad << endl;
+//	cout << "Telefono: " << clienteBuscado->telefono << endl;
+//	cout << "Ultima Visita: " << clienteBuscado->ultimavisita << endl;
+//	cout << "Descuento: " << clienteBuscado->descuento << endl;
+//	cout << "Saldo: " << clienteBuscado->saldo << endl;
+//
+//}
+//
+//void busquedaMascota(pNodoAVLMascotas mascotaBuscada) {
+//
+//	cout << "Codigo Cliente: " << mascotaBuscada->codCliente << endl;
+//	cout << "Codigo Mascota: " << mascotaBuscada->valor << endl;
+//	cout << "Nombre Mascota: " << mascotaBuscada->nombre << endl;
+//	cout << "Tipo Mascota: " << mascotaBuscada->tipoMascota << endl;
+//	cout << "Raza Mascota: " << mascotaBuscada->raza << endl;
+//	cout << "Fecha Nacimiento: " << mascotaBuscada->fechaNacimiento << endl;
+//	cout << "Sexo Mascota: " << mascotaBuscada->sexo << endl;
+//	cout << "Color Mascota: " << mascotaBuscada->color << endl;
+//	cout << "Castrado: " << mascotaBuscada->castrado << endl;
+//	cout << "Ultima Visita: " << mascotaBuscada->ultimaVisita << endl;
+//
+//}
+//
+//void busquedaVisita(pNodoBinarioVisitas visitaBuscada) {
+//
+//	cout << "Codigo Visita: " << visitaBuscada->valor << endl;
+//	cout << "Codigo Mascota: " << visitaBuscada->IDAnimal << endl;
+//	cout << "Ultima Visita: " << visitaBuscada->ultimaVisita << endl;
+//	cout << "Total Factura: " << visitaBuscada->totalFactura << endl;
+//	cout << "Forma Pago: " << visitaBuscada->formaPago << endl;
+//
+//}
+//
+//void busquedaTratamiento(pNodoRNTratamiento tratamientoBuscado) {
+//
+//	cout << "Codigo Tratamiento: " << tratamientoBuscado->valor << endl;
+//	cout << "Nombre Tratamiento: " << tratamientoBuscado->nombreTratamiento << endl;
+//	cout << "Precio Tratamiento: " << tratamientoBuscado->precio << endl;
+//
+//}
+//
+//void busquedaMedicacion(pNodoAAMedicacion medicacionBuscada) {
+//
+//	cout << "Codigo Mascota: " << medicacionBuscada->IdAnimal << endl;
+//	cout << "Codigo Medicacion: " << medicacionBuscada->valor << endl;
+//	cout << "Ultima Visita: " << medicacionBuscada->ultimavisita << endl;
+//	cout << "Lista Medicacion: " << medicacionBuscada->listaMed << endl;
+//	cout << "Costo Unitario: " << medicacionBuscada->costoUnidad << endl;
+//	cout << "Cantidad Medicacion: " << medicacionBuscada->cantidad << endl;
+//	cout << "Costo Total: " << medicacionBuscada->costoTotal << endl;
+//
+//}
+//
 
 
 /*void Reporte1(string nombre, string contenido){
@@ -533,20 +382,20 @@ void CreaReporte1(string nombre) {
 
 }
 
-void RecorreArbolPaises(NodoBinarioPaises* R, string STR, string nomArch) {
-
-	if (R == NULL) {
-		return;
-	}
-	else {
-		//cout<<" "<<R->valor<<": "<<R->nombre<<" ->> ";
-		STR = STR + "Codigo Pais: " + to_string(R->valor) + "\n" + "Nombre Pais: " + R->nombre + "\n" + "------------------------------------" + "\n";
-		EscribeReporte(nomArch, STR);
-		RecorreArbolPaises(R->Hizq, STR, nomArch);
-		RecorreArbolPaises(R->Hder, STR, nomArch);
-	}
-	//return STR;
-}
+//void RecorreArbolPaises(NodoBinarioPaises* R, string STR, string nomArch) {
+//
+//	if (R == NULL) {
+//		return;
+//	}
+//	else {
+//		//cout<<" "<<R->valor<<": "<<R->nombre<<" ->> ";
+//		STR = STR + "Codigo Pais: " + to_string(R->valor) + "\n" + "Nombre Pais: " + R->nombre + "\n" + "------------------------------------" + "\n";
+//		EscribeReporte(nomArch, STR);
+//		RecorreArbolPaises(R->Hizq, STR, nomArch);
+//		RecorreArbolPaises(R->Hder, STR, nomArch);
+//	}
+//	//return STR;
+//}
 
 
 void CreaReporte2(string nombre) {
@@ -560,48 +409,48 @@ void CreaReporte2(string nombre) {
 	fout.close();
 
 }
+//
+//void RecorreArbolCiudades(NodoBinarioCiudades* R, string STR, string nomArch, int codPais) {
+//
+//	if (R == NULL) {
+//		return;
+//	}
+//	else {
+//		if (R->codpais == codPais) {
+//			STR = STR + "Codigo Pais: " + to_string(R->codpais) + "\n" + "Codigo Ciudad: " + to_string(R->valor) + "\n" + "Nombre Ciudad: " + R->nombre + "\n" + "------------------------------------" + "\n";
+//			EscribeReporte(nomArch, STR);
+//		}
+//		RecorreArbolCiudades(R->Hizq, STR, nomArch, codPais);
+//		RecorreArbolCiudades(R->Hder, STR, nomArch, codPais);
+//	}
+//}
+//
+//void CreaReporte3(string nombre) {
+//
+//	ofstream fout(nombre + ".txt");		// se crea el archivo
+//
+//	fout << "Reporte - Clientes Registrados" << endl;
+//	fout << "\n" << endl;
+//
+//	fout << endl;
+//	fout.close();
+//
+//}
 
-void RecorreArbolCiudades(NodoBinarioCiudades* R, string STR, string nomArch, int codPais) {
-
-	if (R == NULL) {
-		return;
-	}
-	else {
-		if (R->codpais == codPais) {
-			STR = STR + "Codigo Pais: " + to_string(R->codpais) + "\n" + "Codigo Ciudad: " + to_string(R->valor) + "\n" + "Nombre Ciudad: " + R->nombre + "\n" + "------------------------------------" + "\n";
-			EscribeReporte(nomArch, STR);
-		}
-		RecorreArbolCiudades(R->Hizq, STR, nomArch, codPais);
-		RecorreArbolCiudades(R->Hder, STR, nomArch, codPais);
-	}
-}
-
-void CreaReporte3(string nombre) {
-
-	ofstream fout(nombre + ".txt");		// se crea el archivo
-
-	fout << "Reporte - Clientes Registrados" << endl;
-	fout << "\n" << endl;
-
-	fout << endl;
-	fout.close();
-
-}
-
-void RecorreArbolClientes(NodoBCliente* R, string STR, string nomArch) {
-
-	if (R == NULL) {
-		return;
-	}
-	else {
-		STR += "Codigo Cliente: " + to_string(R->valor) + "\nNombre: " + R->nombre + "\nDireccion: " + R->direccion + "\nCodigo Pais: " + to_string(R->codigoPais)
-			+ "\nCodigo Ciudad: " + to_string(R->codigoCiudad) + "\nTelefono: " + to_string(R->telefono) + "\nUltima Visita: " + R->ultimavisita
-			+ "\nDescuento: " + to_string(R->descuento) + "\nSaldo: " + to_string(R->saldo) + "\n" + "------------------------------------" + "\n";
-		EscribeReporte(nomArch, STR);
-		RecorreArbolClientes(R->Hizq, STR, nomArch);
-		RecorreArbolClientes(R->Hder, STR, nomArch);
-	}
-}
+//void RecorreArbolClientes(NodoBCliente* R, string STR, string nomArch) {
+//
+//	if (R == NULL) {
+//		return;
+//	}
+//	else {
+//		STR += "Codigo Cliente: " + to_string(R->valor) + "\nNombre: " + R->nombre + "\nDireccion: " + R->direccion + "\nCodigo Pais: " + to_string(R->codigoPais)
+//			+ "\nCodigo Ciudad: " + to_string(R->codigoCiudad) + "\nTelefono: " + to_string(R->telefono) + "\nUltima Visita: " + R->ultimavisita
+//			+ "\nDescuento: " + to_string(R->descuento) + "\nSaldo: " + to_string(R->saldo) + "\n" + "------------------------------------" + "\n";
+//		EscribeReporte(nomArch, STR);
+//		RecorreArbolClientes(R->Hizq, STR, nomArch);
+//		RecorreArbolClientes(R->Hder, STR, nomArch);
+//	}
+//}
 
 void CreaReporte4(string nombre) {
 
@@ -615,20 +464,20 @@ void CreaReporte4(string nombre) {
 
 }
 
-void RecorreArbolMascotas(NodoAVLMascotas* R, string STR, string nomArch, int codCliente) {
-
-	if (R == NULL) {
-		return;
-	}
-	else {
-		if (R->codCliente == codCliente) {
-			STR = STR + "Codigo Cliente: " + to_string(R->codCliente) + "\n" + "Codigo Mascota: " + to_string(R->valor) + "\n" + "Nombre Mascota: " + R->nombre + "\n" + "Tipo Mascota: " + R->tipoMascota + "\n" + "Raza Mascota: " + R->raza + "\n" + "Fecha Nacimiento: " + R->fechaNacimiento + "\n" + "Sexo Mascota: " + R->sexo + "\n" + "Color Mascota: " + R->color + "\n" + "Castrado: " + R->castrado + "\n" + "Ultima Visita: " + R->ultimaVisita + "\n" + "------------------------------------" + "\n";
-			EscribeReporte(nomArch, STR);
-		}
-		RecorreArbolMascotas(R->Hizq, STR, nomArch, codCliente);
-		RecorreArbolMascotas(R->Hder, STR, nomArch, codCliente);
-	}
-}
+//void RecorreArbolMascotas(NodoAVLMascotas* R, string STR, string nomArch, int codCliente) {
+//
+//	if (R == NULL) {
+//		return;
+//	}
+//	else {
+//		if (R->codCliente == codCliente) {
+//			STR = STR + "Codigo Cliente: " + to_string(R->codCliente) + "\n" + "Codigo Mascota: " + to_string(R->valor) + "\n" + "Nombre Mascota: " + R->nombre + "\n" + "Tipo Mascota: " + R->tipoMascota + "\n" + "Raza Mascota: " + R->raza + "\n" + "Fecha Nacimiento: " + R->fechaNacimiento + "\n" + "Sexo Mascota: " + R->sexo + "\n" + "Color Mascota: " + R->color + "\n" + "Castrado: " + R->castrado + "\n" + "Ultima Visita: " + R->ultimaVisita + "\n" + "------------------------------------" + "\n";
+//			EscribeReporte(nomArch, STR);
+//		}
+//		RecorreArbolMascotas(R->Hizq, STR, nomArch, codCliente);
+//		RecorreArbolMascotas(R->Hder, STR, nomArch, codCliente);
+//	}
+//}
 
 void CreaReporte5(string nombre) {
 
@@ -642,45 +491,45 @@ void CreaReporte5(string nombre) {
 
 }
 
-void RecorreArbolVisitas(NodoBinarioVisitas* R, string STR, string nomArch, int codMascota) {
+//void RecorreArbolVisitas(NodoBinarioVisitas* R, string STR, string nomArch, int codMascota) {
+//
+//	if (R == NULL) {
+//		return;
+//	}
+//	else {
+//		if (R->IDAnimal == codMascota) {
+//			STR = STR + "Codigo Mascota: " + to_string(R->IDAnimal) + "\n" + "Codigo Visita: " + to_string(R->valor) + "\n" + "Ultima Visita: " + R->ultimaVisita + "\n" + "Total Factura: " + to_string(R->totalFactura) + "\n" + "Forma Pago: " + to_string(R->formaPago) + "\n" + "------------------------------------" + "\n";
+//			EscribeReporte(nomArch, STR);
+//		}
+//		RecorreArbolVisitas(R->Hizq, STR, nomArch, codMascota);
+//		RecorreArbolVisitas(R->Hder, STR, nomArch, codMascota);
+//	}
+//}
 
-	if (R == NULL) {
-		return;
-	}
-	else {
-		if (R->IDAnimal == codMascota) {
-			STR = STR + "Codigo Mascota: " + to_string(R->IDAnimal) + "\n" + "Codigo Visita: " + to_string(R->valor) + "\n" + "Ultima Visita: " + R->ultimaVisita + "\n" + "Total Factura: " + to_string(R->totalFactura) + "\n" + "Forma Pago: " + to_string(R->formaPago) + "\n" + "------------------------------------" + "\n";
-			EscribeReporte(nomArch, STR);
-		}
-		RecorreArbolVisitas(R->Hizq, STR, nomArch, codMascota);
-		RecorreArbolVisitas(R->Hder, STR, nomArch, codMascota);
-	}
-}
+//void CreaReporte6(string nombre) {
+//
+//	ofstream fout(nombre + ".txt");		// se crea el archivo
+//
+//	fout << "Reporte - Tratamientos Registrados" << endl;
+//	fout << "\n" << endl;
+//
+//	fout << endl;
+//	fout.close();
+//
+//}
 
-void CreaReporte6(string nombre) {
-
-	ofstream fout(nombre + ".txt");		// se crea el archivo
-
-	fout << "Reporte - Tratamientos Registrados" << endl;
-	fout << "\n" << endl;
-
-	fout << endl;
-	fout.close();
-
-}
-
-void RecorreArbolTratamientos(NodoRNTratamiento* R, string STR, string nomArch) {
-
-	if (R == NULL) {
-		return;
-	}
-	else {
-		STR += "Codigo Tratamiento: " + to_string(R->valor) + "\nNombre: " + R->nombreTratamiento + "\nPrecio Unitario: " + to_string(R->precio) + "\n" + "------------------------------------" + "\n";
-		EscribeReporte(nomArch, STR);
-		RecorreArbolTratamientos(R->Hizq, STR, nomArch);
-		RecorreArbolTratamientos(R->Hder, STR, nomArch);
-	}
-}
+//void RecorreArbolTratamientos(NodoRNTratamiento* R, string STR, string nomArch) {
+//
+//	if (R == NULL) {
+//		return;
+//	}
+//	else {
+//		STR += "Codigo Tratamiento: " + to_string(R->valor) + "\nNombre: " + R->nombreTratamiento + "\nPrecio Unitario: " + to_string(R->precio) + "\n" + "------------------------------------" + "\n";
+//		EscribeReporte(nomArch, STR);
+//		RecorreArbolTratamientos(R->Hizq, STR, nomArch);
+//		RecorreArbolTratamientos(R->Hder, STR, nomArch);
+//	}
+//}
 
 void CreaReporte7(string nombre) {
 
@@ -694,24 +543,24 @@ void CreaReporte7(string nombre) {
 
 }
 
-void RecorreArbolMedicaciones(NodoAAMedicacion* R, int id, int uM, string STR, string nomArch) {
-
-	if (R == NULL) {
-		return;
-	}
-	else {
-		if (R->IdAnimal == id && R->valor == uM) {
-
-			STR += "ID animal: " + to_string(R->IdAnimal) + "\nCodigo Medicacion: " + to_string(R->valor) + "\nUltima visita: " + R->ultimavisita
-				+ "\nLista de Medicamentos: " + to_string(R->listaMed) + "\nCosto Unitario: " + to_string(R->costoUnidad) + "\nCantidad: " + to_string(R->cantidad)
-				+ "\nCosto Total: " + to_string(R->costoTotal) + "\n" + +"------------------------------------" + "\n";
-			EscribeReporte(nomArch, STR);
-
-		}
-		RecorreArbolMedicaciones(R->Hizq, id, uM, STR, nomArch);
-		RecorreArbolMedicaciones(R->Hder, id, uM, STR, nomArch);
-	}
-}
+//void RecorreArbolMedicaciones(NodoAAMedicacion* R, int id, int uM, string STR, string nomArch) {
+//
+//	if (R == NULL) {
+//		return;
+//	}
+//	else {
+//		if (R->IdAnimal == id && R->valor == uM) {
+//
+//			STR += "ID animal: " + to_string(R->IdAnimal) + "\nCodigo Medicacion: " + to_string(R->valor) + "\nUltima visita: " + R->ultimavisita
+//				+ "\nLista de Medicamentos: " + to_string(R->listaMed) + "\nCosto Unitario: " + to_string(R->costoUnidad) + "\nCantidad: " + to_string(R->cantidad)
+//				+ "\nCosto Total: " + to_string(R->costoTotal) + "\n" + +"------------------------------------" + "\n";
+//			EscribeReporte(nomArch, STR);
+//
+//		}
+//		RecorreArbolMedicaciones(R->Hizq, id, uM, STR, nomArch);
+//		RecorreArbolMedicaciones(R->Hder, id, uM, STR, nomArch);
+//	}
+//}
 
 void CreaReporte8(string nombre) {
 
@@ -724,43 +573,43 @@ void CreaReporte8(string nombre) {
 	fout.close();
 
 }
+//
+//pNodoBCliente RecorreArbolSaldo(NodoBCliente* R, int s) {
+//
+//	NodoBCliente* cliente = NULL;
+//
+//	if (R == NULL) {
+//		return cliente;
+//	}
+//	else {
+//		if (R->saldo >= s) {
+//			cliente = R;
+//			return cliente;
+//		}
+//		else {
+//			cliente = RecorreArbolSaldo(R->Hizq, s);
+//			if (cliente != NULL) {
+//				return cliente;
+//			}
+//			else {
+//				cliente = RecorreArbolSaldo(R->Hder, s);
+//				return cliente;
+//			}
+//		}
+//	}
+//	return cliente;
+//
+//}
 
-pNodoBCliente RecorreArbolSaldo(NodoBCliente* R, int s) {
-
-	NodoBCliente* cliente = NULL;
-
-	if (R == NULL) {
-		return cliente;
-	}
-	else {
-		if (R->saldo >= s) {
-			cliente = R;
-			return cliente;
-		}
-		else {
-			cliente = RecorreArbolSaldo(R->Hizq, s);
-			if (cliente != NULL) {
-				return cliente;
-			}
-			else {
-				cliente = RecorreArbolSaldo(R->Hder, s);
-				return cliente;
-			}
-		}
-	}
-	return cliente;
-
-}
-
-void escribirReporte8(pNodoBCliente cliente, string STR, string nomArch) {
-
-	STR += "Codigo Cliente: " + to_string(cliente->valor) + "\nNombre: " + cliente->nombre + "\nDireccion: " + cliente->direccion + "\nCodigo Pais: " + to_string(cliente->codigoPais)
-		+ "\nCodigo Ciudad: " + to_string(cliente->codigoCiudad) + "\nTelefono: " + to_string(cliente->telefono) + "\nUltima Visita: " + cliente->ultimavisita
-		+ "\nDescuento: " + to_string(cliente->descuento) + "\nSaldo: " + to_string(cliente->saldo) + "\n" + "------------------------------------" + "\n";
-
-	EscribeReporte(nomArch, STR);
-
-}
+//void escribirReporte8(pNodoBCliente cliente, string STR, string nomArch) {
+//
+//	STR += "Codigo Cliente: " + to_string(cliente->valor) + "\nNombre: " + cliente->nombre + "\nDireccion: " + cliente->direccion + "\nCodigo Pais: " + to_string(cliente->codigoPais)
+//		+ "\nCodigo Ciudad: " + to_string(cliente->codigoCiudad) + "\nTelefono: " + to_string(cliente->telefono) + "\nUltima Visita: " + cliente->ultimavisita
+//		+ "\nDescuento: " + to_string(cliente->descuento) + "\nSaldo: " + to_string(cliente->saldo) + "\n" + "------------------------------------" + "\n";
+//
+//	EscribeReporte(nomArch, STR);
+//
+//}
 
 void CreaReporte9(string nombre) {
 
@@ -774,27 +623,27 @@ void CreaReporte9(string nombre) {
 
 }
 
-void RecorreArbolVisitasMascotasClientes(NodoBinarioVisitas* R, AVLMascotas arbolMascotas, BCliente arbolClientes, string STR, string nomArch) {
-
-	if (R == NULL) {
-		return;
-	}
-	else {
-		int codM = 0;
-		int codC = 0;
-		if (R->formaPago == 02) {
-			codM = R->IDAnimal;
-			pNodoAVLMascotas mascota = buscaMascota(arbolMascotas.raiz, codM);
-			if (mascota != NULL) {
-				codC = mascota->codCliente;
-				pNodoBCliente cliente = buscaCliente(arbolClientes.raiz, codC);
-				if (cliente != NULL) {
-					STR = STR + "Codigo Cliente: " + to_string(cliente->valor) + "\n" + "Nombre Cliente: " + cliente->nombre + "\n" + "Direccion Cliente: " + cliente->direccion + "\n" + "Codigo Pais: " + to_string(cliente->codigoPais) + "\n" + "Codigo Ciudad: " + to_string(cliente->codigoCiudad) + "\n" + "Telefono: " + to_string(cliente->telefono) + "\n" + "Ultima Visita: " + cliente->ultimavisita + "\n" + "Descuento Cliente: " + to_string(cliente->descuento) + "\n" + "Saldo Cliente: " + to_string(cliente->saldo) + "\n" + "------------------------------------" + "\n";
-					EscribeReporte(nomArch, STR);
-				}
-			}
-		}
-		RecorreArbolVisitasMascotasClientes(R->Hizq, arbolMascotas, arbolClientes, STR, nomArch);
-		RecorreArbolVisitasMascotasClientes(R->Hder, arbolMascotas, arbolClientes, STR, nomArch);
-	}
-}
+//void RecorreArbolVisitasMascotasClientes(NodoBinarioVisitas* R, AVLMascotas arbolMascotas, BCliente arbolClientes, string STR, string nomArch) {
+//
+//	if (R == NULL) {
+//		return;
+//	}
+//	else {
+//		int codM = 0;
+//		int codC = 0;
+//		if (R->formaPago == 02) {
+//			codM = R->IDAnimal;
+//			/*pNodoAVLMascotas mascota = buscaMascota(arbolMascotas.raiz, codM);
+//			if (mascota != NULL) {
+//				codC = mascota->codCliente;
+//				pNodoBCliente cliente = buscaCliente(arbolClientes.raiz, codC);
+//				if (cliente != NULL) {
+//					STR = STR + "Codigo Cliente: " + to_string(cliente->valor) + "\n" + "Nombre Cliente: " + cliente->nombre + "\n" + "Direccion Cliente: " + cliente->direccion + "\n" + "Codigo Pais: " + to_string(cliente->codigoPais) + "\n" + "Codigo Ciudad: " + to_string(cliente->codigoCiudad) + "\n" + "Telefono: " + to_string(cliente->telefono) + "\n" + "Ultima Visita: " + cliente->ultimavisita + "\n" + "Descuento Cliente: " + to_string(cliente->descuento) + "\n" + "Saldo Cliente: " + to_string(cliente->saldo) + "\n" + "------------------------------------" + "\n";
+//					EscribeReporte(nomArch, STR);
+//				}
+//			}*/
+//		}
+//		RecorreArbolVisitasMascotasClientes(R->Hizq, arbolMascotas, arbolClientes, STR, nomArch);
+//		RecorreArbolVisitasMascotasClientes(R->Hder, arbolMascotas, arbolClientes, STR, nomArch);
+//	}
+//}

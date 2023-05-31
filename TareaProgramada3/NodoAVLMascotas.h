@@ -1,14 +1,4 @@
-#ifndef _NODOAVL_H
-#define	_NODOAVL_H
-//#include "NodoBinario.h"
-//#include "Binario.h"
-//#include "NodoAA.h"
-//#include "AA.h"
-//#include "NodoRN.h"
-//#include "RN.h"
-
-
-
+#pragma once
 #include <iostream>
 #include <fstream>
 #include <cstring> 
@@ -22,7 +12,10 @@ public:
 	NodoAVLMascotas(int codC, int IDAnimal, string nom, string tipo, string rz, string fechaN, string sx,
 		string clr, string cst, string ultimaV, NodoAVLMascotas* der = NULL, NodoAVLMascotas* izq = NULL, NodoAVLMascotas* sig = NULL, NodoAVLMascotas* ant = NULL) :
 		Hizq(izq), Hder(der), codCliente(codC), valor(IDAnimal), nombre(nom), tipoMascota(tipo), raza(rz), fechaNacimiento(fechaN),
-		sexo(sx), color(clr), castrado(cst), ultimaVisita(ultimaV), siguiente(sig), anterior(ant), FB(0) {}
+		sexo(sx), color(clr), castrado(cst), ultimaVisita(ultimaV), siguiente(sig), anterior(ant), FB(0) 
+	{
+
+	}
 
 	int codCliente;
 	int valor;
@@ -37,24 +30,15 @@ public:
 	int FB;
 	NodoAVLMascotas* Hizq, * Hder, * siguiente, * anterior;
 
-	//friend class BinarioPais;
-	friend class AVLMascota;
-	/*friend class AAMarcaInventario;
-	friend class RNMarca;
-	friend class Compra;
-	friend class listaDCCompra;
-	*/
 	void InsertaBinarioMascota(int codC, int IDAnimal, string nom, string tipo, string rz, string fechaN, string sx, string clr, string cst, string ultimaV);
 	bool InsertarMascota(int codC, int IDAnimal, string nom, string tipo, string rz, string fechaN, string sx, string clr, string cst, string ultimaV);
+	void PreordenRMascotas(NodoAVLMascotas* R);
+	void InordenRMascotas(NodoAVLMascotas* R);
+	void PostordenRMascotas(NodoAVLMascotas* R);
+	NodoAVLMascotas* buscaMascota(NodoAVLMascotas* R, int IDAnimal);
+	NodoAVLMascotas* buscaMascotaRepetida(NodoAVLMascotas* R, int IDAnimal, int codCliente);
+
+	friend class AVLMascota;
 };
 
 typedef NodoAVLMascotas* pNodoAVLMascotas;
-
-void PreordenRMascotas(NodoAVLMascotas* R);
-void InordenRMascotas(NodoAVLMascotas* R);
-void PostordenRMascotas(NodoAVLMascotas* R);
-//bool buscaRepetidosProdInventario(NodoAVLProductoInventario* R, int linea);
-NodoAVLMascotas* buscaMascota(NodoAVLMascotas* R, int IDAnimal);
-NodoAVLMascotas* buscaMascotaRepetida(NodoAVLMascotas* R, int IDAnimal, int codCliente);
-
-#endif	

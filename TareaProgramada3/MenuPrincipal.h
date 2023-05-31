@@ -1,25 +1,18 @@
 #pragma once
-
-#include "Binario.h"	// Paises, Ciudades & Visitas
-#include "NodoBinario.h"
-#include "B.h"		// Clientes
-#include "NodoB.h"
-#include "AVL.h"	// Mascotas
-#include "NodoAVL.h"
-#include "RN.h"    // Tratamientos
-#include "NodoRN.h"
-#include "AA.h"		// Medicacion
-#include "NodoAA.h"
-
-#include "Funciones.cpp"
-
-#include "PopUpMenu.h"
-#include "IconMenu.h"
-
+//#include "PopUpMenu.h"
+//#include "IconMenu.h"
 #include <iostream>
 #include <fstream>
 #include <iomanip>
-
+#include "BinarioPaises.h"
+#include "BinarioCiudades.h"
+#include "BCliente.h"
+#include "AVLMascotas.h"
+#include "BinarioVisitas.h"
+#include "RNTratamiento.h"
+#include "AAMedicacion.h"
+#include "IconMenu.h"
+#include "PopUpMenu.h"
 namespace TareaProgramada3 {
 
 	using namespace System;
@@ -73,7 +66,7 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Label^ iconLbl;
 	private: System::Windows::Forms::Button^ bIcon;
 	private: System::Windows::Forms::Button^ bSalir;
-	
+
 	public: BinarioPaises* arbolPaises;
 	public: BinarioCiudades* arbolCiudades;
 	public: BCliente* arbolClientes;
@@ -90,9 +83,9 @@ namespace TareaProgramada3 {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
-	#pragma region Windows Form Designer generated code
+#pragma region Windows Form Designer generated code
 		/// <summary>
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
@@ -252,7 +245,7 @@ namespace TareaProgramada3 {
 	private: System::Void MenuPrincipal_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 
-	/*	POP UP MENU  */
+		   /*	POP UP MENU  */
 
 	private: System::Void bPopUp_Click(System::Object^ sender, System::EventArgs^ e) {
 		PopUpMenu^ popUpMenu = gcnew PopUpMenu(this, this->arbolPaises, this->arbolCiudades,
@@ -260,8 +253,8 @@ namespace TareaProgramada3 {
 		popUpMenu->Show();
 		this->Hide();
 	}
-	
-	/*	ICON MENU  */
+
+		   /*	ICON MENU  */
 
 	private: System::Void bIcon_Click(System::Object^ sender, System::EventArgs^ e) {
 		IconMenu^ iconMenu = gcnew IconMenu(this, this->arbolPaises, this->arbolCiudades,
@@ -270,13 +263,13 @@ namespace TareaProgramada3 {
 		this->Hide();
 	}
 
-// *****************************************************************************************************
+		   // *****************************************************************************************************
 
-private: System::Void bSalir_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void bSalir_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	this->Close();
+		this->Close();
 
-}
+	}
 
-};
+	};
 }

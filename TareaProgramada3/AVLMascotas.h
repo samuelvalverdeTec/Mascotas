@@ -1,18 +1,11 @@
-#ifndef _AVL_H
-#define	_AVL_H
-#include "NodoAVL.h"
-
+#pragma once
+#include "NodoAVLMascotas.h"
 #include <iostream>
 #include <fstream>
 #include <cstring> 
 #include <string>
 
 using namespace std;
-
-
-
-//***************************************INVENTARIO*****************************************************
-
 
 class AVLMascotas {
 
@@ -38,5 +31,3 @@ public:
 	void RotacionSimpleDerecha(NodoAVLMascotas*& n1, NodoAVLMascotas* n2);
 
 };
-
-#endif	/* _AVL_H */

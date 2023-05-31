@@ -1,10 +1,6 @@
 #pragma once
-
-#include "Controlador.h"
-/*
-#include "Binario.h"	// Paises, Ciudades & Visitas
-#include "NodoBinario.h"
-*/
+#include "BinarioPaises.h"
+#include "BinarioCiudades.h"
 namespace TareaProgramada3 {
 
 	using namespace System;
@@ -90,7 +86,7 @@ namespace TareaProgramada3 {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -666,17 +662,17 @@ namespace TareaProgramada3 {
 		//Controlador::imprimir();
 
 	}
-private: System::Void lblLugs_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void lblCiudades_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void pInserTxtbx1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void pInserTxtbx2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void pBusqTxtbx1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void pPaises_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-};
+	private: System::Void lblLugs_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void lblCiudades_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void pInserTxtbx1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void pInserTxtbx2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void pBusqTxtbx1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void pPaises_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+	}
+	};
 }

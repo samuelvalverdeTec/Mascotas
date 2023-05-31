@@ -1,14 +1,11 @@
-#ifndef _AA_H
-#define	_AA_H
-#include "NodoAA.h"
-
+#pragma once
 #include <iostream>
 #include <fstream>
 #include <cstring> 
 #include <string>
+#include "NodoAAMedicacion.h"
 
 using namespace std;
-
 
 class AAMedicacion {
 
@@ -32,5 +29,3 @@ public:
 	void RotacionSimpleDerecha(NodoAAMedicacion*& n1, NodoAAMedicacion* n2);
 
 };
-
-#endif

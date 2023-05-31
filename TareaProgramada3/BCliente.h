@@ -1,7 +1,5 @@
-#ifndef _B_H
-#define	_B_H
-#include "NodoB.h"
-
+#pragma once
+#include "NodoBCliente.h"
 #include <iostream>
 #include <fstream>
 #include <cstring> 
@@ -9,9 +7,7 @@
 
 using namespace std;
 
-
 //*****************************************CLIENTES************************************************
-
 
 class BCliente {
 
@@ -35,5 +31,3 @@ public:
 	void RotacionSimpleDerecha(NodoBCliente*& n1, NodoBCliente* n2);
 
 };
-
-#endif
