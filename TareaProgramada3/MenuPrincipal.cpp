@@ -15,15 +15,24 @@ using namespace System::Windows::Forms;
 
 void main() {
 
-	BinarioPaises* arbolPaises;
-	BinarioCiudades* arbolCiudades;
-	BCliente* arbolClientes;
-	AVLMascotas* arbolMascotas;
-	BinarioVisitas* arbolVisitas;
-	RNTratamiento* arbolTratamientos;
-	AAMedicacion* arbolMedicaciones;
+	BinarioPaises* arbolPaises = new BinarioPaises();
+	BinarioCiudades* arbolCiudades = new BinarioCiudades();
+	BCliente* arbolClientes = new BCliente();
+	AVLMascotas* arbolMascotas = new AVLMascotas();
+	BinarioVisitas* arbolVisitas = new BinarioVisitas();
+	RNTratamiento* arbolTratamientos = new RNTratamiento();
+	AAMedicacion* arbolMedicaciones = new AAMedicacion();
 
 	string linea1, linea2, linea3, linea4, linea5, linea6, linea7;
+
+
+	arbolPaises->leer_Doc();
+	arbolCiudades->leer_Doc(arbolPaises);
+	arbolVisitas->leer_Doc(arbolMascotas);
+	arbolMascotas->leer_Doc(arbolClientes);
+	arbolTratamientos->leer_Doc();
+	//arbolMedicaciones->leer_Doc();
+	arbolClientes->leer_Doc(arbolPaises, arbolCiudades);
 
 	//ifstream archivo1("Paises.txt");
 	//while (getline(archivo1, linea1)) {

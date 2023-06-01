@@ -330,7 +330,7 @@ void AAMedicacion::RotacionSimpleIzquierda(NodoAAMedicacion*& n, NodoAAMedicacio
     n = n1;
 }
 
-NodoAAMedicacion* buscaMedicacion(NodoAAMedicacion* R, int codigoMed) {
+NodoAAMedicacion* AAMedicacion::buscaMedicacion(NodoAAMedicacion* R, int codigoMed) {
     NodoAAMedicacion* medicacion = NULL;
     if (R == NULL) {
         return medicacion;
@@ -354,7 +354,7 @@ NodoAAMedicacion* buscaMedicacion(NodoAAMedicacion* R, int codigoMed) {
     return medicacion;
 }
 
-NodoAAMedicacion* buscaMedicacionRepetida(NodoAAMedicacion* R, int codigoMed, int idAnimal, string ultVisita) {
+NodoAAMedicacion* AAMedicacion::buscaMedicacionRepetida(NodoAAMedicacion* R, int codigoMed, int idAnimal, string ultVisita) {
     NodoAAMedicacion* medicacion = NULL;
     if (R == NULL) {
         return medicacion;
@@ -378,7 +378,7 @@ NodoAAMedicacion* buscaMedicacionRepetida(NodoAAMedicacion* R, int codigoMed, in
     return medicacion;
 }
 
-NodoAAMedicacion* buscaMedicacionRepetida2(NodoAAMedicacion* R, int codigoMed, int idAnimal) {
+NodoAAMedicacion* AAMedicacion::buscaMedicacionRepetida2(NodoAAMedicacion* R, int codigoMed, int idAnimal) {
     NodoAAMedicacion* medicacion = NULL;
     if (R == NULL) {
         return medicacion;
@@ -400,4 +400,50 @@ NodoAAMedicacion* buscaMedicacionRepetida2(NodoAAMedicacion* R, int codigoMed, i
         }
     }
     return medicacion;
+}
+
+
+string AAMedicacion::fechaFormato(string dia, string mes, string anho) {
+
+    string fecha = dia + "/" + mes + "/" + anho;
+    return fecha;
+
+}
+
+void AAMedicacion::agregar_Datos_lectura(string& pDatosLinea, AVLMascotas* arbolMascotas)
+{
+    std::string datos[10] = { "", "", "", "", "", "", "", "", "", "" };
+    int indiceDatos = 0;
+    for (int indice = 0; indice < pDatosLinea.size(); indice++) {
+        if (pDatosLinea[indice] != ';') {
+            datos[indiceDatos] = datos[indiceDatos] + pDatosLinea[indice];
+        }
+        else {
+            indiceDatos++;
+        }
+    }
+    string ultimaVisita = fechaFormato(datos[2], datos[3], datos[4]);
+    pNodoAVLMascotas mascota = arbolMascotas->buscaMascota(arbolMascotas->raiz, atoi(datos[0].c_str()));
+    pNodoAAMedicacion med = buscaMedicacion(this->raiz, atoi(datos[1].c_str()));
+    pNodoAAMedicacion medicacionValida = buscaMedicacionRepetida(this->raiz, atoi(datos[1].c_str()), atoi(datos[0].c_str()), ultimaVisita);
+    if (mascota != NULL) {
+    	if (medicacionValida == NULL) {
+    		this->InsertaNodoMedicacion(atoi(datos[0].c_str()), atoi(datos[1].c_str()), ultimaVisita, atoi(datos[5].c_str()), atoi(datos[6].c_str()), atoi(datos[7].c_str()), atoi(datos[8].c_str()));
+    	}
+    }
+}
+
+void AAMedicacion::leer_Doc(AVLMascotas* arbolMascotas)
+{
+    string nombreArchivo = "Medicacion.txt";
+    ifstream file(nombreArchivo.c_str());
+    string linea;
+
+    while (!file.eof())
+    {
+        linea = "";
+        getline(file, linea);
+        this->agregar_Datos_lectura(linea, arbolMascotas);
+    }
+    file.close();
 }

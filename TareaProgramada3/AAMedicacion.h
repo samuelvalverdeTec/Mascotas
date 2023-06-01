@@ -4,6 +4,7 @@
 #include <cstring> 
 #include <string>
 #include "NodoAAMedicacion.h"
+#include "AVLMascotas.h"
 
 using namespace std;
 
@@ -27,5 +28,13 @@ public:
 	void RotacionDobleDerecha(NodoAAMedicacion*& n1, NodoAAMedicacion* n2);
 	void RotacionSimpleIzquierda(NodoAAMedicacion*& n1, NodoAAMedicacion* n2);
 	void RotacionSimpleDerecha(NodoAAMedicacion*& n1, NodoAAMedicacion* n2);
+
+	void agregar_Datos_lectura(string& pDatosLinea, AVLMascotas* arbolMascotas);
+	void leer_Doc(AVLMascotas* arbolMascotas);
+	string fechaFormato(string dia, string mes, string anho);
+
+	NodoAAMedicacion* buscaMedicacion(NodoAAMedicacion* R, int codigoMed);
+	NodoAAMedicacion* buscaMedicacionRepetida(NodoAAMedicacion* R, int codigoMed, int idAnimal, string ultVisita);
+	NodoAAMedicacion* buscaMedicacionRepetida2(NodoAAMedicacion* R, int codigoMed, int idAnimal);
 
 };

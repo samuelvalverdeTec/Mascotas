@@ -339,7 +339,7 @@ void AVLMascotas::RotacionSimpleIzquierda(NodoAVLMascotas*& n, NodoAVLMascotas* 
     n = n1;
 }
 
-NodoAVLMascotas* buscaMascota(NodoAVLMascotas* R, int IDAnimal) {
+NodoAVLMascotas* AVLMascotas::buscaMascota(NodoAVLMascotas* R, int IDAnimal) {
 
     NodoAVLMascotas* mascota = NULL;
 
@@ -365,7 +365,7 @@ NodoAVLMascotas* buscaMascota(NodoAVLMascotas* R, int IDAnimal) {
     return mascota;
 }
 
-NodoAVLMascotas* buscaMascotaRepetida(NodoAVLMascotas* R, int IDAnimal, int codCliente) {
+NodoAVLMascotas* AVLMascotas::buscaMascotaRepetida(NodoAVLMascotas* R, int IDAnimal, int codCliente) {
 
     NodoAVLMascotas* mascota = NULL;
 
@@ -389,4 +389,52 @@ NodoAVLMascotas* buscaMascotaRepetida(NodoAVLMascotas* R, int IDAnimal, int codC
         }
     }
     return mascota;
+}
+
+
+string AVLMascotas::fechaFormato(string dia, string mes, string anho) {
+
+    string fecha = dia + "/" + mes + "/" + anho;
+    return fecha;
+
+}
+
+void AVLMascotas::agregar_Datos_lectura(string& pDatosLinea, BCliente* arbolClientes)
+{
+    std::string datos[14] = { "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
+    int indiceDatos = 0;
+    for (int indice = 0; indice < pDatosLinea.size(); indice++) {
+        if (pDatosLinea[indice] != ';') {
+            datos[indiceDatos] = datos[indiceDatos] + pDatosLinea[indice];
+        }
+        else {
+            indiceDatos++;
+        }
+    }
+    pNodoBCliente cliente = arbolClientes->buscaCliente(arbolClientes->raiz, atoi(datos[0].c_str()));
+    pNodoAVLMascotas mascota = buscaMascota(this->raiz, atoi(datos[1].c_str()));
+    string fechaNacimiento = fechaFormato(datos[5], datos[6], datos[7]);
+    string ultimaVisita = fechaFormato(datos[11], datos[12], datos[13]);
+    if (cliente != NULL) {
+        if (mascota == NULL) {
+            this->InsertaNodoMascota(atoi(datos[0].c_str()), atoi(datos[1].c_str()), datos[2], datos[3], datos[4], fechaNacimiento, datos[8], datos[9], datos[10], ultimaVisita);
+        }
+    }
+    /*if (!this->esta_Vendedor(atoi(datos[0].c_str())))
+        this->inserta(atoi(datos[0].c_str()), datos[1]);*/
+}
+
+void AVLMascotas::leer_Doc(BCliente* arbolClientes)
+{
+    string nombreArchivo = "Mascotas.txt";
+    ifstream file(nombreArchivo.c_str());
+    string linea;
+
+    while (!file.eof())
+    {
+        linea = "";
+        getline(file, linea);
+        this->agregar_Datos_lectura(linea, arbolClientes);
+    }
+    file.close();
 }

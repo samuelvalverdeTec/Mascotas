@@ -745,7 +745,7 @@ void RNTratamiento::RotacionSimpleIzquierda(NodoRNTratamiento*& n, NodoRNTratami
 }
 
 
-NodoRNTratamiento* buscaTratamiento(NodoRNTratamiento* R, int codigoTratamiento) {
+NodoRNTratamiento* RNTratamiento::buscaTratamiento(NodoRNTratamiento* R, int codigoTratamiento) {
     NodoRNTratamiento* tratamiento = NULL;
     if (R == NULL) {
         return tratamiento;
@@ -767,6 +767,42 @@ NodoRNTratamiento* buscaTratamiento(NodoRNTratamiento* R, int codigoTratamiento)
         }
     }
     return tratamiento;
+}
+
+
+void RNTratamiento::agregar_Datos_lectura(string& pDatosLinea)
+{
+    std::string datos[4] = { "", "", "", "" };
+    int indiceDatos = 0;
+    for (int indice = 0; indice < pDatosLinea.size(); indice++) {
+        if (pDatosLinea[indice] != ';') {
+            datos[indiceDatos] = datos[indiceDatos] + pDatosLinea[indice];
+        }
+        else {
+            indiceDatos++;
+        }
+    }
+    pNodoRNTratamiento tratamiento = buscaTratamiento(this->raiz, atoi(datos[0].c_str()));
+    if (tratamiento == NULL) {
+    	this->InsertaNodoTratamiento(atoi(datos[0].c_str()), datos[1], atoi(datos[2].c_str()));
+    }
+    /*if (!this->esta_Vendedor(atoi(datos[0].c_str())))
+        this->inserta(atoi(datos[0].c_str()), datos[1]);*/
+}
+
+void RNTratamiento::leer_Doc()
+{
+    string nombreArchivo = "Tratamiento.txt";
+    ifstream file(nombreArchivo.c_str());
+    string linea;
+
+    while (!file.eof())
+    {
+        linea = "";
+        getline(file, linea);
+        this->agregar_Datos_lectura(linea);
+    }
+    file.close();
 }
 
 //********************************************PRUEBAS*****************************************

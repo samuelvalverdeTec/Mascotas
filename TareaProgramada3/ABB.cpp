@@ -2,6 +2,7 @@
 #include <fstream>
 #include <cstring> 
 #include <string>
+#include <cstdlib>
 #include "BinarioCiudades.h"
 #include "BinarioPaises.h"
 #include "BinarioVisitas.h"
@@ -79,7 +80,7 @@ void PostordenRPaises(NodoBinarioPaises* R) {
     }
 }
 
-pNodoBinarioPaises buscaPais(pNodoBinarioPaises R, int codPais) {
+pNodoBinarioPaises BinarioPaises::buscaPais(pNodoBinarioPaises R, int codPais) {
 
     pNodoBinarioPaises pais = NULL;
     if (R == NULL) {
@@ -103,6 +104,40 @@ pNodoBinarioPaises buscaPais(pNodoBinarioPaises R, int codPais) {
     }
     return pais;
 }
+
+void BinarioPaises::agregar_Datos_lectura(string& pDatosLinea)
+{
+    std::string datos[2] = { "", "" };
+    int indiceDatos = 0;
+    for (int indice = 0; indice < pDatosLinea.size(); indice++) {
+        if (pDatosLinea[indice] != ';') {
+            datos[indiceDatos] = datos[indiceDatos] + pDatosLinea[indice];
+        }
+        else {
+            indiceDatos++;
+        }
+    }
+    pNodoBinarioPaises pais = this->buscaPais(this->raiz, atoi(datos[0].c_str()));
+    if (pais == NULL) {
+        this->InsertaNodoPaises(atoi(datos[0].c_str()), datos[1]);
+    }
+}
+
+void BinarioPaises::leer_Doc()
+{
+    string nombreArchivo = "Paises.txt";
+    ifstream file(nombreArchivo.c_str());
+    string linea;
+
+    while (!file.eof())
+    {
+        linea = "";
+        getline(file, linea);
+        this->agregar_Datos_lectura(linea);
+    }
+    file.close();
+}
+
 
 // ************************************* CIUDADES *************************************
 
@@ -175,7 +210,7 @@ void PostordenRCiudades(NodoBinarioCiudades* R) {
     }
 }
 
-pNodoBinarioCiudades buscaCiudad(pNodoBinarioCiudades R, int codCiudad) {
+pNodoBinarioCiudades BinarioCiudades::buscaCiudad(pNodoBinarioCiudades R, int codCiudad) {
 
     pNodoBinarioCiudades ciudad = NULL;
 
@@ -201,7 +236,7 @@ pNodoBinarioCiudades buscaCiudad(pNodoBinarioCiudades R, int codCiudad) {
     return ciudad;
 }
 
-pNodoBinarioCiudades buscaCiudadRepetida(pNodoBinarioCiudades R, int codP, int codC) {
+pNodoBinarioCiudades BinarioCiudades::buscaCiudadRepetida(pNodoBinarioCiudades R, int codP, int codC) {
 
     pNodoBinarioCiudades ciudad = NULL;
 
@@ -225,6 +260,46 @@ pNodoBinarioCiudades buscaCiudadRepetida(pNodoBinarioCiudades R, int codP, int c
         }
     }
     return ciudad;
+}
+
+
+void BinarioCiudades::agregar_Datos_lectura(string& pDatosLinea, BinarioPaises* arbolPaises)
+{
+    std::string datos[3] = { "", "", "" };
+    int indiceDatos = 0;
+    for (int indice = 0; indice < pDatosLinea.size(); indice++) {
+        if (pDatosLinea[indice] != ';') {
+            datos[indiceDatos] = datos[indiceDatos] + pDatosLinea[indice];
+        }
+        else {
+            indiceDatos++;
+        }
+    }
+    pNodoBinarioPaises pais = arbolPaises->buscaPais(arbolPaises->raiz, atoi(datos[0].c_str()));
+    pNodoBinarioCiudades ciudad = buscaCiudad(this->raiz, atoi(datos[1].c_str()));
+    pNodoBinarioCiudades ciudadYpais = buscaCiudadRepetida(this->raiz, atoi(datos[0].c_str()), atoi(datos[1].c_str()));
+    if (pais != NULL) {
+        if (ciudadYpais == NULL) {
+            this->InsertaNodoCiudad(atoi(datos[0].c_str()), atoi(datos[1].c_str()), datos[2]);
+        }
+    }
+    /*if (!this->esta_Vendedor(atoi(datos[0].c_str())))
+        this->inserta(atoi(datos[0].c_str()), datos[1]);*/
+}
+
+void BinarioCiudades::leer_Doc(BinarioPaises* arbolPaises)
+{
+    string nombreArchivo = "Ciudades.txt";
+    ifstream file(nombreArchivo.c_str());
+    string linea;
+
+    while (!file.eof())
+    {
+        linea = "";
+        getline(file, linea);
+        this->agregar_Datos_lectura(linea, arbolPaises);
+    }
+    file.close();
 }
 
 // ************************************* VISITAS *************************************
@@ -298,7 +373,7 @@ void PostordenRVisitas(NodoBinarioVisitas* R) {
     }
 }
 
-pNodoBinarioVisitas buscaVisita(pNodoBinarioVisitas R, int codVisita) {
+pNodoBinarioVisitas BinarioVisitas::buscaVisita(pNodoBinarioVisitas R, int codVisita) {
 
     pNodoBinarioVisitas visita = NULL;
     if (R == NULL) {
@@ -323,7 +398,7 @@ pNodoBinarioVisitas buscaVisita(pNodoBinarioVisitas R, int codVisita) {
     return visita;
 }
 
-pNodoBinarioVisitas buscaVisitaRepetida(pNodoBinarioVisitas R, int codVisita, int codMascota) {
+pNodoBinarioVisitas BinarioVisitas::buscaVisitaRepetida(pNodoBinarioVisitas R, int codVisita, int codMascota) {
 
     pNodoBinarioVisitas visita = NULL;
     if (R == NULL) {
@@ -346,4 +421,51 @@ pNodoBinarioVisitas buscaVisitaRepetida(pNodoBinarioVisitas R, int codVisita, in
         }
     }
     return visita;
+}
+
+
+string BinarioVisitas::fechaFormato(string dia, string mes, string anho) {
+
+    string fecha = dia + "/" + mes + "/" + anho;
+    return fecha;
+
+}
+
+void BinarioVisitas::agregar_Datos_lectura(string& pDatosLinea, AVLMascotas* arbolMascotas)
+{
+    std::string datos[7] = { "", "", "", "", "", "", "" };
+    int indiceDatos = 0;
+    for (int indice = 0; indice < pDatosLinea.size(); indice++) {
+        if (pDatosLinea[indice] != ';') {
+            datos[indiceDatos] = datos[indiceDatos] + pDatosLinea[indice];
+        }
+        else {
+            indiceDatos++;
+        }
+    }
+    pNodoAVLMascotas mascota = arbolMascotas->buscaMascota(arbolMascotas->raiz, atoi(datos[1].c_str()));
+    pNodoBinarioVisitas visita = buscaVisita(this->raiz, atoi(datos[0].c_str()));
+    string ultimaVisita = fechaFormato(datos[2], datos[3], datos[4]);
+    if (mascota != NULL) {
+        if (visita == NULL) {
+            this->InsertaNodoVisitas(atoi(datos[0].c_str()), atoi(datos[1].c_str()), ultimaVisita, atoi(datos[5].c_str()), atoi(datos[6].c_str()));
+        }
+    }
+    /*if (!this->esta_Vendedor(atoi(datos[0].c_str())))
+        this->inserta(atoi(datos[0].c_str()), datos[1]);*/
+}
+
+void BinarioVisitas::leer_Doc(AVLMascotas* arbolMascotas)
+{
+    string nombreArchivo = "Visitas.txt";
+    ifstream file(nombreArchivo.c_str());
+    string linea;
+
+    while (!file.eof())
+    {
+        linea = "";
+        getline(file, linea);
+        this->agregar_Datos_lectura(linea, arbolMascotas);
+    }
+    file.close();
 }

@@ -3,6 +3,9 @@
 #include <cstring> 
 #include <string>
 #include "BCliente.h"
+//#include "BinarioPaises.h"
+//#include "BinarioCiudades.h"
+
 using namespace std;
 
 //*******************************************CLIENTES***************************************************************
@@ -333,7 +336,7 @@ void BCliente::RotacionSimpleIzquierda(NodoBCliente*& n, NodoBCliente* n1) {
 
 
 
-NodoBCliente* buscaCliente(NodoBCliente* R, int cedula) {
+NodoBCliente* BCliente::buscaCliente(NodoBCliente* R, int cedula) {
     NodoBCliente* cliente = NULL;
     if (R == NULL) {
         return cliente;
@@ -357,7 +360,7 @@ NodoBCliente* buscaCliente(NodoBCliente* R, int cedula) {
     return cliente;
 }
 
-NodoBCliente* buscaClienteRepetido(NodoBCliente* R, int cedula, int codPais, int codCiudad) {
+NodoBCliente* BCliente::buscaClienteRepetido(NodoBCliente* R, int cedula, int codPais, int codCiudad) {
     NodoBCliente* cliente = NULL;
     if (R == NULL) {
         return cliente;
@@ -379,6 +382,56 @@ NodoBCliente* buscaClienteRepetido(NodoBCliente* R, int cedula, int codPais, int
         }
     }
     return cliente;
+}
+
+
+string BCliente::fechaFormato(string dia, string mes, string anho) {
+
+    string fecha = dia + "/" + mes + "/" + anho;
+    return fecha;
+
+}
+
+void BCliente::agregar_Datos_lectura(string& pDatosLinea, BinarioPaises* arbolPaises, BinarioCiudades* arbolCiudades)
+{
+    std::string datos[10] = { "", "", "", "", "", "", "", "", "", "" };
+    int indiceDatos = 0;
+    for (int indice = 0; indice < pDatosLinea.size(); indice++) {
+        if (pDatosLinea[indice] != ';') {
+            datos[indiceDatos] = datos[indiceDatos] + pDatosLinea[indice];
+        }
+        else {
+            indiceDatos++;
+        }
+    }
+    pNodoBinarioPaises pais = arbolPaises->buscaPais(arbolPaises->raiz, atoi(datos[3].c_str()));
+    pNodoBinarioCiudades ciudad = arbolCiudades->buscaCiudadRepetida(arbolCiudades->raiz, atoi(datos[3].c_str()), atoi(datos[4].c_str()));
+    pNodoBCliente cliente = buscaCliente(this->raiz, atoi(datos[0].c_str()));
+    string ultVisita = fechaFormato(datos[6], datos[7], datos[8]);
+    if (pais != NULL) {
+    	if (ciudad != NULL) {
+    		if (cliente == NULL) {
+    			this->InsertaNodoCliente(atoi(datos[0].c_str()), datos[1], datos[2], atoi(datos[3].c_str()), atoi(datos[4].c_str()), atoi(datos[5].c_str()), ultVisita, atoi(datos[9].c_str()), atoi(datos[10].c_str()));
+    		}
+    	}
+    }
+    /*if (!this->esta_Vendedor(atoi(datos[0].c_str())))
+        this->inserta(atoi(datos[0].c_str()), datos[1]);*/
+}
+
+void BCliente::leer_Doc(BinarioPaises* arbolPaises, BinarioCiudades* arbolCiudades)
+{
+    string nombreArchivo = "Clientes.txt";
+    ifstream file(nombreArchivo.c_str());
+    string linea;
+
+    while (!file.eof())
+    {
+        linea = "";
+        getline(file, linea);
+        this->agregar_Datos_lectura(linea, arbolPaises, arbolCiudades);
+    }
+    file.close();
 }
 
 

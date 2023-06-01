@@ -28,4 +28,9 @@ public:
 	void RotacionSimpleIzquierda(NodoRNTratamiento*& n1, NodoRNTratamiento* n2);
 	void RotacionSimpleDerecha(NodoRNTratamiento*& n1, NodoRNTratamiento* n2);
 
+	void agregar_Datos_lectura(string& pDatosLinea);
+	void leer_Doc();
+
+	NodoRNTratamiento* buscaTratamiento(NodoRNTratamiento* R, int codigoTratamiento);
+
 };

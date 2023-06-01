@@ -4,6 +4,8 @@
 #include <fstream>
 #include <cstring> 
 #include <string>
+#include "BinarioPaises.h"
+#include "BinarioCiudades.h"
 
 using namespace std;
 
@@ -29,5 +31,12 @@ public:
 	void RotacionDobleDerecha(NodoBCliente*& n1, NodoBCliente* n2);
 	void RotacionSimpleIzquierda(NodoBCliente*& n1, NodoBCliente* n2);
 	void RotacionSimpleDerecha(NodoBCliente*& n1, NodoBCliente* n2);
+
+	void agregar_Datos_lectura(string& pDatosLinea, BinarioPaises* arbolPaises, BinarioCiudades* arbolCiudades);
+	void leer_Doc(BinarioPaises* arbolPaises, BinarioCiudades* arbolCiudades);
+	string fechaFormato(string dia, string mes, string anho);
+
+	NodoBCliente* buscaCliente(NodoBCliente* R, int cedula);
+	NodoBCliente* buscaClienteRepetido(NodoBCliente* R, int cedula, int codPais, int codCiudad);
 
 };

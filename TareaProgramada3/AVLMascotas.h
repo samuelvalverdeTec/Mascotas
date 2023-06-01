@@ -4,6 +4,7 @@
 #include <fstream>
 #include <cstring> 
 #include <string>
+#include "BCliente.h"
 
 using namespace std;
 
@@ -29,5 +30,12 @@ public:
 	void RotacionDobleDerecha(NodoAVLMascotas*& n1, NodoAVLMascotas* n2);
 	void RotacionSimpleIzquierda(NodoAVLMascotas*& n1, NodoAVLMascotas* n2);
 	void RotacionSimpleDerecha(NodoAVLMascotas*& n1, NodoAVLMascotas* n2);
+
+	NodoAVLMascotas* buscaMascota(NodoAVLMascotas* R, int IDAnimal);
+	NodoAVLMascotas* buscaMascotaRepetida(NodoAVLMascotas* R, int IDAnimal, int codCliente);
+
+	void agregar_Datos_lectura(string& pDatosLinea, BCliente* arbolClientes);
+	void leer_Doc(BCliente* arbolClientes);
+	string fechaFormato(string dia, string mes, string anho);
 
 };
