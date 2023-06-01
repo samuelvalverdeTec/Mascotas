@@ -6,6 +6,7 @@
 #include <string>
 #include "BinarioPaises.h"
 #include "BinarioCiudades.h"
+#include "AVLMascotas.h"
 
 using namespace std;
 
@@ -42,5 +43,10 @@ public:
 	void EscribeReporte(string nombre, string contenido);
 	void CreaReporte3(string nombre);
 	void RecorreArbolClientes(NodoBCliente* R, string STR, string nomArch);
+	void CreaReporte8(string nombre);
+	pNodoBCliente RecorreArbolSaldo(NodoBCliente* R, int s);
+	void escribirReporte8(pNodoBCliente cliente, string STR, string nomArch);
+	void CreaReporte9(string nombre);
+	//void RecorreArbolVisitasMascotasClientes(NodoBinarioVisitas* R, AVLMascotas* arbolMascotas, BCliente* arbolClientes, string STR, string nomArch);
 
 };
