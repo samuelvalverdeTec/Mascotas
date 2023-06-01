@@ -322,8 +322,8 @@ namespace TareaProgramada3 {
 			this->bpElim->Text = L"-> Eliminación";
 			this->bpElim->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bpElim->UseVisualStyleBackColor = false;
-			this->bpElim->Click += gcnew System::EventHandler(this, &SubMenuLugs::bpElim_Click);
 			this->bpElim->DoubleClick += gcnew System::EventHandler(this, &SubMenuLugs::dbpElim_Click);
+			this->bpElim->Click += gcnew System::EventHandler(this, &SubMenuLugs::bpElim_Click);
 			// 
 			// bpBusq
 			// 
@@ -337,8 +337,8 @@ namespace TareaProgramada3 {
 			this->bpBusq->Text = L"-> Búsqueda";
 			this->bpBusq->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bpBusq->UseVisualStyleBackColor = false;
-			this->bpBusq->Click += gcnew System::EventHandler(this, &SubMenuLugs::bpBusq_Click);
 			this->bpBusq->DoubleClick += gcnew System::EventHandler(this, &SubMenuLugs::dbpBusq_Click);
+			this->bpBusq->Click += gcnew System::EventHandler(this, &SubMenuLugs::bpBusq_Click);
 			// 
 			// bpModif
 			// 
@@ -352,8 +352,8 @@ namespace TareaProgramada3 {
 			this->bpModif->Text = L"-> Modificación";
 			this->bpModif->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bpModif->UseVisualStyleBackColor = false;
-			this->bpModif->Click += gcnew System::EventHandler(this, &SubMenuLugs::bpModif_Click);
 			this->bpModif->DoubleClick += gcnew System::EventHandler(this, &SubMenuLugs::dbpModif_Click);
+			this->bpModif->Click += gcnew System::EventHandler(this, &SubMenuLugs::bpModif_Click);
 			// 
 			// bpInser
 			// 
@@ -367,8 +367,8 @@ namespace TareaProgramada3 {
 			this->bpInser->Text = L"-> Inserción";
 			this->bpInser->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bpInser->UseVisualStyleBackColor = false;
-			this->bpInser->Click += gcnew System::EventHandler(this, &SubMenuLugs::bpInser_Click);
 			this->bpInser->DoubleClick += gcnew System::EventHandler(this, &SubMenuLugs::dbpInser_Click);
+			this->bpInser->Click += gcnew System::EventHandler(this, &SubMenuLugs::bpInser_Click);
 			// 
 			// pCiudades
 			// 
@@ -397,8 +397,8 @@ namespace TareaProgramada3 {
 			this->bcElim->Text = L"-> Eliminación";
 			this->bcElim->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bcElim->UseVisualStyleBackColor = false;
-			this->bcElim->Click += gcnew System::EventHandler(this, &SubMenuLugs::bcElim_Click);
 			this->bcElim->DoubleClick += gcnew System::EventHandler(this, &SubMenuLugs::dbcElim_Click);
+			this->bcElim->Click += gcnew System::EventHandler(this, &SubMenuLugs::bcElim_Click);
 			// 
 			// bcBusq
 			// 
@@ -412,8 +412,8 @@ namespace TareaProgramada3 {
 			this->bcBusq->Text = L"-> Búsqueda";
 			this->bcBusq->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bcBusq->UseVisualStyleBackColor = false;
-			this->bcBusq->Click += gcnew System::EventHandler(this, &SubMenuLugs::bcBusq_Click);
 			this->bcBusq->DoubleClick += gcnew System::EventHandler(this, &SubMenuLugs::dbcBusq_Click);
+			this->bcBusq->Click += gcnew System::EventHandler(this, &SubMenuLugs::bcBusq_Click);
 			// 
 			// bcModif
 			// 
@@ -427,8 +427,8 @@ namespace TareaProgramada3 {
 			this->bcModif->Text = L"-> Modificación";
 			this->bcModif->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bcModif->UseVisualStyleBackColor = false;
-			this->bcModif->Click += gcnew System::EventHandler(this, &SubMenuLugs::bcModif_Click);
 			this->bcModif->DoubleClick += gcnew System::EventHandler(this, &SubMenuLugs::dbcModif_Click);
+			this->bcModif->Click += gcnew System::EventHandler(this, &SubMenuLugs::bcModif_Click);
 			// 
 			// bcInser
 			// 
@@ -442,8 +442,8 @@ namespace TareaProgramada3 {
 			this->bcInser->Text = L"-> Inserción";
 			this->bcInser->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->bcInser->UseVisualStyleBackColor = false;
-			this->bcInser->Click += gcnew System::EventHandler(this, &SubMenuLugs::bcInser_Click);
 			this->bcInser->DoubleClick += gcnew System::EventHandler(this, &SubMenuLugs::dbcInser_Click);
+			this->bcInser->Click += gcnew System::EventHandler(this, &SubMenuLugs::bcInser_Click);
 			// 
 			// ppInser
 			// 
@@ -529,9 +529,9 @@ namespace TareaProgramada3 {
 			this->pcInser->Controls->Add(this->cInserTxtbx2);
 			this->pcInser->Controls->Add(this->cInserTxtbx1);
 			this->pcInser->ForeColor = System::Drawing::Color::White;
-			this->pcInser->Location = System::Drawing::Point(349, 341);
+			this->pcInser->Location = System::Drawing::Point(346, 341);
 			this->pcInser->Name = L"pcInser";
-			this->pcInser->Size = System::Drawing::Size(184, 158);
+			this->pcInser->Size = System::Drawing::Size(175, 250);
 			this->pcInser->TabIndex = 27;
 			this->pcInser->Visible = false;
 			// 
@@ -591,7 +591,7 @@ namespace TareaProgramada3 {
 			this->cInserLbl1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->cInserLbl1->ForeColor = System::Drawing::Color::White;
-			this->cInserLbl1->Location = System::Drawing::Point(13, 1);
+			this->cInserLbl1->Location = System::Drawing::Point(28, 1);
 			this->cInserLbl1->Name = L"cInserLbl1";
 			this->cInserLbl1->Size = System::Drawing::Size(121, 30);
 			this->cInserLbl1->TabIndex = 25;
@@ -621,7 +621,7 @@ namespace TareaProgramada3 {
 			this->bcModificar->Location = System::Drawing::Point(-3, 204);
 			this->bcModificar->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->bcModificar->Name = L"bcModificar";
-			this->bcModificar->Size = System::Drawing::Size(173, 45);
+			this->bcModificar->Size = System::Drawing::Size(170, 45);
 			this->bcModificar->TabIndex = 51;
 			this->bcModificar->Text = L"Modificar";
 			this->bcModificar->UseVisualStyleBackColor = false;
@@ -655,9 +655,9 @@ namespace TareaProgramada3 {
 			this->pcModif->Controls->Add(this->cModifTxtbx2);
 			this->pcModif->Controls->Add(this->cModifTxtbx1);
 			this->pcModif->ForeColor = System::Drawing::Color::White;
-			this->pcModif->Location = System::Drawing::Point(551, 342);
+			this->pcModif->Location = System::Drawing::Point(545, 341);
 			this->pcModif->Name = L"pcModif";
-			this->pcModif->Size = System::Drawing::Size(184, 158);
+			this->pcModif->Size = System::Drawing::Size(169, 249);
 			this->pcModif->TabIndex = 50;
 			this->pcModif->Visible = false;
 			// 
@@ -678,7 +678,7 @@ namespace TareaProgramada3 {
 			// 
 			this->cModifTxtbx3->Location = System::Drawing::Point(0, 177);
 			this->cModifTxtbx3->Name = L"cModifTxtbx3";
-			this->cModifTxtbx3->Size = System::Drawing::Size(170, 29);
+			this->cModifTxtbx3->Size = System::Drawing::Size(167, 29);
 			this->cModifTxtbx3->TabIndex = 28;
 			// 
 			// cModifLbl3
@@ -711,14 +711,14 @@ namespace TareaProgramada3 {
 			// 
 			this->cModifTxtbx2->Location = System::Drawing::Point(0, 113);
 			this->cModifTxtbx2->Name = L"cModifTxtbx2";
-			this->cModifTxtbx2->Size = System::Drawing::Size(170, 29);
+			this->cModifTxtbx2->Size = System::Drawing::Size(167, 29);
 			this->cModifTxtbx2->TabIndex = 1;
 			// 
 			// cModifTxtbx1
 			// 
 			this->cModifTxtbx1->Location = System::Drawing::Point(-3, 43);
 			this->cModifTxtbx1->Name = L"cModifTxtbx1";
-			this->cModifTxtbx1->Size = System::Drawing::Size(173, 29);
+			this->cModifTxtbx1->Size = System::Drawing::Size(170, 29);
 			this->cModifTxtbx1->TabIndex = 0;
 			// 
 			// pcElim

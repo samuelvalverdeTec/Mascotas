@@ -1508,7 +1508,7 @@ namespace TareaProgramada3 {
 			this->bvEliminar->Name = L"bvEliminar";
 			this->bvEliminar->Size = System::Drawing::Size(182, 45);
 			this->bvEliminar->TabIndex = 51;
-			this->bvEliminar->Text = L"Buscar";
+			this->bvEliminar->Text = L"Eliminar";
 			this->bvEliminar->UseVisualStyleBackColor = false;
 			this->bvEliminar->Click += gcnew System::EventHandler(this, &SubMenuClts::bvEliminar_Click);
 			// 
@@ -1558,7 +1558,7 @@ namespace TareaProgramada3 {
 			this->bmEliminar->Name = L"bmEliminar";
 			this->bmEliminar->Size = System::Drawing::Size(182, 45);
 			this->bmEliminar->TabIndex = 50;
-			this->bmEliminar->Text = L"Buscar";
+			this->bmEliminar->Text = L"Eliminar";
 			this->bmEliminar->UseVisualStyleBackColor = false;
 			this->bmEliminar->Click += gcnew System::EventHandler(this, &SubMenuClts::bmEliminar_Click);
 			// 
@@ -1608,7 +1608,7 @@ namespace TareaProgramada3 {
 			this->bcEliminar->Name = L"bcEliminar";
 			this->bcEliminar->Size = System::Drawing::Size(182, 45);
 			this->bcEliminar->TabIndex = 49;
-			this->bcEliminar->Text = L"Buscar";
+			this->bcEliminar->Text = L"Eliminar";
 			this->bcEliminar->UseVisualStyleBackColor = false;
 			this->bcEliminar->Click += gcnew System::EventHandler(this, &SubMenuClts::bcEliminar_Click);
 			// 
