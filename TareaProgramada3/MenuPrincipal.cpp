@@ -25,7 +25,6 @@ void main() {
 
 	string linea1, linea2, linea3, linea4, linea5, linea6, linea7;
 
-
 	arbolPaises->leer_Doc();
 	arbolCiudades->leer_Doc(arbolPaises);
 	arbolVisitas->leer_Doc(arbolMascotas);

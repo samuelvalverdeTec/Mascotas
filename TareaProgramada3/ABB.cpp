@@ -534,8 +534,7 @@ void BinarioVisitas::agregar_Datos_lectura(string& pDatosLinea, AVLMascotas* arb
             this->InsertaNodoVisitas(atoi(datos[0].c_str()), atoi(datos[1].c_str()), ultimaVisita, atoi(datos[5].c_str()), atoi(datos[6].c_str()));
         }
     }
-    /*if (!this->esta_Vendedor(atoi(datos[0].c_str())))
-        this->inserta(atoi(datos[0].c_str()), datos[1]);*/
+    
 }
 
 void BinarioVisitas::leer_Doc(AVLMascotas* arbolMascotas)
@@ -552,8 +551,6 @@ void BinarioVisitas::leer_Doc(AVLMascotas* arbolMascotas)
     }
     file.close();
 }
-
-
 
 void BinarioVisitas::EscribeReporte(string nombre, string contenido) {
 
