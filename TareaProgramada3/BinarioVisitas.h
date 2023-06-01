@@ -27,4 +27,8 @@ public:
     void CreaReporte5(string nombre);
     void RecorreArbolVisitas(NodoBinarioVisitas* R, string STR, string nomArch, int codMascota);
 
+    void CreaReporte9(string nombre);
+    void RecorreArbolVisitasMascotasClientes(NodoBinarioVisitas* R, AVLMascotas* arbolMascotas, BCliente* arbolClientes, string STR, string nomArch);
+
+
 };

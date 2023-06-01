@@ -527,43 +527,6 @@ void BCliente::escribirReporte8(pNodoBCliente cliente, string STR, string nomArc
 
 
 
-void BCliente::CreaReporte9(string nombre) {
-
-    ofstream fout(nombre + ".txt");		// se crea el archivo
-
-    fout << "Reporte - Clientes de credito" << endl;
-    fout << "\n" << endl;
-
-    fout << endl;
-    fout.close();
-
-}
-
-/*void BCliente::RecorreArbolVisitasMascotasClientes(NodoBinarioVisitas* R, AVLMascotas* arbolMascotas, BCliente* arbolClientes, string STR, string nomArch) {
-
-	if (R == NULL) {
-		return;
-	}
-	else {
-		int codM = 0;
-		int codC = 0;
-		if (R->formaPago == 02) {
-			codM = R->IDAnimal;
-			pNodoAVLMascotas mascota = arbolMascotas->buscaMascota(arbolMascotas->raiz, codM);
-			if (mascota != NULL) {
-				codC = mascota->codCliente;
-				pNodoBCliente cliente = arbolClientes->buscaCliente(arbolClientes->raiz, codC);
-				if (cliente != NULL) {
-					STR = STR + "Codigo Cliente: " + to_string(cliente->valor) + "\n" + "Nombre Cliente: " + cliente->nombre + "\n" + "Direccion Cliente: " + cliente->direccion + "\n" + "Codigo Pais: " + to_string(cliente->codigoPais) + "\n" + "Codigo Ciudad: " + to_string(cliente->codigoCiudad) + "\n" + "Telefono: " + to_string(cliente->telefono) + "\n" + "Ultima Visita: " + cliente->ultimavisita + "\n" + "Descuento Cliente: " + to_string(cliente->descuento) + "\n" + "Saldo Cliente: " + to_string(cliente->saldo) + "\n" + "------------------------------------" + "\n";
-					this->EscribeReporte(nomArch, STR);
-				}
-			}
-		}
-		this->RecorreArbolVisitasMascotasClientes(R->Hizq, arbolMascotas, arbolClientes, STR, nomArch);
-		this->RecorreArbolVisitasMascotasClientes(R->Hder, arbolMascotas, arbolClientes, STR, nomArch);
-	}
-}*/
-
 
 
 /*string BCliente::SeparaStringCliente(string linea){

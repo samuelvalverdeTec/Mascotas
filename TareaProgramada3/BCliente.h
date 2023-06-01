@@ -46,7 +46,6 @@ public:
 	void CreaReporte8(string nombre);
 	pNodoBCliente RecorreArbolSaldo(NodoBCliente* R, int s);
 	void escribirReporte8(pNodoBCliente cliente, string STR, string nomArch);
-	void CreaReporte9(string nombre);
-	//void RecorreArbolVisitasMascotasClientes(NodoBinarioVisitas* R, AVLMascotas* arbolMascotas, BCliente* arbolClientes, string STR, string nomArch);
+
 
 };
