@@ -38,4 +38,8 @@ public:
 	void leer_Doc(BCliente* arbolClientes);
 	string fechaFormato(string dia, string mes, string anho);
 
+	void EscribeReporte(string nombre, string contenido);
+	void CreaReporte4(string nombre);
+	void RecorreArbolMascotas(NodoAVLMascotas* R, string STR, string nomArch, int codCliente);
+
 };

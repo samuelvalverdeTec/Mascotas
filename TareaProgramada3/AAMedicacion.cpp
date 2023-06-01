@@ -447,3 +447,47 @@ void AAMedicacion::leer_Doc(AVLMascotas* arbolMascotas)
     }
     file.close();
 }
+
+
+
+void AAMedicacion::EscribeReporte(string nombre, string contenido) {
+
+    fstream fout(nombre + ".txt");		// se escribe el archivo
+
+    fout << contenido << endl;
+
+    fout << endl;
+    fout.close();
+
+}
+
+void AAMedicacion::CreaReporte7(string nombre) {
+
+    ofstream fout(nombre + ".txt");		// se crea el archivo
+
+    fout << "Reporte - Medicaciones de Mascota" << endl;
+    fout << "\n" << endl;
+
+    fout << endl;
+    fout.close();
+
+}
+
+void AAMedicacion::RecorreArbolMedicaciones(NodoAAMedicacion* R, int id, int uM, string STR, string nomArch) {
+
+	if (R == NULL) {
+		return;
+	}
+	else {
+		if (R->IdAnimal == id && R->valor == uM) {
+
+			STR += "ID animal: " + to_string(R->IdAnimal) + "\nCodigo Medicacion: " + to_string(R->valor) + "\nUltima visita: " + R->ultimavisita
+				+ "\nLista de Medicamentos: " + to_string(R->listaMed) + "\nCosto Unitario: " + to_string(R->costoUnidad) + "\nCantidad: " + to_string(R->cantidad)
+				+ "\nCosto Total: " + to_string(R->costoTotal) + "\n" + +"------------------------------------" + "\n";
+			this->EscribeReporte(nomArch, STR);
+
+		}
+		this->RecorreArbolMedicaciones(R->Hizq, id, uM, STR, nomArch);
+		this->RecorreArbolMedicaciones(R->Hder, id, uM, STR, nomArch);
+	}
+}

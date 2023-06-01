@@ -23,4 +23,8 @@ public:
     pNodoBinarioVisitas buscaVisita(pNodoBinarioVisitas R, int valor);
     pNodoBinarioVisitas buscaVisitaRepetida(pNodoBinarioVisitas R, int valor, int codMascota);
 
+    void EscribeReporte(string nombre, string contenido);
+    void CreaReporte5(string nombre);
+    void RecorreArbolVisitas(NodoBinarioVisitas* R, string STR, string nomArch, int codMascota);
+
 };

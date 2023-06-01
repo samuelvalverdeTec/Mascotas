@@ -33,4 +33,8 @@ public:
 
 	NodoRNTratamiento* buscaTratamiento(NodoRNTratamiento* R, int codigoTratamiento);
 
+	void EscribeReporte(string nombre, string contenido);
+	void CreaReporte6(string nombre);
+	void RecorreArbolTratamientos(NodoRNTratamiento* R, string STR, string nomArch);
+
 };

@@ -435,6 +435,46 @@ void BCliente::leer_Doc(BinarioPaises* arbolPaises, BinarioCiudades* arbolCiudad
 }
 
 
+
+void BCliente::EscribeReporte(string nombre, string contenido) {
+
+    fstream fout(nombre + ".txt");		// se escribe el archivo
+
+    fout << contenido << endl;
+
+    fout << endl;
+    fout.close();
+
+}
+
+void BCliente::CreaReporte3(string nombre) {
+
+	ofstream fout(nombre + ".txt");		// se crea el archivo
+
+	fout << "Reporte - Clientes Registrados" << endl;
+	fout << "\n" << endl;
+
+	fout << endl;
+	fout.close();
+
+}
+
+void BCliente::RecorreArbolClientes(NodoBCliente* R, string STR, string nomArch) {
+
+	if (R == NULL) {
+		return;
+	}
+	else {
+		STR += "Codigo Cliente: " + to_string(R->valor) + "\nNombre: " + R->nombre + "\nDireccion: " + R->direccion + "\nCodigo Pais: " + to_string(R->codigoPais)
+			+ "\nCodigo Ciudad: " + to_string(R->codigoCiudad) + "\nTelefono: " + to_string(R->telefono) + "\nUltima Visita: " + R->ultimavisita
+			+ "\nDescuento: " + to_string(R->descuento) + "\nSaldo: " + to_string(R->saldo) + "\n" + "------------------------------------" + "\n";
+		this->EscribeReporte(nomArch, STR);
+		this->RecorreArbolClientes(R->Hizq, STR, nomArch);
+		this->RecorreArbolClientes(R->Hder, STR, nomArch);
+	}
+}
+
+
 /*string BCliente::SeparaStringCliente(string linea){
     char *ptr; // declare a ptr pointer
     int largolinea = linea.length();

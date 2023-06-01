@@ -805,6 +805,45 @@ void RNTratamiento::leer_Doc()
     file.close();
 }
 
+
+void RNTratamiento::EscribeReporte(string nombre, string contenido) {
+
+    fstream fout(nombre + ".txt");		// se escribe el archivo
+
+    fout << contenido << endl;
+
+    fout << endl;
+    fout.close();
+
+}
+
+void RNTratamiento::CreaReporte6(string nombre) {
+
+	ofstream fout(nombre + ".txt");		// se crea el archivo
+
+	fout << "Reporte - Tratamientos Registrados" << endl;
+	fout << "\n" << endl;
+
+	fout << endl;
+	fout.close();
+
+}
+
+void RNTratamiento::RecorreArbolTratamientos(NodoRNTratamiento* R, string STR, string nomArch) {
+
+	if (R == NULL) {
+		return;
+	}
+	else {
+		STR += "Codigo Tratamiento: " + to_string(R->valor) + "\nNombre: " + R->nombreTratamiento + "\nPrecio Unitario: " + to_string(R->precio) + "\n" + "------------------------------------" + "\n";
+		this->EscribeReporte(nomArch, STR);
+		this->RecorreArbolTratamientos(R->Hizq, STR, nomArch);
+		this->RecorreArbolTratamientos(R->Hder, STR, nomArch);
+	}
+}
+
+
+
 //********************************************PRUEBAS*****************************************
 /*void RevisaMarcaFinal(NodoRNMarca *R){//, NodoBinarioPasilloInventario * S){
     //cout << "cualquier cosa" << endl;

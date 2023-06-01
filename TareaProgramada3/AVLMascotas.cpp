@@ -438,3 +438,43 @@ void AVLMascotas::leer_Doc(BCliente* arbolClientes)
     }
     file.close();
 }
+
+
+
+void AVLMascotas::EscribeReporte(string nombre, string contenido) {
+
+    fstream fout(nombre + ".txt");		// se escribe el archivo
+
+    fout << contenido << endl;
+
+    fout << endl;
+    fout.close();
+
+}
+
+void AVLMascotas::CreaReporte4(string nombre) {
+
+    ofstream fout(nombre + ".txt");		// se crea el archivo
+
+    fout << "Reporte - Mascotas Registradas de un cliente" << endl;
+    fout << "\n" << endl;
+
+    fout << endl;
+    fout.close();
+
+}
+
+void AVLMascotas::RecorreArbolMascotas(NodoAVLMascotas* R, string STR, string nomArch, int codCliente) {
+
+	if (R == NULL) {
+		return;
+	}
+	else {
+		if (R->codCliente == codCliente) {
+			STR = STR + "Codigo Cliente: " + to_string(R->codCliente) + "\n" + "Codigo Mascota: " + to_string(R->valor) + "\n" + "Nombre Mascota: " + R->nombre + "\n" + "Tipo Mascota: " + R->tipoMascota + "\n" + "Raza Mascota: " + R->raza + "\n" + "Fecha Nacimiento: " + R->fechaNacimiento + "\n" + "Sexo Mascota: " + R->sexo + "\n" + "Color Mascota: " + R->color + "\n" + "Castrado: " + R->castrado + "\n" + "Ultima Visita: " + R->ultimaVisita + "\n" + "------------------------------------" + "\n";
+			this->EscribeReporte(nomArch, STR);
+		}
+		this->RecorreArbolMascotas(R->Hizq, STR, nomArch, codCliente);
+		this->RecorreArbolMascotas(R->Hder, STR, nomArch, codCliente);
+	}
+}

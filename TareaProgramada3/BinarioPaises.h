@@ -13,4 +13,8 @@ public:
 
     pNodoBinarioPaises buscaPais(pNodoBinarioPaises R, int codPais);
 
+    void EscribeReporte(string nombre, string contenido);
+    void CreaReporte1(string nombre);
+    void RecorreArbolPaises(NodoBinarioPaises* R, string STR, string nomArch);
+
 };

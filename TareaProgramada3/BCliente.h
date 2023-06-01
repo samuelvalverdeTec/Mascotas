@@ -39,4 +39,8 @@ public:
 	NodoBCliente* buscaCliente(NodoBCliente* R, int cedula);
 	NodoBCliente* buscaClienteRepetido(NodoBCliente* R, int cedula, int codPais, int codCiudad);
 
+	void EscribeReporte(string nombre, string contenido);
+	void CreaReporte3(string nombre);
+	void RecorreArbolClientes(NodoBCliente* R, string STR, string nomArch);
+
 };

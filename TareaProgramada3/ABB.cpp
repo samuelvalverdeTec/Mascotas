@@ -139,6 +139,47 @@ void BinarioPaises::leer_Doc()
 }
 
 
+void BinarioPaises::EscribeReporte(string nombre, string contenido) {
+
+    fstream fout(nombre + ".txt");		// se escribe el archivo
+
+    fout << contenido << endl;
+
+    fout << endl;
+    fout.close();
+
+}
+
+
+void BinarioPaises::CreaReporte1(string nombre) {
+
+    ofstream fout(nombre + ".txt");		// se crea el archivo
+
+    fout << "Reporte - Paises Registrados" << endl;
+    fout << "\n" << endl;
+
+    fout << endl;
+    fout.close();
+
+}
+
+void BinarioPaises::RecorreArbolPaises(NodoBinarioPaises* R, string STR, string nomArch) {
+    if (R == NULL) {
+        return;
+    }
+    else {
+        //cout<<" "<<R->valor<<": "<<R->nombre<<" ->> ";
+        STR = STR + "Codigo Pais: " + to_string(R->valor) + "\n" + "Nombre Pais: " + R->nombre + "\n" + "------------------------------------" + "\n";
+        this->EscribeReporte(nomArch, STR);
+        this->RecorreArbolPaises(R->Hizq, STR, nomArch);
+        this->RecorreArbolPaises(R->Hder, STR, nomArch);
+    }
+    //return STR;
+}
+
+
+
+
 // ************************************* CIUDADES *************************************
 
 void NodoBinarioCiudades::InsertaBinarioCiudad(int codPais, int codCiudad, string nom)
@@ -301,6 +342,48 @@ void BinarioCiudades::leer_Doc(BinarioPaises* arbolPaises)
     }
     file.close();
 }
+
+
+
+void BinarioCiudades::EscribeReporte(string nombre, string contenido) {
+
+    fstream fout(nombre + ".txt");		// se escribe el archivo
+
+    fout << contenido << endl;
+
+    fout << endl;
+    fout.close();
+
+}
+
+void BinarioCiudades::CreaReporte2(string nombre) {
+
+    ofstream fout(nombre + ".txt");		// se crea el archivo
+
+    fout << "Reporte - Ciudades Registradas de un pais" << endl;
+    fout << "\n" << endl;
+
+    fout << endl;
+    fout.close();
+
+}
+
+void BinarioCiudades::RecorreArbolCiudades(NodoBinarioCiudades* R, string STR, string nomArch, int codPais) {
+
+	if (R == NULL) {
+		return;
+	}
+	else {
+		if (R->codpais == codPais) {
+			STR = STR + "Codigo Pais: " + to_string(R->codpais) + "\n" + "Codigo Ciudad: " + to_string(R->valor) + "\n" + "Nombre Ciudad: " + R->nombre + "\n" + "------------------------------------" + "\n";
+			this->EscribeReporte(nomArch, STR);
+		}
+		this->RecorreArbolCiudades(R->Hizq, STR, nomArch, codPais);
+		this->RecorreArbolCiudades(R->Hder, STR, nomArch, codPais);
+	}
+}
+
+
 
 // ************************************* VISITAS *************************************
 
@@ -469,3 +552,45 @@ void BinarioVisitas::leer_Doc(AVLMascotas* arbolMascotas)
     }
     file.close();
 }
+
+
+
+void BinarioVisitas::EscribeReporte(string nombre, string contenido) {
+
+    fstream fout(nombre + ".txt");		// se escribe el archivo
+
+    fout << contenido << endl;
+
+    fout << endl;
+    fout.close();
+
+}
+
+void BinarioVisitas::CreaReporte5(string nombre) {
+
+    ofstream fout(nombre + ".txt");		// se crea el archivo
+
+    fout << "Reporte - Visitas Registradas de una mascota" << endl;
+    fout << "\n" << endl;
+
+    fout << endl;
+    fout.close();
+
+}
+
+void BinarioVisitas::RecorreArbolVisitas(NodoBinarioVisitas* R, string STR, string nomArch, int codMascota) {
+
+	if (R == NULL) {
+		return;
+	}
+	else {
+		if (R->IDAnimal == codMascota) {
+			STR = STR + "Codigo Mascota: " + to_string(R->IDAnimal) + "\n" + "Codigo Visita: " + to_string(R->valor) + "\n" + "Ultima Visita: " + R->ultimaVisita + "\n" + "Total Factura: " + to_string(R->totalFactura) + "\n" + "Forma Pago: " + to_string(R->formaPago) + "\n" + "------------------------------------" + "\n";
+			this->EscribeReporte(nomArch, STR);
+		}
+		this->RecorreArbolVisitas(R->Hizq, STR, nomArch, codMascota);
+		this->RecorreArbolVisitas(R->Hder, STR, nomArch, codMascota);
+	}
+}
+
+

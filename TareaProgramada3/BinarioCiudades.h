@@ -15,4 +15,8 @@ public:
     pNodoBinarioCiudades buscaCiudad(pNodoBinarioCiudades R, int codCiudad);
     pNodoBinarioCiudades buscaCiudadRepetida(pNodoBinarioCiudades R, int codPais, int codCiudad);
 
+    void EscribeReporte(string nombre, string contenido);
+    void CreaReporte2(string nombre);
+    void RecorreArbolCiudades(NodoBinarioCiudades* R, string STR, string nomArch, int codPais);
+
 };

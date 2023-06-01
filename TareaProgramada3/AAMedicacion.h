@@ -37,4 +37,8 @@ public:
 	NodoAAMedicacion* buscaMedicacionRepetida(NodoAAMedicacion* R, int codigoMed, int idAnimal, string ultVisita);
 	NodoAAMedicacion* buscaMedicacionRepetida2(NodoAAMedicacion* R, int codigoMed, int idAnimal);
 
+	void EscribeReporte(string nombre, string contenido);
+	void CreaReporte7(string nombre);
+	void RecorreArbolMedicaciones(NodoAAMedicacion* R, int id, int uM, string STR, string nomArch);
+
 };
