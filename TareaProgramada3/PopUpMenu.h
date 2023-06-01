@@ -389,9 +389,9 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->btabCont->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->btabCont->ForeColor = System::Drawing::Color::White;
-			this->btabCont->Location = System::Drawing::Point(4, 42);
+			this->btabCont->Location = System::Drawing::Point(4, 48);
 			this->btabCont->Name = L"btabCont";
-			this->btabCont->Size = System::Drawing::Size(925, 541);
+			this->btabCont->Size = System::Drawing::Size(925, 535);
 			this->btabCont->TabIndex = 5;
 			this->btabCont->Text = L"Contactos";
 			this->btabCont->Click += gcnew System::EventHandler(this, &PopUpMenu::tabCont_Click);
@@ -401,9 +401,9 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->btabAD->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->btabAD->Controls->Add(this->AcercaDe);
 			this->btabAD->ForeColor = System::Drawing::Color::White;
-			this->btabAD->Location = System::Drawing::Point(4, 42);
+			this->btabAD->Location = System::Drawing::Point(4, 48);
 			this->btabAD->Name = L"btabAD";
-			this->btabAD->Size = System::Drawing::Size(925, 541);
+			this->btabAD->Size = System::Drawing::Size(925, 535);
 			this->btabAD->TabIndex = 4;
 			this->btabAD->Text = L"Acerca De";
 			this->btabAD->Click += gcnew System::EventHandler(this, &PopUpMenu::tabAD_Click);
@@ -413,7 +413,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->AcercaDe->AutoSize = true;
 			this->AcercaDe->Location = System::Drawing::Point(24, 25);
 			this->AcercaDe->Name = L"AcercaDe";
-			this->AcercaDe->Size = System::Drawing::Size(305, 30);
+			this->AcercaDe->Size = System::Drawing::Size(386, 37);
 			this->AcercaDe->TabIndex = 0;
 			this->AcercaDe->Text = L"Nosotros somos Fauna Life y ....";
 			// 
@@ -422,9 +422,9 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->btabSucs->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->btabSucs->Controls->Add(this->tabControl1);
 			this->btabSucs->ForeColor = System::Drawing::Color::White;
-			this->btabSucs->Location = System::Drawing::Point(4, 42);
+			this->btabSucs->Location = System::Drawing::Point(4, 48);
 			this->btabSucs->Name = L"btabSucs";
-			this->btabSucs->Size = System::Drawing::Size(925, 541);
+			this->btabSucs->Size = System::Drawing::Size(925, 535);
 			this->btabSucs->TabIndex = 3;
 			this->btabSucs->Text = L"Sucursales";
 			this->btabSucs->Click += gcnew System::EventHandler(this, &PopUpMenu::tabSucs_Click);
@@ -444,36 +444,36 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			// tabPrim
 			// 
-			this->tabPrim->Location = System::Drawing::Point(4, 42);
+			this->tabPrim->Location = System::Drawing::Point(4, 48);
 			this->tabPrim->Name = L"tabPrim";
-			this->tabPrim->Size = System::Drawing::Size(1004, 501);
+			this->tabPrim->Size = System::Drawing::Size(1004, 495);
 			this->tabPrim->TabIndex = 10;
 			this->tabPrim->Text = L"Prim";
 			this->tabPrim->UseVisualStyleBackColor = true;
 			// 
 			// tabKruskal
 			// 
-			this->tabKruskal->Location = System::Drawing::Point(4, 42);
+			this->tabKruskal->Location = System::Drawing::Point(4, 48);
 			this->tabKruskal->Name = L"tabKruskal";
-			this->tabKruskal->Size = System::Drawing::Size(1004, 501);
+			this->tabKruskal->Size = System::Drawing::Size(1004, 495);
 			this->tabKruskal->TabIndex = 12;
 			this->tabKruskal->Text = L"Kruskal";
 			this->tabKruskal->UseVisualStyleBackColor = true;
 			// 
 			// tabGrado
 			// 
-			this->tabGrado->Location = System::Drawing::Point(4, 42);
+			this->tabGrado->Location = System::Drawing::Point(4, 48);
 			this->tabGrado->Name = L"tabGrado";
-			this->tabGrado->Size = System::Drawing::Size(1004, 501);
+			this->tabGrado->Size = System::Drawing::Size(1004, 495);
 			this->tabGrado->TabIndex = 11;
 			this->tabGrado->Text = L"Grado";
 			this->tabGrado->UseVisualStyleBackColor = true;
 			// 
 			// tabCamino
 			// 
-			this->tabCamino->Location = System::Drawing::Point(4, 42);
+			this->tabCamino->Location = System::Drawing::Point(4, 48);
 			this->tabCamino->Name = L"tabCamino";
-			this->tabCamino->Size = System::Drawing::Size(1004, 501);
+			this->tabCamino->Size = System::Drawing::Size(1004, 495);
 			this->tabCamino->TabIndex = 13;
 			this->tabCamino->Text = L"Camino";
 			this->tabCamino->UseVisualStyleBackColor = true;
@@ -483,9 +483,9 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->btabReps->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->btabReps->Controls->Add(this->tabReportes);
 			this->btabReps->ForeColor = System::Drawing::Color::White;
-			this->btabReps->Location = System::Drawing::Point(4, 42);
+			this->btabReps->Location = System::Drawing::Point(4, 48);
 			this->btabReps->Name = L"btabReps";
-			this->btabReps->Size = System::Drawing::Size(925, 541);
+			this->btabReps->Size = System::Drawing::Size(925, 535);
 			this->btabReps->TabIndex = 2;
 			this->btabReps->Text = L"Reportes";
 			this->btabReps->Click += gcnew System::EventHandler(this, &PopUpMenu::tabReps_Click);
@@ -514,119 +514,119 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			// tabR1
 			// 
-			this->tabR1->Location = System::Drawing::Point(4, 42);
+			this->tabR1->Location = System::Drawing::Point(4, 48);
 			this->tabR1->Name = L"tabR1";
 			this->tabR1->Padding = System::Windows::Forms::Padding(3);
-			this->tabR1->Size = System::Drawing::Size(921, 501);
+			this->tabR1->Size = System::Drawing::Size(921, 495);
 			this->tabR1->TabIndex = 0;
 			this->tabR1->Text = L"Rep1";
 			this->tabR1->UseVisualStyleBackColor = true;
 			// 
 			// tabR2
 			// 
-			this->tabR2->Location = System::Drawing::Point(4, 42);
+			this->tabR2->Location = System::Drawing::Point(4, 48);
 			this->tabR2->Name = L"tabR2";
 			this->tabR2->Padding = System::Windows::Forms::Padding(3);
-			this->tabR2->Size = System::Drawing::Size(921, 501);
+			this->tabR2->Size = System::Drawing::Size(921, 495);
 			this->tabR2->TabIndex = 1;
 			this->tabR2->Text = L"Rep2";
 			this->tabR2->UseVisualStyleBackColor = true;
 			// 
 			// tabR3
 			// 
-			this->tabR3->Location = System::Drawing::Point(4, 42);
+			this->tabR3->Location = System::Drawing::Point(4, 48);
 			this->tabR3->Name = L"tabR3";
-			this->tabR3->Size = System::Drawing::Size(921, 501);
+			this->tabR3->Size = System::Drawing::Size(921, 495);
 			this->tabR3->TabIndex = 2;
 			this->tabR3->Text = L"Rep3";
 			this->tabR3->UseVisualStyleBackColor = true;
 			// 
 			// tabR4
 			// 
-			this->tabR4->Location = System::Drawing::Point(4, 42);
+			this->tabR4->Location = System::Drawing::Point(4, 48);
 			this->tabR4->Name = L"tabR4";
-			this->tabR4->Size = System::Drawing::Size(921, 501);
+			this->tabR4->Size = System::Drawing::Size(921, 495);
 			this->tabR4->TabIndex = 3;
 			this->tabR4->Text = L"Rep4";
 			this->tabR4->UseVisualStyleBackColor = true;
 			// 
 			// tabR5
 			// 
-			this->tabR5->Location = System::Drawing::Point(4, 42);
+			this->tabR5->Location = System::Drawing::Point(4, 48);
 			this->tabR5->Name = L"tabR5";
-			this->tabR5->Size = System::Drawing::Size(921, 501);
+			this->tabR5->Size = System::Drawing::Size(921, 495);
 			this->tabR5->TabIndex = 4;
 			this->tabR5->Text = L"Rep5";
 			this->tabR5->UseVisualStyleBackColor = true;
 			// 
 			// tabR6
 			// 
-			this->tabR6->Location = System::Drawing::Point(4, 42);
+			this->tabR6->Location = System::Drawing::Point(4, 48);
 			this->tabR6->Name = L"tabR6";
-			this->tabR6->Size = System::Drawing::Size(921, 501);
+			this->tabR6->Size = System::Drawing::Size(921, 495);
 			this->tabR6->TabIndex = 5;
 			this->tabR6->Text = L"Rep6";
 			this->tabR6->UseVisualStyleBackColor = true;
 			// 
 			// tabR7
 			// 
-			this->tabR7->Location = System::Drawing::Point(4, 42);
+			this->tabR7->Location = System::Drawing::Point(4, 48);
 			this->tabR7->Name = L"tabR7";
-			this->tabR7->Size = System::Drawing::Size(921, 501);
+			this->tabR7->Size = System::Drawing::Size(921, 495);
 			this->tabR7->TabIndex = 6;
 			this->tabR7->Text = L"Rep7";
 			this->tabR7->UseVisualStyleBackColor = true;
 			// 
 			// tabR8
 			// 
-			this->tabR8->Location = System::Drawing::Point(4, 42);
+			this->tabR8->Location = System::Drawing::Point(4, 48);
 			this->tabR8->Name = L"tabR8";
-			this->tabR8->Size = System::Drawing::Size(921, 501);
+			this->tabR8->Size = System::Drawing::Size(921, 495);
 			this->tabR8->TabIndex = 7;
 			this->tabR8->Text = L"Rep8";
 			this->tabR8->UseVisualStyleBackColor = true;
 			// 
 			// tabR9
 			// 
-			this->tabR9->Location = System::Drawing::Point(4, 42);
+			this->tabR9->Location = System::Drawing::Point(4, 48);
 			this->tabR9->Name = L"tabR9";
-			this->tabR9->Size = System::Drawing::Size(921, 501);
+			this->tabR9->Size = System::Drawing::Size(921, 495);
 			this->tabR9->TabIndex = 8;
 			this->tabR9->Text = L"Rep9";
 			this->tabR9->UseVisualStyleBackColor = true;
 			// 
 			// tabR10
 			// 
-			this->tabR10->Location = System::Drawing::Point(4, 42);
+			this->tabR10->Location = System::Drawing::Point(4, 48);
 			this->tabR10->Name = L"tabR10";
-			this->tabR10->Size = System::Drawing::Size(921, 501);
+			this->tabR10->Size = System::Drawing::Size(921, 495);
 			this->tabR10->TabIndex = 9;
 			this->tabR10->Text = L"Rep10";
 			this->tabR10->UseVisualStyleBackColor = true;
 			// 
 			// tabR11
 			// 
-			this->tabR11->Location = System::Drawing::Point(4, 42);
+			this->tabR11->Location = System::Drawing::Point(4, 48);
 			this->tabR11->Name = L"tabR11";
-			this->tabR11->Size = System::Drawing::Size(921, 501);
+			this->tabR11->Size = System::Drawing::Size(921, 495);
 			this->tabR11->TabIndex = 10;
 			this->tabR11->Text = L"Rep11";
 			this->tabR11->UseVisualStyleBackColor = true;
 			// 
 			// tabR12
 			// 
-			this->tabR12->Location = System::Drawing::Point(4, 42);
+			this->tabR12->Location = System::Drawing::Point(4, 48);
 			this->tabR12->Name = L"tabR12";
-			this->tabR12->Size = System::Drawing::Size(921, 501);
+			this->tabR12->Size = System::Drawing::Size(921, 495);
 			this->tabR12->TabIndex = 11;
 			this->tabR12->Text = L"Rep12";
 			this->tabR12->UseVisualStyleBackColor = true;
 			// 
 			// tabR13
 			// 
-			this->tabR13->Location = System::Drawing::Point(4, 42);
+			this->tabR13->Location = System::Drawing::Point(4, 48);
 			this->tabR13->Name = L"tabR13";
-			this->tabR13->Size = System::Drawing::Size(921, 501);
+			this->tabR13->Size = System::Drawing::Size(921, 495);
 			this->tabR13->TabIndex = 12;
 			this->tabR13->Text = L"Rep13";
 			this->tabR13->UseVisualStyleBackColor = true;
@@ -636,10 +636,10 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->btabFact->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->btabFact->Controls->Add(this->tabFacturacion);
 			this->btabFact->ForeColor = System::Drawing::Color::White;
-			this->btabFact->Location = System::Drawing::Point(4, 42);
+			this->btabFact->Location = System::Drawing::Point(4, 48);
 			this->btabFact->Name = L"btabFact";
 			this->btabFact->Padding = System::Windows::Forms::Padding(3);
-			this->btabFact->Size = System::Drawing::Size(925, 541);
+			this->btabFact->Size = System::Drawing::Size(925, 535);
 			this->btabFact->TabIndex = 1;
 			this->btabFact->Text = L"Facturacion";
 			this->btabFact->Click += gcnew System::EventHandler(this, &PopUpMenu::tabFact_Click);
@@ -658,29 +658,29 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			// tabSaldos
 			// 
-			this->tabSaldos->Location = System::Drawing::Point(4, 42);
+			this->tabSaldos->Location = System::Drawing::Point(4, 48);
 			this->tabSaldos->Name = L"tabSaldos";
 			this->tabSaldos->Padding = System::Windows::Forms::Padding(3);
-			this->tabSaldos->Size = System::Drawing::Size(921, 501);
+			this->tabSaldos->Size = System::Drawing::Size(921, 495);
 			this->tabSaldos->TabIndex = 0;
 			this->tabSaldos->Text = L"Saldos";
 			this->tabSaldos->UseVisualStyleBackColor = true;
 			// 
 			// tabDesc
 			// 
-			this->tabDesc->Location = System::Drawing::Point(4, 42);
+			this->tabDesc->Location = System::Drawing::Point(4, 48);
 			this->tabDesc->Name = L"tabDesc";
 			this->tabDesc->Padding = System::Windows::Forms::Padding(3);
-			this->tabDesc->Size = System::Drawing::Size(921, 501);
+			this->tabDesc->Size = System::Drawing::Size(921, 495);
 			this->tabDesc->TabIndex = 1;
 			this->tabDesc->Text = L"Descuentos";
 			this->tabDesc->UseVisualStyleBackColor = true;
 			// 
 			// tabFact
 			// 
-			this->tabFact->Location = System::Drawing::Point(4, 42);
+			this->tabFact->Location = System::Drawing::Point(4, 48);
 			this->tabFact->Name = L"tabFact";
-			this->tabFact->Size = System::Drawing::Size(921, 501);
+			this->tabFact->Size = System::Drawing::Size(921, 495);
 			this->tabFact->TabIndex = 2;
 			this->tabFact->Text = L"Facturación";
 			this->tabFact->UseVisualStyleBackColor = true;
@@ -711,10 +711,10 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->btabMant->Controls->Add(this->tabMantenimiento);
 			this->btabMant->ForeColor = System::Drawing::Color::White;
 			this->btabMant->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->btabMant->Location = System::Drawing::Point(4, 42);
+			this->btabMant->Location = System::Drawing::Point(4, 48);
 			this->btabMant->Name = L"btabMant";
 			this->btabMant->Padding = System::Windows::Forms::Padding(3);
-			this->btabMant->Size = System::Drawing::Size(925, 541);
+			this->btabMant->Size = System::Drawing::Size(925, 535);
 			this->btabMant->TabIndex = 0;
 			this->btabMant->Text = L"Mantenimiento";
 			this->btabMant->Click += gcnew System::EventHandler(this, &PopUpMenu::tabMant_Click);
@@ -735,10 +735,10 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// btabInser
 			// 
 			this->btabInser->Controls->Add(this->tabInsercion);
-			this->btabInser->Location = System::Drawing::Point(4, 42);
+			this->btabInser->Location = System::Drawing::Point(4, 48);
 			this->btabInser->Name = L"btabInser";
 			this->btabInser->Padding = System::Windows::Forms::Padding(3);
-			this->btabInser->Size = System::Drawing::Size(921, 499);
+			this->btabInser->Size = System::Drawing::Size(921, 493);
 			this->btabInser->TabIndex = 0;
 			this->btabInser->Text = L"Inserción";
 			this->btabInser->UseVisualStyleBackColor = true;
@@ -761,76 +761,76 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			// btabInserPais
 			// 
-			this->btabInserPais->Location = System::Drawing::Point(4, 39);
+			this->btabInserPais->BackColor = System::Drawing::Color::Teal;
+			this->btabInserPais->Location = System::Drawing::Point(4, 45);
 			this->btabInserPais->Name = L"btabInserPais";
 			this->btabInserPais->Padding = System::Windows::Forms::Padding(3);
-			this->btabInserPais->Size = System::Drawing::Size(917, 457);
+			this->btabInserPais->Size = System::Drawing::Size(917, 451);
 			this->btabInserPais->TabIndex = 0;
 			this->btabInserPais->Text = L"País";
-			this->btabInserPais->UseVisualStyleBackColor = true;
 			// 
 			// btabInserCdd
 			// 
-			this->btabInserCdd->Location = System::Drawing::Point(4, 39);
+			this->btabInserCdd->BackColor = System::Drawing::Color::Teal;
+			this->btabInserCdd->Location = System::Drawing::Point(4, 45);
 			this->btabInserCdd->Name = L"btabInserCdd";
 			this->btabInserCdd->Padding = System::Windows::Forms::Padding(3);
-			this->btabInserCdd->Size = System::Drawing::Size(917, 457);
+			this->btabInserCdd->Size = System::Drawing::Size(917, 451);
 			this->btabInserCdd->TabIndex = 1;
 			this->btabInserCdd->Text = L"Ciudad";
-			this->btabInserCdd->UseVisualStyleBackColor = true;
 			// 
 			// btabInserClt
 			// 
-			this->btabInserClt->Location = System::Drawing::Point(4, 39);
+			this->btabInserClt->BackColor = System::Drawing::Color::Teal;
+			this->btabInserClt->Location = System::Drawing::Point(4, 45);
 			this->btabInserClt->Name = L"btabInserClt";
-			this->btabInserClt->Size = System::Drawing::Size(917, 457);
+			this->btabInserClt->Size = System::Drawing::Size(917, 451);
 			this->btabInserClt->TabIndex = 2;
 			this->btabInserClt->Text = L"Cliente";
-			this->btabInserClt->UseVisualStyleBackColor = true;
 			// 
 			// btabInserMasc
 			// 
-			this->btabInserMasc->Location = System::Drawing::Point(4, 39);
+			this->btabInserMasc->BackColor = System::Drawing::Color::Teal;
+			this->btabInserMasc->Location = System::Drawing::Point(4, 45);
 			this->btabInserMasc->Name = L"btabInserMasc";
-			this->btabInserMasc->Size = System::Drawing::Size(917, 457);
+			this->btabInserMasc->Size = System::Drawing::Size(917, 451);
 			this->btabInserMasc->TabIndex = 3;
 			this->btabInserMasc->Text = L"Mascota";
-			this->btabInserMasc->UseVisualStyleBackColor = true;
 			// 
 			// btabInserVisita
 			// 
-			this->btabInserVisita->Location = System::Drawing::Point(4, 39);
+			this->btabInserVisita->BackColor = System::Drawing::Color::Teal;
+			this->btabInserVisita->Location = System::Drawing::Point(4, 45);
 			this->btabInserVisita->Name = L"btabInserVisita";
-			this->btabInserVisita->Size = System::Drawing::Size(917, 457);
+			this->btabInserVisita->Size = System::Drawing::Size(917, 451);
 			this->btabInserVisita->TabIndex = 4;
 			this->btabInserVisita->Text = L"Visita";
-			this->btabInserVisita->UseVisualStyleBackColor = true;
 			// 
 			// btabInserTrat
 			// 
-			this->btabInserTrat->Location = System::Drawing::Point(4, 39);
+			this->btabInserTrat->BackColor = System::Drawing::Color::Teal;
+			this->btabInserTrat->Location = System::Drawing::Point(4, 45);
 			this->btabInserTrat->Name = L"btabInserTrat";
-			this->btabInserTrat->Size = System::Drawing::Size(917, 457);
+			this->btabInserTrat->Size = System::Drawing::Size(917, 451);
 			this->btabInserTrat->TabIndex = 5;
 			this->btabInserTrat->Text = L"Tratamiento";
-			this->btabInserTrat->UseVisualStyleBackColor = true;
 			// 
 			// btabInserMed
 			// 
-			this->btabInserMed->Location = System::Drawing::Point(4, 39);
+			this->btabInserMed->BackColor = System::Drawing::Color::Teal;
+			this->btabInserMed->Location = System::Drawing::Point(4, 45);
 			this->btabInserMed->Name = L"btabInserMed";
-			this->btabInserMed->Size = System::Drawing::Size(917, 457);
+			this->btabInserMed->Size = System::Drawing::Size(917, 451);
 			this->btabInserMed->TabIndex = 6;
 			this->btabInserMed->Text = L"Medicación";
-			this->btabInserMed->UseVisualStyleBackColor = true;
 			// 
 			// btabModif
 			// 
 			this->btabModif->Controls->Add(this->tabModificacion);
-			this->btabModif->Location = System::Drawing::Point(4, 42);
+			this->btabModif->Location = System::Drawing::Point(4, 48);
 			this->btabModif->Name = L"btabModif";
 			this->btabModif->Padding = System::Windows::Forms::Padding(3);
-			this->btabModif->Size = System::Drawing::Size(921, 499);
+			this->btabModif->Size = System::Drawing::Size(921, 493);
 			this->btabModif->TabIndex = 1;
 			this->btabModif->Text = L"Modificación";
 			this->btabModif->UseVisualStyleBackColor = true;
@@ -861,10 +861,10 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->btabModifPais->Controls->Add(this->txtModifPais1);
 			this->btabModifPais->Controls->Add(this->lblModifPais1);
 			this->btabModifPais->ForeColor = System::Drawing::Color::White;
-			this->btabModifPais->Location = System::Drawing::Point(4, 39);
+			this->btabModifPais->Location = System::Drawing::Point(4, 45);
 			this->btabModifPais->Name = L"btabModifPais";
 			this->btabModifPais->Padding = System::Windows::Forms::Padding(3);
-			this->btabModifPais->Size = System::Drawing::Size(917, 457);
+			this->btabModifPais->Size = System::Drawing::Size(917, 451);
 			this->btabModifPais->TabIndex = 0;
 			this->btabModifPais->Text = L"País";
 			// 
@@ -876,7 +876,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->errorModifPais->ForeColor = System::Drawing::Color::Red;
 			this->errorModifPais->Location = System::Drawing::Point(71, 130);
 			this->errorModifPais->Name = L"errorModifPais";
-			this->errorModifPais->Size = System::Drawing::Size(352, 21);
+			this->errorModifPais->Size = System::Drawing::Size(438, 28);
 			this->errorModifPais->TabIndex = 44;
 			this->errorModifPais->Text = L"El código de país ingresado no está registrado.";
 			this->errorModifPais->Visible = false;
@@ -885,7 +885,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->txtModifPais2->Location = System::Drawing::Point(75, 191);
 			this->txtModifPais2->Name = L"txtModifPais2";
-			this->txtModifPais2->Size = System::Drawing::Size(210, 35);
+			this->txtModifPais2->Size = System::Drawing::Size(210, 42);
 			this->txtModifPais2->TabIndex = 43;
 			// 
 			// lblModifPais2
@@ -895,7 +895,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifPais2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifPais2->Location = System::Drawing::Point(70, 158);
 			this->lblModifPais2->Name = L"lblModifPais2";
-			this->lblModifPais2->Size = System::Drawing::Size(131, 30);
+			this->lblModifPais2->Size = System::Drawing::Size(168, 37);
 			this->lblModifPais2->TabIndex = 42;
 			this->lblModifPais2->Text = L"Nombre País";
 			// 
@@ -913,13 +913,12 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->bModifPais->TabIndex = 41;
 			this->bModifPais->Text = L"Modificar";
 			this->bModifPais->UseVisualStyleBackColor = false;
-			//this->bModifPais->Click += gcnew System::EventHandler(this, &PopUpMenu::bModifPais_Click);
 			// 
 			// txtModifPais1
 			// 
 			this->txtModifPais1->Location = System::Drawing::Point(75, 92);
 			this->txtModifPais1->Name = L"txtModifPais1";
-			this->txtModifPais1->Size = System::Drawing::Size(210, 35);
+			this->txtModifPais1->Size = System::Drawing::Size(210, 42);
 			this->txtModifPais1->TabIndex = 1;
 			// 
 			// lblModifPais1
@@ -929,7 +928,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifPais1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifPais1->Location = System::Drawing::Point(70, 59);
 			this->lblModifPais1->Name = L"lblModifPais1";
-			this->lblModifPais1->Size = System::Drawing::Size(121, 30);
+			this->lblModifPais1->Size = System::Drawing::Size(158, 37);
 			this->lblModifPais1->TabIndex = 0;
 			this->lblModifPais1->Text = L"Código País";
 			// 
@@ -945,10 +944,10 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->btabModifCdd->Controls->Add(this->lblModifCiudad2);
 			this->btabModifCdd->Controls->Add(this->txtModifCiudad1);
 			this->btabModifCdd->Controls->Add(this->lblModifCiudad1);
-			this->btabModifCdd->Location = System::Drawing::Point(4, 39);
+			this->btabModifCdd->Location = System::Drawing::Point(4, 45);
 			this->btabModifCdd->Name = L"btabModifCdd";
 			this->btabModifCdd->Padding = System::Windows::Forms::Padding(3);
-			this->btabModifCdd->Size = System::Drawing::Size(917, 457);
+			this->btabModifCdd->Size = System::Drawing::Size(917, 451);
 			this->btabModifCdd->TabIndex = 1;
 			this->btabModifCdd->Text = L"Ciudad";
 			// 
@@ -960,7 +959,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->errorModifCiudad2->ForeColor = System::Drawing::Color::Red;
 			this->errorModifCiudad2->Location = System::Drawing::Point(71, 203);
 			this->errorModifCiudad2->Name = L"errorModifCiudad2";
-			this->errorModifCiudad2->Size = System::Drawing::Size(372, 21);
+			this->errorModifCiudad2->Size = System::Drawing::Size(462, 28);
 			this->errorModifCiudad2->TabIndex = 44;
 			this->errorModifCiudad2->Text = L"El código de ciudad ingresado no está registrado.";
 			this->errorModifCiudad2->Visible = false;
@@ -973,7 +972,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->errorModifCiudad1->ForeColor = System::Drawing::Color::Red;
 			this->errorModifCiudad1->Location = System::Drawing::Point(71, 110);
 			this->errorModifCiudad1->Name = L"errorModifCiudad1";
-			this->errorModifCiudad1->Size = System::Drawing::Size(352, 21);
+			this->errorModifCiudad1->Size = System::Drawing::Size(438, 28);
 			this->errorModifCiudad1->TabIndex = 43;
 			this->errorModifCiudad1->Text = L"El código de país ingresado no está registrado.";
 			this->errorModifCiudad1->Visible = false;
@@ -982,7 +981,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->txtModifCiudad3->Location = System::Drawing::Point(75, 257);
 			this->txtModifCiudad3->Name = L"txtModifCiudad3";
-			this->txtModifCiudad3->Size = System::Drawing::Size(210, 35);
+			this->txtModifCiudad3->Size = System::Drawing::Size(210, 42);
 			this->txtModifCiudad3->TabIndex = 42;
 			// 
 			// lblModifCiudad3
@@ -992,7 +991,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifCiudad3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifCiudad3->Location = System::Drawing::Point(70, 224);
 			this->lblModifCiudad3->Name = L"lblModifCiudad3";
-			this->lblModifCiudad3->Size = System::Drawing::Size(160, 30);
+			this->lblModifCiudad3->Size = System::Drawing::Size(207, 37);
 			this->lblModifCiudad3->TabIndex = 41;
 			this->lblModifCiudad3->Text = L"Nombre Ciudad";
 			// 
@@ -1010,13 +1009,12 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->bModifCiudad->TabIndex = 40;
 			this->bModifCiudad->Text = L"Modificar";
 			this->bModifCiudad->UseVisualStyleBackColor = false;
-			//this->bModifCiudad->Click += gcnew System::EventHandler(this, &PopUpMenu::bModifCiudad_Click);
 			// 
 			// txtModifCiudad2
 			// 
 			this->txtModifCiudad2->Location = System::Drawing::Point(75, 164);
 			this->txtModifCiudad2->Name = L"txtModifCiudad2";
-			this->txtModifCiudad2->Size = System::Drawing::Size(210, 35);
+			this->txtModifCiudad2->Size = System::Drawing::Size(210, 42);
 			this->txtModifCiudad2->TabIndex = 5;
 			// 
 			// lblModifCiudad2
@@ -1026,7 +1024,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifCiudad2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifCiudad2->Location = System::Drawing::Point(70, 131);
 			this->lblModifCiudad2->Name = L"lblModifCiudad2";
-			this->lblModifCiudad2->Size = System::Drawing::Size(150, 30);
+			this->lblModifCiudad2->Size = System::Drawing::Size(197, 37);
 			this->lblModifCiudad2->TabIndex = 4;
 			this->lblModifCiudad2->Text = L"Código Ciudad";
 			// 
@@ -1034,7 +1032,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->txtModifCiudad1->Location = System::Drawing::Point(75, 72);
 			this->txtModifCiudad1->Name = L"txtModifCiudad1";
-			this->txtModifCiudad1->Size = System::Drawing::Size(210, 35);
+			this->txtModifCiudad1->Size = System::Drawing::Size(210, 42);
 			this->txtModifCiudad1->TabIndex = 3;
 			// 
 			// lblModifCiudad1
@@ -1044,7 +1042,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifCiudad1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifCiudad1->Location = System::Drawing::Point(70, 39);
 			this->lblModifCiudad1->Name = L"lblModifCiudad1";
-			this->lblModifCiudad1->Size = System::Drawing::Size(121, 30);
+			this->lblModifCiudad1->Size = System::Drawing::Size(158, 37);
 			this->lblModifCiudad1->TabIndex = 2;
 			this->lblModifCiudad1->Text = L"Código País";
 			// 
@@ -1064,9 +1062,9 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->btabModifClt->Controls->Add(this->lblModifCliente2);
 			this->btabModifClt->Controls->Add(this->txtModifCliente1);
 			this->btabModifClt->Controls->Add(this->lblModifCliente1);
-			this->btabModifClt->Location = System::Drawing::Point(4, 39);
+			this->btabModifClt->Location = System::Drawing::Point(4, 45);
 			this->btabModifClt->Name = L"btabModifClt";
-			this->btabModifClt->Size = System::Drawing::Size(917, 457);
+			this->btabModifClt->Size = System::Drawing::Size(917, 451);
 			this->btabModifClt->TabIndex = 2;
 			this->btabModifClt->Text = L"Cliente";
 			// 
@@ -1074,7 +1072,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->txtModifCliente6->Location = System::Drawing::Point(371, 263);
 			this->txtModifCliente6->Name = L"txtModifCliente6";
-			this->txtModifCliente6->Size = System::Drawing::Size(210, 35);
+			this->txtModifCliente6->Size = System::Drawing::Size(210, 42);
 			this->txtModifCliente6->TabIndex = 55;
 			// 
 			// lblModifCliente6
@@ -1084,7 +1082,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifCliente6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifCliente6->Location = System::Drawing::Point(366, 230);
 			this->lblModifCliente6->Name = L"lblModifCliente6";
-			this->lblModifCliente6->Size = System::Drawing::Size(92, 30);
+			this->lblModifCliente6->Size = System::Drawing::Size(118, 37);
 			this->lblModifCliente6->TabIndex = 54;
 			this->lblModifCliente6->Text = L"Teléfono";
 			// 
@@ -1092,7 +1090,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->txtModifCliente5->Location = System::Drawing::Point(371, 170);
 			this->txtModifCliente5->Name = L"txtModifCliente5";
-			this->txtModifCliente5->Size = System::Drawing::Size(210, 35);
+			this->txtModifCliente5->Size = System::Drawing::Size(210, 42);
 			this->txtModifCliente5->TabIndex = 53;
 			// 
 			// lblModifCliente5
@@ -1102,7 +1100,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifCliente5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifCliente5->Location = System::Drawing::Point(366, 137);
 			this->lblModifCliente5->Name = L"lblModifCliente5";
-			this->lblModifCliente5->Size = System::Drawing::Size(150, 30);
+			this->lblModifCliente5->Size = System::Drawing::Size(197, 37);
 			this->lblModifCliente5->TabIndex = 52;
 			this->lblModifCliente5->Text = L"Código Ciudad";
 			// 
@@ -1110,7 +1108,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->txtModifCliente4->Location = System::Drawing::Point(371, 78);
 			this->txtModifCliente4->Name = L"txtModifCliente4";
-			this->txtModifCliente4->Size = System::Drawing::Size(210, 35);
+			this->txtModifCliente4->Size = System::Drawing::Size(210, 42);
 			this->txtModifCliente4->TabIndex = 51;
 			// 
 			// lblModifCliente4
@@ -1120,7 +1118,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifCliente4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifCliente4->Location = System::Drawing::Point(366, 45);
 			this->lblModifCliente4->Name = L"lblModifCliente4";
-			this->lblModifCliente4->Size = System::Drawing::Size(121, 30);
+			this->lblModifCliente4->Size = System::Drawing::Size(158, 37);
 			this->lblModifCliente4->TabIndex = 50;
 			this->lblModifCliente4->Text = L"Código País";
 			// 
@@ -1128,7 +1126,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->txtModifCliente3->Location = System::Drawing::Point(75, 263);
 			this->txtModifCliente3->Name = L"txtModifCliente3";
-			this->txtModifCliente3->Size = System::Drawing::Size(210, 35);
+			this->txtModifCliente3->Size = System::Drawing::Size(210, 42);
 			this->txtModifCliente3->TabIndex = 49;
 			// 
 			// lblModifCliente3
@@ -1138,7 +1136,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifCliente3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifCliente3->Location = System::Drawing::Point(70, 230);
 			this->lblModifCliente3->Name = L"lblModifCliente3";
-			this->lblModifCliente3->Size = System::Drawing::Size(100, 30);
+			this->lblModifCliente3->Size = System::Drawing::Size(128, 37);
 			this->lblModifCliente3->TabIndex = 48;
 			this->lblModifCliente3->Text = L"Dirección";
 			// 
@@ -1161,7 +1159,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->txtModifCliente2->Location = System::Drawing::Point(75, 170);
 			this->txtModifCliente2->Name = L"txtModifCliente2";
-			this->txtModifCliente2->Size = System::Drawing::Size(210, 35);
+			this->txtModifCliente2->Size = System::Drawing::Size(210, 42);
 			this->txtModifCliente2->TabIndex = 46;
 			// 
 			// lblModifCliente2
@@ -1171,7 +1169,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifCliente2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifCliente2->Location = System::Drawing::Point(70, 137);
 			this->lblModifCliente2->Name = L"lblModifCliente2";
-			this->lblModifCliente2->Size = System::Drawing::Size(159, 30);
+			this->lblModifCliente2->Size = System::Drawing::Size(205, 37);
 			this->lblModifCliente2->TabIndex = 45;
 			this->lblModifCliente2->Text = L"Nombre Cliente";
 			// 
@@ -1179,7 +1177,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->txtModifCliente1->Location = System::Drawing::Point(75, 78);
 			this->txtModifCliente1->Name = L"txtModifCliente1";
-			this->txtModifCliente1->Size = System::Drawing::Size(210, 35);
+			this->txtModifCliente1->Size = System::Drawing::Size(210, 42);
 			this->txtModifCliente1->TabIndex = 44;
 			// 
 			// lblModifCliente1
@@ -1189,7 +1187,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifCliente1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifCliente1->Location = System::Drawing::Point(70, 45);
 			this->lblModifCliente1->Name = L"lblModifCliente1";
-			this->lblModifCliente1->Size = System::Drawing::Size(159, 30);
+			this->lblModifCliente1->Size = System::Drawing::Size(204, 37);
 			this->lblModifCliente1->TabIndex = 43;
 			this->lblModifCliente1->Text = L"Número Cliente";
 			// 
@@ -1205,9 +1203,9 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->btabModifMasc->Controls->Add(this->lblModifMascota2);
 			this->btabModifMasc->Controls->Add(this->txtModifMascota1);
 			this->btabModifMasc->Controls->Add(this->lblModifMascota1);
-			this->btabModifMasc->Location = System::Drawing::Point(4, 39);
+			this->btabModifMasc->Location = System::Drawing::Point(4, 45);
 			this->btabModifMasc->Name = L"btabModifMasc";
-			this->btabModifMasc->Size = System::Drawing::Size(917, 457);
+			this->btabModifMasc->Size = System::Drawing::Size(917, 451);
 			this->btabModifMasc->TabIndex = 3;
 			this->btabModifMasc->Text = L"Mascota";
 			// 
@@ -1215,7 +1213,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->txtModifMascota4->Location = System::Drawing::Point(379, 176);
 			this->txtModifMascota4->Name = L"txtModifMascota4";
-			this->txtModifMascota4->Size = System::Drawing::Size(210, 35);
+			this->txtModifMascota4->Size = System::Drawing::Size(210, 42);
 			this->txtModifMascota4->TabIndex = 64;
 			// 
 			// lblModifMascota4
@@ -1225,7 +1223,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifMascota4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifMascota4->Location = System::Drawing::Point(374, 143);
 			this->lblModifMascota4->Name = L"lblModifMascota4";
-			this->lblModifMascota4->Size = System::Drawing::Size(95, 30);
+			this->lblModifMascota4->Size = System::Drawing::Size(123, 37);
 			this->lblModifMascota4->TabIndex = 63;
 			this->lblModifMascota4->Text = L"Castrado";
 			// 
@@ -1233,7 +1231,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->txtModifMascota3->Location = System::Drawing::Point(379, 84);
 			this->txtModifMascota3->Name = L"txtModifMascota3";
-			this->txtModifMascota3->Size = System::Drawing::Size(210, 35);
+			this->txtModifMascota3->Size = System::Drawing::Size(210, 42);
 			this->txtModifMascota3->TabIndex = 62;
 			// 
 			// lblModifMascota3
@@ -1243,7 +1241,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifMascota3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifMascota3->Location = System::Drawing::Point(374, 51);
 			this->lblModifMascota3->Name = L"lblModifMascota3";
-			this->lblModifMascota3->Size = System::Drawing::Size(174, 30);
+			this->lblModifMascota3->Size = System::Drawing::Size(222, 37);
 			this->lblModifMascota3->TabIndex = 61;
 			this->lblModifMascota3->Text = L"Nombre Mascota";
 			// 
@@ -1266,7 +1264,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->txtModifMascota2->Location = System::Drawing::Point(75, 176);
 			this->txtModifMascota2->Name = L"txtModifMascota2";
-			this->txtModifMascota2->Size = System::Drawing::Size(210, 35);
+			this->txtModifMascota2->Size = System::Drawing::Size(210, 42);
 			this->txtModifMascota2->TabIndex = 59;
 			// 
 			// lblModifMascota2
@@ -1276,7 +1274,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifMascota2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifMascota2->Location = System::Drawing::Point(70, 143);
 			this->lblModifMascota2->Name = L"lblModifMascota2";
-			this->lblModifMascota2->Size = System::Drawing::Size(105, 30);
+			this->lblModifMascota2->Size = System::Drawing::Size(133, 37);
 			this->lblModifMascota2->TabIndex = 58;
 			this->lblModifMascota2->Text = L"ID Animal";
 			// 
@@ -1284,7 +1282,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->txtModifMascota1->Location = System::Drawing::Point(75, 84);
 			this->txtModifMascota1->Name = L"txtModifMascota1";
-			this->txtModifMascota1->Size = System::Drawing::Size(210, 35);
+			this->txtModifMascota1->Size = System::Drawing::Size(210, 42);
 			this->txtModifMascota1->TabIndex = 57;
 			// 
 			// lblModifMascota1
@@ -1294,7 +1292,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifMascota1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifMascota1->Location = System::Drawing::Point(70, 51);
 			this->lblModifMascota1->Name = L"lblModifMascota1";
-			this->lblModifMascota1->Size = System::Drawing::Size(159, 30);
+			this->lblModifMascota1->Size = System::Drawing::Size(204, 37);
 			this->lblModifMascota1->TabIndex = 56;
 			this->lblModifMascota1->Text = L"Número Cliente";
 			// 
@@ -1308,9 +1306,9 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->btabModifVisita->Controls->Add(this->lblModifVisita2);
 			this->btabModifVisita->Controls->Add(this->txtModifVisita1);
 			this->btabModifVisita->Controls->Add(this->lblModifVisita1);
-			this->btabModifVisita->Location = System::Drawing::Point(4, 39);
+			this->btabModifVisita->Location = System::Drawing::Point(4, 45);
 			this->btabModifVisita->Name = L"btabModifVisita";
-			this->btabModifVisita->Size = System::Drawing::Size(917, 457);
+			this->btabModifVisita->Size = System::Drawing::Size(917, 451);
 			this->btabModifVisita->TabIndex = 4;
 			this->btabModifVisita->Text = L"Visita";
 			// 
@@ -1318,7 +1316,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->txtModifVisita3->Location = System::Drawing::Point(75, 275);
 			this->txtModifVisita3->Name = L"txtModifVisita3";
-			this->txtModifVisita3->Size = System::Drawing::Size(210, 35);
+			this->txtModifVisita3->Size = System::Drawing::Size(210, 42);
 			this->txtModifVisita3->TabIndex = 67;
 			// 
 			// lblModifVisita3
@@ -1328,7 +1326,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifVisita3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifVisita3->Location = System::Drawing::Point(70, 242);
 			this->lblModifVisita3->Name = L"lblModifVisita3";
-			this->lblModifVisita3->Size = System::Drawing::Size(152, 30);
+			this->lblModifVisita3->Size = System::Drawing::Size(196, 37);
 			this->lblModifVisita3->TabIndex = 66;
 			this->lblModifVisita3->Text = L"Forma de Pago";
 			// 
@@ -1351,7 +1349,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->txtModifVisita2->Location = System::Drawing::Point(75, 179);
 			this->txtModifVisita2->Name = L"txtModifVisita2";
-			this->txtModifVisita2->Size = System::Drawing::Size(210, 35);
+			this->txtModifVisita2->Size = System::Drawing::Size(210, 42);
 			this->txtModifVisita2->TabIndex = 64;
 			// 
 			// lblModifVisita2
@@ -1361,7 +1359,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifVisita2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifVisita2->Location = System::Drawing::Point(70, 146);
 			this->lblModifVisita2->Name = L"lblModifVisita2";
-			this->lblModifVisita2->Size = System::Drawing::Size(105, 30);
+			this->lblModifVisita2->Size = System::Drawing::Size(133, 37);
 			this->lblModifVisita2->TabIndex = 63;
 			this->lblModifVisita2->Text = L"ID Animal";
 			// 
@@ -1369,7 +1367,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->txtModifVisita1->Location = System::Drawing::Point(75, 87);
 			this->txtModifVisita1->Name = L"txtModifVisita1";
-			this->txtModifVisita1->Size = System::Drawing::Size(210, 35);
+			this->txtModifVisita1->Size = System::Drawing::Size(210, 42);
 			this->txtModifVisita1->TabIndex = 62;
 			// 
 			// lblModifVisita1
@@ -1379,7 +1377,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifVisita1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifVisita1->Location = System::Drawing::Point(70, 54);
 			this->lblModifVisita1->Name = L"lblModifVisita1";
-			this->lblModifVisita1->Size = System::Drawing::Size(135, 30);
+			this->lblModifVisita1->Size = System::Drawing::Size(177, 37);
 			this->lblModifVisita1->TabIndex = 61;
 			this->lblModifVisita1->Text = L"Código Visita";
 			// 
@@ -1391,9 +1389,9 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->btabModifTrat->Controls->Add(this->lblModifTratamiento2);
 			this->btabModifTrat->Controls->Add(this->txtModifTratamiento1);
 			this->btabModifTrat->Controls->Add(this->lblModifTratamiento1);
-			this->btabModifTrat->Location = System::Drawing::Point(4, 39);
+			this->btabModifTrat->Location = System::Drawing::Point(4, 45);
 			this->btabModifTrat->Name = L"btabModifTrat";
-			this->btabModifTrat->Size = System::Drawing::Size(917, 457);
+			this->btabModifTrat->Size = System::Drawing::Size(917, 451);
 			this->btabModifTrat->TabIndex = 5;
 			this->btabModifTrat->Text = L"Tratamiento";
 			// 
@@ -1416,7 +1414,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->txtModifTratamiento2->Location = System::Drawing::Point(75, 191);
 			this->txtModifTratamiento2->Name = L"txtModifTratamiento2";
-			this->txtModifTratamiento2->Size = System::Drawing::Size(210, 35);
+			this->txtModifTratamiento2->Size = System::Drawing::Size(210, 42);
 			this->txtModifTratamiento2->TabIndex = 71;
 			// 
 			// lblModifTratamiento2
@@ -1426,7 +1424,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifTratamiento2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifTratamiento2->Location = System::Drawing::Point(70, 158);
 			this->lblModifTratamiento2->Name = L"lblModifTratamiento2";
-			this->lblModifTratamiento2->Size = System::Drawing::Size(70, 30);
+			this->lblModifTratamiento2->Size = System::Drawing::Size(90, 37);
 			this->lblModifTratamiento2->TabIndex = 70;
 			this->lblModifTratamiento2->Text = L"Precio";
 			// 
@@ -1434,7 +1432,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->txtModifTratamiento1->Location = System::Drawing::Point(75, 99);
 			this->txtModifTratamiento1->Name = L"txtModifTratamiento1";
-			this->txtModifTratamiento1->Size = System::Drawing::Size(210, 35);
+			this->txtModifTratamiento1->Size = System::Drawing::Size(210, 42);
 			this->txtModifTratamiento1->TabIndex = 69;
 			// 
 			// lblModifTratamiento1
@@ -1444,7 +1442,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifTratamiento1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifTratamiento1->Location = System::Drawing::Point(70, 66);
 			this->lblModifTratamiento1->Name = L"lblModifTratamiento1";
-			this->lblModifTratamiento1->Size = System::Drawing::Size(195, 30);
+			this->lblModifTratamiento1->Size = System::Drawing::Size(254, 37);
 			this->lblModifTratamiento1->TabIndex = 68;
 			this->lblModifTratamiento1->Text = L"Código Tratamiento";
 			// 
@@ -1462,9 +1460,9 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->btabModifMed->Controls->Add(this->lblModifMedicacion2);
 			this->btabModifMed->Controls->Add(this->txtModifMedicacion1);
 			this->btabModifMed->Controls->Add(this->lblModifMedicacion1);
-			this->btabModifMed->Location = System::Drawing::Point(4, 39);
+			this->btabModifMed->Location = System::Drawing::Point(4, 45);
 			this->btabModifMed->Name = L"btabModifMed";
-			this->btabModifMed->Size = System::Drawing::Size(917, 457);
+			this->btabModifMed->Size = System::Drawing::Size(917, 451);
 			this->btabModifMed->TabIndex = 6;
 			this->btabModifMed->Text = L"Medicación";
 			// 
@@ -1472,7 +1470,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->txtModifMedicacion5->Location = System::Drawing::Point(392, 268);
 			this->txtModifMedicacion5->Name = L"txtModifMedicacion5";
-			this->txtModifMedicacion5->Size = System::Drawing::Size(210, 35);
+			this->txtModifMedicacion5->Size = System::Drawing::Size(210, 42);
 			this->txtModifMedicacion5->TabIndex = 66;
 			// 
 			// lblModifMedicacion5
@@ -1482,7 +1480,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifMedicacion5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifMedicacion5->Location = System::Drawing::Point(387, 235);
 			this->lblModifMedicacion5->Name = L"lblModifMedicacion5";
-			this->lblModifMedicacion5->Size = System::Drawing::Size(116, 30);
+			this->lblModifMedicacion5->Size = System::Drawing::Size(150, 37);
 			this->lblModifMedicacion5->TabIndex = 65;
 			this->lblModifMedicacion5->Text = L"Costo Total";
 			// 
@@ -1490,7 +1488,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->txtModifMedicacion4->Location = System::Drawing::Point(392, 176);
 			this->txtModifMedicacion4->Name = L"txtModifMedicacion4";
-			this->txtModifMedicacion4->Size = System::Drawing::Size(210, 35);
+			this->txtModifMedicacion4->Size = System::Drawing::Size(210, 42);
 			this->txtModifMedicacion4->TabIndex = 64;
 			// 
 			// lblModifMedicacion4
@@ -1500,7 +1498,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifMedicacion4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifMedicacion4->Location = System::Drawing::Point(387, 143);
 			this->lblModifMedicacion4->Name = L"lblModifMedicacion4";
-			this->lblModifMedicacion4->Size = System::Drawing::Size(70, 30);
+			this->lblModifMedicacion4->Size = System::Drawing::Size(90, 37);
 			this->lblModifMedicacion4->TabIndex = 63;
 			this->lblModifMedicacion4->Text = L"Precio";
 			// 
@@ -1508,7 +1506,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->txtModifMedicacion3->Location = System::Drawing::Point(392, 84);
 			this->txtModifMedicacion3->Name = L"txtModifMedicacion3";
-			this->txtModifMedicacion3->Size = System::Drawing::Size(210, 35);
+			this->txtModifMedicacion3->Size = System::Drawing::Size(210, 42);
 			this->txtModifMedicacion3->TabIndex = 62;
 			// 
 			// lblModifMedicacion3
@@ -1518,7 +1516,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifMedicacion3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifMedicacion3->Location = System::Drawing::Point(387, 51);
 			this->lblModifMedicacion3->Name = L"lblModifMedicacion3";
-			this->lblModifMedicacion3->Size = System::Drawing::Size(96, 30);
+			this->lblModifMedicacion3->Size = System::Drawing::Size(125, 37);
 			this->lblModifMedicacion3->TabIndex = 61;
 			this->lblModifMedicacion3->Text = L"Cantidad";
 			// 
@@ -1541,7 +1539,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->txtModifMedicacion2->Location = System::Drawing::Point(75, 176);
 			this->txtModifMedicacion2->Name = L"txtModifMedicacion2";
-			this->txtModifMedicacion2->Size = System::Drawing::Size(210, 35);
+			this->txtModifMedicacion2->Size = System::Drawing::Size(210, 42);
 			this->txtModifMedicacion2->TabIndex = 59;
 			// 
 			// lblModifMedicacion2
@@ -1551,7 +1549,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifMedicacion2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifMedicacion2->Location = System::Drawing::Point(70, 143);
 			this->lblModifMedicacion2->Name = L"lblModifMedicacion2";
-			this->lblModifMedicacion2->Size = System::Drawing::Size(105, 30);
+			this->lblModifMedicacion2->Size = System::Drawing::Size(133, 37);
 			this->lblModifMedicacion2->TabIndex = 58;
 			this->lblModifMedicacion2->Text = L"ID Animal";
 			// 
@@ -1559,7 +1557,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			this->txtModifMedicacion1->Location = System::Drawing::Point(75, 84);
 			this->txtModifMedicacion1->Name = L"txtModifMedicacion1";
-			this->txtModifMedicacion1->Size = System::Drawing::Size(210, 35);
+			this->txtModifMedicacion1->Size = System::Drawing::Size(210, 42);
 			this->txtModifMedicacion1->TabIndex = 57;
 			// 
 			// lblModifMedicacion1
@@ -1569,16 +1567,16 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			this->lblModifMedicacion1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifMedicacion1->Location = System::Drawing::Point(70, 51);
 			this->lblModifMedicacion1->Name = L"lblModifMedicacion1";
-			this->lblModifMedicacion1->Size = System::Drawing::Size(192, 30);
+			this->lblModifMedicacion1->Size = System::Drawing::Size(249, 37);
 			this->lblModifMedicacion1->TabIndex = 56;
 			this->lblModifMedicacion1->Text = L"Código Medicación";
 			// 
 			// btabCons
 			// 
 			this->btabCons->Controls->Add(this->tabConsulta);
-			this->btabCons->Location = System::Drawing::Point(4, 42);
+			this->btabCons->Location = System::Drawing::Point(4, 48);
 			this->btabCons->Name = L"btabCons";
-			this->btabCons->Size = System::Drawing::Size(921, 499);
+			this->btabCons->Size = System::Drawing::Size(921, 493);
 			this->btabCons->TabIndex = 2;
 			this->btabCons->Text = L"Consulta";
 			this->btabCons->UseVisualStyleBackColor = true;
@@ -1601,75 +1599,75 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			// btabConsPais
 			// 
-			this->btabConsPais->Location = System::Drawing::Point(4, 39);
+			this->btabConsPais->BackColor = System::Drawing::Color::Teal;
+			this->btabConsPais->Location = System::Drawing::Point(4, 45);
 			this->btabConsPais->Name = L"btabConsPais";
 			this->btabConsPais->Padding = System::Windows::Forms::Padding(3);
-			this->btabConsPais->Size = System::Drawing::Size(917, 457);
+			this->btabConsPais->Size = System::Drawing::Size(917, 451);
 			this->btabConsPais->TabIndex = 0;
 			this->btabConsPais->Text = L"País";
-			this->btabConsPais->UseVisualStyleBackColor = true;
 			// 
 			// btabConsCdd
 			// 
-			this->btabConsCdd->Location = System::Drawing::Point(4, 39);
+			this->btabConsCdd->BackColor = System::Drawing::Color::Teal;
+			this->btabConsCdd->Location = System::Drawing::Point(4, 45);
 			this->btabConsCdd->Name = L"btabConsCdd";
 			this->btabConsCdd->Padding = System::Windows::Forms::Padding(3);
-			this->btabConsCdd->Size = System::Drawing::Size(917, 457);
+			this->btabConsCdd->Size = System::Drawing::Size(917, 451);
 			this->btabConsCdd->TabIndex = 1;
 			this->btabConsCdd->Text = L"Ciudad";
-			this->btabConsCdd->UseVisualStyleBackColor = true;
 			// 
 			// btabConsClt
 			// 
-			this->btabConsClt->Location = System::Drawing::Point(4, 39);
+			this->btabConsClt->BackColor = System::Drawing::Color::Teal;
+			this->btabConsClt->Location = System::Drawing::Point(4, 45);
 			this->btabConsClt->Name = L"btabConsClt";
-			this->btabConsClt->Size = System::Drawing::Size(917, 457);
+			this->btabConsClt->Size = System::Drawing::Size(917, 451);
 			this->btabConsClt->TabIndex = 2;
 			this->btabConsClt->Text = L"Cliente";
-			this->btabConsClt->UseVisualStyleBackColor = true;
 			// 
 			// btabConsMasc
 			// 
-			this->btabConsMasc->Location = System::Drawing::Point(4, 39);
+			this->btabConsMasc->BackColor = System::Drawing::Color::Teal;
+			this->btabConsMasc->Location = System::Drawing::Point(4, 45);
 			this->btabConsMasc->Name = L"btabConsMasc";
-			this->btabConsMasc->Size = System::Drawing::Size(917, 457);
+			this->btabConsMasc->Size = System::Drawing::Size(917, 451);
 			this->btabConsMasc->TabIndex = 3;
 			this->btabConsMasc->Text = L"Mascota";
-			this->btabConsMasc->UseVisualStyleBackColor = true;
 			// 
 			// btabConsVisita
 			// 
-			this->btabConsVisita->Location = System::Drawing::Point(4, 39);
+			this->btabConsVisita->BackColor = System::Drawing::Color::Teal;
+			this->btabConsVisita->Location = System::Drawing::Point(4, 45);
 			this->btabConsVisita->Name = L"btabConsVisita";
-			this->btabConsVisita->Size = System::Drawing::Size(917, 457);
+			this->btabConsVisita->Size = System::Drawing::Size(917, 451);
 			this->btabConsVisita->TabIndex = 4;
 			this->btabConsVisita->Text = L"Visita";
-			this->btabConsVisita->UseVisualStyleBackColor = true;
 			// 
 			// btabConsTrat
 			// 
-			this->btabConsTrat->Location = System::Drawing::Point(4, 39);
+			this->btabConsTrat->BackColor = System::Drawing::Color::Teal;
+			this->btabConsTrat->Location = System::Drawing::Point(4, 45);
 			this->btabConsTrat->Name = L"btabConsTrat";
-			this->btabConsTrat->Size = System::Drawing::Size(917, 457);
+			this->btabConsTrat->Size = System::Drawing::Size(917, 451);
 			this->btabConsTrat->TabIndex = 5;
 			this->btabConsTrat->Text = L"Tratamiento";
-			this->btabConsTrat->UseVisualStyleBackColor = true;
 			// 
 			// btabConsMed
 			// 
-			this->btabConsMed->Location = System::Drawing::Point(4, 39);
+			this->btabConsMed->BackColor = System::Drawing::Color::Teal;
+			this->btabConsMed->Location = System::Drawing::Point(4, 45);
 			this->btabConsMed->Name = L"btabConsMed";
-			this->btabConsMed->Size = System::Drawing::Size(917, 457);
+			this->btabConsMed->Size = System::Drawing::Size(917, 451);
 			this->btabConsMed->TabIndex = 6;
 			this->btabConsMed->Text = L"Medicación";
-			this->btabConsMed->UseVisualStyleBackColor = true;
 			// 
 			// btabElim
 			// 
 			this->btabElim->Controls->Add(this->tabEliminacion);
-			this->btabElim->Location = System::Drawing::Point(4, 42);
+			this->btabElim->Location = System::Drawing::Point(4, 48);
 			this->btabElim->Name = L"btabElim";
-			this->btabElim->Size = System::Drawing::Size(921, 499);
+			this->btabElim->Size = System::Drawing::Size(921, 493);
 			this->btabElim->TabIndex = 3;
 			this->btabElim->Text = L"Eliminación";
 			this->btabElim->UseVisualStyleBackColor = true;
@@ -1692,68 +1690,68 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			// btabElimPais
 			// 
-			this->btabElimPais->Location = System::Drawing::Point(4, 39);
+			this->btabElimPais->BackColor = System::Drawing::Color::Teal;
+			this->btabElimPais->Location = System::Drawing::Point(4, 45);
 			this->btabElimPais->Name = L"btabElimPais";
 			this->btabElimPais->Padding = System::Windows::Forms::Padding(3);
-			this->btabElimPais->Size = System::Drawing::Size(917, 457);
+			this->btabElimPais->Size = System::Drawing::Size(917, 451);
 			this->btabElimPais->TabIndex = 0;
 			this->btabElimPais->Text = L"País";
-			this->btabElimPais->UseVisualStyleBackColor = true;
 			// 
 			// btabElimCdd
 			// 
-			this->btabElimCdd->Location = System::Drawing::Point(4, 39);
+			this->btabElimCdd->BackColor = System::Drawing::Color::Teal;
+			this->btabElimCdd->Location = System::Drawing::Point(4, 45);
 			this->btabElimCdd->Name = L"btabElimCdd";
 			this->btabElimCdd->Padding = System::Windows::Forms::Padding(3);
-			this->btabElimCdd->Size = System::Drawing::Size(917, 457);
+			this->btabElimCdd->Size = System::Drawing::Size(917, 451);
 			this->btabElimCdd->TabIndex = 1;
 			this->btabElimCdd->Text = L"Ciudad";
-			this->btabElimCdd->UseVisualStyleBackColor = true;
 			// 
 			// btabElimClt
 			// 
-			this->btabElimClt->Location = System::Drawing::Point(4, 39);
+			this->btabElimClt->BackColor = System::Drawing::Color::Teal;
+			this->btabElimClt->Location = System::Drawing::Point(4, 45);
 			this->btabElimClt->Name = L"btabElimClt";
-			this->btabElimClt->Size = System::Drawing::Size(917, 457);
+			this->btabElimClt->Size = System::Drawing::Size(917, 451);
 			this->btabElimClt->TabIndex = 2;
 			this->btabElimClt->Text = L"Cliente";
-			this->btabElimClt->UseVisualStyleBackColor = true;
 			// 
 			// btabElimMasc
 			// 
-			this->btabElimMasc->Location = System::Drawing::Point(4, 39);
+			this->btabElimMasc->BackColor = System::Drawing::Color::Teal;
+			this->btabElimMasc->Location = System::Drawing::Point(4, 45);
 			this->btabElimMasc->Name = L"btabElimMasc";
-			this->btabElimMasc->Size = System::Drawing::Size(917, 457);
+			this->btabElimMasc->Size = System::Drawing::Size(917, 451);
 			this->btabElimMasc->TabIndex = 3;
 			this->btabElimMasc->Text = L"Mascota";
-			this->btabElimMasc->UseVisualStyleBackColor = true;
 			// 
 			// btabElimVisita
 			// 
-			this->btabElimVisita->Location = System::Drawing::Point(4, 39);
+			this->btabElimVisita->BackColor = System::Drawing::Color::Teal;
+			this->btabElimVisita->Location = System::Drawing::Point(4, 45);
 			this->btabElimVisita->Name = L"btabElimVisita";
-			this->btabElimVisita->Size = System::Drawing::Size(917, 457);
+			this->btabElimVisita->Size = System::Drawing::Size(917, 451);
 			this->btabElimVisita->TabIndex = 4;
 			this->btabElimVisita->Text = L"Visita";
-			this->btabElimVisita->UseVisualStyleBackColor = true;
 			// 
 			// btabElimTrat
 			// 
-			this->btabElimTrat->Location = System::Drawing::Point(4, 39);
+			this->btabElimTrat->BackColor = System::Drawing::Color::Teal;
+			this->btabElimTrat->Location = System::Drawing::Point(4, 45);
 			this->btabElimTrat->Name = L"btabElimTrat";
-			this->btabElimTrat->Size = System::Drawing::Size(917, 457);
+			this->btabElimTrat->Size = System::Drawing::Size(917, 451);
 			this->btabElimTrat->TabIndex = 5;
 			this->btabElimTrat->Text = L"Tratamiento";
-			this->btabElimTrat->UseVisualStyleBackColor = true;
 			// 
 			// btabElimMed
 			// 
-			this->btabElimMed->Location = System::Drawing::Point(4, 39);
+			this->btabElimMed->BackColor = System::Drawing::Color::Teal;
+			this->btabElimMed->Location = System::Drawing::Point(4, 45);
 			this->btabElimMed->Name = L"btabElimMed";
-			this->btabElimMed->Size = System::Drawing::Size(917, 457);
+			this->btabElimMed->Size = System::Drawing::Size(917, 451);
 			this->btabElimMed->TabIndex = 6;
 			this->btabElimMed->Text = L"Medicación";
-			this->btabElimMed->UseVisualStyleBackColor = true;
 			// 
 			// bSalir
 			// 
@@ -1773,7 +1771,7 @@ private: System::Windows::Forms::TextBox^ txtModifCiudad3;
 			// 
 			// PopUpMenu
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(12, 30);
+			this->AutoScaleDimensions = System::Drawing::SizeF(14, 36);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::CadetBlue;
 			this->ClientSize = System::Drawing::Size(1084, 611);
