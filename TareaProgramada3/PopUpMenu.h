@@ -1065,6 +1065,7 @@ namespace TareaProgramada3 {
 			this->bModifCiudad->TabIndex = 40;
 			this->bModifCiudad->Text = L"Modificar";
 			this->bModifCiudad->UseVisualStyleBackColor = false;
+			this->bModifCiudad->Click += gcnew System::EventHandler(this, &PopUpMenu::bModifCiudad_Click);
 			// 
 			// txtModifCiudad2
 			// 
@@ -1951,6 +1952,9 @@ namespace TareaProgramada3 {
 
 	private: System::Void bModifCiudad_Click(System::Object^ sender, System::EventArgs^ e) {
 
+		String^ errorP = "El codigo de pais no existe";
+		String^ errorC = "El codigo de ciudad no existe";
+
 		String^ codPais = this->txtModifCiudad1->Text;
 		String^ codCiudad = this->txtModifCiudad2->Text;
 		String^ nombre = this->txtModifCiudad3->Text;
@@ -1966,9 +1970,12 @@ namespace TareaProgramada3 {
 			if (ciudadBuscada != NULL) {
 				ciudadBuscada->nombre = nombreC;
 			}
+			else {
+				MessageBox::Show(errorC);
+			}
 		}
 		else {
-			//messagebox
+			MessageBox::Show(errorP);
 		}
 	}
 	private: System::Void bModifMedicacion_Click(System::Object^ sender, System::EventArgs^ e) {

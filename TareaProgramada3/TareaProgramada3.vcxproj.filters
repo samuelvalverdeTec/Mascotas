@@ -18,37 +18,7 @@
     <ClCompile Include="MenuPrincipal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SubMenuLugs.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Controlador.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SubMenuFact.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SubMenuSucs.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SubMenuClts.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SubMenuClnc.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ABB.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AVL.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RN.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AA.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="B.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Funciones.cpp">
@@ -60,6 +30,18 @@
     <ClCompile Include="IconMenu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AAMedicacion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AVLMascotas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BCliente.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RNTratamiento.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MenuPrincipal.h">
@@ -69,9 +51,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SubMenuLugs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Controlador.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SubMenuFact.h">
@@ -86,40 +65,52 @@
     <ClInclude Include="SubMenuClnc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NodoBinario.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Binario.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="NodoAVL.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AVL.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="NodoRN.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RN.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="NodoAA.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AA.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="NodoB.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="B.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="PopUpMenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IconMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AAMedicacion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AVLMascotas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BCliente.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BinarioVisitas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BinarioCiudades.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BinarioPaises.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NodoAAMedicacion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NodoAVLMascotas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NodoBCliente.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NodoBinarioVisitas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NodoBinarioCiudades.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NodoBinarioPaises.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NodoRNTratamiento.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RNTratamiento.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
