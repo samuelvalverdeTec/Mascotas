@@ -9,6 +9,7 @@
 #include "BinarioVisitas.h"
 #include "RNTratamiento.h"
 #include "AAMedicacion.h"
+
 namespace TareaProgramada3 {
 
 	using namespace System;
@@ -33,13 +34,6 @@ namespace TareaProgramada3 {
 	public: AVLMascotas* arbolMascotas;
 	public: BinarioVisitas* arbolVisitas;
 	public: RNTratamiento* arbolTratamientos;
-	private: System::Windows::Forms::TextBox^ txtInserPais2;
-	public:
-	private: System::Windows::Forms::Label^ lblInserPais2;
-	private: System::Windows::Forms::Button^ bInserPais;
-
-	private: System::Windows::Forms::TextBox^ txtInserPais1;
-	private: System::Windows::Forms::Label^ lblInserPais1;
 	public: AAMedicacion* arbolMedicaciones;
 
 	public:
@@ -201,10 +195,181 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Label^ lblModifMedicacion2;
 	private: System::Windows::Forms::TextBox^ txtModifMedicacion1;
 	private: System::Windows::Forms::Label^ lblModifMedicacion1;
-	private: System::Windows::Forms::Label^ errorModifCiudad1;
-
-	private: System::Windows::Forms::Label^ errorModifCiudad2;
-
+	private: System::Windows::Forms::TextBox^ txtInserPais2;
+	private: System::Windows::Forms::Label^ lblInserPais2;
+	private: System::Windows::Forms::Button^ bInserPais;
+	private: System::Windows::Forms::TextBox^ txtInserPais1;
+	private: System::Windows::Forms::Label^ lblInserPais1;
+	private: System::Windows::Forms::TextBox^ txtInserCiudad3;
+	private: System::Windows::Forms::Label^ lblInserCiudad3;
+	private: System::Windows::Forms::Button^ bInserCiudad;
+	private: System::Windows::Forms::TextBox^ txtInserCiudad2;
+	private: System::Windows::Forms::Label^ lblInserCiudad2;
+	private: System::Windows::Forms::TextBox^ txtInserCiudad1;
+	private: System::Windows::Forms::Label^ lblInserCiudad1;
+	private: System::Windows::Forms::TextBox^ txtInserCliente7;
+	private: System::Windows::Forms::Label^ lblInserCliente7;
+	private: System::Windows::Forms::TextBox^ txtInserCliente6;
+	private: System::Windows::Forms::Label^ lblInserCliente6;
+	private: System::Windows::Forms::TextBox^ txtInserCliente5;
+	private: System::Windows::Forms::Label^ lblInserCliente5;
+	private: System::Windows::Forms::TextBox^ txtInserCliente4;
+	private: System::Windows::Forms::Label^ lblInserCliente4;
+	private: System::Windows::Forms::TextBox^ txtInserCliente3;
+	private: System::Windows::Forms::Label^ lblInserCliente3;
+	private: System::Windows::Forms::Button^ bInserCliente;
+	private: System::Windows::Forms::TextBox^ txtInserCliente2;
+	private: System::Windows::Forms::Label^ lblInserCliente2;
+	private: System::Windows::Forms::TextBox^ txtInserCliente1;
+	private: System::Windows::Forms::Label^ lblInserCliente1;
+	private: System::Windows::Forms::Label^ lblInserCliente8;
+	private: System::Windows::Forms::Label^ lblInserMascota11;
+	private: System::Windows::Forms::TextBox^ txtInserMascota10;
+	private: System::Windows::Forms::Label^ lblInserMascota10;
+	private: System::Windows::Forms::TextBox^ txtInserMascota9;
+	private: System::Windows::Forms::Label^ lblInserMascota9;
+	private: System::Windows::Forms::TextBox^ txtInserMascota8;
+	private: System::Windows::Forms::Label^ lblInserMascota8;
+	private: System::Windows::Forms::TextBox^ txtInserMascota7;
+	private: System::Windows::Forms::Label^ lblInserMascota7;
+	private: System::Windows::Forms::TextBox^ txtInserMascota6;
+	private: System::Windows::Forms::Label^ lblInserMascota6;
+	private: System::Windows::Forms::TextBox^ txtInserMascota5;
+	private: System::Windows::Forms::Label^ lblInserMascota5;
+	private: System::Windows::Forms::TextBox^ txtInserMascota4;
+	private: System::Windows::Forms::Label^ lblInserMascota4;
+	private: System::Windows::Forms::TextBox^ txtInserMascota3;
+	private: System::Windows::Forms::Label^ label5lblInserMascota3;
+	private: System::Windows::Forms::Button^ bInserMascota;
+	private: System::Windows::Forms::TextBox^ txtInserMascota2;
+	private: System::Windows::Forms::Label^ lblInserMascota2;
+	private: System::Windows::Forms::TextBox^ txtInserMascota1;
+	private: System::Windows::Forms::Label^ lblInserMascota1;
+	private: System::Windows::Forms::Label^ lblInserVisita6;
+	private: System::Windows::Forms::TextBox^ txtInserVisita5;
+	private: System::Windows::Forms::Label^ lblInserVisita5;
+	private: System::Windows::Forms::TextBox^ txtInserVisita4;
+	private: System::Windows::Forms::Label^ lblInserVisita4;
+	private: System::Windows::Forms::TextBox^ txtInserVisita3;
+	private: System::Windows::Forms::Label^ lblInserVisita3;
+	private: System::Windows::Forms::Button^ bInserVisita;
+	private: System::Windows::Forms::TextBox^ txtInserVisita2;
+	private: System::Windows::Forms::Label^ lblInserVisita2;
+	private: System::Windows::Forms::TextBox^ txtInserVisita1;
+	private: System::Windows::Forms::Label^ lblInserVisita1;
+	private: System::Windows::Forms::TextBox^ txtInserTrat4;
+	private: System::Windows::Forms::Label^ lblInserTrat4;
+	private: System::Windows::Forms::TextBox^ txtInserTrat3;
+	private: System::Windows::Forms::Label^ lblInserTrat3;
+	private: System::Windows::Forms::Button^ binserTratamiento;
+	private: System::Windows::Forms::TextBox^ txtInserTrat2;
+	private: System::Windows::Forms::Label^ lblInserTrat2;
+	private: System::Windows::Forms::TextBox^ txtInserTrat1;
+	private: System::Windows::Forms::Label^ lblInserTrat1;
+	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::TextBox^ textBox3;
+	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Button^ bInserMedicacion;
+	private: System::Windows::Forms::TextBox^ textBox4;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::TextBox^ textBox5;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::TextBox^ textBox6;
+	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::TextBox^ txtBusqPais2;
+	private: System::Windows::Forms::Label^ lblBusqPais2;
+	private: System::Windows::Forms::Button^ bBuscarPais;
+	private: System::Windows::Forms::TextBox^ txtBusqPais1;
+	private: System::Windows::Forms::Label^ lblBusqPais1;
+	private: System::Windows::Forms::TextBox^ txtBusqCiudad3;
+	private: System::Windows::Forms::Label^ lblBusqCiudad3;
+	private: System::Windows::Forms::Button^ bBuscarCiudad;
+	private: System::Windows::Forms::TextBox^ txtBusqCiudad2;
+	private: System::Windows::Forms::Label^ lblBusqCiudad2;
+	private: System::Windows::Forms::TextBox^ txtBusqCiudad1;
+	private: System::Windows::Forms::Label^ lblBusqCiudad1;
+	private: System::Windows::Forms::TextBox^ txtBusqCliente6;
+	private: System::Windows::Forms::Label^ lblBusqCliente6;
+	private: System::Windows::Forms::TextBox^ txtBusqCliente2;
+	private: System::Windows::Forms::Label^ lblBusqCliente2;
+	private: System::Windows::Forms::TextBox^ txtBusqCliente1;
+	private: System::Windows::Forms::Label^ lblBusqCliente1;
+	private: System::Windows::Forms::TextBox^ txtBusqCliente5;
+	private: System::Windows::Forms::Label^ lblBusqCliente5;
+	private: System::Windows::Forms::Button^ bBuscarCliente;
+	private: System::Windows::Forms::TextBox^ txtBusqCliente4;
+	private: System::Windows::Forms::Label^ lblBusqCliente4;
+	private: System::Windows::Forms::TextBox^ txtBusqCliente3;
+	private: System::Windows::Forms::Label^ lblBusqCliente3;
+	private: System::Windows::Forms::Panel^ pBuscarMascota;
+	private: System::Windows::Forms::Label^ lblBusqMascota11;
+	private: System::Windows::Forms::TextBox^ txtBusqMascota10;
+	private: System::Windows::Forms::Label^ lblBusqMascota10;
+	private: System::Windows::Forms::TextBox^ txtBusqMascota9;
+	private: System::Windows::Forms::Label^ lblBusqMascota9;
+	private: System::Windows::Forms::TextBox^ txtBusqMascota8;
+	private: System::Windows::Forms::Label^ lblBusqMascota8;
+	private: System::Windows::Forms::TextBox^ txtBusqMascota7;
+	private: System::Windows::Forms::Label^ lblBusqMascota7;
+	private: System::Windows::Forms::TextBox^ txtBusqMascota6;
+	private: System::Windows::Forms::Label^ lblBusqMascota6;
+	private: System::Windows::Forms::TextBox^ txtBusqMascota5;
+	private: System::Windows::Forms::Label^ lblBusqMascota5;
+	private: System::Windows::Forms::Label^ lblBusqMascota4;
+	private: System::Windows::Forms::TextBox^ txtBusqMascota3;
+	private: System::Windows::Forms::Label^ lblBusqMascota3;
+	private: System::Windows::Forms::Button^ bBuscarMascota;
+	private: System::Windows::Forms::TextBox^ txtBusqMascota2;
+	private: System::Windows::Forms::Label^ lblBusqMascota2;
+	private: System::Windows::Forms::TextBox^ txtBusqMascota1;
+	private: System::Windows::Forms::Label^ lblBusqMascota1;
+	private: System::Windows::Forms::TextBox^ txtBusqMascota4;
+	private: System::Windows::Forms::Panel^ pBuscarVisita;
+	private: System::Windows::Forms::Label^ lblBusqVisita6;
+	private: System::Windows::Forms::TextBox^ txtBusqVisita5;
+	private: System::Windows::Forms::Label^ lblBusqVisita5;
+	private: System::Windows::Forms::TextBox^ txtBusqVisita4;
+	private: System::Windows::Forms::Label^ lblBusqVisita4;
+	private: System::Windows::Forms::TextBox^ txtBusqVisita3;
+	private: System::Windows::Forms::Label^ lblBusqVisita3;
+	private: System::Windows::Forms::Button^ bBuscarVisita;
+	private: System::Windows::Forms::TextBox^ txtBusqVisita2;
+	private: System::Windows::Forms::Label^ lblBusqVisita2;
+	private: System::Windows::Forms::TextBox^ txtBusqVisita1;
+	private: System::Windows::Forms::Label^ lblBusqVisita1;
+	private: System::Windows::Forms::Panel^ pBuscarCliente;
+	private: System::Windows::Forms::Panel^ pBuscarTratamiento;
+	private: System::Windows::Forms::Label^ lblBuscarTrat2;
+	private: System::Windows::Forms::Label^ lblBuscarTrat5;
+	private: System::Windows::Forms::TextBox^ txtBuscarTrat2;
+	private: System::Windows::Forms::TextBox^ txtBuscarTrat4;
+	private: System::Windows::Forms::Label^ lblBuscarTrat3;
+	private: System::Windows::Forms::Label^ lblBuscarTrat4;
+	private: System::Windows::Forms::TextBox^ txtBuscarTrat3;
+	private: System::Windows::Forms::Button^ bBuscarTratamiento;
+	private: System::Windows::Forms::TextBox^ txtBuscarTrat1;
+	private: System::Windows::Forms::Label^ lblBuscarTrat1;
+	private: System::Windows::Forms::Panel^ pBuscarMedicacion;
+	private: System::Windows::Forms::Label^ lblBuscarMedicacion4;
+	private: System::Windows::Forms::Label^ lblBuscarMedicacion3;
+	private: System::Windows::Forms::TextBox^ txtBuscarMedicacion4;
+	private: System::Windows::Forms::TextBox^ txtBuscarMedicacion3;
+	private: System::Windows::Forms::Label^ lblBuscarMedicacion7;
+	private: System::Windows::Forms::TextBox^ txtBuscarMedicacion5;
+	private: System::Windows::Forms::TextBox^ txtBuscarMedicacion7;
+	private: System::Windows::Forms::Label^ lblBuscarMedicacion5;
+	private: System::Windows::Forms::Button^ bBuscarMedicacion;
+	private: System::Windows::Forms::TextBox^ txtBuscarMedicacion2;
+	private: System::Windows::Forms::Label^ lblBuscarMedicacion2;
+	private: System::Windows::Forms::TextBox^ txtBuscarMedicacion1;
+	private: System::Windows::Forms::Label^ lblBuscarMedicacion1;
+	private: System::Windows::Forms::Label^ lblBuscarMedicacion8;
+	private: System::Windows::Forms::TextBox^ txtBuscarMedicacion6;
+	private: System::Windows::Forms::Label^ lblBuscarMedicacion6;
 
 	private:
 		/// <summary>
@@ -261,11 +426,91 @@ namespace TareaProgramada3 {
 			this->txtInserPais1 = (gcnew System::Windows::Forms::TextBox());
 			this->lblInserPais1 = (gcnew System::Windows::Forms::Label());
 			this->btabInserCdd = (gcnew System::Windows::Forms::TabPage());
+			this->txtInserCiudad3 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserCiudad3 = (gcnew System::Windows::Forms::Label());
+			this->bInserCiudad = (gcnew System::Windows::Forms::Button());
+			this->txtInserCiudad2 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserCiudad2 = (gcnew System::Windows::Forms::Label());
+			this->txtInserCiudad1 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserCiudad1 = (gcnew System::Windows::Forms::Label());
 			this->btabInserClt = (gcnew System::Windows::Forms::TabPage());
+			this->lblInserCliente8 = (gcnew System::Windows::Forms::Label());
+			this->txtInserCliente7 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserCliente7 = (gcnew System::Windows::Forms::Label());
+			this->txtInserCliente6 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserCliente6 = (gcnew System::Windows::Forms::Label());
+			this->txtInserCliente5 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserCliente5 = (gcnew System::Windows::Forms::Label());
+			this->txtInserCliente4 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserCliente4 = (gcnew System::Windows::Forms::Label());
+			this->txtInserCliente3 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserCliente3 = (gcnew System::Windows::Forms::Label());
+			this->bInserCliente = (gcnew System::Windows::Forms::Button());
+			this->txtInserCliente2 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserCliente2 = (gcnew System::Windows::Forms::Label());
+			this->txtInserCliente1 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserCliente1 = (gcnew System::Windows::Forms::Label());
 			this->btabInserMasc = (gcnew System::Windows::Forms::TabPage());
+			this->lblInserMascota11 = (gcnew System::Windows::Forms::Label());
+			this->txtInserMascota10 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserMascota10 = (gcnew System::Windows::Forms::Label());
+			this->txtInserMascota9 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserMascota9 = (gcnew System::Windows::Forms::Label());
+			this->txtInserMascota8 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserMascota8 = (gcnew System::Windows::Forms::Label());
+			this->txtInserMascota7 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserMascota7 = (gcnew System::Windows::Forms::Label());
+			this->txtInserMascota6 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserMascota6 = (gcnew System::Windows::Forms::Label());
+			this->txtInserMascota5 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserMascota5 = (gcnew System::Windows::Forms::Label());
+			this->txtInserMascota4 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserMascota4 = (gcnew System::Windows::Forms::Label());
+			this->txtInserMascota3 = (gcnew System::Windows::Forms::TextBox());
+			this->label5lblInserMascota3 = (gcnew System::Windows::Forms::Label());
+			this->bInserMascota = (gcnew System::Windows::Forms::Button());
+			this->txtInserMascota2 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserMascota2 = (gcnew System::Windows::Forms::Label());
+			this->txtInserMascota1 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserMascota1 = (gcnew System::Windows::Forms::Label());
 			this->btabInserVisita = (gcnew System::Windows::Forms::TabPage());
+			this->lblInserVisita6 = (gcnew System::Windows::Forms::Label());
+			this->txtInserVisita5 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserVisita5 = (gcnew System::Windows::Forms::Label());
+			this->txtInserVisita4 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserVisita4 = (gcnew System::Windows::Forms::Label());
+			this->txtInserVisita3 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserVisita3 = (gcnew System::Windows::Forms::Label());
+			this->bInserVisita = (gcnew System::Windows::Forms::Button());
+			this->txtInserVisita2 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserVisita2 = (gcnew System::Windows::Forms::Label());
+			this->txtInserVisita1 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserVisita1 = (gcnew System::Windows::Forms::Label());
 			this->btabInserTrat = (gcnew System::Windows::Forms::TabPage());
+			this->txtInserTrat4 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserTrat4 = (gcnew System::Windows::Forms::Label());
+			this->txtInserTrat3 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserTrat3 = (gcnew System::Windows::Forms::Label());
+			this->binserTratamiento = (gcnew System::Windows::Forms::Button());
+			this->txtInserTrat2 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserTrat2 = (gcnew System::Windows::Forms::Label());
+			this->txtInserTrat1 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserTrat1 = (gcnew System::Windows::Forms::Label());
 			this->btabInserMed = (gcnew System::Windows::Forms::TabPage());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->bInserMedicacion = (gcnew System::Windows::Forms::Button());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->btabModif = (gcnew System::Windows::Forms::TabPage());
 			this->tabModificacion = (gcnew System::Windows::Forms::TabControl());
 			this->btabModifPais = (gcnew System::Windows::Forms::TabPage());
@@ -275,8 +520,6 @@ namespace TareaProgramada3 {
 			this->txtModifPais1 = (gcnew System::Windows::Forms::TextBox());
 			this->lblModifPais1 = (gcnew System::Windows::Forms::Label());
 			this->btabModifCdd = (gcnew System::Windows::Forms::TabPage());
-			this->errorModifCiudad2 = (gcnew System::Windows::Forms::Label());
-			this->errorModifCiudad1 = (gcnew System::Windows::Forms::Label());
 			this->txtModifCiudad3 = (gcnew System::Windows::Forms::TextBox());
 			this->lblModifCiudad3 = (gcnew System::Windows::Forms::Label());
 			this->bModifCiudad = (gcnew System::Windows::Forms::Button());
@@ -337,12 +580,102 @@ namespace TareaProgramada3 {
 			this->btabCons = (gcnew System::Windows::Forms::TabPage());
 			this->tabConsulta = (gcnew System::Windows::Forms::TabControl());
 			this->btabConsPais = (gcnew System::Windows::Forms::TabPage());
+			this->txtBusqPais2 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBusqPais2 = (gcnew System::Windows::Forms::Label());
+			this->bBuscarPais = (gcnew System::Windows::Forms::Button());
+			this->txtBusqPais1 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBusqPais1 = (gcnew System::Windows::Forms::Label());
 			this->btabConsCdd = (gcnew System::Windows::Forms::TabPage());
+			this->txtBusqCiudad3 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBusqCiudad3 = (gcnew System::Windows::Forms::Label());
+			this->bBuscarCiudad = (gcnew System::Windows::Forms::Button());
+			this->txtBusqCiudad2 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBusqCiudad2 = (gcnew System::Windows::Forms::Label());
+			this->txtBusqCiudad1 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBusqCiudad1 = (gcnew System::Windows::Forms::Label());
 			this->btabConsClt = (gcnew System::Windows::Forms::TabPage());
+			this->pBuscarCliente = (gcnew System::Windows::Forms::Panel());
+			this->lblBusqCliente4 = (gcnew System::Windows::Forms::Label());
+			this->txtBusqCliente6 = (gcnew System::Windows::Forms::TextBox());
+			this->txtBusqCliente4 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBusqCliente6 = (gcnew System::Windows::Forms::Label());
+			this->lblBusqCliente5 = (gcnew System::Windows::Forms::Label());
+			this->txtBusqCliente5 = (gcnew System::Windows::Forms::TextBox());
+			this->txtBusqCliente2 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBusqCliente2 = (gcnew System::Windows::Forms::Label());
+			this->txtBusqCliente1 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBusqCliente1 = (gcnew System::Windows::Forms::Label());
+			this->bBuscarCliente = (gcnew System::Windows::Forms::Button());
+			this->txtBusqCliente3 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBusqCliente3 = (gcnew System::Windows::Forms::Label());
 			this->btabConsMasc = (gcnew System::Windows::Forms::TabPage());
+			this->pBuscarMascota = (gcnew System::Windows::Forms::Panel());
+			this->lblBusqMascota11 = (gcnew System::Windows::Forms::Label());
+			this->txtBusqMascota10 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBusqMascota10 = (gcnew System::Windows::Forms::Label());
+			this->txtBusqMascota9 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBusqMascota9 = (gcnew System::Windows::Forms::Label());
+			this->txtBusqMascota8 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBusqMascota8 = (gcnew System::Windows::Forms::Label());
+			this->txtBusqMascota7 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBusqMascota7 = (gcnew System::Windows::Forms::Label());
+			this->txtBusqMascota6 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBusqMascota6 = (gcnew System::Windows::Forms::Label());
+			this->txtBusqMascota5 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBusqMascota5 = (gcnew System::Windows::Forms::Label());
+			this->txtBusqMascota4 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBusqMascota4 = (gcnew System::Windows::Forms::Label());
+			this->txtBusqMascota3 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBusqMascota3 = (gcnew System::Windows::Forms::Label());
+			this->bBuscarMascota = (gcnew System::Windows::Forms::Button());
+			this->txtBusqMascota2 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBusqMascota2 = (gcnew System::Windows::Forms::Label());
+			this->txtBusqMascota1 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBusqMascota1 = (gcnew System::Windows::Forms::Label());
 			this->btabConsVisita = (gcnew System::Windows::Forms::TabPage());
+			this->pBuscarVisita = (gcnew System::Windows::Forms::Panel());
+			this->lblBusqVisita3 = (gcnew System::Windows::Forms::Label());
+			this->lblBusqVisita6 = (gcnew System::Windows::Forms::Label());
+			this->txtBusqVisita3 = (gcnew System::Windows::Forms::TextBox());
+			this->txtBusqVisita5 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBusqVisita4 = (gcnew System::Windows::Forms::Label());
+			this->lblBusqVisita5 = (gcnew System::Windows::Forms::Label());
+			this->txtBusqVisita4 = (gcnew System::Windows::Forms::TextBox());
+			this->bBuscarVisita = (gcnew System::Windows::Forms::Button());
+			this->txtBusqVisita2 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBusqVisita2 = (gcnew System::Windows::Forms::Label());
+			this->txtBusqVisita1 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBusqVisita1 = (gcnew System::Windows::Forms::Label());
 			this->btabConsTrat = (gcnew System::Windows::Forms::TabPage());
+			this->pBuscarTratamiento = (gcnew System::Windows::Forms::Panel());
+			this->lblBuscarTrat2 = (gcnew System::Windows::Forms::Label());
+			this->lblBuscarTrat5 = (gcnew System::Windows::Forms::Label());
+			this->txtBuscarTrat2 = (gcnew System::Windows::Forms::TextBox());
+			this->txtBuscarTrat4 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBuscarTrat3 = (gcnew System::Windows::Forms::Label());
+			this->lblBuscarTrat4 = (gcnew System::Windows::Forms::Label());
+			this->txtBuscarTrat3 = (gcnew System::Windows::Forms::TextBox());
+			this->bBuscarTratamiento = (gcnew System::Windows::Forms::Button());
+			this->txtBuscarTrat1 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBuscarTrat1 = (gcnew System::Windows::Forms::Label());
 			this->btabConsMed = (gcnew System::Windows::Forms::TabPage());
+			this->pBuscarMedicacion = (gcnew System::Windows::Forms::Panel());
+			this->lblBuscarMedicacion8 = (gcnew System::Windows::Forms::Label());
+			this->txtBuscarMedicacion6 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBuscarMedicacion6 = (gcnew System::Windows::Forms::Label());
+			this->lblBuscarMedicacion4 = (gcnew System::Windows::Forms::Label());
+			this->lblBuscarMedicacion3 = (gcnew System::Windows::Forms::Label());
+			this->txtBuscarMedicacion4 = (gcnew System::Windows::Forms::TextBox());
+			this->txtBuscarMedicacion3 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBuscarMedicacion7 = (gcnew System::Windows::Forms::Label());
+			this->txtBuscarMedicacion5 = (gcnew System::Windows::Forms::TextBox());
+			this->txtBuscarMedicacion7 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBuscarMedicacion5 = (gcnew System::Windows::Forms::Label());
+			this->bBuscarMedicacion = (gcnew System::Windows::Forms::Button());
+			this->txtBuscarMedicacion2 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBuscarMedicacion2 = (gcnew System::Windows::Forms::Label());
+			this->txtBuscarMedicacion1 = (gcnew System::Windows::Forms::TextBox());
+			this->lblBuscarMedicacion1 = (gcnew System::Windows::Forms::Label());
 			this->btabElim = (gcnew System::Windows::Forms::TabPage());
 			this->tabEliminacion = (gcnew System::Windows::Forms::TabControl());
 			this->btabElimPais = (gcnew System::Windows::Forms::TabPage());
@@ -366,6 +699,12 @@ namespace TareaProgramada3 {
 			this->btabInser->SuspendLayout();
 			this->tabInsercion->SuspendLayout();
 			this->btabInserPais->SuspendLayout();
+			this->btabInserCdd->SuspendLayout();
+			this->btabInserClt->SuspendLayout();
+			this->btabInserMasc->SuspendLayout();
+			this->btabInserVisita->SuspendLayout();
+			this->btabInserTrat->SuspendLayout();
+			this->btabInserMed->SuspendLayout();
 			this->btabModif->SuspendLayout();
 			this->tabModificacion->SuspendLayout();
 			this->btabModifPais->SuspendLayout();
@@ -377,6 +716,18 @@ namespace TareaProgramada3 {
 			this->btabModifMed->SuspendLayout();
 			this->btabCons->SuspendLayout();
 			this->tabConsulta->SuspendLayout();
+			this->btabConsPais->SuspendLayout();
+			this->btabConsCdd->SuspendLayout();
+			this->btabConsClt->SuspendLayout();
+			this->pBuscarCliente->SuspendLayout();
+			this->btabConsMasc->SuspendLayout();
+			this->pBuscarMascota->SuspendLayout();
+			this->btabConsVisita->SuspendLayout();
+			this->pBuscarVisita->SuspendLayout();
+			this->btabConsTrat->SuspendLayout();
+			this->pBuscarTratamiento->SuspendLayout();
+			this->btabConsMed->SuspendLayout();
+			this->pBuscarMedicacion->SuspendLayout();
 			this->btabElim->SuspendLayout();
 			this->tabEliminacion->SuspendLayout();
 			this->SuspendLayout();
@@ -526,13 +877,13 @@ namespace TareaProgramada3 {
 			// 
 			// tabR1
 			// 
+			this->tabR1->BackColor = System::Drawing::Color::Transparent;
 			this->tabR1->Location = System::Drawing::Point(4, 42);
 			this->tabR1->Name = L"tabR1";
 			this->tabR1->Padding = System::Windows::Forms::Padding(3);
 			this->tabR1->Size = System::Drawing::Size(921, 501);
 			this->tabR1->TabIndex = 0;
 			this->tabR1->Text = L"Rep1";
-			this->tabR1->UseVisualStyleBackColor = true;
 			// 
 			// tabR2
 			// 
@@ -670,32 +1021,33 @@ namespace TareaProgramada3 {
 			// 
 			// tabSaldos
 			// 
+			this->tabSaldos->BackColor = System::Drawing::Color::Teal;
+			this->tabSaldos->ForeColor = System::Drawing::Color::Teal;
 			this->tabSaldos->Location = System::Drawing::Point(4, 42);
 			this->tabSaldos->Name = L"tabSaldos";
 			this->tabSaldos->Padding = System::Windows::Forms::Padding(3);
 			this->tabSaldos->Size = System::Drawing::Size(921, 501);
 			this->tabSaldos->TabIndex = 0;
 			this->tabSaldos->Text = L"Saldos";
-			this->tabSaldos->UseVisualStyleBackColor = true;
 			// 
 			// tabDesc
 			// 
+			this->tabDesc->BackColor = System::Drawing::Color::Teal;
 			this->tabDesc->Location = System::Drawing::Point(4, 42);
 			this->tabDesc->Name = L"tabDesc";
 			this->tabDesc->Padding = System::Windows::Forms::Padding(3);
 			this->tabDesc->Size = System::Drawing::Size(921, 501);
 			this->tabDesc->TabIndex = 1;
 			this->tabDesc->Text = L"Descuentos";
-			this->tabDesc->UseVisualStyleBackColor = true;
 			// 
 			// tabFact
 			// 
+			this->tabFact->BackColor = System::Drawing::Color::Teal;
 			this->tabFact->Location = System::Drawing::Point(4, 42);
 			this->tabFact->Name = L"tabFact";
 			this->tabFact->Size = System::Drawing::Size(921, 501);
 			this->tabFact->TabIndex = 2;
 			this->tabFact->Text = L"Facturación";
-			this->tabFact->UseVisualStyleBackColor = true;
 			// 
 			// tabPrincipal
 			// 
@@ -841,6 +1193,13 @@ namespace TareaProgramada3 {
 			// btabInserCdd
 			// 
 			this->btabInserCdd->BackColor = System::Drawing::Color::Teal;
+			this->btabInserCdd->Controls->Add(this->txtInserCiudad3);
+			this->btabInserCdd->Controls->Add(this->lblInserCiudad3);
+			this->btabInserCdd->Controls->Add(this->bInserCiudad);
+			this->btabInserCdd->Controls->Add(this->txtInserCiudad2);
+			this->btabInserCdd->Controls->Add(this->lblInserCiudad2);
+			this->btabInserCdd->Controls->Add(this->txtInserCiudad1);
+			this->btabInserCdd->Controls->Add(this->lblInserCiudad1);
 			this->btabInserCdd->Location = System::Drawing::Point(4, 39);
 			this->btabInserCdd->Name = L"btabInserCdd";
 			this->btabInserCdd->Padding = System::Windows::Forms::Padding(3);
@@ -848,50 +1207,905 @@ namespace TareaProgramada3 {
 			this->btabInserCdd->TabIndex = 1;
 			this->btabInserCdd->Text = L"Ciudad";
 			// 
+			// txtInserCiudad3
+			// 
+			this->txtInserCiudad3->Location = System::Drawing::Point(411, 109);
+			this->txtInserCiudad3->Name = L"txtInserCiudad3";
+			this->txtInserCiudad3->Size = System::Drawing::Size(210, 35);
+			this->txtInserCiudad3->TabIndex = 49;
+			// 
+			// lblInserCiudad3
+			// 
+			this->lblInserCiudad3->AutoSize = true;
+			this->lblInserCiudad3->BackColor = System::Drawing::Color::Teal;
+			this->lblInserCiudad3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserCiudad3->Location = System::Drawing::Point(406, 76);
+			this->lblInserCiudad3->Name = L"lblInserCiudad3";
+			this->lblInserCiudad3->Size = System::Drawing::Size(160, 30);
+			this->lblInserCiudad3->TabIndex = 48;
+			this->lblInserCiudad3->Text = L"Nombre Ciudad";
+			// 
+			// bInserCiudad
+			// 
+			this->bInserCiudad->BackColor = System::Drawing::Color::Transparent;
+			this->bInserCiudad->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bInserCiudad->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bInserCiudad->ForeColor = System::Drawing::Color::White;
+			this->bInserCiudad->Location = System::Drawing::Point(102, 336);
+			this->bInserCiudad->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bInserCiudad->Name = L"bInserCiudad";
+			this->bInserCiudad->Size = System::Drawing::Size(210, 45);
+			this->bInserCiudad->TabIndex = 47;
+			this->bInserCiudad->Text = L"Insertar";
+			this->bInserCiudad->UseVisualStyleBackColor = false;
+			this->bInserCiudad->Click += gcnew System::EventHandler(this, &PopUpMenu::bInserCiudad_Click);
+			// 
+			// txtInserCiudad2
+			// 
+			this->txtInserCiudad2->Location = System::Drawing::Point(102, 201);
+			this->txtInserCiudad2->Name = L"txtInserCiudad2";
+			this->txtInserCiudad2->Size = System::Drawing::Size(210, 35);
+			this->txtInserCiudad2->TabIndex = 46;
+			// 
+			// lblInserCiudad2
+			// 
+			this->lblInserCiudad2->AutoSize = true;
+			this->lblInserCiudad2->BackColor = System::Drawing::Color::Teal;
+			this->lblInserCiudad2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserCiudad2->Location = System::Drawing::Point(97, 168);
+			this->lblInserCiudad2->Name = L"lblInserCiudad2";
+			this->lblInserCiudad2->Size = System::Drawing::Size(150, 30);
+			this->lblInserCiudad2->TabIndex = 45;
+			this->lblInserCiudad2->Text = L"Código Ciudad";
+			// 
+			// txtInserCiudad1
+			// 
+			this->txtInserCiudad1->Location = System::Drawing::Point(102, 109);
+			this->txtInserCiudad1->Name = L"txtInserCiudad1";
+			this->txtInserCiudad1->Size = System::Drawing::Size(210, 35);
+			this->txtInserCiudad1->TabIndex = 44;
+			// 
+			// lblInserCiudad1
+			// 
+			this->lblInserCiudad1->AutoSize = true;
+			this->lblInserCiudad1->BackColor = System::Drawing::Color::Teal;
+			this->lblInserCiudad1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserCiudad1->Location = System::Drawing::Point(97, 76);
+			this->lblInserCiudad1->Name = L"lblInserCiudad1";
+			this->lblInserCiudad1->Size = System::Drawing::Size(121, 30);
+			this->lblInserCiudad1->TabIndex = 43;
+			this->lblInserCiudad1->Text = L"Código País";
+			// 
 			// btabInserClt
 			// 
 			this->btabInserClt->BackColor = System::Drawing::Color::Teal;
+			this->btabInserClt->Controls->Add(this->lblInserCliente8);
+			this->btabInserClt->Controls->Add(this->txtInserCliente7);
+			this->btabInserClt->Controls->Add(this->lblInserCliente7);
+			this->btabInserClt->Controls->Add(this->txtInserCliente6);
+			this->btabInserClt->Controls->Add(this->lblInserCliente6);
+			this->btabInserClt->Controls->Add(this->txtInserCliente5);
+			this->btabInserClt->Controls->Add(this->lblInserCliente5);
+			this->btabInserClt->Controls->Add(this->txtInserCliente4);
+			this->btabInserClt->Controls->Add(this->lblInserCliente4);
+			this->btabInserClt->Controls->Add(this->txtInserCliente3);
+			this->btabInserClt->Controls->Add(this->lblInserCliente3);
+			this->btabInserClt->Controls->Add(this->bInserCliente);
+			this->btabInserClt->Controls->Add(this->txtInserCliente2);
+			this->btabInserClt->Controls->Add(this->lblInserCliente2);
+			this->btabInserClt->Controls->Add(this->txtInserCliente1);
+			this->btabInserClt->Controls->Add(this->lblInserCliente1);
 			this->btabInserClt->Location = System::Drawing::Point(4, 39);
 			this->btabInserClt->Name = L"btabInserClt";
 			this->btabInserClt->Size = System::Drawing::Size(917, 457);
 			this->btabInserClt->TabIndex = 2;
 			this->btabInserClt->Text = L"Cliente";
 			// 
+			// lblInserCliente8
+			// 
+			this->lblInserCliente8->AutoSize = true;
+			this->lblInserCliente8->BackColor = System::Drawing::Color::Teal;
+			this->lblInserCliente8->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lblInserCliente8->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserCliente8->Location = System::Drawing::Point(673, 119);
+			this->lblInserCliente8->Name = L"lblInserCliente8";
+			this->lblInserCliente8->Size = System::Drawing::Size(110, 25);
+			this->lblInserCliente8->TabIndex = 71;
+			this->lblInserCliente8->Text = L"DD/MM/AA";
+			// 
+			// txtInserCliente7
+			// 
+			this->txtInserCliente7->Location = System::Drawing::Point(678, 81);
+			this->txtInserCliente7->Name = L"txtInserCliente7";
+			this->txtInserCliente7->Size = System::Drawing::Size(210, 35);
+			this->txtInserCliente7->TabIndex = 70;
+			// 
+			// lblInserCliente7
+			// 
+			this->lblInserCliente7->AutoSize = true;
+			this->lblInserCliente7->BackColor = System::Drawing::Color::Teal;
+			this->lblInserCliente7->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lblInserCliente7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserCliente7->Location = System::Drawing::Point(673, 48);
+			this->lblInserCliente7->Name = L"lblInserCliente7";
+			this->lblInserCliente7->Size = System::Drawing::Size(189, 30);
+			this->lblInserCliente7->TabIndex = 69;
+			this->lblInserCliente7->Text = L"Fecha Última Visita";
+			// 
+			// txtInserCliente6
+			// 
+			this->txtInserCliente6->Location = System::Drawing::Point(387, 266);
+			this->txtInserCliente6->Name = L"txtInserCliente6";
+			this->txtInserCliente6->Size = System::Drawing::Size(210, 35);
+			this->txtInserCliente6->TabIndex = 68;
+			// 
+			// lblInserCliente6
+			// 
+			this->lblInserCliente6->AutoSize = true;
+			this->lblInserCliente6->BackColor = System::Drawing::Color::Teal;
+			this->lblInserCliente6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserCliente6->Location = System::Drawing::Point(382, 233);
+			this->lblInserCliente6->Name = L"lblInserCliente6";
+			this->lblInserCliente6->Size = System::Drawing::Size(92, 30);
+			this->lblInserCliente6->TabIndex = 67;
+			this->lblInserCliente6->Text = L"Teléfono";
+			// 
+			// txtInserCliente5
+			// 
+			this->txtInserCliente5->Location = System::Drawing::Point(387, 173);
+			this->txtInserCliente5->Name = L"txtInserCliente5";
+			this->txtInserCliente5->Size = System::Drawing::Size(210, 35);
+			this->txtInserCliente5->TabIndex = 66;
+			// 
+			// lblInserCliente5
+			// 
+			this->lblInserCliente5->AutoSize = true;
+			this->lblInserCliente5->BackColor = System::Drawing::Color::Teal;
+			this->lblInserCliente5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserCliente5->Location = System::Drawing::Point(382, 140);
+			this->lblInserCliente5->Name = L"lblInserCliente5";
+			this->lblInserCliente5->Size = System::Drawing::Size(150, 30);
+			this->lblInserCliente5->TabIndex = 65;
+			this->lblInserCliente5->Text = L"Código Ciudad";
+			// 
+			// txtInserCliente4
+			// 
+			this->txtInserCliente4->Location = System::Drawing::Point(387, 81);
+			this->txtInserCliente4->Name = L"txtInserCliente4";
+			this->txtInserCliente4->Size = System::Drawing::Size(210, 35);
+			this->txtInserCliente4->TabIndex = 64;
+			// 
+			// lblInserCliente4
+			// 
+			this->lblInserCliente4->AutoSize = true;
+			this->lblInserCliente4->BackColor = System::Drawing::Color::Teal;
+			this->lblInserCliente4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserCliente4->Location = System::Drawing::Point(382, 48);
+			this->lblInserCliente4->Name = L"lblInserCliente4";
+			this->lblInserCliente4->Size = System::Drawing::Size(121, 30);
+			this->lblInserCliente4->TabIndex = 63;
+			this->lblInserCliente4->Text = L"Código País";
+			// 
+			// txtInserCliente3
+			// 
+			this->txtInserCliente3->Location = System::Drawing::Point(91, 266);
+			this->txtInserCliente3->Name = L"txtInserCliente3";
+			this->txtInserCliente3->Size = System::Drawing::Size(210, 35);
+			this->txtInserCliente3->TabIndex = 62;
+			// 
+			// lblInserCliente3
+			// 
+			this->lblInserCliente3->AutoSize = true;
+			this->lblInserCliente3->BackColor = System::Drawing::Color::Teal;
+			this->lblInserCliente3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserCliente3->Location = System::Drawing::Point(86, 233);
+			this->lblInserCliente3->Name = L"lblInserCliente3";
+			this->lblInserCliente3->Size = System::Drawing::Size(100, 30);
+			this->lblInserCliente3->TabIndex = 61;
+			this->lblInserCliente3->Text = L"Dirección";
+			// 
+			// bInserCliente
+			// 
+			this->bInserCliente->BackColor = System::Drawing::Color::Transparent;
+			this->bInserCliente->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bInserCliente->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bInserCliente->ForeColor = System::Drawing::Color::White;
+			this->bInserCliente->Location = System::Drawing::Point(91, 369);
+			this->bInserCliente->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bInserCliente->Name = L"bInserCliente";
+			this->bInserCliente->Size = System::Drawing::Size(210, 45);
+			this->bInserCliente->TabIndex = 60;
+			this->bInserCliente->Text = L"Insertar";
+			this->bInserCliente->UseVisualStyleBackColor = false;
+			this->bInserCliente->Click += gcnew System::EventHandler(this, &PopUpMenu::bInserCliente_Click);
+			// 
+			// txtInserCliente2
+			// 
+			this->txtInserCliente2->Location = System::Drawing::Point(91, 173);
+			this->txtInserCliente2->Name = L"txtInserCliente2";
+			this->txtInserCliente2->Size = System::Drawing::Size(210, 35);
+			this->txtInserCliente2->TabIndex = 59;
+			// 
+			// lblInserCliente2
+			// 
+			this->lblInserCliente2->AutoSize = true;
+			this->lblInserCliente2->BackColor = System::Drawing::Color::Teal;
+			this->lblInserCliente2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserCliente2->Location = System::Drawing::Point(86, 140);
+			this->lblInserCliente2->Name = L"lblInserCliente2";
+			this->lblInserCliente2->Size = System::Drawing::Size(159, 30);
+			this->lblInserCliente2->TabIndex = 58;
+			this->lblInserCliente2->Text = L"Nombre Cliente";
+			// 
+			// txtInserCliente1
+			// 
+			this->txtInserCliente1->Location = System::Drawing::Point(91, 81);
+			this->txtInserCliente1->Name = L"txtInserCliente1";
+			this->txtInserCliente1->Size = System::Drawing::Size(210, 35);
+			this->txtInserCliente1->TabIndex = 57;
+			// 
+			// lblInserCliente1
+			// 
+			this->lblInserCliente1->AutoSize = true;
+			this->lblInserCliente1->BackColor = System::Drawing::Color::Teal;
+			this->lblInserCliente1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserCliente1->Location = System::Drawing::Point(86, 48);
+			this->lblInserCliente1->Name = L"lblInserCliente1";
+			this->lblInserCliente1->Size = System::Drawing::Size(159, 30);
+			this->lblInserCliente1->TabIndex = 56;
+			this->lblInserCliente1->Text = L"Número Cliente";
+			// 
 			// btabInserMasc
 			// 
 			this->btabInserMasc->BackColor = System::Drawing::Color::Teal;
+			this->btabInserMasc->Controls->Add(this->lblInserMascota11);
+			this->btabInserMasc->Controls->Add(this->txtInserMascota10);
+			this->btabInserMasc->Controls->Add(this->lblInserMascota10);
+			this->btabInserMasc->Controls->Add(this->txtInserMascota9);
+			this->btabInserMasc->Controls->Add(this->lblInserMascota9);
+			this->btabInserMasc->Controls->Add(this->txtInserMascota8);
+			this->btabInserMasc->Controls->Add(this->lblInserMascota8);
+			this->btabInserMasc->Controls->Add(this->txtInserMascota7);
+			this->btabInserMasc->Controls->Add(this->lblInserMascota7);
+			this->btabInserMasc->Controls->Add(this->txtInserMascota6);
+			this->btabInserMasc->Controls->Add(this->lblInserMascota6);
+			this->btabInserMasc->Controls->Add(this->txtInserMascota5);
+			this->btabInserMasc->Controls->Add(this->lblInserMascota5);
+			this->btabInserMasc->Controls->Add(this->txtInserMascota4);
+			this->btabInserMasc->Controls->Add(this->lblInserMascota4);
+			this->btabInserMasc->Controls->Add(this->txtInserMascota3);
+			this->btabInserMasc->Controls->Add(this->label5lblInserMascota3);
+			this->btabInserMasc->Controls->Add(this->bInserMascota);
+			this->btabInserMasc->Controls->Add(this->txtInserMascota2);
+			this->btabInserMasc->Controls->Add(this->lblInserMascota2);
+			this->btabInserMasc->Controls->Add(this->txtInserMascota1);
+			this->btabInserMasc->Controls->Add(this->lblInserMascota1);
 			this->btabInserMasc->Location = System::Drawing::Point(4, 39);
 			this->btabInserMasc->Name = L"btabInserMasc";
 			this->btabInserMasc->Size = System::Drawing::Size(917, 457);
 			this->btabInserMasc->TabIndex = 3;
 			this->btabInserMasc->Text = L"Mascota";
 			// 
+			// lblInserMascota11
+			// 
+			this->lblInserMascota11->AutoSize = true;
+			this->lblInserMascota11->BackColor = System::Drawing::Color::Teal;
+			this->lblInserMascota11->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lblInserMascota11->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserMascota11->Location = System::Drawing::Point(352, 405);
+			this->lblInserMascota11->Name = L"lblInserMascota11";
+			this->lblInserMascota11->Size = System::Drawing::Size(110, 25);
+			this->lblInserMascota11->TabIndex = 90;
+			this->lblInserMascota11->Text = L"DD/MM/AA";
+			// 
+			// txtInserMascota10
+			// 
+			this->txtInserMascota10->Location = System::Drawing::Point(357, 367);
+			this->txtInserMascota10->Name = L"txtInserMascota10";
+			this->txtInserMascota10->Size = System::Drawing::Size(210, 35);
+			this->txtInserMascota10->TabIndex = 89;
+			// 
+			// lblInserMascota10
+			// 
+			this->lblInserMascota10->AutoSize = true;
+			this->lblInserMascota10->BackColor = System::Drawing::Color::Teal;
+			this->lblInserMascota10->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lblInserMascota10->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserMascota10->Location = System::Drawing::Point(352, 334);
+			this->lblInserMascota10->Name = L"lblInserMascota10";
+			this->lblInserMascota10->Size = System::Drawing::Size(189, 30);
+			this->lblInserMascota10->TabIndex = 88;
+			this->lblInserMascota10->Text = L"Fecha Última Visita";
+			// 
+			// txtInserMascota9
+			// 
+			this->txtInserMascota9->Location = System::Drawing::Point(644, 268);
+			this->txtInserMascota9->Name = L"txtInserMascota9";
+			this->txtInserMascota9->Size = System::Drawing::Size(210, 35);
+			this->txtInserMascota9->TabIndex = 87;
+			// 
+			// lblInserMascota9
+			// 
+			this->lblInserMascota9->AutoSize = true;
+			this->lblInserMascota9->BackColor = System::Drawing::Color::Teal;
+			this->lblInserMascota9->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserMascota9->Location = System::Drawing::Point(639, 235);
+			this->lblInserMascota9->Name = L"lblInserMascota9";
+			this->lblInserMascota9->Size = System::Drawing::Size(95, 30);
+			this->lblInserMascota9->TabIndex = 86;
+			this->lblInserMascota9->Text = L"Castrado";
+			// 
+			// txtInserMascota8
+			// 
+			this->txtInserMascota8->Location = System::Drawing::Point(644, 171);
+			this->txtInserMascota8->Name = L"txtInserMascota8";
+			this->txtInserMascota8->Size = System::Drawing::Size(210, 35);
+			this->txtInserMascota8->TabIndex = 85;
+			// 
+			// lblInserMascota8
+			// 
+			this->lblInserMascota8->AutoSize = true;
+			this->lblInserMascota8->BackColor = System::Drawing::Color::Teal;
+			this->lblInserMascota8->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserMascota8->Location = System::Drawing::Point(639, 138);
+			this->lblInserMascota8->Name = L"lblInserMascota8";
+			this->lblInserMascota8->Size = System::Drawing::Size(62, 30);
+			this->lblInserMascota8->TabIndex = 84;
+			this->lblInserMascota8->Text = L"Color";
+			// 
+			// txtInserMascota7
+			// 
+			this->txtInserMascota7->Location = System::Drawing::Point(644, 79);
+			this->txtInserMascota7->Name = L"txtInserMascota7";
+			this->txtInserMascota7->Size = System::Drawing::Size(210, 35);
+			this->txtInserMascota7->TabIndex = 83;
+			// 
+			// lblInserMascota7
+			// 
+			this->lblInserMascota7->AutoSize = true;
+			this->lblInserMascota7->BackColor = System::Drawing::Color::Teal;
+			this->lblInserMascota7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserMascota7->Location = System::Drawing::Point(639, 46);
+			this->lblInserMascota7->Name = L"lblInserMascota7";
+			this->lblInserMascota7->Size = System::Drawing::Size(57, 30);
+			this->lblInserMascota7->TabIndex = 82;
+			this->lblInserMascota7->Text = L"Sexo";
+			// 
+			// txtInserMascota6
+			// 
+			this->txtInserMascota6->Location = System::Drawing::Point(357, 268);
+			this->txtInserMascota6->Name = L"txtInserMascota6";
+			this->txtInserMascota6->Size = System::Drawing::Size(210, 35);
+			this->txtInserMascota6->TabIndex = 81;
+			// 
+			// lblInserMascota6
+			// 
+			this->lblInserMascota6->AutoSize = true;
+			this->lblInserMascota6->BackColor = System::Drawing::Color::Teal;
+			this->lblInserMascota6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserMascota6->Location = System::Drawing::Point(352, 235);
+			this->lblInserMascota6->Name = L"lblInserMascota6";
+			this->lblInserMascota6->Size = System::Drawing::Size(209, 30);
+			this->lblInserMascota6->TabIndex = 80;
+			this->lblInserMascota6->Text = L"Fecha de Nacimiento";
+			// 
+			// txtInserMascota5
+			// 
+			this->txtInserMascota5->Location = System::Drawing::Point(357, 171);
+			this->txtInserMascota5->Name = L"txtInserMascota5";
+			this->txtInserMascota5->Size = System::Drawing::Size(210, 35);
+			this->txtInserMascota5->TabIndex = 79;
+			// 
+			// lblInserMascota5
+			// 
+			this->lblInserMascota5->AutoSize = true;
+			this->lblInserMascota5->BackColor = System::Drawing::Color::Teal;
+			this->lblInserMascota5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserMascota5->Location = System::Drawing::Point(352, 138);
+			this->lblInserMascota5->Name = L"lblInserMascota5";
+			this->lblInserMascota5->Size = System::Drawing::Size(58, 30);
+			this->lblInserMascota5->TabIndex = 78;
+			this->lblInserMascota5->Text = L"Raza";
+			// 
+			// txtInserMascota4
+			// 
+			this->txtInserMascota4->Location = System::Drawing::Point(357, 79);
+			this->txtInserMascota4->Name = L"txtInserMascota4";
+			this->txtInserMascota4->Size = System::Drawing::Size(210, 35);
+			this->txtInserMascota4->TabIndex = 77;
+			// 
+			// lblInserMascota4
+			// 
+			this->lblInserMascota4->AutoSize = true;
+			this->lblInserMascota4->BackColor = System::Drawing::Color::Teal;
+			this->lblInserMascota4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserMascota4->Location = System::Drawing::Point(352, 46);
+			this->lblInserMascota4->Name = L"lblInserMascota4";
+			this->lblInserMascota4->Size = System::Drawing::Size(53, 30);
+			this->lblInserMascota4->TabIndex = 76;
+			this->lblInserMascota4->Text = L"Tipo";
+			// 
+			// txtInserMascota3
+			// 
+			this->txtInserMascota3->Location = System::Drawing::Point(66, 268);
+			this->txtInserMascota3->Name = L"txtInserMascota3";
+			this->txtInserMascota3->Size = System::Drawing::Size(210, 35);
+			this->txtInserMascota3->TabIndex = 75;
+			// 
+			// label5lblInserMascota3
+			// 
+			this->label5lblInserMascota3->AutoSize = true;
+			this->label5lblInserMascota3->BackColor = System::Drawing::Color::Teal;
+			this->label5lblInserMascota3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label5lblInserMascota3->Location = System::Drawing::Point(61, 235);
+			this->label5lblInserMascota3->Name = L"label5lblInserMascota3";
+			this->label5lblInserMascota3->Size = System::Drawing::Size(89, 30);
+			this->label5lblInserMascota3->TabIndex = 74;
+			this->label5lblInserMascota3->Text = L"Nombre";
+			// 
+			// bInserMascota
+			// 
+			this->bInserMascota->BackColor = System::Drawing::Color::Transparent;
+			this->bInserMascota->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bInserMascota->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bInserMascota->ForeColor = System::Drawing::Color::White;
+			this->bInserMascota->Location = System::Drawing::Point(66, 361);
+			this->bInserMascota->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bInserMascota->Name = L"bInserMascota";
+			this->bInserMascota->Size = System::Drawing::Size(210, 45);
+			this->bInserMascota->TabIndex = 69;
+			this->bInserMascota->Text = L"Insertar";
+			this->bInserMascota->UseVisualStyleBackColor = false;
+			this->bInserMascota->Click += gcnew System::EventHandler(this, &PopUpMenu::bInserMascota_Click);
+			// 
+			// txtInserMascota2
+			// 
+			this->txtInserMascota2->Location = System::Drawing::Point(66, 171);
+			this->txtInserMascota2->Name = L"txtInserMascota2";
+			this->txtInserMascota2->Size = System::Drawing::Size(210, 35);
+			this->txtInserMascota2->TabIndex = 68;
+			// 
+			// lblInserMascota2
+			// 
+			this->lblInserMascota2->AutoSize = true;
+			this->lblInserMascota2->BackColor = System::Drawing::Color::Teal;
+			this->lblInserMascota2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserMascota2->Location = System::Drawing::Point(61, 138);
+			this->lblInserMascota2->Name = L"lblInserMascota2";
+			this->lblInserMascota2->Size = System::Drawing::Size(105, 30);
+			this->lblInserMascota2->TabIndex = 67;
+			this->lblInserMascota2->Text = L"ID Animal";
+			// 
+			// txtInserMascota1
+			// 
+			this->txtInserMascota1->Location = System::Drawing::Point(66, 79);
+			this->txtInserMascota1->Name = L"txtInserMascota1";
+			this->txtInserMascota1->Size = System::Drawing::Size(210, 35);
+			this->txtInserMascota1->TabIndex = 66;
+			// 
+			// lblInserMascota1
+			// 
+			this->lblInserMascota1->AutoSize = true;
+			this->lblInserMascota1->BackColor = System::Drawing::Color::Teal;
+			this->lblInserMascota1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserMascota1->Location = System::Drawing::Point(61, 46);
+			this->lblInserMascota1->Name = L"lblInserMascota1";
+			this->lblInserMascota1->Size = System::Drawing::Size(159, 30);
+			this->lblInserMascota1->TabIndex = 65;
+			this->lblInserMascota1->Text = L"Número Cliente";
+			// 
 			// btabInserVisita
 			// 
 			this->btabInserVisita->BackColor = System::Drawing::Color::Teal;
+			this->btabInserVisita->Controls->Add(this->lblInserVisita6);
+			this->btabInserVisita->Controls->Add(this->txtInserVisita5);
+			this->btabInserVisita->Controls->Add(this->lblInserVisita5);
+			this->btabInserVisita->Controls->Add(this->txtInserVisita4);
+			this->btabInserVisita->Controls->Add(this->lblInserVisita4);
+			this->btabInserVisita->Controls->Add(this->txtInserVisita3);
+			this->btabInserVisita->Controls->Add(this->lblInserVisita3);
+			this->btabInserVisita->Controls->Add(this->bInserVisita);
+			this->btabInserVisita->Controls->Add(this->txtInserVisita2);
+			this->btabInserVisita->Controls->Add(this->lblInserVisita2);
+			this->btabInserVisita->Controls->Add(this->txtInserVisita1);
+			this->btabInserVisita->Controls->Add(this->lblInserVisita1);
 			this->btabInserVisita->Location = System::Drawing::Point(4, 39);
 			this->btabInserVisita->Name = L"btabInserVisita";
 			this->btabInserVisita->Size = System::Drawing::Size(917, 457);
 			this->btabInserVisita->TabIndex = 4;
 			this->btabInserVisita->Text = L"Visita";
 			// 
+			// lblInserVisita6
+			// 
+			this->lblInserVisita6->AutoSize = true;
+			this->lblInserVisita6->BackColor = System::Drawing::Color::Teal;
+			this->lblInserVisita6->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lblInserVisita6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserVisita6->Location = System::Drawing::Point(91, 304);
+			this->lblInserVisita6->Name = L"lblInserVisita6";
+			this->lblInserVisita6->Size = System::Drawing::Size(110, 25);
+			this->lblInserVisita6->TabIndex = 91;
+			this->lblInserVisita6->Text = L"DD/MM/AA";
+			// 
+			// txtInserVisita5
+			// 
+			this->txtInserVisita5->Location = System::Drawing::Point(392, 173);
+			this->txtInserVisita5->Name = L"txtInserVisita5";
+			this->txtInserVisita5->Size = System::Drawing::Size(210, 35);
+			this->txtInserVisita5->TabIndex = 79;
+			// 
+			// lblInserVisita5
+			// 
+			this->lblInserVisita5->AutoSize = true;
+			this->lblInserVisita5->BackColor = System::Drawing::Color::Teal;
+			this->lblInserVisita5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserVisita5->Location = System::Drawing::Point(387, 140);
+			this->lblInserVisita5->Name = L"lblInserVisita5";
+			this->lblInserVisita5->Size = System::Drawing::Size(152, 30);
+			this->lblInserVisita5->TabIndex = 78;
+			this->lblInserVisita5->Text = L"Forma de Pago";
+			// 
+			// txtInserVisita4
+			// 
+			this->txtInserVisita4->Location = System::Drawing::Point(392, 81);
+			this->txtInserVisita4->Name = L"txtInserVisita4";
+			this->txtInserVisita4->Size = System::Drawing::Size(210, 35);
+			this->txtInserVisita4->TabIndex = 77;
+			// 
+			// lblInserVisita4
+			// 
+			this->lblInserVisita4->AutoSize = true;
+			this->lblInserVisita4->BackColor = System::Drawing::Color::Teal;
+			this->lblInserVisita4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserVisita4->Location = System::Drawing::Point(387, 48);
+			this->lblInserVisita4->Name = L"lblInserVisita4";
+			this->lblInserVisita4->Size = System::Drawing::Size(130, 30);
+			this->lblInserVisita4->TabIndex = 76;
+			this->lblInserVisita4->Text = L"Total Factura";
+			// 
+			// txtInserVisita3
+			// 
+			this->txtInserVisita3->Location = System::Drawing::Point(96, 266);
+			this->txtInserVisita3->Name = L"txtInserVisita3";
+			this->txtInserVisita3->Size = System::Drawing::Size(210, 35);
+			this->txtInserVisita3->TabIndex = 75;
+			// 
+			// lblInserVisita3
+			// 
+			this->lblInserVisita3->AutoSize = true;
+			this->lblInserVisita3->BackColor = System::Drawing::Color::Teal;
+			this->lblInserVisita3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserVisita3->Location = System::Drawing::Point(91, 233);
+			this->lblInserVisita3->Name = L"lblInserVisita3";
+			this->lblInserVisita3->Size = System::Drawing::Size(189, 30);
+			this->lblInserVisita3->TabIndex = 74;
+			this->lblInserVisita3->Text = L"Fecha Última Visita";
+			// 
+			// bInserVisita
+			// 
+			this->bInserVisita->BackColor = System::Drawing::Color::Transparent;
+			this->bInserVisita->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bInserVisita->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bInserVisita->ForeColor = System::Drawing::Color::White;
+			this->bInserVisita->Location = System::Drawing::Point(96, 369);
+			this->bInserVisita->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bInserVisita->Name = L"bInserVisita";
+			this->bInserVisita->Size = System::Drawing::Size(210, 45);
+			this->bInserVisita->TabIndex = 73;
+			this->bInserVisita->Text = L"Insertar";
+			this->bInserVisita->UseVisualStyleBackColor = false;
+			this->bInserVisita->Click += gcnew System::EventHandler(this, &PopUpMenu::bInserVisita_Click);
+			// 
+			// txtInserVisita2
+			// 
+			this->txtInserVisita2->Location = System::Drawing::Point(96, 173);
+			this->txtInserVisita2->Name = L"txtInserVisita2";
+			this->txtInserVisita2->Size = System::Drawing::Size(210, 35);
+			this->txtInserVisita2->TabIndex = 72;
+			// 
+			// lblInserVisita2
+			// 
+			this->lblInserVisita2->AutoSize = true;
+			this->lblInserVisita2->BackColor = System::Drawing::Color::Teal;
+			this->lblInserVisita2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserVisita2->Location = System::Drawing::Point(91, 140);
+			this->lblInserVisita2->Name = L"lblInserVisita2";
+			this->lblInserVisita2->Size = System::Drawing::Size(105, 30);
+			this->lblInserVisita2->TabIndex = 71;
+			this->lblInserVisita2->Text = L"ID Animal";
+			// 
+			// txtInserVisita1
+			// 
+			this->txtInserVisita1->Location = System::Drawing::Point(96, 81);
+			this->txtInserVisita1->Name = L"txtInserVisita1";
+			this->txtInserVisita1->Size = System::Drawing::Size(210, 35);
+			this->txtInserVisita1->TabIndex = 70;
+			// 
+			// lblInserVisita1
+			// 
+			this->lblInserVisita1->AutoSize = true;
+			this->lblInserVisita1->BackColor = System::Drawing::Color::Teal;
+			this->lblInserVisita1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserVisita1->Location = System::Drawing::Point(91, 48);
+			this->lblInserVisita1->Name = L"lblInserVisita1";
+			this->lblInserVisita1->Size = System::Drawing::Size(135, 30);
+			this->lblInserVisita1->TabIndex = 69;
+			this->lblInserVisita1->Text = L"Código Visita";
+			// 
 			// btabInserTrat
 			// 
 			this->btabInserTrat->BackColor = System::Drawing::Color::Teal;
+			this->btabInserTrat->Controls->Add(this->txtInserTrat4);
+			this->btabInserTrat->Controls->Add(this->lblInserTrat4);
+			this->btabInserTrat->Controls->Add(this->txtInserTrat3);
+			this->btabInserTrat->Controls->Add(this->lblInserTrat3);
+			this->btabInserTrat->Controls->Add(this->binserTratamiento);
+			this->btabInserTrat->Controls->Add(this->txtInserTrat2);
+			this->btabInserTrat->Controls->Add(this->lblInserTrat2);
+			this->btabInserTrat->Controls->Add(this->txtInserTrat1);
+			this->btabInserTrat->Controls->Add(this->lblInserTrat1);
 			this->btabInserTrat->Location = System::Drawing::Point(4, 39);
 			this->btabInserTrat->Name = L"btabInserTrat";
 			this->btabInserTrat->Size = System::Drawing::Size(917, 457);
 			this->btabInserTrat->TabIndex = 5;
 			this->btabInserTrat->Text = L"Tratamiento";
 			// 
+			// txtInserTrat4
+			// 
+			this->txtInserTrat4->Location = System::Drawing::Point(394, 207);
+			this->txtInserTrat4->Name = L"txtInserTrat4";
+			this->txtInserTrat4->Size = System::Drawing::Size(210, 35);
+			this->txtInserTrat4->TabIndex = 79;
+			// 
+			// lblInserTrat4
+			// 
+			this->lblInserTrat4->AutoSize = true;
+			this->lblInserTrat4->BackColor = System::Drawing::Color::Teal;
+			this->lblInserTrat4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserTrat4->Location = System::Drawing::Point(389, 174);
+			this->lblInserTrat4->Name = L"lblInserTrat4";
+			this->lblInserTrat4->Size = System::Drawing::Size(96, 30);
+			this->lblInserTrat4->TabIndex = 78;
+			this->lblInserTrat4->Text = L"Cantidad";
+			// 
+			// txtInserTrat3
+			// 
+			this->txtInserTrat3->Location = System::Drawing::Point(394, 115);
+			this->txtInserTrat3->Name = L"txtInserTrat3";
+			this->txtInserTrat3->Size = System::Drawing::Size(210, 35);
+			this->txtInserTrat3->TabIndex = 77;
+			// 
+			// lblInserTrat3
+			// 
+			this->lblInserTrat3->AutoSize = true;
+			this->lblInserTrat3->BackColor = System::Drawing::Color::Teal;
+			this->lblInserTrat3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserTrat3->Location = System::Drawing::Point(389, 82);
+			this->lblInserTrat3->Name = L"lblInserTrat3";
+			this->lblInserTrat3->Size = System::Drawing::Size(149, 30);
+			this->lblInserTrat3->TabIndex = 76;
+			this->lblInserTrat3->Text = L"Precio Unitario";
+			// 
+			// binserTratamiento
+			// 
+			this->binserTratamiento->BackColor = System::Drawing::Color::Transparent;
+			this->binserTratamiento->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->binserTratamiento->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->binserTratamiento->ForeColor = System::Drawing::Color::White;
+			this->binserTratamiento->Location = System::Drawing::Point(98, 335);
+			this->binserTratamiento->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->binserTratamiento->Name = L"binserTratamiento";
+			this->binserTratamiento->Size = System::Drawing::Size(210, 45);
+			this->binserTratamiento->TabIndex = 73;
+			this->binserTratamiento->Text = L"Insertar";
+			this->binserTratamiento->UseVisualStyleBackColor = false;
+			this->binserTratamiento->Click += gcnew System::EventHandler(this, &PopUpMenu::binserTratamiento_Click);
+			// 
+			// txtInserTrat2
+			// 
+			this->txtInserTrat2->Location = System::Drawing::Point(98, 207);
+			this->txtInserTrat2->Name = L"txtInserTrat2";
+			this->txtInserTrat2->Size = System::Drawing::Size(210, 35);
+			this->txtInserTrat2->TabIndex = 72;
+			// 
+			// lblInserTrat2
+			// 
+			this->lblInserTrat2->AutoSize = true;
+			this->lblInserTrat2->BackColor = System::Drawing::Color::Teal;
+			this->lblInserTrat2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserTrat2->Location = System::Drawing::Point(93, 174);
+			this->lblInserTrat2->Name = L"lblInserTrat2";
+			this->lblInserTrat2->Size = System::Drawing::Size(89, 30);
+			this->lblInserTrat2->TabIndex = 71;
+			this->lblInserTrat2->Text = L"Nombre";
+			// 
+			// txtInserTrat1
+			// 
+			this->txtInserTrat1->Location = System::Drawing::Point(98, 115);
+			this->txtInserTrat1->Name = L"txtInserTrat1";
+			this->txtInserTrat1->Size = System::Drawing::Size(210, 35);
+			this->txtInserTrat1->TabIndex = 70;
+			// 
+			// lblInserTrat1
+			// 
+			this->lblInserTrat1->AutoSize = true;
+			this->lblInserTrat1->BackColor = System::Drawing::Color::Teal;
+			this->lblInserTrat1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserTrat1->Location = System::Drawing::Point(93, 82);
+			this->lblInserTrat1->Name = L"lblInserTrat1";
+			this->lblInserTrat1->Size = System::Drawing::Size(195, 30);
+			this->lblInserTrat1->TabIndex = 69;
+			this->lblInserTrat1->Text = L"Código Tratamiento";
+			// 
 			// btabInserMed
 			// 
 			this->btabInserMed->BackColor = System::Drawing::Color::Teal;
+			this->btabInserMed->Controls->Add(this->label6);
+			this->btabInserMed->Controls->Add(this->textBox6);
+			this->btabInserMed->Controls->Add(this->label7);
+			this->btabInserMed->Controls->Add(this->textBox1);
+			this->btabInserMed->Controls->Add(this->label1);
+			this->btabInserMed->Controls->Add(this->textBox2);
+			this->btabInserMed->Controls->Add(this->label2);
+			this->btabInserMed->Controls->Add(this->textBox3);
+			this->btabInserMed->Controls->Add(this->label3);
+			this->btabInserMed->Controls->Add(this->bInserMedicacion);
+			this->btabInserMed->Controls->Add(this->textBox4);
+			this->btabInserMed->Controls->Add(this->label4);
+			this->btabInserMed->Controls->Add(this->textBox5);
+			this->btabInserMed->Controls->Add(this->label5);
 			this->btabInserMed->Location = System::Drawing::Point(4, 39);
 			this->btabInserMed->Name = L"btabInserMed";
 			this->btabInserMed->Size = System::Drawing::Size(917, 457);
 			this->btabInserMed->TabIndex = 6;
 			this->btabInserMed->Text = L"Medicación";
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->BackColor = System::Drawing::Color::Teal;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label6->Location = System::Drawing::Point(84, 310);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(110, 25);
+			this->label6->TabIndex = 94;
+			this->label6->Text = L"DD/MM/AA";
+			// 
+			// textBox6
+			// 
+			this->textBox6->Location = System::Drawing::Point(89, 272);
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(210, 35);
+			this->textBox6->TabIndex = 93;
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->BackColor = System::Drawing::Color::Teal;
+			this->label7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label7->Location = System::Drawing::Point(84, 239);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(189, 30);
+			this->label7->TabIndex = 92;
+			this->label7->Text = L"Fecha Última Visita";
+			// 
+			// textBox1
+			// 
+			this->textBox1->Location = System::Drawing::Point(403, 272);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(210, 35);
+			this->textBox1->TabIndex = 77;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::Teal;
+			this->label1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label1->Location = System::Drawing::Point(398, 239);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(116, 30);
+			this->label1->TabIndex = 76;
+			this->label1->Text = L"Costo Total";
+			// 
+			// textBox2
+			// 
+			this->textBox2->Location = System::Drawing::Point(403, 192);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(210, 35);
+			this->textBox2->TabIndex = 75;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->BackColor = System::Drawing::Color::Teal;
+			this->label2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label2->Location = System::Drawing::Point(398, 147);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(70, 30);
+			this->label2->TabIndex = 74;
+			this->label2->Text = L"Precio";
+			// 
+			// textBox3
+			// 
+			this->textBox3->Location = System::Drawing::Point(403, 99);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(210, 35);
+			this->textBox3->TabIndex = 73;
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->BackColor = System::Drawing::Color::Teal;
+			this->label3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label3->Location = System::Drawing::Point(398, 55);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(96, 30);
+			this->label3->TabIndex = 72;
+			this->label3->Text = L"Cantidad";
+			// 
+			// bInserMedicacion
+			// 
+			this->bInserMedicacion->BackColor = System::Drawing::Color::Transparent;
+			this->bInserMedicacion->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bInserMedicacion->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bInserMedicacion->ForeColor = System::Drawing::Color::White;
+			this->bInserMedicacion->Location = System::Drawing::Point(86, 372);
+			this->bInserMedicacion->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bInserMedicacion->Name = L"bInserMedicacion";
+			this->bInserMedicacion->Size = System::Drawing::Size(210, 45);
+			this->bInserMedicacion->TabIndex = 71;
+			this->bInserMedicacion->Text = L"Insertar";
+			this->bInserMedicacion->UseVisualStyleBackColor = false;
+			this->bInserMedicacion->Click += gcnew System::EventHandler(this, &PopUpMenu::bInserMedicacion_Click);
+			// 
+			// textBox4
+			// 
+			this->textBox4->Location = System::Drawing::Point(86, 192);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(210, 35);
+			this->textBox4->TabIndex = 70;
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->BackColor = System::Drawing::Color::Teal;
+			this->label4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label4->Location = System::Drawing::Point(81, 147);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(105, 30);
+			this->label4->TabIndex = 69;
+			this->label4->Text = L"ID Animal";
+			// 
+			// textBox5
+			// 
+			this->textBox5->Location = System::Drawing::Point(86, 99);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(210, 35);
+			this->textBox5->TabIndex = 68;
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->BackColor = System::Drawing::Color::Teal;
+			this->label5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label5->Location = System::Drawing::Point(81, 55);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(192, 30);
+			this->label5->TabIndex = 67;
+			this->label5->Text = L"Código Medicación";
 			// 
 			// btabModif
 			// 
@@ -991,8 +2205,6 @@ namespace TareaProgramada3 {
 			// btabModifCdd
 			// 
 			this->btabModifCdd->BackColor = System::Drawing::Color::Teal;
-			this->btabModifCdd->Controls->Add(this->errorModifCiudad2);
-			this->btabModifCdd->Controls->Add(this->errorModifCiudad1);
 			this->btabModifCdd->Controls->Add(this->txtModifCiudad3);
 			this->btabModifCdd->Controls->Add(this->lblModifCiudad3);
 			this->btabModifCdd->Controls->Add(this->bModifCiudad);
@@ -1006,32 +2218,6 @@ namespace TareaProgramada3 {
 			this->btabModifCdd->Size = System::Drawing::Size(917, 457);
 			this->btabModifCdd->TabIndex = 1;
 			this->btabModifCdd->Text = L"Ciudad";
-			// 
-			// errorModifCiudad2
-			// 
-			this->errorModifCiudad2->AutoSize = true;
-			this->errorModifCiudad2->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->errorModifCiudad2->ForeColor = System::Drawing::Color::Red;
-			this->errorModifCiudad2->Location = System::Drawing::Point(71, 203);
-			this->errorModifCiudad2->Name = L"errorModifCiudad2";
-			this->errorModifCiudad2->Size = System::Drawing::Size(372, 21);
-			this->errorModifCiudad2->TabIndex = 44;
-			this->errorModifCiudad2->Text = L"El código de ciudad ingresado no está registrado.";
-			this->errorModifCiudad2->Visible = false;
-			// 
-			// errorModifCiudad1
-			// 
-			this->errorModifCiudad1->AutoSize = true;
-			this->errorModifCiudad1->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->errorModifCiudad1->ForeColor = System::Drawing::Color::Red;
-			this->errorModifCiudad1->Location = System::Drawing::Point(71, 110);
-			this->errorModifCiudad1->Name = L"errorModifCiudad1";
-			this->errorModifCiudad1->Size = System::Drawing::Size(352, 21);
-			this->errorModifCiudad1->TabIndex = 43;
-			this->errorModifCiudad1->Text = L"El código de país ingresado no está registrado.";
-			this->errorModifCiudad1->Visible = false;
 			// 
 			// txtModifCiudad3
 			// 
@@ -1211,6 +2397,7 @@ namespace TareaProgramada3 {
 			this->bModifCliente->TabIndex = 47;
 			this->bModifCliente->Text = L"Modificar";
 			this->bModifCliente->UseVisualStyleBackColor = false;
+			this->bModifCliente->Click += gcnew System::EventHandler(this, &PopUpMenu::bModifCliente_Click);
 			// 
 			// txtModifCliente2
 			// 
@@ -1316,6 +2503,7 @@ namespace TareaProgramada3 {
 			this->bModifMascota->TabIndex = 60;
 			this->bModifMascota->Text = L"Modificar";
 			this->bModifMascota->UseVisualStyleBackColor = false;
+			this->bModifMascota->Click += gcnew System::EventHandler(this, &PopUpMenu::bModifMascota_Click);
 			// 
 			// txtModifMascota2
 			// 
@@ -1401,6 +2589,7 @@ namespace TareaProgramada3 {
 			this->bModifVisita->TabIndex = 65;
 			this->bModifVisita->Text = L"Modificar";
 			this->bModifVisita->UseVisualStyleBackColor = false;
+			this->bModifVisita->Click += gcnew System::EventHandler(this, &PopUpMenu::bModifVisita_Click);
 			// 
 			// txtModifVisita2
 			// 
@@ -1466,6 +2655,7 @@ namespace TareaProgramada3 {
 			this->bModifTratamiento->TabIndex = 72;
 			this->bModifTratamiento->Text = L"Modificar";
 			this->bModifTratamiento->UseVisualStyleBackColor = false;
+			this->bModifTratamiento->Click += gcnew System::EventHandler(this, &PopUpMenu::bModifTratamiento_Click);
 			// 
 			// txtModifTratamiento2
 			// 
@@ -1658,6 +2848,11 @@ namespace TareaProgramada3 {
 			// btabConsPais
 			// 
 			this->btabConsPais->BackColor = System::Drawing::Color::Teal;
+			this->btabConsPais->Controls->Add(this->txtBusqPais2);
+			this->btabConsPais->Controls->Add(this->lblBusqPais2);
+			this->btabConsPais->Controls->Add(this->bBuscarPais);
+			this->btabConsPais->Controls->Add(this->txtBusqPais1);
+			this->btabConsPais->Controls->Add(this->lblBusqPais1);
 			this->btabConsPais->Location = System::Drawing::Point(4, 39);
 			this->btabConsPais->Name = L"btabConsPais";
 			this->btabConsPais->Padding = System::Windows::Forms::Padding(3);
@@ -1665,9 +2860,70 @@ namespace TareaProgramada3 {
 			this->btabConsPais->TabIndex = 0;
 			this->btabConsPais->Text = L"País";
 			// 
+			// txtBusqPais2
+			// 
+			this->txtBusqPais2->Location = System::Drawing::Point(97, 219);
+			this->txtBusqPais2->Name = L"txtBusqPais2";
+			this->txtBusqPais2->Size = System::Drawing::Size(210, 35);
+			this->txtBusqPais2->TabIndex = 48;
+			this->txtBusqPais2->Visible = false;
+			// 
+			// lblBusqPais2
+			// 
+			this->lblBusqPais2->AutoSize = true;
+			this->lblBusqPais2->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqPais2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqPais2->Location = System::Drawing::Point(92, 176);
+			this->lblBusqPais2->Name = L"lblBusqPais2";
+			this->lblBusqPais2->Size = System::Drawing::Size(131, 30);
+			this->lblBusqPais2->TabIndex = 47;
+			this->lblBusqPais2->Text = L"Nombre País";
+			this->lblBusqPais2->Visible = false;
+			// 
+			// bBuscarPais
+			// 
+			this->bBuscarPais->BackColor = System::Drawing::Color::Transparent;
+			this->bBuscarPais->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bBuscarPais->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bBuscarPais->ForeColor = System::Drawing::Color::White;
+			this->bBuscarPais->Location = System::Drawing::Point(97, 328);
+			this->bBuscarPais->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bBuscarPais->Name = L"bBuscarPais";
+			this->bBuscarPais->Size = System::Drawing::Size(210, 45);
+			this->bBuscarPais->TabIndex = 46;
+			this->bBuscarPais->Text = L"Buscar";
+			this->bBuscarPais->UseVisualStyleBackColor = false;
+			this->bBuscarPais->Click += gcnew System::EventHandler(this, &PopUpMenu::bBuscarPais_Click);
+			// 
+			// txtBusqPais1
+			// 
+			this->txtBusqPais1->Location = System::Drawing::Point(97, 105);
+			this->txtBusqPais1->Name = L"txtBusqPais1";
+			this->txtBusqPais1->Size = System::Drawing::Size(210, 35);
+			this->txtBusqPais1->TabIndex = 45;
+			// 
+			// lblBusqPais1
+			// 
+			this->lblBusqPais1->AutoSize = true;
+			this->lblBusqPais1->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqPais1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqPais1->Location = System::Drawing::Point(92, 59);
+			this->lblBusqPais1->Name = L"lblBusqPais1";
+			this->lblBusqPais1->Size = System::Drawing::Size(121, 30);
+			this->lblBusqPais1->TabIndex = 44;
+			this->lblBusqPais1->Text = L"Código País";
+			// 
 			// btabConsCdd
 			// 
 			this->btabConsCdd->BackColor = System::Drawing::Color::Teal;
+			this->btabConsCdd->Controls->Add(this->txtBusqCiudad3);
+			this->btabConsCdd->Controls->Add(this->lblBusqCiudad3);
+			this->btabConsCdd->Controls->Add(this->bBuscarCiudad);
+			this->btabConsCdd->Controls->Add(this->txtBusqCiudad2);
+			this->btabConsCdd->Controls->Add(this->lblBusqCiudad2);
+			this->btabConsCdd->Controls->Add(this->txtBusqCiudad1);
+			this->btabConsCdd->Controls->Add(this->lblBusqCiudad1);
 			this->btabConsCdd->Location = System::Drawing::Point(4, 39);
 			this->btabConsCdd->Name = L"btabConsCdd";
 			this->btabConsCdd->Padding = System::Windows::Forms::Padding(3);
@@ -1675,50 +2931,965 @@ namespace TareaProgramada3 {
 			this->btabConsCdd->TabIndex = 1;
 			this->btabConsCdd->Text = L"Ciudad";
 			// 
+			// txtBusqCiudad3
+			// 
+			this->txtBusqCiudad3->Location = System::Drawing::Point(391, 105);
+			this->txtBusqCiudad3->Name = L"txtBusqCiudad3";
+			this->txtBusqCiudad3->Size = System::Drawing::Size(210, 35);
+			this->txtBusqCiudad3->TabIndex = 49;
+			this->txtBusqCiudad3->Visible = false;
+			// 
+			// lblBusqCiudad3
+			// 
+			this->lblBusqCiudad3->AutoSize = true;
+			this->lblBusqCiudad3->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqCiudad3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqCiudad3->Location = System::Drawing::Point(386, 72);
+			this->lblBusqCiudad3->Name = L"lblBusqCiudad3";
+			this->lblBusqCiudad3->Size = System::Drawing::Size(160, 30);
+			this->lblBusqCiudad3->TabIndex = 48;
+			this->lblBusqCiudad3->Text = L"Nombre Ciudad";
+			this->lblBusqCiudad3->Visible = false;
+			// 
+			// bBuscarCiudad
+			// 
+			this->bBuscarCiudad->BackColor = System::Drawing::Color::Transparent;
+			this->bBuscarCiudad->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bBuscarCiudad->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bBuscarCiudad->ForeColor = System::Drawing::Color::White;
+			this->bBuscarCiudad->Location = System::Drawing::Point(95, 309);
+			this->bBuscarCiudad->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bBuscarCiudad->Name = L"bBuscarCiudad";
+			this->bBuscarCiudad->Size = System::Drawing::Size(210, 45);
+			this->bBuscarCiudad->TabIndex = 47;
+			this->bBuscarCiudad->Text = L"Buscar";
+			this->bBuscarCiudad->UseVisualStyleBackColor = false;
+			this->bBuscarCiudad->Click += gcnew System::EventHandler(this, &PopUpMenu::bBuscarCiudad_Click);
+			// 
+			// txtBusqCiudad2
+			// 
+			this->txtBusqCiudad2->Location = System::Drawing::Point(95, 197);
+			this->txtBusqCiudad2->Name = L"txtBusqCiudad2";
+			this->txtBusqCiudad2->Size = System::Drawing::Size(210, 35);
+			this->txtBusqCiudad2->TabIndex = 46;
+			// 
+			// lblBusqCiudad2
+			// 
+			this->lblBusqCiudad2->AutoSize = true;
+			this->lblBusqCiudad2->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqCiudad2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqCiudad2->Location = System::Drawing::Point(90, 164);
+			this->lblBusqCiudad2->Name = L"lblBusqCiudad2";
+			this->lblBusqCiudad2->Size = System::Drawing::Size(150, 30);
+			this->lblBusqCiudad2->TabIndex = 45;
+			this->lblBusqCiudad2->Text = L"Código Ciudad";
+			// 
+			// txtBusqCiudad1
+			// 
+			this->txtBusqCiudad1->Location = System::Drawing::Point(95, 105);
+			this->txtBusqCiudad1->Name = L"txtBusqCiudad1";
+			this->txtBusqCiudad1->Size = System::Drawing::Size(210, 35);
+			this->txtBusqCiudad1->TabIndex = 44;
+			// 
+			// lblBusqCiudad1
+			// 
+			this->lblBusqCiudad1->AutoSize = true;
+			this->lblBusqCiudad1->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqCiudad1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqCiudad1->Location = System::Drawing::Point(90, 72);
+			this->lblBusqCiudad1->Name = L"lblBusqCiudad1";
+			this->lblBusqCiudad1->Size = System::Drawing::Size(121, 30);
+			this->lblBusqCiudad1->TabIndex = 43;
+			this->lblBusqCiudad1->Text = L"Código País";
+			// 
 			// btabConsClt
 			// 
 			this->btabConsClt->BackColor = System::Drawing::Color::Teal;
+			this->btabConsClt->Controls->Add(this->pBuscarCliente);
+			this->btabConsClt->Controls->Add(this->txtBusqCliente2);
+			this->btabConsClt->Controls->Add(this->lblBusqCliente2);
+			this->btabConsClt->Controls->Add(this->txtBusqCliente1);
+			this->btabConsClt->Controls->Add(this->lblBusqCliente1);
+			this->btabConsClt->Controls->Add(this->bBuscarCliente);
+			this->btabConsClt->Controls->Add(this->txtBusqCliente3);
+			this->btabConsClt->Controls->Add(this->lblBusqCliente3);
 			this->btabConsClt->Location = System::Drawing::Point(4, 39);
 			this->btabConsClt->Name = L"btabConsClt";
 			this->btabConsClt->Size = System::Drawing::Size(917, 457);
 			this->btabConsClt->TabIndex = 2;
 			this->btabConsClt->Text = L"Cliente";
 			// 
+			// pBuscarCliente
+			// 
+			this->pBuscarCliente->BackColor = System::Drawing::Color::Teal;
+			this->pBuscarCliente->Controls->Add(this->lblBusqCliente4);
+			this->pBuscarCliente->Controls->Add(this->txtBusqCliente6);
+			this->pBuscarCliente->Controls->Add(this->txtBusqCliente4);
+			this->pBuscarCliente->Controls->Add(this->lblBusqCliente6);
+			this->pBuscarCliente->Controls->Add(this->lblBusqCliente5);
+			this->pBuscarCliente->Controls->Add(this->txtBusqCliente5);
+			this->pBuscarCliente->ForeColor = System::Drawing::Color::Teal;
+			this->pBuscarCliente->Location = System::Drawing::Point(379, 35);
+			this->pBuscarCliente->Name = L"pBuscarCliente";
+			this->pBuscarCliente->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->pBuscarCliente->Size = System::Drawing::Size(239, 303);
+			this->pBuscarCliente->TabIndex = 115;
+			this->pBuscarCliente->Visible = false;
+			// 
+			// lblBusqCliente4
+			// 
+			this->lblBusqCliente4->AutoSize = true;
+			this->lblBusqCliente4->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqCliente4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqCliente4->Location = System::Drawing::Point(15, 17);
+			this->lblBusqCliente4->Name = L"lblBusqCliente4";
+			this->lblBusqCliente4->Size = System::Drawing::Size(159, 30);
+			this->lblBusqCliente4->TabIndex = 58;
+			this->lblBusqCliente4->Text = L"Nombre Cliente";
+			// 
+			// txtBusqCliente6
+			// 
+			this->txtBusqCliente6->Location = System::Drawing::Point(20, 235);
+			this->txtBusqCliente6->Name = L"txtBusqCliente6";
+			this->txtBusqCliente6->Size = System::Drawing::Size(210, 35);
+			this->txtBusqCliente6->TabIndex = 68;
+			// 
+			// txtBusqCliente4
+			// 
+			this->txtBusqCliente4->Location = System::Drawing::Point(20, 50);
+			this->txtBusqCliente4->Name = L"txtBusqCliente4";
+			this->txtBusqCliente4->Size = System::Drawing::Size(210, 35);
+			this->txtBusqCliente4->TabIndex = 59;
+			// 
+			// lblBusqCliente6
+			// 
+			this->lblBusqCliente6->AutoSize = true;
+			this->lblBusqCliente6->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqCliente6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqCliente6->Location = System::Drawing::Point(15, 202);
+			this->lblBusqCliente6->Name = L"lblBusqCliente6";
+			this->lblBusqCliente6->Size = System::Drawing::Size(92, 30);
+			this->lblBusqCliente6->TabIndex = 67;
+			this->lblBusqCliente6->Text = L"Teléfono";
+			// 
+			// lblBusqCliente5
+			// 
+			this->lblBusqCliente5->AutoSize = true;
+			this->lblBusqCliente5->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqCliente5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqCliente5->Location = System::Drawing::Point(15, 109);
+			this->lblBusqCliente5->Name = L"lblBusqCliente5";
+			this->lblBusqCliente5->Size = System::Drawing::Size(100, 30);
+			this->lblBusqCliente5->TabIndex = 61;
+			this->lblBusqCliente5->Text = L"Dirección";
+			// 
+			// txtBusqCliente5
+			// 
+			this->txtBusqCliente5->Location = System::Drawing::Point(20, 142);
+			this->txtBusqCliente5->Name = L"txtBusqCliente5";
+			this->txtBusqCliente5->Size = System::Drawing::Size(210, 35);
+			this->txtBusqCliente5->TabIndex = 62;
+			// 
+			// txtBusqCliente2
+			// 
+			this->txtBusqCliente2->Location = System::Drawing::Point(83, 176);
+			this->txtBusqCliente2->Name = L"txtBusqCliente2";
+			this->txtBusqCliente2->Size = System::Drawing::Size(210, 35);
+			this->txtBusqCliente2->TabIndex = 66;
+			// 
+			// lblBusqCliente2
+			// 
+			this->lblBusqCliente2->AutoSize = true;
+			this->lblBusqCliente2->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqCliente2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqCliente2->Location = System::Drawing::Point(78, 143);
+			this->lblBusqCliente2->Name = L"lblBusqCliente2";
+			this->lblBusqCliente2->Size = System::Drawing::Size(150, 30);
+			this->lblBusqCliente2->TabIndex = 65;
+			this->lblBusqCliente2->Text = L"Código Ciudad";
+			// 
+			// txtBusqCliente1
+			// 
+			this->txtBusqCliente1->Location = System::Drawing::Point(83, 84);
+			this->txtBusqCliente1->Name = L"txtBusqCliente1";
+			this->txtBusqCliente1->Size = System::Drawing::Size(210, 35);
+			this->txtBusqCliente1->TabIndex = 64;
+			// 
+			// lblBusqCliente1
+			// 
+			this->lblBusqCliente1->AutoSize = true;
+			this->lblBusqCliente1->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqCliente1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqCliente1->Location = System::Drawing::Point(78, 51);
+			this->lblBusqCliente1->Name = L"lblBusqCliente1";
+			this->lblBusqCliente1->Size = System::Drawing::Size(121, 30);
+			this->lblBusqCliente1->TabIndex = 63;
+			this->lblBusqCliente1->Text = L"Código País";
+			// 
+			// bBuscarCliente
+			// 
+			this->bBuscarCliente->BackColor = System::Drawing::Color::Transparent;
+			this->bBuscarCliente->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bBuscarCliente->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bBuscarCliente->ForeColor = System::Drawing::Color::White;
+			this->bBuscarCliente->Location = System::Drawing::Point(83, 361);
+			this->bBuscarCliente->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bBuscarCliente->Name = L"bBuscarCliente";
+			this->bBuscarCliente->Size = System::Drawing::Size(210, 45);
+			this->bBuscarCliente->TabIndex = 60;
+			this->bBuscarCliente->Text = L"Modificar";
+			this->bBuscarCliente->UseVisualStyleBackColor = false;
+			this->bBuscarCliente->Click += gcnew System::EventHandler(this, &PopUpMenu::bBuscarCliente_Click);
+			// 
+			// txtBusqCliente3
+			// 
+			this->txtBusqCliente3->Location = System::Drawing::Point(83, 269);
+			this->txtBusqCliente3->Name = L"txtBusqCliente3";
+			this->txtBusqCliente3->Size = System::Drawing::Size(210, 35);
+			this->txtBusqCliente3->TabIndex = 57;
+			// 
+			// lblBusqCliente3
+			// 
+			this->lblBusqCliente3->AutoSize = true;
+			this->lblBusqCliente3->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqCliente3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqCliente3->Location = System::Drawing::Point(78, 236);
+			this->lblBusqCliente3->Name = L"lblBusqCliente3";
+			this->lblBusqCliente3->Size = System::Drawing::Size(159, 30);
+			this->lblBusqCliente3->TabIndex = 56;
+			this->lblBusqCliente3->Text = L"Número Cliente";
+			// 
 			// btabConsMasc
 			// 
 			this->btabConsMasc->BackColor = System::Drawing::Color::Teal;
+			this->btabConsMasc->Controls->Add(this->pBuscarMascota);
+			this->btabConsMasc->Controls->Add(this->bBuscarMascota);
+			this->btabConsMasc->Controls->Add(this->txtBusqMascota2);
+			this->btabConsMasc->Controls->Add(this->lblBusqMascota2);
+			this->btabConsMasc->Controls->Add(this->txtBusqMascota1);
+			this->btabConsMasc->Controls->Add(this->lblBusqMascota1);
 			this->btabConsMasc->Location = System::Drawing::Point(4, 39);
 			this->btabConsMasc->Name = L"btabConsMasc";
 			this->btabConsMasc->Size = System::Drawing::Size(917, 457);
 			this->btabConsMasc->TabIndex = 3;
 			this->btabConsMasc->Text = L"Mascota";
 			// 
+			// pBuscarMascota
+			// 
+			this->pBuscarMascota->BackColor = System::Drawing::Color::Teal;
+			this->pBuscarMascota->Controls->Add(this->lblBusqMascota11);
+			this->pBuscarMascota->Controls->Add(this->txtBusqMascota10);
+			this->pBuscarMascota->Controls->Add(this->lblBusqMascota10);
+			this->pBuscarMascota->Controls->Add(this->txtBusqMascota9);
+			this->pBuscarMascota->Controls->Add(this->lblBusqMascota9);
+			this->pBuscarMascota->Controls->Add(this->txtBusqMascota8);
+			this->pBuscarMascota->Controls->Add(this->lblBusqMascota8);
+			this->pBuscarMascota->Controls->Add(this->txtBusqMascota7);
+			this->pBuscarMascota->Controls->Add(this->lblBusqMascota7);
+			this->pBuscarMascota->Controls->Add(this->txtBusqMascota6);
+			this->pBuscarMascota->Controls->Add(this->lblBusqMascota6);
+			this->pBuscarMascota->Controls->Add(this->txtBusqMascota5);
+			this->pBuscarMascota->Controls->Add(this->lblBusqMascota5);
+			this->pBuscarMascota->Controls->Add(this->txtBusqMascota4);
+			this->pBuscarMascota->Controls->Add(this->lblBusqMascota4);
+			this->pBuscarMascota->Controls->Add(this->txtBusqMascota3);
+			this->pBuscarMascota->Controls->Add(this->lblBusqMascota3);
+			this->pBuscarMascota->ForeColor = System::Drawing::Color::Teal;
+			this->pBuscarMascota->Location = System::Drawing::Point(313, 13);
+			this->pBuscarMascota->Name = L"pBuscarMascota";
+			this->pBuscarMascota->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->pBuscarMascota->Size = System::Drawing::Size(554, 411);
+			this->pBuscarMascota->TabIndex = 113;
+			this->pBuscarMascota->Visible = false;
+			// 
+			// lblBusqMascota11
+			// 
+			this->lblBusqMascota11->AutoSize = true;
+			this->lblBusqMascota11->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqMascota11->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lblBusqMascota11->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqMascota11->Location = System::Drawing::Point(314, 374);
+			this->lblBusqMascota11->Name = L"lblBusqMascota11";
+			this->lblBusqMascota11->Size = System::Drawing::Size(110, 25);
+			this->lblBusqMascota11->TabIndex = 129;
+			this->lblBusqMascota11->Text = L"DD/MM/AA";
+			// 
+			// txtBusqMascota10
+			// 
+			this->txtBusqMascota10->Location = System::Drawing::Point(319, 336);
+			this->txtBusqMascota10->Name = L"txtBusqMascota10";
+			this->txtBusqMascota10->Size = System::Drawing::Size(210, 35);
+			this->txtBusqMascota10->TabIndex = 128;
+			// 
+			// lblBusqMascota10
+			// 
+			this->lblBusqMascota10->AutoSize = true;
+			this->lblBusqMascota10->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqMascota10->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lblBusqMascota10->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqMascota10->Location = System::Drawing::Point(314, 303);
+			this->lblBusqMascota10->Name = L"lblBusqMascota10";
+			this->lblBusqMascota10->Size = System::Drawing::Size(189, 30);
+			this->lblBusqMascota10->TabIndex = 127;
+			this->lblBusqMascota10->Text = L"Fecha Última Visita";
+			// 
+			// txtBusqMascota9
+			// 
+			this->txtBusqMascota9->Location = System::Drawing::Point(319, 244);
+			this->txtBusqMascota9->Name = L"txtBusqMascota9";
+			this->txtBusqMascota9->Size = System::Drawing::Size(210, 35);
+			this->txtBusqMascota9->TabIndex = 126;
+			// 
+			// lblBusqMascota9
+			// 
+			this->lblBusqMascota9->AutoSize = true;
+			this->lblBusqMascota9->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqMascota9->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqMascota9->Location = System::Drawing::Point(314, 211);
+			this->lblBusqMascota9->Name = L"lblBusqMascota9";
+			this->lblBusqMascota9->Size = System::Drawing::Size(95, 30);
+			this->lblBusqMascota9->TabIndex = 125;
+			this->lblBusqMascota9->Text = L"Castrado";
+			// 
+			// txtBusqMascota8
+			// 
+			this->txtBusqMascota8->Location = System::Drawing::Point(319, 147);
+			this->txtBusqMascota8->Name = L"txtBusqMascota8";
+			this->txtBusqMascota8->Size = System::Drawing::Size(210, 35);
+			this->txtBusqMascota8->TabIndex = 124;
+			// 
+			// lblBusqMascota8
+			// 
+			this->lblBusqMascota8->AutoSize = true;
+			this->lblBusqMascota8->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqMascota8->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqMascota8->Location = System::Drawing::Point(314, 114);
+			this->lblBusqMascota8->Name = L"lblBusqMascota8";
+			this->lblBusqMascota8->Size = System::Drawing::Size(62, 30);
+			this->lblBusqMascota8->TabIndex = 123;
+			this->lblBusqMascota8->Text = L"Color";
+			// 
+			// txtBusqMascota7
+			// 
+			this->txtBusqMascota7->Location = System::Drawing::Point(319, 55);
+			this->txtBusqMascota7->Name = L"txtBusqMascota7";
+			this->txtBusqMascota7->Size = System::Drawing::Size(210, 35);
+			this->txtBusqMascota7->TabIndex = 122;
+			// 
+			// lblBusqMascota7
+			// 
+			this->lblBusqMascota7->AutoSize = true;
+			this->lblBusqMascota7->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqMascota7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqMascota7->Location = System::Drawing::Point(314, 22);
+			this->lblBusqMascota7->Name = L"lblBusqMascota7";
+			this->lblBusqMascota7->Size = System::Drawing::Size(57, 30);
+			this->lblBusqMascota7->TabIndex = 121;
+			this->lblBusqMascota7->Text = L"Sexo";
+			// 
+			// txtBusqMascota6
+			// 
+			this->txtBusqMascota6->Location = System::Drawing::Point(36, 336);
+			this->txtBusqMascota6->Name = L"txtBusqMascota6";
+			this->txtBusqMascota6->Size = System::Drawing::Size(210, 35);
+			this->txtBusqMascota6->TabIndex = 120;
+			// 
+			// lblBusqMascota6
+			// 
+			this->lblBusqMascota6->AutoSize = true;
+			this->lblBusqMascota6->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqMascota6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqMascota6->Location = System::Drawing::Point(31, 303);
+			this->lblBusqMascota6->Name = L"lblBusqMascota6";
+			this->lblBusqMascota6->Size = System::Drawing::Size(209, 30);
+			this->lblBusqMascota6->TabIndex = 119;
+			this->lblBusqMascota6->Text = L"Fecha de Nacimiento";
+			// 
+			// txtBusqMascota5
+			// 
+			this->txtBusqMascota5->Location = System::Drawing::Point(36, 239);
+			this->txtBusqMascota5->Name = L"txtBusqMascota5";
+			this->txtBusqMascota5->Size = System::Drawing::Size(210, 35);
+			this->txtBusqMascota5->TabIndex = 118;
+			// 
+			// lblBusqMascota5
+			// 
+			this->lblBusqMascota5->AutoSize = true;
+			this->lblBusqMascota5->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqMascota5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqMascota5->Location = System::Drawing::Point(31, 206);
+			this->lblBusqMascota5->Name = L"lblBusqMascota5";
+			this->lblBusqMascota5->Size = System::Drawing::Size(58, 30);
+			this->lblBusqMascota5->TabIndex = 117;
+			this->lblBusqMascota5->Text = L"Raza";
+			// 
+			// txtBusqMascota4
+			// 
+			this->txtBusqMascota4->Location = System::Drawing::Point(36, 147);
+			this->txtBusqMascota4->Name = L"txtBusqMascota4";
+			this->txtBusqMascota4->Size = System::Drawing::Size(210, 35);
+			this->txtBusqMascota4->TabIndex = 116;
+			// 
+			// lblBusqMascota4
+			// 
+			this->lblBusqMascota4->AutoSize = true;
+			this->lblBusqMascota4->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqMascota4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqMascota4->Location = System::Drawing::Point(31, 114);
+			this->lblBusqMascota4->Name = L"lblBusqMascota4";
+			this->lblBusqMascota4->Size = System::Drawing::Size(53, 30);
+			this->lblBusqMascota4->TabIndex = 115;
+			this->lblBusqMascota4->Text = L"Tipo";
+			// 
+			// txtBusqMascota3
+			// 
+			this->txtBusqMascota3->Location = System::Drawing::Point(36, 55);
+			this->txtBusqMascota3->Name = L"txtBusqMascota3";
+			this->txtBusqMascota3->Size = System::Drawing::Size(210, 35);
+			this->txtBusqMascota3->TabIndex = 114;
+			// 
+			// lblBusqMascota3
+			// 
+			this->lblBusqMascota3->AutoSize = true;
+			this->lblBusqMascota3->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqMascota3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqMascota3->Location = System::Drawing::Point(31, 22);
+			this->lblBusqMascota3->Name = L"lblBusqMascota3";
+			this->lblBusqMascota3->Size = System::Drawing::Size(89, 30);
+			this->lblBusqMascota3->TabIndex = 113;
+			this->lblBusqMascota3->Text = L"Nombre";
+			// 
+			// bBuscarMascota
+			// 
+			this->bBuscarMascota->BackColor = System::Drawing::Color::Transparent;
+			this->bBuscarMascota->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bBuscarMascota->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bBuscarMascota->ForeColor = System::Drawing::Color::White;
+			this->bBuscarMascota->Location = System::Drawing::Point(67, 351);
+			this->bBuscarMascota->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bBuscarMascota->Name = L"bBuscarMascota";
+			this->bBuscarMascota->Size = System::Drawing::Size(210, 45);
+			this->bBuscarMascota->TabIndex = 95;
+			this->bBuscarMascota->Text = L"Insertar";
+			this->bBuscarMascota->UseVisualStyleBackColor = false;
+			this->bBuscarMascota->Click += gcnew System::EventHandler(this, &PopUpMenu::bBuscarMascota_Click);
+			// 
+			// txtBusqMascota2
+			// 
+			this->txtBusqMascota2->Location = System::Drawing::Point(67, 161);
+			this->txtBusqMascota2->Name = L"txtBusqMascota2";
+			this->txtBusqMascota2->Size = System::Drawing::Size(210, 35);
+			this->txtBusqMascota2->TabIndex = 94;
+			// 
+			// lblBusqMascota2
+			// 
+			this->lblBusqMascota2->AutoSize = true;
+			this->lblBusqMascota2->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqMascota2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqMascota2->Location = System::Drawing::Point(62, 128);
+			this->lblBusqMascota2->Name = L"lblBusqMascota2";
+			this->lblBusqMascota2->Size = System::Drawing::Size(105, 30);
+			this->lblBusqMascota2->TabIndex = 93;
+			this->lblBusqMascota2->Text = L"ID Animal";
+			// 
+			// txtBusqMascota1
+			// 
+			this->txtBusqMascota1->Location = System::Drawing::Point(67, 69);
+			this->txtBusqMascota1->Name = L"txtBusqMascota1";
+			this->txtBusqMascota1->Size = System::Drawing::Size(210, 35);
+			this->txtBusqMascota1->TabIndex = 92;
+			// 
+			// lblBusqMascota1
+			// 
+			this->lblBusqMascota1->AutoSize = true;
+			this->lblBusqMascota1->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqMascota1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqMascota1->Location = System::Drawing::Point(62, 36);
+			this->lblBusqMascota1->Name = L"lblBusqMascota1";
+			this->lblBusqMascota1->Size = System::Drawing::Size(159, 30);
+			this->lblBusqMascota1->TabIndex = 91;
+			this->lblBusqMascota1->Text = L"Número Cliente";
+			// 
 			// btabConsVisita
 			// 
 			this->btabConsVisita->BackColor = System::Drawing::Color::Teal;
+			this->btabConsVisita->Controls->Add(this->pBuscarVisita);
+			this->btabConsVisita->Controls->Add(this->bBuscarVisita);
+			this->btabConsVisita->Controls->Add(this->txtBusqVisita2);
+			this->btabConsVisita->Controls->Add(this->lblBusqVisita2);
+			this->btabConsVisita->Controls->Add(this->txtBusqVisita1);
+			this->btabConsVisita->Controls->Add(this->lblBusqVisita1);
 			this->btabConsVisita->Location = System::Drawing::Point(4, 39);
 			this->btabConsVisita->Name = L"btabConsVisita";
 			this->btabConsVisita->Size = System::Drawing::Size(917, 457);
 			this->btabConsVisita->TabIndex = 4;
 			this->btabConsVisita->Text = L"Visita";
 			// 
+			// pBuscarVisita
+			// 
+			this->pBuscarVisita->BackColor = System::Drawing::Color::Teal;
+			this->pBuscarVisita->Controls->Add(this->lblBusqVisita3);
+			this->pBuscarVisita->Controls->Add(this->lblBusqVisita6);
+			this->pBuscarVisita->Controls->Add(this->txtBusqVisita3);
+			this->pBuscarVisita->Controls->Add(this->txtBusqVisita5);
+			this->pBuscarVisita->Controls->Add(this->lblBusqVisita4);
+			this->pBuscarVisita->Controls->Add(this->lblBusqVisita5);
+			this->pBuscarVisita->Controls->Add(this->txtBusqVisita4);
+			this->pBuscarVisita->ForeColor = System::Drawing::Color::Teal;
+			this->pBuscarVisita->Location = System::Drawing::Point(460, 31);
+			this->pBuscarVisita->Name = L"pBuscarVisita";
+			this->pBuscarVisita->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->pBuscarVisita->Size = System::Drawing::Size(239, 303);
+			this->pBuscarVisita->TabIndex = 114;
+			this->pBuscarVisita->Visible = false;
+			// 
+			// lblBusqVisita3
+			// 
+			this->lblBusqVisita3->AutoSize = true;
+			this->lblBusqVisita3->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqVisita3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqVisita3->Location = System::Drawing::Point(13, 14);
+			this->lblBusqVisita3->Name = L"lblBusqVisita3";
+			this->lblBusqVisita3->Size = System::Drawing::Size(189, 30);
+			this->lblBusqVisita3->TabIndex = 97;
+			this->lblBusqVisita3->Text = L"Fecha Última Visita";
+			// 
+			// lblBusqVisita6
+			// 
+			this->lblBusqVisita6->AutoSize = true;
+			this->lblBusqVisita6->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqVisita6->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lblBusqVisita6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqVisita6->Location = System::Drawing::Point(13, 85);
+			this->lblBusqVisita6->Name = L"lblBusqVisita6";
+			this->lblBusqVisita6->Size = System::Drawing::Size(110, 25);
+			this->lblBusqVisita6->TabIndex = 103;
+			this->lblBusqVisita6->Text = L"DD/MM/AA";
+			// 
+			// txtBusqVisita3
+			// 
+			this->txtBusqVisita3->Location = System::Drawing::Point(18, 47);
+			this->txtBusqVisita3->Name = L"txtBusqVisita3";
+			this->txtBusqVisita3->Size = System::Drawing::Size(210, 35);
+			this->txtBusqVisita3->TabIndex = 98;
+			// 
+			// txtBusqVisita5
+			// 
+			this->txtBusqVisita5->Location = System::Drawing::Point(18, 251);
+			this->txtBusqVisita5->Name = L"txtBusqVisita5";
+			this->txtBusqVisita5->Size = System::Drawing::Size(210, 35);
+			this->txtBusqVisita5->TabIndex = 102;
+			// 
+			// lblBusqVisita4
+			// 
+			this->lblBusqVisita4->AutoSize = true;
+			this->lblBusqVisita4->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqVisita4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqVisita4->Location = System::Drawing::Point(13, 126);
+			this->lblBusqVisita4->Name = L"lblBusqVisita4";
+			this->lblBusqVisita4->Size = System::Drawing::Size(130, 30);
+			this->lblBusqVisita4->TabIndex = 99;
+			this->lblBusqVisita4->Text = L"Total Factura";
+			// 
+			// lblBusqVisita5
+			// 
+			this->lblBusqVisita5->AutoSize = true;
+			this->lblBusqVisita5->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqVisita5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqVisita5->Location = System::Drawing::Point(13, 218);
+			this->lblBusqVisita5->Name = L"lblBusqVisita5";
+			this->lblBusqVisita5->Size = System::Drawing::Size(152, 30);
+			this->lblBusqVisita5->TabIndex = 101;
+			this->lblBusqVisita5->Text = L"Forma de Pago";
+			// 
+			// txtBusqVisita4
+			// 
+			this->txtBusqVisita4->Location = System::Drawing::Point(18, 159);
+			this->txtBusqVisita4->Name = L"txtBusqVisita4";
+			this->txtBusqVisita4->Size = System::Drawing::Size(210, 35);
+			this->txtBusqVisita4->TabIndex = 100;
+			// 
+			// bBuscarVisita
+			// 
+			this->bBuscarVisita->BackColor = System::Drawing::Color::Transparent;
+			this->bBuscarVisita->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bBuscarVisita->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bBuscarVisita->ForeColor = System::Drawing::Color::White;
+			this->bBuscarVisita->Location = System::Drawing::Point(208, 366);
+			this->bBuscarVisita->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bBuscarVisita->Name = L"bBuscarVisita";
+			this->bBuscarVisita->Size = System::Drawing::Size(210, 45);
+			this->bBuscarVisita->TabIndex = 96;
+			this->bBuscarVisita->Text = L"Buscar";
+			this->bBuscarVisita->UseVisualStyleBackColor = false;
+			this->bBuscarVisita->Click += gcnew System::EventHandler(this, &PopUpMenu::bBuscarVisita_Click);
+			// 
+			// txtBusqVisita2
+			// 
+			this->txtBusqVisita2->Location = System::Drawing::Point(208, 190);
+			this->txtBusqVisita2->Name = L"txtBusqVisita2";
+			this->txtBusqVisita2->Size = System::Drawing::Size(210, 35);
+			this->txtBusqVisita2->TabIndex = 95;
+			// 
+			// lblBusqVisita2
+			// 
+			this->lblBusqVisita2->AutoSize = true;
+			this->lblBusqVisita2->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqVisita2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqVisita2->Location = System::Drawing::Point(203, 157);
+			this->lblBusqVisita2->Name = L"lblBusqVisita2";
+			this->lblBusqVisita2->Size = System::Drawing::Size(105, 30);
+			this->lblBusqVisita2->TabIndex = 94;
+			this->lblBusqVisita2->Text = L"ID Animal";
+			// 
+			// txtBusqVisita1
+			// 
+			this->txtBusqVisita1->Location = System::Drawing::Point(208, 78);
+			this->txtBusqVisita1->Name = L"txtBusqVisita1";
+			this->txtBusqVisita1->Size = System::Drawing::Size(210, 35);
+			this->txtBusqVisita1->TabIndex = 93;
+			// 
+			// lblBusqVisita1
+			// 
+			this->lblBusqVisita1->AutoSize = true;
+			this->lblBusqVisita1->BackColor = System::Drawing::Color::Teal;
+			this->lblBusqVisita1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBusqVisita1->Location = System::Drawing::Point(203, 45);
+			this->lblBusqVisita1->Name = L"lblBusqVisita1";
+			this->lblBusqVisita1->Size = System::Drawing::Size(135, 30);
+			this->lblBusqVisita1->TabIndex = 92;
+			this->lblBusqVisita1->Text = L"Código Visita";
+			// 
 			// btabConsTrat
 			// 
 			this->btabConsTrat->BackColor = System::Drawing::Color::Teal;
+			this->btabConsTrat->Controls->Add(this->pBuscarTratamiento);
+			this->btabConsTrat->Controls->Add(this->bBuscarTratamiento);
+			this->btabConsTrat->Controls->Add(this->txtBuscarTrat1);
+			this->btabConsTrat->Controls->Add(this->lblBuscarTrat1);
 			this->btabConsTrat->Location = System::Drawing::Point(4, 39);
 			this->btabConsTrat->Name = L"btabConsTrat";
 			this->btabConsTrat->Size = System::Drawing::Size(917, 457);
 			this->btabConsTrat->TabIndex = 5;
 			this->btabConsTrat->Text = L"Tratamiento";
 			// 
+			// pBuscarTratamiento
+			// 
+			this->pBuscarTratamiento->BackColor = System::Drawing::Color::Teal;
+			this->pBuscarTratamiento->Controls->Add(this->lblBuscarTrat2);
+			this->pBuscarTratamiento->Controls->Add(this->lblBuscarTrat5);
+			this->pBuscarTratamiento->Controls->Add(this->txtBuscarTrat2);
+			this->pBuscarTratamiento->Controls->Add(this->txtBuscarTrat4);
+			this->pBuscarTratamiento->Controls->Add(this->lblBuscarTrat3);
+			this->pBuscarTratamiento->Controls->Add(this->lblBuscarTrat4);
+			this->pBuscarTratamiento->Controls->Add(this->txtBuscarTrat3);
+			this->pBuscarTratamiento->ForeColor = System::Drawing::Color::Teal;
+			this->pBuscarTratamiento->Location = System::Drawing::Point(467, 38);
+			this->pBuscarTratamiento->Name = L"pBuscarTratamiento";
+			this->pBuscarTratamiento->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->pBuscarTratamiento->Size = System::Drawing::Size(239, 303);
+			this->pBuscarTratamiento->TabIndex = 120;
+			this->pBuscarTratamiento->Visible = false;
+			// 
+			// lblBuscarTrat2
+			// 
+			this->lblBuscarTrat2->AutoSize = true;
+			this->lblBuscarTrat2->BackColor = System::Drawing::Color::Teal;
+			this->lblBuscarTrat2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBuscarTrat2->Location = System::Drawing::Point(13, 14);
+			this->lblBuscarTrat2->Name = L"lblBuscarTrat2";
+			this->lblBuscarTrat2->Size = System::Drawing::Size(189, 30);
+			this->lblBuscarTrat2->TabIndex = 97;
+			this->lblBuscarTrat2->Text = L"Fecha Última Visita";
+			// 
+			// lblBuscarTrat5
+			// 
+			this->lblBuscarTrat5->AutoSize = true;
+			this->lblBuscarTrat5->BackColor = System::Drawing::Color::Teal;
+			this->lblBuscarTrat5->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lblBuscarTrat5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBuscarTrat5->Location = System::Drawing::Point(13, 85);
+			this->lblBuscarTrat5->Name = L"lblBuscarTrat5";
+			this->lblBuscarTrat5->Size = System::Drawing::Size(110, 25);
+			this->lblBuscarTrat5->TabIndex = 103;
+			this->lblBuscarTrat5->Text = L"DD/MM/AA";
+			// 
+			// txtBuscarTrat2
+			// 
+			this->txtBuscarTrat2->Location = System::Drawing::Point(18, 47);
+			this->txtBuscarTrat2->Name = L"txtBuscarTrat2";
+			this->txtBuscarTrat2->Size = System::Drawing::Size(210, 35);
+			this->txtBuscarTrat2->TabIndex = 98;
+			// 
+			// txtBuscarTrat4
+			// 
+			this->txtBuscarTrat4->Location = System::Drawing::Point(18, 251);
+			this->txtBuscarTrat4->Name = L"txtBuscarTrat4";
+			this->txtBuscarTrat4->Size = System::Drawing::Size(210, 35);
+			this->txtBuscarTrat4->TabIndex = 102;
+			// 
+			// lblBuscarTrat3
+			// 
+			this->lblBuscarTrat3->AutoSize = true;
+			this->lblBuscarTrat3->BackColor = System::Drawing::Color::Teal;
+			this->lblBuscarTrat3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBuscarTrat3->Location = System::Drawing::Point(13, 126);
+			this->lblBuscarTrat3->Name = L"lblBuscarTrat3";
+			this->lblBuscarTrat3->Size = System::Drawing::Size(130, 30);
+			this->lblBuscarTrat3->TabIndex = 99;
+			this->lblBuscarTrat3->Text = L"Total Factura";
+			// 
+			// lblBuscarTrat4
+			// 
+			this->lblBuscarTrat4->AutoSize = true;
+			this->lblBuscarTrat4->BackColor = System::Drawing::Color::Teal;
+			this->lblBuscarTrat4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBuscarTrat4->Location = System::Drawing::Point(13, 218);
+			this->lblBuscarTrat4->Name = L"lblBuscarTrat4";
+			this->lblBuscarTrat4->Size = System::Drawing::Size(152, 30);
+			this->lblBuscarTrat4->TabIndex = 101;
+			this->lblBuscarTrat4->Text = L"Forma de Pago";
+			// 
+			// txtBuscarTrat3
+			// 
+			this->txtBuscarTrat3->Location = System::Drawing::Point(18, 159);
+			this->txtBuscarTrat3->Name = L"txtBuscarTrat3";
+			this->txtBuscarTrat3->Size = System::Drawing::Size(210, 35);
+			this->txtBuscarTrat3->TabIndex = 100;
+			// 
+			// bBuscarTratamiento
+			// 
+			this->bBuscarTratamiento->BackColor = System::Drawing::Color::Transparent;
+			this->bBuscarTratamiento->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bBuscarTratamiento->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bBuscarTratamiento->ForeColor = System::Drawing::Color::White;
+			this->bBuscarTratamiento->Location = System::Drawing::Point(215, 285);
+			this->bBuscarTratamiento->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bBuscarTratamiento->Name = L"bBuscarTratamiento";
+			this->bBuscarTratamiento->Size = System::Drawing::Size(210, 45);
+			this->bBuscarTratamiento->TabIndex = 119;
+			this->bBuscarTratamiento->Text = L"Buscar";
+			this->bBuscarTratamiento->UseVisualStyleBackColor = false;
+			this->bBuscarTratamiento->Click += gcnew System::EventHandler(this, &PopUpMenu::bBuscarTratamiento_Click);
+			// 
+			// txtBuscarTrat1
+			// 
+			this->txtBuscarTrat1->Location = System::Drawing::Point(215, 197);
+			this->txtBuscarTrat1->Name = L"txtBuscarTrat1";
+			this->txtBuscarTrat1->Size = System::Drawing::Size(210, 35);
+			this->txtBuscarTrat1->TabIndex = 116;
+			// 
+			// lblBuscarTrat1
+			// 
+			this->lblBuscarTrat1->AutoSize = true;
+			this->lblBuscarTrat1->BackColor = System::Drawing::Color::Teal;
+			this->lblBuscarTrat1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBuscarTrat1->Location = System::Drawing::Point(210, 164);
+			this->lblBuscarTrat1->Name = L"lblBuscarTrat1";
+			this->lblBuscarTrat1->Size = System::Drawing::Size(195, 30);
+			this->lblBuscarTrat1->TabIndex = 115;
+			this->lblBuscarTrat1->Text = L"Código Tratamiento";
+			// 
 			// btabConsMed
 			// 
 			this->btabConsMed->BackColor = System::Drawing::Color::Teal;
+			this->btabConsMed->Controls->Add(this->pBuscarMedicacion);
+			this->btabConsMed->Controls->Add(this->bBuscarMedicacion);
+			this->btabConsMed->Controls->Add(this->txtBuscarMedicacion2);
+			this->btabConsMed->Controls->Add(this->lblBuscarMedicacion2);
+			this->btabConsMed->Controls->Add(this->txtBuscarMedicacion1);
+			this->btabConsMed->Controls->Add(this->lblBuscarMedicacion1);
 			this->btabConsMed->Location = System::Drawing::Point(4, 39);
 			this->btabConsMed->Name = L"btabConsMed";
 			this->btabConsMed->Size = System::Drawing::Size(917, 457);
 			this->btabConsMed->TabIndex = 6;
 			this->btabConsMed->Text = L"Medicación";
+			// 
+			// pBuscarMedicacion
+			// 
+			this->pBuscarMedicacion->BackColor = System::Drawing::Color::Teal;
+			this->pBuscarMedicacion->Controls->Add(this->lblBuscarMedicacion8);
+			this->pBuscarMedicacion->Controls->Add(this->txtBuscarMedicacion6);
+			this->pBuscarMedicacion->Controls->Add(this->lblBuscarMedicacion6);
+			this->pBuscarMedicacion->Controls->Add(this->lblBuscarMedicacion4);
+			this->pBuscarMedicacion->Controls->Add(this->lblBuscarMedicacion3);
+			this->pBuscarMedicacion->Controls->Add(this->txtBuscarMedicacion4);
+			this->pBuscarMedicacion->Controls->Add(this->txtBuscarMedicacion3);
+			this->pBuscarMedicacion->Controls->Add(this->lblBuscarMedicacion7);
+			this->pBuscarMedicacion->Controls->Add(this->txtBuscarMedicacion5);
+			this->pBuscarMedicacion->Controls->Add(this->txtBuscarMedicacion7);
+			this->pBuscarMedicacion->Controls->Add(this->lblBuscarMedicacion5);
+			this->pBuscarMedicacion->ForeColor = System::Drawing::Color::Teal;
+			this->pBuscarMedicacion->Location = System::Drawing::Point(382, 44);
+			this->pBuscarMedicacion->Name = L"pBuscarMedicacion";
+			this->pBuscarMedicacion->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->pBuscarMedicacion->Size = System::Drawing::Size(499, 275);
+			this->pBuscarMedicacion->TabIndex = 121;
+			this->pBuscarMedicacion->Visible = false;
+			// 
+			// lblBuscarMedicacion8
+			// 
+			this->lblBuscarMedicacion8->AutoSize = true;
+			this->lblBuscarMedicacion8->BackColor = System::Drawing::Color::Teal;
+			this->lblBuscarMedicacion8->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lblBuscarMedicacion8->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBuscarMedicacion8->Location = System::Drawing::Point(3, 172);
+			this->lblBuscarMedicacion8->Name = L"lblBuscarMedicacion8";
+			this->lblBuscarMedicacion8->Size = System::Drawing::Size(110, 25);
+			this->lblBuscarMedicacion8->TabIndex = 122;
+			this->lblBuscarMedicacion8->Text = L"DD/MM/AA";
+			// 
+			// txtBuscarMedicacion6
+			// 
+			this->txtBuscarMedicacion6->Location = System::Drawing::Point(277, 138);
+			this->txtBuscarMedicacion6->Name = L"txtBuscarMedicacion6";
+			this->txtBuscarMedicacion6->Size = System::Drawing::Size(210, 35);
+			this->txtBuscarMedicacion6->TabIndex = 110;
+			// 
+			// lblBuscarMedicacion6
+			// 
+			this->lblBuscarMedicacion6->AutoSize = true;
+			this->lblBuscarMedicacion6->BackColor = System::Drawing::Color::Teal;
+			this->lblBuscarMedicacion6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBuscarMedicacion6->Location = System::Drawing::Point(272, 105);
+			this->lblBuscarMedicacion6->Name = L"lblBuscarMedicacion6";
+			this->lblBuscarMedicacion6->Size = System::Drawing::Size(96, 30);
+			this->lblBuscarMedicacion6->TabIndex = 109;
+			this->lblBuscarMedicacion6->Text = L"Cantidad";
+			// 
+			// lblBuscarMedicacion4
+			// 
+			this->lblBuscarMedicacion4->AutoSize = true;
+			this->lblBuscarMedicacion4->BackColor = System::Drawing::Color::Teal;
+			this->lblBuscarMedicacion4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBuscarMedicacion4->Location = System::Drawing::Point(3, 105);
+			this->lblBuscarMedicacion4->Name = L"lblBuscarMedicacion4";
+			this->lblBuscarMedicacion4->Size = System::Drawing::Size(189, 30);
+			this->lblBuscarMedicacion4->TabIndex = 106;
+			this->lblBuscarMedicacion4->Text = L"Fecha Última Visita";
+			// 
+			// lblBuscarMedicacion3
+			// 
+			this->lblBuscarMedicacion3->AutoSize = true;
+			this->lblBuscarMedicacion3->BackColor = System::Drawing::Color::Teal;
+			this->lblBuscarMedicacion3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBuscarMedicacion3->Location = System::Drawing::Point(3, 14);
+			this->lblBuscarMedicacion3->Name = L"lblBuscarMedicacion3";
+			this->lblBuscarMedicacion3->Size = System::Drawing::Size(195, 30);
+			this->lblBuscarMedicacion3->TabIndex = 100;
+			this->lblBuscarMedicacion3->Text = L"Código Tratamiento";
+			// 
+			// txtBuscarMedicacion4
+			// 
+			this->txtBuscarMedicacion4->Location = System::Drawing::Point(8, 138);
+			this->txtBuscarMedicacion4->Name = L"txtBuscarMedicacion4";
+			this->txtBuscarMedicacion4->Size = System::Drawing::Size(210, 35);
+			this->txtBuscarMedicacion4->TabIndex = 107;
+			// 
+			// txtBuscarMedicacion3
+			// 
+			this->txtBuscarMedicacion3->Location = System::Drawing::Point(8, 47);
+			this->txtBuscarMedicacion3->Name = L"txtBuscarMedicacion3";
+			this->txtBuscarMedicacion3->Size = System::Drawing::Size(210, 35);
+			this->txtBuscarMedicacion3->TabIndex = 101;
+			// 
+			// lblBuscarMedicacion7
+			// 
+			this->lblBuscarMedicacion7->AutoSize = true;
+			this->lblBuscarMedicacion7->BackColor = System::Drawing::Color::Teal;
+			this->lblBuscarMedicacion7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBuscarMedicacion7->Location = System::Drawing::Point(272, 200);
+			this->lblBuscarMedicacion7->Name = L"lblBuscarMedicacion7";
+			this->lblBuscarMedicacion7->Size = System::Drawing::Size(116, 30);
+			this->lblBuscarMedicacion7->TabIndex = 102;
+			this->lblBuscarMedicacion7->Text = L"Costo Total";
+			// 
+			// txtBuscarMedicacion5
+			// 
+			this->txtBuscarMedicacion5->Location = System::Drawing::Point(277, 46);
+			this->txtBuscarMedicacion5->Name = L"txtBuscarMedicacion5";
+			this->txtBuscarMedicacion5->Size = System::Drawing::Size(210, 35);
+			this->txtBuscarMedicacion5->TabIndex = 105;
+			// 
+			// txtBuscarMedicacion7
+			// 
+			this->txtBuscarMedicacion7->Location = System::Drawing::Point(277, 233);
+			this->txtBuscarMedicacion7->Name = L"txtBuscarMedicacion7";
+			this->txtBuscarMedicacion7->Size = System::Drawing::Size(210, 35);
+			this->txtBuscarMedicacion7->TabIndex = 103;
+			// 
+			// lblBuscarMedicacion5
+			// 
+			this->lblBuscarMedicacion5->AutoSize = true;
+			this->lblBuscarMedicacion5->BackColor = System::Drawing::Color::Teal;
+			this->lblBuscarMedicacion5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBuscarMedicacion5->Location = System::Drawing::Point(272, 13);
+			this->lblBuscarMedicacion5->Name = L"lblBuscarMedicacion5";
+			this->lblBuscarMedicacion5->Size = System::Drawing::Size(145, 30);
+			this->lblBuscarMedicacion5->TabIndex = 104;
+			this->lblBuscarMedicacion5->Text = L"Costo Unitario";
+			// 
+			// bBuscarMedicacion
+			// 
+			this->bBuscarMedicacion->BackColor = System::Drawing::Color::Transparent;
+			this->bBuscarMedicacion->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bBuscarMedicacion->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bBuscarMedicacion->ForeColor = System::Drawing::Color::White;
+			this->bBuscarMedicacion->Location = System::Drawing::Point(114, 266);
+			this->bBuscarMedicacion->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bBuscarMedicacion->Name = L"bBuscarMedicacion";
+			this->bBuscarMedicacion->Size = System::Drawing::Size(210, 45);
+			this->bBuscarMedicacion->TabIndex = 99;
+			this->bBuscarMedicacion->Text = L"Buscar";
+			this->bBuscarMedicacion->UseVisualStyleBackColor = false;
+			this->bBuscarMedicacion->Click += gcnew System::EventHandler(this, &PopUpMenu::bBuscarMedicacion_Click);
+			// 
+			// txtBuscarMedicacion2
+			// 
+			this->txtBuscarMedicacion2->Location = System::Drawing::Point(114, 184);
+			this->txtBuscarMedicacion2->Name = L"txtBuscarMedicacion2";
+			this->txtBuscarMedicacion2->Size = System::Drawing::Size(210, 35);
+			this->txtBuscarMedicacion2->TabIndex = 98;
+			// 
+			// lblBuscarMedicacion2
+			// 
+			this->lblBuscarMedicacion2->AutoSize = true;
+			this->lblBuscarMedicacion2->BackColor = System::Drawing::Color::Teal;
+			this->lblBuscarMedicacion2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBuscarMedicacion2->Location = System::Drawing::Point(109, 150);
+			this->lblBuscarMedicacion2->Name = L"lblBuscarMedicacion2";
+			this->lblBuscarMedicacion2->Size = System::Drawing::Size(105, 30);
+			this->lblBuscarMedicacion2->TabIndex = 97;
+			this->lblBuscarMedicacion2->Text = L"ID Animal";
+			// 
+			// txtBuscarMedicacion1
+			// 
+			this->txtBuscarMedicacion1->Location = System::Drawing::Point(114, 91);
+			this->txtBuscarMedicacion1->Name = L"txtBuscarMedicacion1";
+			this->txtBuscarMedicacion1->Size = System::Drawing::Size(210, 35);
+			this->txtBuscarMedicacion1->TabIndex = 96;
+			// 
+			// lblBuscarMedicacion1
+			// 
+			this->lblBuscarMedicacion1->AutoSize = true;
+			this->lblBuscarMedicacion1->BackColor = System::Drawing::Color::Teal;
+			this->lblBuscarMedicacion1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBuscarMedicacion1->Location = System::Drawing::Point(109, 58);
+			this->lblBuscarMedicacion1->Name = L"lblBuscarMedicacion1";
+			this->lblBuscarMedicacion1->Size = System::Drawing::Size(192, 30);
+			this->lblBuscarMedicacion1->TabIndex = 95;
+			this->lblBuscarMedicacion1->Text = L"Código Medicación";
 			// 
 			// btabElim
 			// 
@@ -1858,6 +4029,18 @@ namespace TareaProgramada3 {
 			this->tabInsercion->ResumeLayout(false);
 			this->btabInserPais->ResumeLayout(false);
 			this->btabInserPais->PerformLayout();
+			this->btabInserCdd->ResumeLayout(false);
+			this->btabInserCdd->PerformLayout();
+			this->btabInserClt->ResumeLayout(false);
+			this->btabInserClt->PerformLayout();
+			this->btabInserMasc->ResumeLayout(false);
+			this->btabInserMasc->PerformLayout();
+			this->btabInserVisita->ResumeLayout(false);
+			this->btabInserVisita->PerformLayout();
+			this->btabInserTrat->ResumeLayout(false);
+			this->btabInserTrat->PerformLayout();
+			this->btabInserMed->ResumeLayout(false);
+			this->btabInserMed->PerformLayout();
 			this->btabModif->ResumeLayout(false);
 			this->tabModificacion->ResumeLayout(false);
 			this->btabModifPais->ResumeLayout(false);
@@ -1876,6 +4059,30 @@ namespace TareaProgramada3 {
 			this->btabModifMed->PerformLayout();
 			this->btabCons->ResumeLayout(false);
 			this->tabConsulta->ResumeLayout(false);
+			this->btabConsPais->ResumeLayout(false);
+			this->btabConsPais->PerformLayout();
+			this->btabConsCdd->ResumeLayout(false);
+			this->btabConsCdd->PerformLayout();
+			this->btabConsClt->ResumeLayout(false);
+			this->btabConsClt->PerformLayout();
+			this->pBuscarCliente->ResumeLayout(false);
+			this->pBuscarCliente->PerformLayout();
+			this->btabConsMasc->ResumeLayout(false);
+			this->btabConsMasc->PerformLayout();
+			this->pBuscarMascota->ResumeLayout(false);
+			this->pBuscarMascota->PerformLayout();
+			this->btabConsVisita->ResumeLayout(false);
+			this->btabConsVisita->PerformLayout();
+			this->pBuscarVisita->ResumeLayout(false);
+			this->pBuscarVisita->PerformLayout();
+			this->btabConsTrat->ResumeLayout(false);
+			this->btabConsTrat->PerformLayout();
+			this->pBuscarTratamiento->ResumeLayout(false);
+			this->pBuscarTratamiento->PerformLayout();
+			this->btabConsMed->ResumeLayout(false);
+			this->btabConsMed->PerformLayout();
+			this->pBuscarMedicacion->ResumeLayout(false);
+			this->pBuscarMedicacion->PerformLayout();
 			this->btabElim->ResumeLayout(false);
 			this->tabEliminacion->ResumeLayout(false);
 			this->ResumeLayout(false);
@@ -1929,6 +4136,18 @@ namespace TareaProgramada3 {
 			//messagebox
 		}
 	}
+	private: System::Void bInserCiudad_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void bInserCliente_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void bInserMascota_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void bInserVisita_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void binserTratamiento_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void bInserMedicacion_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
 
 	/*	FUNCIONES MODIFICAR  */
 
@@ -1978,7 +4197,37 @@ namespace TareaProgramada3 {
 			MessageBox::Show(errorP);
 		}
 	}
+	private: System::Void bModifCliente_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void bModifMascota_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void bModifVisita_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void bModifTratamiento_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
 	private: System::Void bModifMedicacion_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+
+	/*	FUNCIONES BUSCAR  */
+
+	private: System::Void bBuscarPais_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void bBuscarCiudad_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void bBuscarCliente_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void bBuscarMascota_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void bBuscarVisita_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void bBuscarTratamiento_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void bBuscarMedicacion_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+
+    /*	FUNCIONES ELIMINAR  */
+
+
+
 };
 }
