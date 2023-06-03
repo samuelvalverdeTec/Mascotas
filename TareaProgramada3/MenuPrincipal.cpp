@@ -26,11 +26,12 @@ void main() {
 
 	arbolPaises->leer_Doc();
 	arbolCiudades->leer_Doc(arbolPaises);
-	arbolVisitas->leer_Doc(arbolMascotas);
+	arbolClientes->leer_Doc(arbolPaises, arbolCiudades);
 	arbolMascotas->leer_Doc(arbolClientes);
+	arbolVisitas->leer_Doc(arbolMascotas);	
 	arbolTratamientos->leer_Doc();
 	//arbolMedicaciones->leer_Doc();
-	arbolClientes->leer_Doc(arbolPaises, arbolCiudades);
+	
 
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);

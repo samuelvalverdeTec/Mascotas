@@ -1,0 +1,15 @@
+Reporte 4 - Mascotas de Cliente
+
+Codigo Cliente: 777
+Codigo Mascota: 111
+Nombre Mascota: Brownie
+Tipo Mascota: CAnino
+Raza Mascota: Yorkie
+Fecha Nacimiento: 20/02/04
+Sexo Mascota: macho
+Color Mascota: cafe y negro
+Castrado: si
+Ultima Visita: 28/07/23
+------------------------------------
+
+

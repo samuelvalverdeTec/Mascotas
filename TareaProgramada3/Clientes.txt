@@ -3,4 +3,4 @@
 12345;Maria;Las Cotorras;12;123;45678;23;04;23;3;0
 123456;jose;Las Cotorras;10;123;45678;23;04;23;3:67890
 123415;Trinidad Castro;Cotorras;12;1234;45678;23;04;23;3;65432
-777;Samuel Valverde;Curridabat;12;1234;45678;23;04;23;3;65432
+777;Samuel Valverde;Curridabat;12;123;45678;23;04;23;3;65432
