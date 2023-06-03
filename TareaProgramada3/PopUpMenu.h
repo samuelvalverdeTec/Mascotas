@@ -34,6 +34,34 @@ namespace TareaProgramada3 {
 	public: AVLMascotas* arbolMascotas;
 	public: BinarioVisitas* arbolVisitas;
 	public: RNTratamiento* arbolTratamientos;
+	private: System::Windows::Forms::Button^ bEliminarPais;
+	public:
+	private: System::Windows::Forms::TextBox^ txtElimPais1;
+	private: System::Windows::Forms::Label^ lblElimPais1;
+	private: System::Windows::Forms::Button^ bEliminarCiudad;
+	private: System::Windows::Forms::TextBox^ txtElimCiudad2;
+	private: System::Windows::Forms::Label^ lblElimCiudad2;
+	private: System::Windows::Forms::TextBox^ txtElimCiudad1;
+	private: System::Windows::Forms::Label^ lblElimCiudad1;
+	private: System::Windows::Forms::TextBox^ txtElimCliente2;
+	private: System::Windows::Forms::Label^ lblElimCliente2;
+	private: System::Windows::Forms::TextBox^ txtElimCliente1;
+	private: System::Windows::Forms::Label^ lblElimCliente1;
+	private: System::Windows::Forms::Button^ bEliminarCliente;
+	private: System::Windows::Forms::TextBox^ txtElimCliente3;
+	private: System::Windows::Forms::Label^ lblElimCliente3;
+	private: System::Windows::Forms::Button^ bEliminarMascota;
+	private: System::Windows::Forms::TextBox^ txtElimMascota1;
+	private: System::Windows::Forms::Label^ lblElimMascota1;
+	private: System::Windows::Forms::Button^ bEliminarVisita;
+	private: System::Windows::Forms::TextBox^ txtElimVisita1;
+	private: System::Windows::Forms::Label^ lblElimVisita1;
+	private: System::Windows::Forms::Button^ bEliminarTratamiento;
+	private: System::Windows::Forms::TextBox^ txtElimTrat1;
+	private: System::Windows::Forms::Label^ lblElimTrat1;
+	private: System::Windows::Forms::Button^ bEliminarMedicacion;
+	private: System::Windows::Forms::TextBox^ txtElimMedicacion1;
+	private: System::Windows::Forms::Label^ lblElimMedicacion1;
 	public: AAMedicacion* arbolMedicaciones;
 
 	public:
@@ -679,12 +707,39 @@ namespace TareaProgramada3 {
 			this->btabElim = (gcnew System::Windows::Forms::TabPage());
 			this->tabEliminacion = (gcnew System::Windows::Forms::TabControl());
 			this->btabElimPais = (gcnew System::Windows::Forms::TabPage());
+			this->bEliminarPais = (gcnew System::Windows::Forms::Button());
+			this->txtElimPais1 = (gcnew System::Windows::Forms::TextBox());
+			this->lblElimPais1 = (gcnew System::Windows::Forms::Label());
 			this->btabElimCdd = (gcnew System::Windows::Forms::TabPage());
+			this->bEliminarCiudad = (gcnew System::Windows::Forms::Button());
+			this->txtElimCiudad2 = (gcnew System::Windows::Forms::TextBox());
+			this->lblElimCiudad2 = (gcnew System::Windows::Forms::Label());
+			this->txtElimCiudad1 = (gcnew System::Windows::Forms::TextBox());
+			this->lblElimCiudad1 = (gcnew System::Windows::Forms::Label());
 			this->btabElimClt = (gcnew System::Windows::Forms::TabPage());
+			this->txtElimCliente2 = (gcnew System::Windows::Forms::TextBox());
+			this->lblElimCliente2 = (gcnew System::Windows::Forms::Label());
+			this->txtElimCliente1 = (gcnew System::Windows::Forms::TextBox());
+			this->lblElimCliente1 = (gcnew System::Windows::Forms::Label());
+			this->bEliminarCliente = (gcnew System::Windows::Forms::Button());
+			this->txtElimCliente3 = (gcnew System::Windows::Forms::TextBox());
+			this->lblElimCliente3 = (gcnew System::Windows::Forms::Label());
 			this->btabElimMasc = (gcnew System::Windows::Forms::TabPage());
+			this->bEliminarMascota = (gcnew System::Windows::Forms::Button());
+			this->txtElimMascota1 = (gcnew System::Windows::Forms::TextBox());
+			this->lblElimMascota1 = (gcnew System::Windows::Forms::Label());
 			this->btabElimVisita = (gcnew System::Windows::Forms::TabPage());
+			this->bEliminarVisita = (gcnew System::Windows::Forms::Button());
+			this->txtElimVisita1 = (gcnew System::Windows::Forms::TextBox());
+			this->lblElimVisita1 = (gcnew System::Windows::Forms::Label());
 			this->btabElimTrat = (gcnew System::Windows::Forms::TabPage());
+			this->bEliminarTratamiento = (gcnew System::Windows::Forms::Button());
+			this->txtElimTrat1 = (gcnew System::Windows::Forms::TextBox());
+			this->lblElimTrat1 = (gcnew System::Windows::Forms::Label());
 			this->btabElimMed = (gcnew System::Windows::Forms::TabPage());
+			this->bEliminarMedicacion = (gcnew System::Windows::Forms::Button());
+			this->txtElimMedicacion1 = (gcnew System::Windows::Forms::TextBox());
+			this->lblElimMedicacion1 = (gcnew System::Windows::Forms::Label());
 			this->bSalir = (gcnew System::Windows::Forms::Button());
 			this->btabAD->SuspendLayout();
 			this->btabSucs->SuspendLayout();
@@ -730,6 +785,13 @@ namespace TareaProgramada3 {
 			this->pBuscarMedicacion->SuspendLayout();
 			this->btabElim->SuspendLayout();
 			this->tabEliminacion->SuspendLayout();
+			this->btabElimPais->SuspendLayout();
+			this->btabElimCdd->SuspendLayout();
+			this->btabElimClt->SuspendLayout();
+			this->btabElimMasc->SuspendLayout();
+			this->btabElimVisita->SuspendLayout();
+			this->btabElimTrat->SuspendLayout();
+			this->btabElimMed->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// bExit
@@ -752,9 +814,9 @@ namespace TareaProgramada3 {
 			// 
 			this->btabCont->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->btabCont->ForeColor = System::Drawing::Color::White;
-			this->btabCont->Location = System::Drawing::Point(4, 42);
+			this->btabCont->Location = System::Drawing::Point(4, 48);
 			this->btabCont->Name = L"btabCont";
-			this->btabCont->Size = System::Drawing::Size(925, 541);
+			this->btabCont->Size = System::Drawing::Size(925, 535);
 			this->btabCont->TabIndex = 5;
 			this->btabCont->Text = L"Contactos";
 			this->btabCont->Click += gcnew System::EventHandler(this, &PopUpMenu::tabCont_Click);
@@ -764,9 +826,9 @@ namespace TareaProgramada3 {
 			this->btabAD->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->btabAD->Controls->Add(this->AcercaDe);
 			this->btabAD->ForeColor = System::Drawing::Color::White;
-			this->btabAD->Location = System::Drawing::Point(4, 42);
+			this->btabAD->Location = System::Drawing::Point(4, 48);
 			this->btabAD->Name = L"btabAD";
-			this->btabAD->Size = System::Drawing::Size(925, 541);
+			this->btabAD->Size = System::Drawing::Size(925, 535);
 			this->btabAD->TabIndex = 4;
 			this->btabAD->Text = L"Acerca De";
 			this->btabAD->Click += gcnew System::EventHandler(this, &PopUpMenu::tabAD_Click);
@@ -776,7 +838,7 @@ namespace TareaProgramada3 {
 			this->AcercaDe->AutoSize = true;
 			this->AcercaDe->Location = System::Drawing::Point(24, 25);
 			this->AcercaDe->Name = L"AcercaDe";
-			this->AcercaDe->Size = System::Drawing::Size(305, 30);
+			this->AcercaDe->Size = System::Drawing::Size(386, 37);
 			this->AcercaDe->TabIndex = 0;
 			this->AcercaDe->Text = L"Nosotros somos Fauna Life y ....";
 			// 
@@ -785,9 +847,9 @@ namespace TareaProgramada3 {
 			this->btabSucs->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->btabSucs->Controls->Add(this->tabControl1);
 			this->btabSucs->ForeColor = System::Drawing::Color::White;
-			this->btabSucs->Location = System::Drawing::Point(4, 42);
+			this->btabSucs->Location = System::Drawing::Point(4, 48);
 			this->btabSucs->Name = L"btabSucs";
-			this->btabSucs->Size = System::Drawing::Size(925, 541);
+			this->btabSucs->Size = System::Drawing::Size(925, 535);
 			this->btabSucs->TabIndex = 3;
 			this->btabSucs->Text = L"Sucursales";
 			this->btabSucs->Click += gcnew System::EventHandler(this, &PopUpMenu::tabSucs_Click);
@@ -807,36 +869,36 @@ namespace TareaProgramada3 {
 			// 
 			// tabPrim
 			// 
-			this->tabPrim->Location = System::Drawing::Point(4, 42);
+			this->tabPrim->Location = System::Drawing::Point(4, 48);
 			this->tabPrim->Name = L"tabPrim";
-			this->tabPrim->Size = System::Drawing::Size(1004, 501);
+			this->tabPrim->Size = System::Drawing::Size(1004, 495);
 			this->tabPrim->TabIndex = 10;
 			this->tabPrim->Text = L"Prim";
 			this->tabPrim->UseVisualStyleBackColor = true;
 			// 
 			// tabKruskal
 			// 
-			this->tabKruskal->Location = System::Drawing::Point(4, 42);
+			this->tabKruskal->Location = System::Drawing::Point(4, 48);
 			this->tabKruskal->Name = L"tabKruskal";
-			this->tabKruskal->Size = System::Drawing::Size(1004, 501);
+			this->tabKruskal->Size = System::Drawing::Size(1004, 495);
 			this->tabKruskal->TabIndex = 12;
 			this->tabKruskal->Text = L"Kruskal";
 			this->tabKruskal->UseVisualStyleBackColor = true;
 			// 
 			// tabGrado
 			// 
-			this->tabGrado->Location = System::Drawing::Point(4, 42);
+			this->tabGrado->Location = System::Drawing::Point(4, 48);
 			this->tabGrado->Name = L"tabGrado";
-			this->tabGrado->Size = System::Drawing::Size(1004, 501);
+			this->tabGrado->Size = System::Drawing::Size(1004, 495);
 			this->tabGrado->TabIndex = 11;
 			this->tabGrado->Text = L"Grado";
 			this->tabGrado->UseVisualStyleBackColor = true;
 			// 
 			// tabCamino
 			// 
-			this->tabCamino->Location = System::Drawing::Point(4, 42);
+			this->tabCamino->Location = System::Drawing::Point(4, 48);
 			this->tabCamino->Name = L"tabCamino";
-			this->tabCamino->Size = System::Drawing::Size(1004, 501);
+			this->tabCamino->Size = System::Drawing::Size(1004, 495);
 			this->tabCamino->TabIndex = 13;
 			this->tabCamino->Text = L"Camino";
 			this->tabCamino->UseVisualStyleBackColor = true;
@@ -846,9 +908,9 @@ namespace TareaProgramada3 {
 			this->btabReps->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->btabReps->Controls->Add(this->tabReportes);
 			this->btabReps->ForeColor = System::Drawing::Color::White;
-			this->btabReps->Location = System::Drawing::Point(4, 42);
+			this->btabReps->Location = System::Drawing::Point(4, 48);
 			this->btabReps->Name = L"btabReps";
-			this->btabReps->Size = System::Drawing::Size(925, 541);
+			this->btabReps->Size = System::Drawing::Size(925, 535);
 			this->btabReps->TabIndex = 2;
 			this->btabReps->Text = L"Reportes";
 			this->btabReps->Click += gcnew System::EventHandler(this, &PopUpMenu::tabReps_Click);
@@ -878,118 +940,118 @@ namespace TareaProgramada3 {
 			// tabR1
 			// 
 			this->tabR1->BackColor = System::Drawing::Color::Transparent;
-			this->tabR1->Location = System::Drawing::Point(4, 42);
+			this->tabR1->Location = System::Drawing::Point(4, 48);
 			this->tabR1->Name = L"tabR1";
 			this->tabR1->Padding = System::Windows::Forms::Padding(3);
-			this->tabR1->Size = System::Drawing::Size(921, 501);
+			this->tabR1->Size = System::Drawing::Size(921, 495);
 			this->tabR1->TabIndex = 0;
 			this->tabR1->Text = L"Rep1";
 			// 
 			// tabR2
 			// 
-			this->tabR2->Location = System::Drawing::Point(4, 42);
+			this->tabR2->Location = System::Drawing::Point(4, 48);
 			this->tabR2->Name = L"tabR2";
 			this->tabR2->Padding = System::Windows::Forms::Padding(3);
-			this->tabR2->Size = System::Drawing::Size(921, 501);
+			this->tabR2->Size = System::Drawing::Size(921, 495);
 			this->tabR2->TabIndex = 1;
 			this->tabR2->Text = L"Rep2";
 			this->tabR2->UseVisualStyleBackColor = true;
 			// 
 			// tabR3
 			// 
-			this->tabR3->Location = System::Drawing::Point(4, 42);
+			this->tabR3->Location = System::Drawing::Point(4, 48);
 			this->tabR3->Name = L"tabR3";
-			this->tabR3->Size = System::Drawing::Size(921, 501);
+			this->tabR3->Size = System::Drawing::Size(921, 495);
 			this->tabR3->TabIndex = 2;
 			this->tabR3->Text = L"Rep3";
 			this->tabR3->UseVisualStyleBackColor = true;
 			// 
 			// tabR4
 			// 
-			this->tabR4->Location = System::Drawing::Point(4, 42);
+			this->tabR4->Location = System::Drawing::Point(4, 48);
 			this->tabR4->Name = L"tabR4";
-			this->tabR4->Size = System::Drawing::Size(921, 501);
+			this->tabR4->Size = System::Drawing::Size(921, 495);
 			this->tabR4->TabIndex = 3;
 			this->tabR4->Text = L"Rep4";
 			this->tabR4->UseVisualStyleBackColor = true;
 			// 
 			// tabR5
 			// 
-			this->tabR5->Location = System::Drawing::Point(4, 42);
+			this->tabR5->Location = System::Drawing::Point(4, 48);
 			this->tabR5->Name = L"tabR5";
-			this->tabR5->Size = System::Drawing::Size(921, 501);
+			this->tabR5->Size = System::Drawing::Size(921, 495);
 			this->tabR5->TabIndex = 4;
 			this->tabR5->Text = L"Rep5";
 			this->tabR5->UseVisualStyleBackColor = true;
 			// 
 			// tabR6
 			// 
-			this->tabR6->Location = System::Drawing::Point(4, 42);
+			this->tabR6->Location = System::Drawing::Point(4, 48);
 			this->tabR6->Name = L"tabR6";
-			this->tabR6->Size = System::Drawing::Size(921, 501);
+			this->tabR6->Size = System::Drawing::Size(921, 495);
 			this->tabR6->TabIndex = 5;
 			this->tabR6->Text = L"Rep6";
 			this->tabR6->UseVisualStyleBackColor = true;
 			// 
 			// tabR7
 			// 
-			this->tabR7->Location = System::Drawing::Point(4, 42);
+			this->tabR7->Location = System::Drawing::Point(4, 48);
 			this->tabR7->Name = L"tabR7";
-			this->tabR7->Size = System::Drawing::Size(921, 501);
+			this->tabR7->Size = System::Drawing::Size(921, 495);
 			this->tabR7->TabIndex = 6;
 			this->tabR7->Text = L"Rep7";
 			this->tabR7->UseVisualStyleBackColor = true;
 			// 
 			// tabR8
 			// 
-			this->tabR8->Location = System::Drawing::Point(4, 42);
+			this->tabR8->Location = System::Drawing::Point(4, 48);
 			this->tabR8->Name = L"tabR8";
-			this->tabR8->Size = System::Drawing::Size(921, 501);
+			this->tabR8->Size = System::Drawing::Size(921, 495);
 			this->tabR8->TabIndex = 7;
 			this->tabR8->Text = L"Rep8";
 			this->tabR8->UseVisualStyleBackColor = true;
 			// 
 			// tabR9
 			// 
-			this->tabR9->Location = System::Drawing::Point(4, 42);
+			this->tabR9->Location = System::Drawing::Point(4, 48);
 			this->tabR9->Name = L"tabR9";
-			this->tabR9->Size = System::Drawing::Size(921, 501);
+			this->tabR9->Size = System::Drawing::Size(921, 495);
 			this->tabR9->TabIndex = 8;
 			this->tabR9->Text = L"Rep9";
 			this->tabR9->UseVisualStyleBackColor = true;
 			// 
 			// tabR10
 			// 
-			this->tabR10->Location = System::Drawing::Point(4, 42);
+			this->tabR10->Location = System::Drawing::Point(4, 48);
 			this->tabR10->Name = L"tabR10";
-			this->tabR10->Size = System::Drawing::Size(921, 501);
+			this->tabR10->Size = System::Drawing::Size(921, 495);
 			this->tabR10->TabIndex = 9;
 			this->tabR10->Text = L"Rep10";
 			this->tabR10->UseVisualStyleBackColor = true;
 			// 
 			// tabR11
 			// 
-			this->tabR11->Location = System::Drawing::Point(4, 42);
+			this->tabR11->Location = System::Drawing::Point(4, 48);
 			this->tabR11->Name = L"tabR11";
-			this->tabR11->Size = System::Drawing::Size(921, 501);
+			this->tabR11->Size = System::Drawing::Size(921, 495);
 			this->tabR11->TabIndex = 10;
 			this->tabR11->Text = L"Rep11";
 			this->tabR11->UseVisualStyleBackColor = true;
 			// 
 			// tabR12
 			// 
-			this->tabR12->Location = System::Drawing::Point(4, 42);
+			this->tabR12->Location = System::Drawing::Point(4, 48);
 			this->tabR12->Name = L"tabR12";
-			this->tabR12->Size = System::Drawing::Size(921, 501);
+			this->tabR12->Size = System::Drawing::Size(921, 495);
 			this->tabR12->TabIndex = 11;
 			this->tabR12->Text = L"Rep12";
 			this->tabR12->UseVisualStyleBackColor = true;
 			// 
 			// tabR13
 			// 
-			this->tabR13->Location = System::Drawing::Point(4, 42);
+			this->tabR13->Location = System::Drawing::Point(4, 48);
 			this->tabR13->Name = L"tabR13";
-			this->tabR13->Size = System::Drawing::Size(921, 501);
+			this->tabR13->Size = System::Drawing::Size(921, 495);
 			this->tabR13->TabIndex = 12;
 			this->tabR13->Text = L"Rep13";
 			this->tabR13->UseVisualStyleBackColor = true;
@@ -999,10 +1061,10 @@ namespace TareaProgramada3 {
 			this->btabFact->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->btabFact->Controls->Add(this->tabFacturacion);
 			this->btabFact->ForeColor = System::Drawing::Color::White;
-			this->btabFact->Location = System::Drawing::Point(4, 42);
+			this->btabFact->Location = System::Drawing::Point(4, 48);
 			this->btabFact->Name = L"btabFact";
 			this->btabFact->Padding = System::Windows::Forms::Padding(3);
-			this->btabFact->Size = System::Drawing::Size(925, 541);
+			this->btabFact->Size = System::Drawing::Size(925, 535);
 			this->btabFact->TabIndex = 1;
 			this->btabFact->Text = L"Facturacion";
 			this->btabFact->Click += gcnew System::EventHandler(this, &PopUpMenu::tabFact_Click);
@@ -1023,29 +1085,29 @@ namespace TareaProgramada3 {
 			// 
 			this->tabSaldos->BackColor = System::Drawing::Color::Teal;
 			this->tabSaldos->ForeColor = System::Drawing::Color::Teal;
-			this->tabSaldos->Location = System::Drawing::Point(4, 42);
+			this->tabSaldos->Location = System::Drawing::Point(4, 48);
 			this->tabSaldos->Name = L"tabSaldos";
 			this->tabSaldos->Padding = System::Windows::Forms::Padding(3);
-			this->tabSaldos->Size = System::Drawing::Size(921, 501);
+			this->tabSaldos->Size = System::Drawing::Size(921, 495);
 			this->tabSaldos->TabIndex = 0;
 			this->tabSaldos->Text = L"Saldos";
 			// 
 			// tabDesc
 			// 
 			this->tabDesc->BackColor = System::Drawing::Color::Teal;
-			this->tabDesc->Location = System::Drawing::Point(4, 42);
+			this->tabDesc->Location = System::Drawing::Point(4, 48);
 			this->tabDesc->Name = L"tabDesc";
 			this->tabDesc->Padding = System::Windows::Forms::Padding(3);
-			this->tabDesc->Size = System::Drawing::Size(921, 501);
+			this->tabDesc->Size = System::Drawing::Size(921, 495);
 			this->tabDesc->TabIndex = 1;
 			this->tabDesc->Text = L"Descuentos";
 			// 
 			// tabFact
 			// 
 			this->tabFact->BackColor = System::Drawing::Color::Teal;
-			this->tabFact->Location = System::Drawing::Point(4, 42);
+			this->tabFact->Location = System::Drawing::Point(4, 48);
 			this->tabFact->Name = L"tabFact";
-			this->tabFact->Size = System::Drawing::Size(921, 501);
+			this->tabFact->Size = System::Drawing::Size(921, 495);
 			this->tabFact->TabIndex = 2;
 			this->tabFact->Text = L"Facturación";
 			// 
@@ -1075,10 +1137,10 @@ namespace TareaProgramada3 {
 			this->btabMant->Controls->Add(this->tabMantenimiento);
 			this->btabMant->ForeColor = System::Drawing::Color::White;
 			this->btabMant->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->btabMant->Location = System::Drawing::Point(4, 42);
+			this->btabMant->Location = System::Drawing::Point(4, 48);
 			this->btabMant->Name = L"btabMant";
 			this->btabMant->Padding = System::Windows::Forms::Padding(3);
-			this->btabMant->Size = System::Drawing::Size(925, 541);
+			this->btabMant->Size = System::Drawing::Size(925, 535);
 			this->btabMant->TabIndex = 0;
 			this->btabMant->Text = L"Mantenimiento";
 			this->btabMant->Click += gcnew System::EventHandler(this, &PopUpMenu::tabMant_Click);
@@ -1099,10 +1161,10 @@ namespace TareaProgramada3 {
 			// btabInser
 			// 
 			this->btabInser->Controls->Add(this->tabInsercion);
-			this->btabInser->Location = System::Drawing::Point(4, 42);
+			this->btabInser->Location = System::Drawing::Point(4, 48);
 			this->btabInser->Name = L"btabInser";
 			this->btabInser->Padding = System::Windows::Forms::Padding(3);
-			this->btabInser->Size = System::Drawing::Size(921, 499);
+			this->btabInser->Size = System::Drawing::Size(921, 493);
 			this->btabInser->TabIndex = 0;
 			this->btabInser->Text = L"Inserción";
 			this->btabInser->UseVisualStyleBackColor = true;
@@ -1131,10 +1193,10 @@ namespace TareaProgramada3 {
 			this->btabInserPais->Controls->Add(this->bInserPais);
 			this->btabInserPais->Controls->Add(this->txtInserPais1);
 			this->btabInserPais->Controls->Add(this->lblInserPais1);
-			this->btabInserPais->Location = System::Drawing::Point(4, 39);
+			this->btabInserPais->Location = System::Drawing::Point(4, 45);
 			this->btabInserPais->Name = L"btabInserPais";
 			this->btabInserPais->Padding = System::Windows::Forms::Padding(3);
-			this->btabInserPais->Size = System::Drawing::Size(917, 457);
+			this->btabInserPais->Size = System::Drawing::Size(917, 451);
 			this->btabInserPais->TabIndex = 0;
 			this->btabInserPais->Text = L"País";
 			// 
@@ -1142,7 +1204,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserPais2->Location = System::Drawing::Point(81, 189);
 			this->txtInserPais2->Name = L"txtInserPais2";
-			this->txtInserPais2->Size = System::Drawing::Size(210, 35);
+			this->txtInserPais2->Size = System::Drawing::Size(210, 42);
 			this->txtInserPais2->TabIndex = 48;
 			// 
 			// lblInserPais2
@@ -1152,7 +1214,7 @@ namespace TareaProgramada3 {
 			this->lblInserPais2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserPais2->Location = System::Drawing::Point(76, 156);
 			this->lblInserPais2->Name = L"lblInserPais2";
-			this->lblInserPais2->Size = System::Drawing::Size(131, 30);
+			this->lblInserPais2->Size = System::Drawing::Size(168, 37);
 			this->lblInserPais2->TabIndex = 47;
 			this->lblInserPais2->Text = L"Nombre País";
 			// 
@@ -1176,7 +1238,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserPais1->Location = System::Drawing::Point(81, 90);
 			this->txtInserPais1->Name = L"txtInserPais1";
-			this->txtInserPais1->Size = System::Drawing::Size(210, 35);
+			this->txtInserPais1->Size = System::Drawing::Size(210, 42);
 			this->txtInserPais1->TabIndex = 45;
 			// 
 			// lblInserPais1
@@ -1186,7 +1248,7 @@ namespace TareaProgramada3 {
 			this->lblInserPais1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserPais1->Location = System::Drawing::Point(76, 57);
 			this->lblInserPais1->Name = L"lblInserPais1";
-			this->lblInserPais1->Size = System::Drawing::Size(121, 30);
+			this->lblInserPais1->Size = System::Drawing::Size(158, 37);
 			this->lblInserPais1->TabIndex = 44;
 			this->lblInserPais1->Text = L"Código País";
 			// 
@@ -1200,10 +1262,10 @@ namespace TareaProgramada3 {
 			this->btabInserCdd->Controls->Add(this->lblInserCiudad2);
 			this->btabInserCdd->Controls->Add(this->txtInserCiudad1);
 			this->btabInserCdd->Controls->Add(this->lblInserCiudad1);
-			this->btabInserCdd->Location = System::Drawing::Point(4, 39);
+			this->btabInserCdd->Location = System::Drawing::Point(4, 45);
 			this->btabInserCdd->Name = L"btabInserCdd";
 			this->btabInserCdd->Padding = System::Windows::Forms::Padding(3);
-			this->btabInserCdd->Size = System::Drawing::Size(917, 457);
+			this->btabInserCdd->Size = System::Drawing::Size(917, 451);
 			this->btabInserCdd->TabIndex = 1;
 			this->btabInserCdd->Text = L"Ciudad";
 			// 
@@ -1211,7 +1273,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserCiudad3->Location = System::Drawing::Point(411, 109);
 			this->txtInserCiudad3->Name = L"txtInserCiudad3";
-			this->txtInserCiudad3->Size = System::Drawing::Size(210, 35);
+			this->txtInserCiudad3->Size = System::Drawing::Size(210, 42);
 			this->txtInserCiudad3->TabIndex = 49;
 			// 
 			// lblInserCiudad3
@@ -1221,7 +1283,7 @@ namespace TareaProgramada3 {
 			this->lblInserCiudad3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserCiudad3->Location = System::Drawing::Point(406, 76);
 			this->lblInserCiudad3->Name = L"lblInserCiudad3";
-			this->lblInserCiudad3->Size = System::Drawing::Size(160, 30);
+			this->lblInserCiudad3->Size = System::Drawing::Size(207, 37);
 			this->lblInserCiudad3->TabIndex = 48;
 			this->lblInserCiudad3->Text = L"Nombre Ciudad";
 			// 
@@ -1245,7 +1307,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserCiudad2->Location = System::Drawing::Point(102, 201);
 			this->txtInserCiudad2->Name = L"txtInserCiudad2";
-			this->txtInserCiudad2->Size = System::Drawing::Size(210, 35);
+			this->txtInserCiudad2->Size = System::Drawing::Size(210, 42);
 			this->txtInserCiudad2->TabIndex = 46;
 			// 
 			// lblInserCiudad2
@@ -1255,7 +1317,7 @@ namespace TareaProgramada3 {
 			this->lblInserCiudad2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserCiudad2->Location = System::Drawing::Point(97, 168);
 			this->lblInserCiudad2->Name = L"lblInserCiudad2";
-			this->lblInserCiudad2->Size = System::Drawing::Size(150, 30);
+			this->lblInserCiudad2->Size = System::Drawing::Size(197, 37);
 			this->lblInserCiudad2->TabIndex = 45;
 			this->lblInserCiudad2->Text = L"Código Ciudad";
 			// 
@@ -1263,7 +1325,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserCiudad1->Location = System::Drawing::Point(102, 109);
 			this->txtInserCiudad1->Name = L"txtInserCiudad1";
-			this->txtInserCiudad1->Size = System::Drawing::Size(210, 35);
+			this->txtInserCiudad1->Size = System::Drawing::Size(210, 42);
 			this->txtInserCiudad1->TabIndex = 44;
 			// 
 			// lblInserCiudad1
@@ -1273,7 +1335,7 @@ namespace TareaProgramada3 {
 			this->lblInserCiudad1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserCiudad1->Location = System::Drawing::Point(97, 76);
 			this->lblInserCiudad1->Name = L"lblInserCiudad1";
-			this->lblInserCiudad1->Size = System::Drawing::Size(121, 30);
+			this->lblInserCiudad1->Size = System::Drawing::Size(158, 37);
 			this->lblInserCiudad1->TabIndex = 43;
 			this->lblInserCiudad1->Text = L"Código País";
 			// 
@@ -1296,9 +1358,9 @@ namespace TareaProgramada3 {
 			this->btabInserClt->Controls->Add(this->lblInserCliente2);
 			this->btabInserClt->Controls->Add(this->txtInserCliente1);
 			this->btabInserClt->Controls->Add(this->lblInserCliente1);
-			this->btabInserClt->Location = System::Drawing::Point(4, 39);
+			this->btabInserClt->Location = System::Drawing::Point(4, 45);
 			this->btabInserClt->Name = L"btabInserClt";
-			this->btabInserClt->Size = System::Drawing::Size(917, 457);
+			this->btabInserClt->Size = System::Drawing::Size(917, 451);
 			this->btabInserClt->TabIndex = 2;
 			this->btabInserClt->Text = L"Cliente";
 			// 
@@ -1311,7 +1373,7 @@ namespace TareaProgramada3 {
 			this->lblInserCliente8->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserCliente8->Location = System::Drawing::Point(673, 119);
 			this->lblInserCliente8->Name = L"lblInserCliente8";
-			this->lblInserCliente8->Size = System::Drawing::Size(110, 25);
+			this->lblInserCliente8->Size = System::Drawing::Size(140, 32);
 			this->lblInserCliente8->TabIndex = 71;
 			this->lblInserCliente8->Text = L"DD/MM/AA";
 			// 
@@ -1319,7 +1381,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserCliente7->Location = System::Drawing::Point(678, 81);
 			this->txtInserCliente7->Name = L"txtInserCliente7";
-			this->txtInserCliente7->Size = System::Drawing::Size(210, 35);
+			this->txtInserCliente7->Size = System::Drawing::Size(210, 42);
 			this->txtInserCliente7->TabIndex = 70;
 			// 
 			// lblInserCliente7
@@ -1331,7 +1393,7 @@ namespace TareaProgramada3 {
 			this->lblInserCliente7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserCliente7->Location = System::Drawing::Point(673, 48);
 			this->lblInserCliente7->Name = L"lblInserCliente7";
-			this->lblInserCliente7->Size = System::Drawing::Size(189, 30);
+			this->lblInserCliente7->Size = System::Drawing::Size(243, 37);
 			this->lblInserCliente7->TabIndex = 69;
 			this->lblInserCliente7->Text = L"Fecha Última Visita";
 			// 
@@ -1339,7 +1401,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserCliente6->Location = System::Drawing::Point(387, 266);
 			this->txtInserCliente6->Name = L"txtInserCliente6";
-			this->txtInserCliente6->Size = System::Drawing::Size(210, 35);
+			this->txtInserCliente6->Size = System::Drawing::Size(210, 42);
 			this->txtInserCliente6->TabIndex = 68;
 			// 
 			// lblInserCliente6
@@ -1349,7 +1411,7 @@ namespace TareaProgramada3 {
 			this->lblInserCliente6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserCliente6->Location = System::Drawing::Point(382, 233);
 			this->lblInserCliente6->Name = L"lblInserCliente6";
-			this->lblInserCliente6->Size = System::Drawing::Size(92, 30);
+			this->lblInserCliente6->Size = System::Drawing::Size(118, 37);
 			this->lblInserCliente6->TabIndex = 67;
 			this->lblInserCliente6->Text = L"Teléfono";
 			// 
@@ -1357,7 +1419,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserCliente5->Location = System::Drawing::Point(387, 173);
 			this->txtInserCliente5->Name = L"txtInserCliente5";
-			this->txtInserCliente5->Size = System::Drawing::Size(210, 35);
+			this->txtInserCliente5->Size = System::Drawing::Size(210, 42);
 			this->txtInserCliente5->TabIndex = 66;
 			// 
 			// lblInserCliente5
@@ -1367,7 +1429,7 @@ namespace TareaProgramada3 {
 			this->lblInserCliente5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserCliente5->Location = System::Drawing::Point(382, 140);
 			this->lblInserCliente5->Name = L"lblInserCliente5";
-			this->lblInserCliente5->Size = System::Drawing::Size(150, 30);
+			this->lblInserCliente5->Size = System::Drawing::Size(197, 37);
 			this->lblInserCliente5->TabIndex = 65;
 			this->lblInserCliente5->Text = L"Código Ciudad";
 			// 
@@ -1375,7 +1437,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserCliente4->Location = System::Drawing::Point(387, 81);
 			this->txtInserCliente4->Name = L"txtInserCliente4";
-			this->txtInserCliente4->Size = System::Drawing::Size(210, 35);
+			this->txtInserCliente4->Size = System::Drawing::Size(210, 42);
 			this->txtInserCliente4->TabIndex = 64;
 			// 
 			// lblInserCliente4
@@ -1385,7 +1447,7 @@ namespace TareaProgramada3 {
 			this->lblInserCliente4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserCliente4->Location = System::Drawing::Point(382, 48);
 			this->lblInserCliente4->Name = L"lblInserCliente4";
-			this->lblInserCliente4->Size = System::Drawing::Size(121, 30);
+			this->lblInserCliente4->Size = System::Drawing::Size(158, 37);
 			this->lblInserCliente4->TabIndex = 63;
 			this->lblInserCliente4->Text = L"Código País";
 			// 
@@ -1393,7 +1455,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserCliente3->Location = System::Drawing::Point(91, 266);
 			this->txtInserCliente3->Name = L"txtInserCliente3";
-			this->txtInserCliente3->Size = System::Drawing::Size(210, 35);
+			this->txtInserCliente3->Size = System::Drawing::Size(210, 42);
 			this->txtInserCliente3->TabIndex = 62;
 			// 
 			// lblInserCliente3
@@ -1403,7 +1465,7 @@ namespace TareaProgramada3 {
 			this->lblInserCliente3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserCliente3->Location = System::Drawing::Point(86, 233);
 			this->lblInserCliente3->Name = L"lblInserCliente3";
-			this->lblInserCliente3->Size = System::Drawing::Size(100, 30);
+			this->lblInserCliente3->Size = System::Drawing::Size(128, 37);
 			this->lblInserCliente3->TabIndex = 61;
 			this->lblInserCliente3->Text = L"Dirección";
 			// 
@@ -1427,7 +1489,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserCliente2->Location = System::Drawing::Point(91, 173);
 			this->txtInserCliente2->Name = L"txtInserCliente2";
-			this->txtInserCliente2->Size = System::Drawing::Size(210, 35);
+			this->txtInserCliente2->Size = System::Drawing::Size(210, 42);
 			this->txtInserCliente2->TabIndex = 59;
 			// 
 			// lblInserCliente2
@@ -1437,7 +1499,7 @@ namespace TareaProgramada3 {
 			this->lblInserCliente2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserCliente2->Location = System::Drawing::Point(86, 140);
 			this->lblInserCliente2->Name = L"lblInserCliente2";
-			this->lblInserCliente2->Size = System::Drawing::Size(159, 30);
+			this->lblInserCliente2->Size = System::Drawing::Size(205, 37);
 			this->lblInserCliente2->TabIndex = 58;
 			this->lblInserCliente2->Text = L"Nombre Cliente";
 			// 
@@ -1445,7 +1507,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserCliente1->Location = System::Drawing::Point(91, 81);
 			this->txtInserCliente1->Name = L"txtInserCliente1";
-			this->txtInserCliente1->Size = System::Drawing::Size(210, 35);
+			this->txtInserCliente1->Size = System::Drawing::Size(210, 42);
 			this->txtInserCliente1->TabIndex = 57;
 			// 
 			// lblInserCliente1
@@ -1455,7 +1517,7 @@ namespace TareaProgramada3 {
 			this->lblInserCliente1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserCliente1->Location = System::Drawing::Point(86, 48);
 			this->lblInserCliente1->Name = L"lblInserCliente1";
-			this->lblInserCliente1->Size = System::Drawing::Size(159, 30);
+			this->lblInserCliente1->Size = System::Drawing::Size(204, 37);
 			this->lblInserCliente1->TabIndex = 56;
 			this->lblInserCliente1->Text = L"Número Cliente";
 			// 
@@ -1484,9 +1546,9 @@ namespace TareaProgramada3 {
 			this->btabInserMasc->Controls->Add(this->lblInserMascota2);
 			this->btabInserMasc->Controls->Add(this->txtInserMascota1);
 			this->btabInserMasc->Controls->Add(this->lblInserMascota1);
-			this->btabInserMasc->Location = System::Drawing::Point(4, 39);
+			this->btabInserMasc->Location = System::Drawing::Point(4, 45);
 			this->btabInserMasc->Name = L"btabInserMasc";
-			this->btabInserMasc->Size = System::Drawing::Size(917, 457);
+			this->btabInserMasc->Size = System::Drawing::Size(917, 451);
 			this->btabInserMasc->TabIndex = 3;
 			this->btabInserMasc->Text = L"Mascota";
 			// 
@@ -1499,7 +1561,7 @@ namespace TareaProgramada3 {
 			this->lblInserMascota11->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserMascota11->Location = System::Drawing::Point(352, 405);
 			this->lblInserMascota11->Name = L"lblInserMascota11";
-			this->lblInserMascota11->Size = System::Drawing::Size(110, 25);
+			this->lblInserMascota11->Size = System::Drawing::Size(140, 32);
 			this->lblInserMascota11->TabIndex = 90;
 			this->lblInserMascota11->Text = L"DD/MM/AA";
 			// 
@@ -1507,7 +1569,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserMascota10->Location = System::Drawing::Point(357, 367);
 			this->txtInserMascota10->Name = L"txtInserMascota10";
-			this->txtInserMascota10->Size = System::Drawing::Size(210, 35);
+			this->txtInserMascota10->Size = System::Drawing::Size(210, 42);
 			this->txtInserMascota10->TabIndex = 89;
 			// 
 			// lblInserMascota10
@@ -1519,7 +1581,7 @@ namespace TareaProgramada3 {
 			this->lblInserMascota10->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserMascota10->Location = System::Drawing::Point(352, 334);
 			this->lblInserMascota10->Name = L"lblInserMascota10";
-			this->lblInserMascota10->Size = System::Drawing::Size(189, 30);
+			this->lblInserMascota10->Size = System::Drawing::Size(243, 37);
 			this->lblInserMascota10->TabIndex = 88;
 			this->lblInserMascota10->Text = L"Fecha Última Visita";
 			// 
@@ -1527,7 +1589,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserMascota9->Location = System::Drawing::Point(644, 268);
 			this->txtInserMascota9->Name = L"txtInserMascota9";
-			this->txtInserMascota9->Size = System::Drawing::Size(210, 35);
+			this->txtInserMascota9->Size = System::Drawing::Size(210, 42);
 			this->txtInserMascota9->TabIndex = 87;
 			// 
 			// lblInserMascota9
@@ -1537,7 +1599,7 @@ namespace TareaProgramada3 {
 			this->lblInserMascota9->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserMascota9->Location = System::Drawing::Point(639, 235);
 			this->lblInserMascota9->Name = L"lblInserMascota9";
-			this->lblInserMascota9->Size = System::Drawing::Size(95, 30);
+			this->lblInserMascota9->Size = System::Drawing::Size(123, 37);
 			this->lblInserMascota9->TabIndex = 86;
 			this->lblInserMascota9->Text = L"Castrado";
 			// 
@@ -1545,7 +1607,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserMascota8->Location = System::Drawing::Point(644, 171);
 			this->txtInserMascota8->Name = L"txtInserMascota8";
-			this->txtInserMascota8->Size = System::Drawing::Size(210, 35);
+			this->txtInserMascota8->Size = System::Drawing::Size(210, 42);
 			this->txtInserMascota8->TabIndex = 85;
 			// 
 			// lblInserMascota8
@@ -1555,7 +1617,7 @@ namespace TareaProgramada3 {
 			this->lblInserMascota8->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserMascota8->Location = System::Drawing::Point(639, 138);
 			this->lblInserMascota8->Name = L"lblInserMascota8";
-			this->lblInserMascota8->Size = System::Drawing::Size(62, 30);
+			this->lblInserMascota8->Size = System::Drawing::Size(82, 37);
 			this->lblInserMascota8->TabIndex = 84;
 			this->lblInserMascota8->Text = L"Color";
 			// 
@@ -1563,7 +1625,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserMascota7->Location = System::Drawing::Point(644, 79);
 			this->txtInserMascota7->Name = L"txtInserMascota7";
-			this->txtInserMascota7->Size = System::Drawing::Size(210, 35);
+			this->txtInserMascota7->Size = System::Drawing::Size(210, 42);
 			this->txtInserMascota7->TabIndex = 83;
 			// 
 			// lblInserMascota7
@@ -1573,7 +1635,7 @@ namespace TareaProgramada3 {
 			this->lblInserMascota7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserMascota7->Location = System::Drawing::Point(639, 46);
 			this->lblInserMascota7->Name = L"lblInserMascota7";
-			this->lblInserMascota7->Size = System::Drawing::Size(57, 30);
+			this->lblInserMascota7->Size = System::Drawing::Size(73, 37);
 			this->lblInserMascota7->TabIndex = 82;
 			this->lblInserMascota7->Text = L"Sexo";
 			// 
@@ -1581,7 +1643,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserMascota6->Location = System::Drawing::Point(357, 268);
 			this->txtInserMascota6->Name = L"txtInserMascota6";
-			this->txtInserMascota6->Size = System::Drawing::Size(210, 35);
+			this->txtInserMascota6->Size = System::Drawing::Size(210, 42);
 			this->txtInserMascota6->TabIndex = 81;
 			// 
 			// lblInserMascota6
@@ -1591,7 +1653,7 @@ namespace TareaProgramada3 {
 			this->lblInserMascota6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserMascota6->Location = System::Drawing::Point(352, 235);
 			this->lblInserMascota6->Name = L"lblInserMascota6";
-			this->lblInserMascota6->Size = System::Drawing::Size(209, 30);
+			this->lblInserMascota6->Size = System::Drawing::Size(266, 37);
 			this->lblInserMascota6->TabIndex = 80;
 			this->lblInserMascota6->Text = L"Fecha de Nacimiento";
 			// 
@@ -1599,7 +1661,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserMascota5->Location = System::Drawing::Point(357, 171);
 			this->txtInserMascota5->Name = L"txtInserMascota5";
-			this->txtInserMascota5->Size = System::Drawing::Size(210, 35);
+			this->txtInserMascota5->Size = System::Drawing::Size(210, 42);
 			this->txtInserMascota5->TabIndex = 79;
 			// 
 			// lblInserMascota5
@@ -1609,7 +1671,7 @@ namespace TareaProgramada3 {
 			this->lblInserMascota5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserMascota5->Location = System::Drawing::Point(352, 138);
 			this->lblInserMascota5->Name = L"lblInserMascota5";
-			this->lblInserMascota5->Size = System::Drawing::Size(58, 30);
+			this->lblInserMascota5->Size = System::Drawing::Size(73, 37);
 			this->lblInserMascota5->TabIndex = 78;
 			this->lblInserMascota5->Text = L"Raza";
 			// 
@@ -1617,7 +1679,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserMascota4->Location = System::Drawing::Point(357, 79);
 			this->txtInserMascota4->Name = L"txtInserMascota4";
-			this->txtInserMascota4->Size = System::Drawing::Size(210, 35);
+			this->txtInserMascota4->Size = System::Drawing::Size(210, 42);
 			this->txtInserMascota4->TabIndex = 77;
 			// 
 			// lblInserMascota4
@@ -1627,7 +1689,7 @@ namespace TareaProgramada3 {
 			this->lblInserMascota4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserMascota4->Location = System::Drawing::Point(352, 46);
 			this->lblInserMascota4->Name = L"lblInserMascota4";
-			this->lblInserMascota4->Size = System::Drawing::Size(53, 30);
+			this->lblInserMascota4->Size = System::Drawing::Size(70, 37);
 			this->lblInserMascota4->TabIndex = 76;
 			this->lblInserMascota4->Text = L"Tipo";
 			// 
@@ -1635,7 +1697,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserMascota3->Location = System::Drawing::Point(66, 268);
 			this->txtInserMascota3->Name = L"txtInserMascota3";
-			this->txtInserMascota3->Size = System::Drawing::Size(210, 35);
+			this->txtInserMascota3->Size = System::Drawing::Size(210, 42);
 			this->txtInserMascota3->TabIndex = 75;
 			// 
 			// label5lblInserMascota3
@@ -1645,7 +1707,7 @@ namespace TareaProgramada3 {
 			this->label5lblInserMascota3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->label5lblInserMascota3->Location = System::Drawing::Point(61, 235);
 			this->label5lblInserMascota3->Name = L"label5lblInserMascota3";
-			this->label5lblInserMascota3->Size = System::Drawing::Size(89, 30);
+			this->label5lblInserMascota3->Size = System::Drawing::Size(115, 37);
 			this->label5lblInserMascota3->TabIndex = 74;
 			this->label5lblInserMascota3->Text = L"Nombre";
 			// 
@@ -1669,7 +1731,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserMascota2->Location = System::Drawing::Point(66, 171);
 			this->txtInserMascota2->Name = L"txtInserMascota2";
-			this->txtInserMascota2->Size = System::Drawing::Size(210, 35);
+			this->txtInserMascota2->Size = System::Drawing::Size(210, 42);
 			this->txtInserMascota2->TabIndex = 68;
 			// 
 			// lblInserMascota2
@@ -1679,7 +1741,7 @@ namespace TareaProgramada3 {
 			this->lblInserMascota2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserMascota2->Location = System::Drawing::Point(61, 138);
 			this->lblInserMascota2->Name = L"lblInserMascota2";
-			this->lblInserMascota2->Size = System::Drawing::Size(105, 30);
+			this->lblInserMascota2->Size = System::Drawing::Size(133, 37);
 			this->lblInserMascota2->TabIndex = 67;
 			this->lblInserMascota2->Text = L"ID Animal";
 			// 
@@ -1687,7 +1749,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserMascota1->Location = System::Drawing::Point(66, 79);
 			this->txtInserMascota1->Name = L"txtInserMascota1";
-			this->txtInserMascota1->Size = System::Drawing::Size(210, 35);
+			this->txtInserMascota1->Size = System::Drawing::Size(210, 42);
 			this->txtInserMascota1->TabIndex = 66;
 			// 
 			// lblInserMascota1
@@ -1697,7 +1759,7 @@ namespace TareaProgramada3 {
 			this->lblInserMascota1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserMascota1->Location = System::Drawing::Point(61, 46);
 			this->lblInserMascota1->Name = L"lblInserMascota1";
-			this->lblInserMascota1->Size = System::Drawing::Size(159, 30);
+			this->lblInserMascota1->Size = System::Drawing::Size(204, 37);
 			this->lblInserMascota1->TabIndex = 65;
 			this->lblInserMascota1->Text = L"Número Cliente";
 			// 
@@ -1716,9 +1778,9 @@ namespace TareaProgramada3 {
 			this->btabInserVisita->Controls->Add(this->lblInserVisita2);
 			this->btabInserVisita->Controls->Add(this->txtInserVisita1);
 			this->btabInserVisita->Controls->Add(this->lblInserVisita1);
-			this->btabInserVisita->Location = System::Drawing::Point(4, 39);
+			this->btabInserVisita->Location = System::Drawing::Point(4, 45);
 			this->btabInserVisita->Name = L"btabInserVisita";
-			this->btabInserVisita->Size = System::Drawing::Size(917, 457);
+			this->btabInserVisita->Size = System::Drawing::Size(917, 451);
 			this->btabInserVisita->TabIndex = 4;
 			this->btabInserVisita->Text = L"Visita";
 			// 
@@ -1731,7 +1793,7 @@ namespace TareaProgramada3 {
 			this->lblInserVisita6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserVisita6->Location = System::Drawing::Point(91, 304);
 			this->lblInserVisita6->Name = L"lblInserVisita6";
-			this->lblInserVisita6->Size = System::Drawing::Size(110, 25);
+			this->lblInserVisita6->Size = System::Drawing::Size(140, 32);
 			this->lblInserVisita6->TabIndex = 91;
 			this->lblInserVisita6->Text = L"DD/MM/AA";
 			// 
@@ -1739,7 +1801,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserVisita5->Location = System::Drawing::Point(392, 173);
 			this->txtInserVisita5->Name = L"txtInserVisita5";
-			this->txtInserVisita5->Size = System::Drawing::Size(210, 35);
+			this->txtInserVisita5->Size = System::Drawing::Size(210, 42);
 			this->txtInserVisita5->TabIndex = 79;
 			// 
 			// lblInserVisita5
@@ -1749,7 +1811,7 @@ namespace TareaProgramada3 {
 			this->lblInserVisita5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserVisita5->Location = System::Drawing::Point(387, 140);
 			this->lblInserVisita5->Name = L"lblInserVisita5";
-			this->lblInserVisita5->Size = System::Drawing::Size(152, 30);
+			this->lblInserVisita5->Size = System::Drawing::Size(196, 37);
 			this->lblInserVisita5->TabIndex = 78;
 			this->lblInserVisita5->Text = L"Forma de Pago";
 			// 
@@ -1757,7 +1819,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserVisita4->Location = System::Drawing::Point(392, 81);
 			this->txtInserVisita4->Name = L"txtInserVisita4";
-			this->txtInserVisita4->Size = System::Drawing::Size(210, 35);
+			this->txtInserVisita4->Size = System::Drawing::Size(210, 42);
 			this->txtInserVisita4->TabIndex = 77;
 			// 
 			// lblInserVisita4
@@ -1767,7 +1829,7 @@ namespace TareaProgramada3 {
 			this->lblInserVisita4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserVisita4->Location = System::Drawing::Point(387, 48);
 			this->lblInserVisita4->Name = L"lblInserVisita4";
-			this->lblInserVisita4->Size = System::Drawing::Size(130, 30);
+			this->lblInserVisita4->Size = System::Drawing::Size(166, 37);
 			this->lblInserVisita4->TabIndex = 76;
 			this->lblInserVisita4->Text = L"Total Factura";
 			// 
@@ -1775,7 +1837,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserVisita3->Location = System::Drawing::Point(96, 266);
 			this->txtInserVisita3->Name = L"txtInserVisita3";
-			this->txtInserVisita3->Size = System::Drawing::Size(210, 35);
+			this->txtInserVisita3->Size = System::Drawing::Size(210, 42);
 			this->txtInserVisita3->TabIndex = 75;
 			// 
 			// lblInserVisita3
@@ -1785,7 +1847,7 @@ namespace TareaProgramada3 {
 			this->lblInserVisita3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserVisita3->Location = System::Drawing::Point(91, 233);
 			this->lblInserVisita3->Name = L"lblInserVisita3";
-			this->lblInserVisita3->Size = System::Drawing::Size(189, 30);
+			this->lblInserVisita3->Size = System::Drawing::Size(243, 37);
 			this->lblInserVisita3->TabIndex = 74;
 			this->lblInserVisita3->Text = L"Fecha Última Visita";
 			// 
@@ -1809,7 +1871,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserVisita2->Location = System::Drawing::Point(96, 173);
 			this->txtInserVisita2->Name = L"txtInserVisita2";
-			this->txtInserVisita2->Size = System::Drawing::Size(210, 35);
+			this->txtInserVisita2->Size = System::Drawing::Size(210, 42);
 			this->txtInserVisita2->TabIndex = 72;
 			// 
 			// lblInserVisita2
@@ -1819,7 +1881,7 @@ namespace TareaProgramada3 {
 			this->lblInserVisita2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserVisita2->Location = System::Drawing::Point(91, 140);
 			this->lblInserVisita2->Name = L"lblInserVisita2";
-			this->lblInserVisita2->Size = System::Drawing::Size(105, 30);
+			this->lblInserVisita2->Size = System::Drawing::Size(133, 37);
 			this->lblInserVisita2->TabIndex = 71;
 			this->lblInserVisita2->Text = L"ID Animal";
 			// 
@@ -1827,7 +1889,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserVisita1->Location = System::Drawing::Point(96, 81);
 			this->txtInserVisita1->Name = L"txtInserVisita1";
-			this->txtInserVisita1->Size = System::Drawing::Size(210, 35);
+			this->txtInserVisita1->Size = System::Drawing::Size(210, 42);
 			this->txtInserVisita1->TabIndex = 70;
 			// 
 			// lblInserVisita1
@@ -1837,7 +1899,7 @@ namespace TareaProgramada3 {
 			this->lblInserVisita1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserVisita1->Location = System::Drawing::Point(91, 48);
 			this->lblInserVisita1->Name = L"lblInserVisita1";
-			this->lblInserVisita1->Size = System::Drawing::Size(135, 30);
+			this->lblInserVisita1->Size = System::Drawing::Size(177, 37);
 			this->lblInserVisita1->TabIndex = 69;
 			this->lblInserVisita1->Text = L"Código Visita";
 			// 
@@ -1853,9 +1915,9 @@ namespace TareaProgramada3 {
 			this->btabInserTrat->Controls->Add(this->lblInserTrat2);
 			this->btabInserTrat->Controls->Add(this->txtInserTrat1);
 			this->btabInserTrat->Controls->Add(this->lblInserTrat1);
-			this->btabInserTrat->Location = System::Drawing::Point(4, 39);
+			this->btabInserTrat->Location = System::Drawing::Point(4, 45);
 			this->btabInserTrat->Name = L"btabInserTrat";
-			this->btabInserTrat->Size = System::Drawing::Size(917, 457);
+			this->btabInserTrat->Size = System::Drawing::Size(917, 451);
 			this->btabInserTrat->TabIndex = 5;
 			this->btabInserTrat->Text = L"Tratamiento";
 			// 
@@ -1863,7 +1925,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserTrat4->Location = System::Drawing::Point(394, 207);
 			this->txtInserTrat4->Name = L"txtInserTrat4";
-			this->txtInserTrat4->Size = System::Drawing::Size(210, 35);
+			this->txtInserTrat4->Size = System::Drawing::Size(210, 42);
 			this->txtInserTrat4->TabIndex = 79;
 			// 
 			// lblInserTrat4
@@ -1873,7 +1935,7 @@ namespace TareaProgramada3 {
 			this->lblInserTrat4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserTrat4->Location = System::Drawing::Point(389, 174);
 			this->lblInserTrat4->Name = L"lblInserTrat4";
-			this->lblInserTrat4->Size = System::Drawing::Size(96, 30);
+			this->lblInserTrat4->Size = System::Drawing::Size(125, 37);
 			this->lblInserTrat4->TabIndex = 78;
 			this->lblInserTrat4->Text = L"Cantidad";
 			// 
@@ -1881,7 +1943,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserTrat3->Location = System::Drawing::Point(394, 115);
 			this->txtInserTrat3->Name = L"txtInserTrat3";
-			this->txtInserTrat3->Size = System::Drawing::Size(210, 35);
+			this->txtInserTrat3->Size = System::Drawing::Size(210, 42);
 			this->txtInserTrat3->TabIndex = 77;
 			// 
 			// lblInserTrat3
@@ -1891,7 +1953,7 @@ namespace TareaProgramada3 {
 			this->lblInserTrat3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserTrat3->Location = System::Drawing::Point(389, 82);
 			this->lblInserTrat3->Name = L"lblInserTrat3";
-			this->lblInserTrat3->Size = System::Drawing::Size(149, 30);
+			this->lblInserTrat3->Size = System::Drawing::Size(193, 37);
 			this->lblInserTrat3->TabIndex = 76;
 			this->lblInserTrat3->Text = L"Precio Unitario";
 			// 
@@ -1915,7 +1977,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserTrat2->Location = System::Drawing::Point(98, 207);
 			this->txtInserTrat2->Name = L"txtInserTrat2";
-			this->txtInserTrat2->Size = System::Drawing::Size(210, 35);
+			this->txtInserTrat2->Size = System::Drawing::Size(210, 42);
 			this->txtInserTrat2->TabIndex = 72;
 			// 
 			// lblInserTrat2
@@ -1925,7 +1987,7 @@ namespace TareaProgramada3 {
 			this->lblInserTrat2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserTrat2->Location = System::Drawing::Point(93, 174);
 			this->lblInserTrat2->Name = L"lblInserTrat2";
-			this->lblInserTrat2->Size = System::Drawing::Size(89, 30);
+			this->lblInserTrat2->Size = System::Drawing::Size(115, 37);
 			this->lblInserTrat2->TabIndex = 71;
 			this->lblInserTrat2->Text = L"Nombre";
 			// 
@@ -1933,7 +1995,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtInserTrat1->Location = System::Drawing::Point(98, 115);
 			this->txtInserTrat1->Name = L"txtInserTrat1";
-			this->txtInserTrat1->Size = System::Drawing::Size(210, 35);
+			this->txtInserTrat1->Size = System::Drawing::Size(210, 42);
 			this->txtInserTrat1->TabIndex = 70;
 			// 
 			// lblInserTrat1
@@ -1943,7 +2005,7 @@ namespace TareaProgramada3 {
 			this->lblInserTrat1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblInserTrat1->Location = System::Drawing::Point(93, 82);
 			this->lblInserTrat1->Name = L"lblInserTrat1";
-			this->lblInserTrat1->Size = System::Drawing::Size(195, 30);
+			this->lblInserTrat1->Size = System::Drawing::Size(254, 37);
 			this->lblInserTrat1->TabIndex = 69;
 			this->lblInserTrat1->Text = L"Código Tratamiento";
 			// 
@@ -1964,9 +2026,9 @@ namespace TareaProgramada3 {
 			this->btabInserMed->Controls->Add(this->label4);
 			this->btabInserMed->Controls->Add(this->textBox5);
 			this->btabInserMed->Controls->Add(this->label5);
-			this->btabInserMed->Location = System::Drawing::Point(4, 39);
+			this->btabInserMed->Location = System::Drawing::Point(4, 45);
 			this->btabInserMed->Name = L"btabInserMed";
-			this->btabInserMed->Size = System::Drawing::Size(917, 457);
+			this->btabInserMed->Size = System::Drawing::Size(917, 451);
 			this->btabInserMed->TabIndex = 6;
 			this->btabInserMed->Text = L"Medicación";
 			// 
@@ -1979,7 +2041,7 @@ namespace TareaProgramada3 {
 			this->label6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->label6->Location = System::Drawing::Point(84, 310);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(110, 25);
+			this->label6->Size = System::Drawing::Size(140, 32);
 			this->label6->TabIndex = 94;
 			this->label6->Text = L"DD/MM/AA";
 			// 
@@ -1987,7 +2049,7 @@ namespace TareaProgramada3 {
 			// 
 			this->textBox6->Location = System::Drawing::Point(89, 272);
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(210, 35);
+			this->textBox6->Size = System::Drawing::Size(210, 42);
 			this->textBox6->TabIndex = 93;
 			// 
 			// label7
@@ -1997,7 +2059,7 @@ namespace TareaProgramada3 {
 			this->label7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->label7->Location = System::Drawing::Point(84, 239);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(189, 30);
+			this->label7->Size = System::Drawing::Size(243, 37);
 			this->label7->TabIndex = 92;
 			this->label7->Text = L"Fecha Última Visita";
 			// 
@@ -2005,7 +2067,7 @@ namespace TareaProgramada3 {
 			// 
 			this->textBox1->Location = System::Drawing::Point(403, 272);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(210, 35);
+			this->textBox1->Size = System::Drawing::Size(210, 42);
 			this->textBox1->TabIndex = 77;
 			// 
 			// label1
@@ -2015,7 +2077,7 @@ namespace TareaProgramada3 {
 			this->label1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->label1->Location = System::Drawing::Point(398, 239);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(116, 30);
+			this->label1->Size = System::Drawing::Size(150, 37);
 			this->label1->TabIndex = 76;
 			this->label1->Text = L"Costo Total";
 			// 
@@ -2023,7 +2085,7 @@ namespace TareaProgramada3 {
 			// 
 			this->textBox2->Location = System::Drawing::Point(403, 192);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(210, 35);
+			this->textBox2->Size = System::Drawing::Size(210, 42);
 			this->textBox2->TabIndex = 75;
 			// 
 			// label2
@@ -2033,7 +2095,7 @@ namespace TareaProgramada3 {
 			this->label2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->label2->Location = System::Drawing::Point(398, 147);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(70, 30);
+			this->label2->Size = System::Drawing::Size(90, 37);
 			this->label2->TabIndex = 74;
 			this->label2->Text = L"Precio";
 			// 
@@ -2041,7 +2103,7 @@ namespace TareaProgramada3 {
 			// 
 			this->textBox3->Location = System::Drawing::Point(403, 99);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(210, 35);
+			this->textBox3->Size = System::Drawing::Size(210, 42);
 			this->textBox3->TabIndex = 73;
 			// 
 			// label3
@@ -2051,7 +2113,7 @@ namespace TareaProgramada3 {
 			this->label3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->label3->Location = System::Drawing::Point(398, 55);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(96, 30);
+			this->label3->Size = System::Drawing::Size(125, 37);
 			this->label3->TabIndex = 72;
 			this->label3->Text = L"Cantidad";
 			// 
@@ -2075,7 +2137,7 @@ namespace TareaProgramada3 {
 			// 
 			this->textBox4->Location = System::Drawing::Point(86, 192);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(210, 35);
+			this->textBox4->Size = System::Drawing::Size(210, 42);
 			this->textBox4->TabIndex = 70;
 			// 
 			// label4
@@ -2085,7 +2147,7 @@ namespace TareaProgramada3 {
 			this->label4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->label4->Location = System::Drawing::Point(81, 147);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(105, 30);
+			this->label4->Size = System::Drawing::Size(133, 37);
 			this->label4->TabIndex = 69;
 			this->label4->Text = L"ID Animal";
 			// 
@@ -2093,7 +2155,7 @@ namespace TareaProgramada3 {
 			// 
 			this->textBox5->Location = System::Drawing::Point(86, 99);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(210, 35);
+			this->textBox5->Size = System::Drawing::Size(210, 42);
 			this->textBox5->TabIndex = 68;
 			// 
 			// label5
@@ -2103,17 +2165,17 @@ namespace TareaProgramada3 {
 			this->label5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->label5->Location = System::Drawing::Point(81, 55);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(192, 30);
+			this->label5->Size = System::Drawing::Size(249, 37);
 			this->label5->TabIndex = 67;
 			this->label5->Text = L"Código Medicación";
 			// 
 			// btabModif
 			// 
 			this->btabModif->Controls->Add(this->tabModificacion);
-			this->btabModif->Location = System::Drawing::Point(4, 42);
+			this->btabModif->Location = System::Drawing::Point(4, 48);
 			this->btabModif->Name = L"btabModif";
 			this->btabModif->Padding = System::Windows::Forms::Padding(3);
-			this->btabModif->Size = System::Drawing::Size(921, 499);
+			this->btabModif->Size = System::Drawing::Size(921, 493);
 			this->btabModif->TabIndex = 1;
 			this->btabModif->Text = L"Modificación";
 			this->btabModif->UseVisualStyleBackColor = true;
@@ -2143,10 +2205,10 @@ namespace TareaProgramada3 {
 			this->btabModifPais->Controls->Add(this->txtModifPais1);
 			this->btabModifPais->Controls->Add(this->lblModifPais1);
 			this->btabModifPais->ForeColor = System::Drawing::Color::White;
-			this->btabModifPais->Location = System::Drawing::Point(4, 39);
+			this->btabModifPais->Location = System::Drawing::Point(4, 45);
 			this->btabModifPais->Name = L"btabModifPais";
 			this->btabModifPais->Padding = System::Windows::Forms::Padding(3);
-			this->btabModifPais->Size = System::Drawing::Size(917, 457);
+			this->btabModifPais->Size = System::Drawing::Size(917, 451);
 			this->btabModifPais->TabIndex = 0;
 			this->btabModifPais->Text = L"País";
 			// 
@@ -2154,7 +2216,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifPais2->Location = System::Drawing::Point(75, 219);
 			this->txtModifPais2->Name = L"txtModifPais2";
-			this->txtModifPais2->Size = System::Drawing::Size(210, 35);
+			this->txtModifPais2->Size = System::Drawing::Size(210, 42);
 			this->txtModifPais2->TabIndex = 43;
 			// 
 			// lblModifPais2
@@ -2164,7 +2226,7 @@ namespace TareaProgramada3 {
 			this->lblModifPais2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifPais2->Location = System::Drawing::Point(70, 176);
 			this->lblModifPais2->Name = L"lblModifPais2";
-			this->lblModifPais2->Size = System::Drawing::Size(131, 30);
+			this->lblModifPais2->Size = System::Drawing::Size(168, 37);
 			this->lblModifPais2->TabIndex = 42;
 			this->lblModifPais2->Text = L"Nombre País";
 			// 
@@ -2188,7 +2250,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifPais1->Location = System::Drawing::Point(75, 105);
 			this->txtModifPais1->Name = L"txtModifPais1";
-			this->txtModifPais1->Size = System::Drawing::Size(210, 35);
+			this->txtModifPais1->Size = System::Drawing::Size(210, 42);
 			this->txtModifPais1->TabIndex = 1;
 			// 
 			// lblModifPais1
@@ -2198,7 +2260,7 @@ namespace TareaProgramada3 {
 			this->lblModifPais1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifPais1->Location = System::Drawing::Point(70, 59);
 			this->lblModifPais1->Name = L"lblModifPais1";
-			this->lblModifPais1->Size = System::Drawing::Size(121, 30);
+			this->lblModifPais1->Size = System::Drawing::Size(158, 37);
 			this->lblModifPais1->TabIndex = 0;
 			this->lblModifPais1->Text = L"Código País";
 			// 
@@ -2212,10 +2274,10 @@ namespace TareaProgramada3 {
 			this->btabModifCdd->Controls->Add(this->lblModifCiudad2);
 			this->btabModifCdd->Controls->Add(this->txtModifCiudad1);
 			this->btabModifCdd->Controls->Add(this->lblModifCiudad1);
-			this->btabModifCdd->Location = System::Drawing::Point(4, 39);
+			this->btabModifCdd->Location = System::Drawing::Point(4, 45);
 			this->btabModifCdd->Name = L"btabModifCdd";
 			this->btabModifCdd->Padding = System::Windows::Forms::Padding(3);
-			this->btabModifCdd->Size = System::Drawing::Size(917, 457);
+			this->btabModifCdd->Size = System::Drawing::Size(917, 451);
 			this->btabModifCdd->TabIndex = 1;
 			this->btabModifCdd->Text = L"Ciudad";
 			// 
@@ -2223,7 +2285,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifCiudad3->Location = System::Drawing::Point(75, 257);
 			this->txtModifCiudad3->Name = L"txtModifCiudad3";
-			this->txtModifCiudad3->Size = System::Drawing::Size(210, 35);
+			this->txtModifCiudad3->Size = System::Drawing::Size(210, 42);
 			this->txtModifCiudad3->TabIndex = 42;
 			// 
 			// lblModifCiudad3
@@ -2233,7 +2295,7 @@ namespace TareaProgramada3 {
 			this->lblModifCiudad3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifCiudad3->Location = System::Drawing::Point(70, 224);
 			this->lblModifCiudad3->Name = L"lblModifCiudad3";
-			this->lblModifCiudad3->Size = System::Drawing::Size(160, 30);
+			this->lblModifCiudad3->Size = System::Drawing::Size(207, 37);
 			this->lblModifCiudad3->TabIndex = 41;
 			this->lblModifCiudad3->Text = L"Nombre Ciudad";
 			// 
@@ -2257,7 +2319,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifCiudad2->Location = System::Drawing::Point(75, 164);
 			this->txtModifCiudad2->Name = L"txtModifCiudad2";
-			this->txtModifCiudad2->Size = System::Drawing::Size(210, 35);
+			this->txtModifCiudad2->Size = System::Drawing::Size(210, 42);
 			this->txtModifCiudad2->TabIndex = 5;
 			// 
 			// lblModifCiudad2
@@ -2267,7 +2329,7 @@ namespace TareaProgramada3 {
 			this->lblModifCiudad2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifCiudad2->Location = System::Drawing::Point(70, 131);
 			this->lblModifCiudad2->Name = L"lblModifCiudad2";
-			this->lblModifCiudad2->Size = System::Drawing::Size(150, 30);
+			this->lblModifCiudad2->Size = System::Drawing::Size(197, 37);
 			this->lblModifCiudad2->TabIndex = 4;
 			this->lblModifCiudad2->Text = L"Código Ciudad";
 			// 
@@ -2275,7 +2337,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifCiudad1->Location = System::Drawing::Point(75, 72);
 			this->txtModifCiudad1->Name = L"txtModifCiudad1";
-			this->txtModifCiudad1->Size = System::Drawing::Size(210, 35);
+			this->txtModifCiudad1->Size = System::Drawing::Size(210, 42);
 			this->txtModifCiudad1->TabIndex = 3;
 			// 
 			// lblModifCiudad1
@@ -2285,7 +2347,7 @@ namespace TareaProgramada3 {
 			this->lblModifCiudad1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifCiudad1->Location = System::Drawing::Point(70, 39);
 			this->lblModifCiudad1->Name = L"lblModifCiudad1";
-			this->lblModifCiudad1->Size = System::Drawing::Size(121, 30);
+			this->lblModifCiudad1->Size = System::Drawing::Size(158, 37);
 			this->lblModifCiudad1->TabIndex = 2;
 			this->lblModifCiudad1->Text = L"Código País";
 			// 
@@ -2305,9 +2367,9 @@ namespace TareaProgramada3 {
 			this->btabModifClt->Controls->Add(this->lblModifCliente2);
 			this->btabModifClt->Controls->Add(this->txtModifCliente1);
 			this->btabModifClt->Controls->Add(this->lblModifCliente1);
-			this->btabModifClt->Location = System::Drawing::Point(4, 39);
+			this->btabModifClt->Location = System::Drawing::Point(4, 45);
 			this->btabModifClt->Name = L"btabModifClt";
-			this->btabModifClt->Size = System::Drawing::Size(917, 457);
+			this->btabModifClt->Size = System::Drawing::Size(917, 451);
 			this->btabModifClt->TabIndex = 2;
 			this->btabModifClt->Text = L"Cliente";
 			// 
@@ -2315,7 +2377,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifCliente6->Location = System::Drawing::Point(371, 263);
 			this->txtModifCliente6->Name = L"txtModifCliente6";
-			this->txtModifCliente6->Size = System::Drawing::Size(210, 35);
+			this->txtModifCliente6->Size = System::Drawing::Size(210, 42);
 			this->txtModifCliente6->TabIndex = 55;
 			// 
 			// lblModifCliente6
@@ -2325,7 +2387,7 @@ namespace TareaProgramada3 {
 			this->lblModifCliente6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifCliente6->Location = System::Drawing::Point(366, 230);
 			this->lblModifCliente6->Name = L"lblModifCliente6";
-			this->lblModifCliente6->Size = System::Drawing::Size(92, 30);
+			this->lblModifCliente6->Size = System::Drawing::Size(118, 37);
 			this->lblModifCliente6->TabIndex = 54;
 			this->lblModifCliente6->Text = L"Teléfono";
 			// 
@@ -2333,7 +2395,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifCliente5->Location = System::Drawing::Point(371, 170);
 			this->txtModifCliente5->Name = L"txtModifCliente5";
-			this->txtModifCliente5->Size = System::Drawing::Size(210, 35);
+			this->txtModifCliente5->Size = System::Drawing::Size(210, 42);
 			this->txtModifCliente5->TabIndex = 53;
 			// 
 			// lblModifCliente5
@@ -2343,7 +2405,7 @@ namespace TareaProgramada3 {
 			this->lblModifCliente5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifCliente5->Location = System::Drawing::Point(366, 137);
 			this->lblModifCliente5->Name = L"lblModifCliente5";
-			this->lblModifCliente5->Size = System::Drawing::Size(150, 30);
+			this->lblModifCliente5->Size = System::Drawing::Size(197, 37);
 			this->lblModifCliente5->TabIndex = 52;
 			this->lblModifCliente5->Text = L"Código Ciudad";
 			// 
@@ -2351,7 +2413,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifCliente4->Location = System::Drawing::Point(371, 78);
 			this->txtModifCliente4->Name = L"txtModifCliente4";
-			this->txtModifCliente4->Size = System::Drawing::Size(210, 35);
+			this->txtModifCliente4->Size = System::Drawing::Size(210, 42);
 			this->txtModifCliente4->TabIndex = 51;
 			// 
 			// lblModifCliente4
@@ -2361,7 +2423,7 @@ namespace TareaProgramada3 {
 			this->lblModifCliente4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifCliente4->Location = System::Drawing::Point(366, 45);
 			this->lblModifCliente4->Name = L"lblModifCliente4";
-			this->lblModifCliente4->Size = System::Drawing::Size(121, 30);
+			this->lblModifCliente4->Size = System::Drawing::Size(158, 37);
 			this->lblModifCliente4->TabIndex = 50;
 			this->lblModifCliente4->Text = L"Código País";
 			// 
@@ -2369,7 +2431,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifCliente3->Location = System::Drawing::Point(75, 263);
 			this->txtModifCliente3->Name = L"txtModifCliente3";
-			this->txtModifCliente3->Size = System::Drawing::Size(210, 35);
+			this->txtModifCliente3->Size = System::Drawing::Size(210, 42);
 			this->txtModifCliente3->TabIndex = 49;
 			// 
 			// lblModifCliente3
@@ -2379,7 +2441,7 @@ namespace TareaProgramada3 {
 			this->lblModifCliente3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifCliente3->Location = System::Drawing::Point(70, 230);
 			this->lblModifCliente3->Name = L"lblModifCliente3";
-			this->lblModifCliente3->Size = System::Drawing::Size(100, 30);
+			this->lblModifCliente3->Size = System::Drawing::Size(128, 37);
 			this->lblModifCliente3->TabIndex = 48;
 			this->lblModifCliente3->Text = L"Dirección";
 			// 
@@ -2403,7 +2465,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifCliente2->Location = System::Drawing::Point(75, 170);
 			this->txtModifCliente2->Name = L"txtModifCliente2";
-			this->txtModifCliente2->Size = System::Drawing::Size(210, 35);
+			this->txtModifCliente2->Size = System::Drawing::Size(210, 42);
 			this->txtModifCliente2->TabIndex = 46;
 			// 
 			// lblModifCliente2
@@ -2413,7 +2475,7 @@ namespace TareaProgramada3 {
 			this->lblModifCliente2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifCliente2->Location = System::Drawing::Point(70, 137);
 			this->lblModifCliente2->Name = L"lblModifCliente2";
-			this->lblModifCliente2->Size = System::Drawing::Size(159, 30);
+			this->lblModifCliente2->Size = System::Drawing::Size(205, 37);
 			this->lblModifCliente2->TabIndex = 45;
 			this->lblModifCliente2->Text = L"Nombre Cliente";
 			// 
@@ -2421,7 +2483,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifCliente1->Location = System::Drawing::Point(75, 78);
 			this->txtModifCliente1->Name = L"txtModifCliente1";
-			this->txtModifCliente1->Size = System::Drawing::Size(210, 35);
+			this->txtModifCliente1->Size = System::Drawing::Size(210, 42);
 			this->txtModifCliente1->TabIndex = 44;
 			// 
 			// lblModifCliente1
@@ -2431,7 +2493,7 @@ namespace TareaProgramada3 {
 			this->lblModifCliente1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifCliente1->Location = System::Drawing::Point(70, 45);
 			this->lblModifCliente1->Name = L"lblModifCliente1";
-			this->lblModifCliente1->Size = System::Drawing::Size(159, 30);
+			this->lblModifCliente1->Size = System::Drawing::Size(204, 37);
 			this->lblModifCliente1->TabIndex = 43;
 			this->lblModifCliente1->Text = L"Número Cliente";
 			// 
@@ -2447,9 +2509,9 @@ namespace TareaProgramada3 {
 			this->btabModifMasc->Controls->Add(this->lblModifMascota2);
 			this->btabModifMasc->Controls->Add(this->txtModifMascota1);
 			this->btabModifMasc->Controls->Add(this->lblModifMascota1);
-			this->btabModifMasc->Location = System::Drawing::Point(4, 39);
+			this->btabModifMasc->Location = System::Drawing::Point(4, 45);
 			this->btabModifMasc->Name = L"btabModifMasc";
-			this->btabModifMasc->Size = System::Drawing::Size(917, 457);
+			this->btabModifMasc->Size = System::Drawing::Size(917, 451);
 			this->btabModifMasc->TabIndex = 3;
 			this->btabModifMasc->Text = L"Mascota";
 			// 
@@ -2457,7 +2519,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifMascota4->Location = System::Drawing::Point(379, 176);
 			this->txtModifMascota4->Name = L"txtModifMascota4";
-			this->txtModifMascota4->Size = System::Drawing::Size(210, 35);
+			this->txtModifMascota4->Size = System::Drawing::Size(210, 42);
 			this->txtModifMascota4->TabIndex = 64;
 			// 
 			// lblModifMascota4
@@ -2467,7 +2529,7 @@ namespace TareaProgramada3 {
 			this->lblModifMascota4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifMascota4->Location = System::Drawing::Point(374, 143);
 			this->lblModifMascota4->Name = L"lblModifMascota4";
-			this->lblModifMascota4->Size = System::Drawing::Size(95, 30);
+			this->lblModifMascota4->Size = System::Drawing::Size(123, 37);
 			this->lblModifMascota4->TabIndex = 63;
 			this->lblModifMascota4->Text = L"Castrado";
 			// 
@@ -2475,7 +2537,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifMascota3->Location = System::Drawing::Point(379, 84);
 			this->txtModifMascota3->Name = L"txtModifMascota3";
-			this->txtModifMascota3->Size = System::Drawing::Size(210, 35);
+			this->txtModifMascota3->Size = System::Drawing::Size(210, 42);
 			this->txtModifMascota3->TabIndex = 62;
 			// 
 			// lblModifMascota3
@@ -2485,7 +2547,7 @@ namespace TareaProgramada3 {
 			this->lblModifMascota3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifMascota3->Location = System::Drawing::Point(374, 51);
 			this->lblModifMascota3->Name = L"lblModifMascota3";
-			this->lblModifMascota3->Size = System::Drawing::Size(174, 30);
+			this->lblModifMascota3->Size = System::Drawing::Size(222, 37);
 			this->lblModifMascota3->TabIndex = 61;
 			this->lblModifMascota3->Text = L"Nombre Mascota";
 			// 
@@ -2509,7 +2571,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifMascota2->Location = System::Drawing::Point(75, 176);
 			this->txtModifMascota2->Name = L"txtModifMascota2";
-			this->txtModifMascota2->Size = System::Drawing::Size(210, 35);
+			this->txtModifMascota2->Size = System::Drawing::Size(210, 42);
 			this->txtModifMascota2->TabIndex = 59;
 			// 
 			// lblModifMascota2
@@ -2519,7 +2581,7 @@ namespace TareaProgramada3 {
 			this->lblModifMascota2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifMascota2->Location = System::Drawing::Point(70, 143);
 			this->lblModifMascota2->Name = L"lblModifMascota2";
-			this->lblModifMascota2->Size = System::Drawing::Size(105, 30);
+			this->lblModifMascota2->Size = System::Drawing::Size(133, 37);
 			this->lblModifMascota2->TabIndex = 58;
 			this->lblModifMascota2->Text = L"ID Animal";
 			// 
@@ -2527,7 +2589,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifMascota1->Location = System::Drawing::Point(75, 84);
 			this->txtModifMascota1->Name = L"txtModifMascota1";
-			this->txtModifMascota1->Size = System::Drawing::Size(210, 35);
+			this->txtModifMascota1->Size = System::Drawing::Size(210, 42);
 			this->txtModifMascota1->TabIndex = 57;
 			// 
 			// lblModifMascota1
@@ -2537,7 +2599,7 @@ namespace TareaProgramada3 {
 			this->lblModifMascota1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifMascota1->Location = System::Drawing::Point(70, 51);
 			this->lblModifMascota1->Name = L"lblModifMascota1";
-			this->lblModifMascota1->Size = System::Drawing::Size(159, 30);
+			this->lblModifMascota1->Size = System::Drawing::Size(204, 37);
 			this->lblModifMascota1->TabIndex = 56;
 			this->lblModifMascota1->Text = L"Número Cliente";
 			// 
@@ -2551,9 +2613,9 @@ namespace TareaProgramada3 {
 			this->btabModifVisita->Controls->Add(this->lblModifVisita2);
 			this->btabModifVisita->Controls->Add(this->txtModifVisita1);
 			this->btabModifVisita->Controls->Add(this->lblModifVisita1);
-			this->btabModifVisita->Location = System::Drawing::Point(4, 39);
+			this->btabModifVisita->Location = System::Drawing::Point(4, 45);
 			this->btabModifVisita->Name = L"btabModifVisita";
-			this->btabModifVisita->Size = System::Drawing::Size(917, 457);
+			this->btabModifVisita->Size = System::Drawing::Size(917, 451);
 			this->btabModifVisita->TabIndex = 4;
 			this->btabModifVisita->Text = L"Visita";
 			// 
@@ -2561,7 +2623,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifVisita3->Location = System::Drawing::Point(75, 275);
 			this->txtModifVisita3->Name = L"txtModifVisita3";
-			this->txtModifVisita3->Size = System::Drawing::Size(210, 35);
+			this->txtModifVisita3->Size = System::Drawing::Size(210, 42);
 			this->txtModifVisita3->TabIndex = 67;
 			// 
 			// lblModifVisita3
@@ -2571,7 +2633,7 @@ namespace TareaProgramada3 {
 			this->lblModifVisita3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifVisita3->Location = System::Drawing::Point(70, 242);
 			this->lblModifVisita3->Name = L"lblModifVisita3";
-			this->lblModifVisita3->Size = System::Drawing::Size(152, 30);
+			this->lblModifVisita3->Size = System::Drawing::Size(196, 37);
 			this->lblModifVisita3->TabIndex = 66;
 			this->lblModifVisita3->Text = L"Forma de Pago";
 			// 
@@ -2595,7 +2657,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifVisita2->Location = System::Drawing::Point(75, 179);
 			this->txtModifVisita2->Name = L"txtModifVisita2";
-			this->txtModifVisita2->Size = System::Drawing::Size(210, 35);
+			this->txtModifVisita2->Size = System::Drawing::Size(210, 42);
 			this->txtModifVisita2->TabIndex = 64;
 			// 
 			// lblModifVisita2
@@ -2605,7 +2667,7 @@ namespace TareaProgramada3 {
 			this->lblModifVisita2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifVisita2->Location = System::Drawing::Point(70, 146);
 			this->lblModifVisita2->Name = L"lblModifVisita2";
-			this->lblModifVisita2->Size = System::Drawing::Size(105, 30);
+			this->lblModifVisita2->Size = System::Drawing::Size(133, 37);
 			this->lblModifVisita2->TabIndex = 63;
 			this->lblModifVisita2->Text = L"ID Animal";
 			// 
@@ -2613,7 +2675,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifVisita1->Location = System::Drawing::Point(75, 87);
 			this->txtModifVisita1->Name = L"txtModifVisita1";
-			this->txtModifVisita1->Size = System::Drawing::Size(210, 35);
+			this->txtModifVisita1->Size = System::Drawing::Size(210, 42);
 			this->txtModifVisita1->TabIndex = 62;
 			// 
 			// lblModifVisita1
@@ -2623,7 +2685,7 @@ namespace TareaProgramada3 {
 			this->lblModifVisita1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifVisita1->Location = System::Drawing::Point(70, 54);
 			this->lblModifVisita1->Name = L"lblModifVisita1";
-			this->lblModifVisita1->Size = System::Drawing::Size(135, 30);
+			this->lblModifVisita1->Size = System::Drawing::Size(177, 37);
 			this->lblModifVisita1->TabIndex = 61;
 			this->lblModifVisita1->Text = L"Código Visita";
 			// 
@@ -2635,9 +2697,9 @@ namespace TareaProgramada3 {
 			this->btabModifTrat->Controls->Add(this->lblModifTratamiento2);
 			this->btabModifTrat->Controls->Add(this->txtModifTratamiento1);
 			this->btabModifTrat->Controls->Add(this->lblModifTratamiento1);
-			this->btabModifTrat->Location = System::Drawing::Point(4, 39);
+			this->btabModifTrat->Location = System::Drawing::Point(4, 45);
 			this->btabModifTrat->Name = L"btabModifTrat";
-			this->btabModifTrat->Size = System::Drawing::Size(917, 457);
+			this->btabModifTrat->Size = System::Drawing::Size(917, 451);
 			this->btabModifTrat->TabIndex = 5;
 			this->btabModifTrat->Text = L"Tratamiento";
 			// 
@@ -2661,7 +2723,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifTratamiento2->Location = System::Drawing::Point(75, 191);
 			this->txtModifTratamiento2->Name = L"txtModifTratamiento2";
-			this->txtModifTratamiento2->Size = System::Drawing::Size(210, 35);
+			this->txtModifTratamiento2->Size = System::Drawing::Size(210, 42);
 			this->txtModifTratamiento2->TabIndex = 71;
 			// 
 			// lblModifTratamiento2
@@ -2671,7 +2733,7 @@ namespace TareaProgramada3 {
 			this->lblModifTratamiento2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifTratamiento2->Location = System::Drawing::Point(70, 158);
 			this->lblModifTratamiento2->Name = L"lblModifTratamiento2";
-			this->lblModifTratamiento2->Size = System::Drawing::Size(70, 30);
+			this->lblModifTratamiento2->Size = System::Drawing::Size(90, 37);
 			this->lblModifTratamiento2->TabIndex = 70;
 			this->lblModifTratamiento2->Text = L"Precio";
 			// 
@@ -2679,7 +2741,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifTratamiento1->Location = System::Drawing::Point(75, 99);
 			this->txtModifTratamiento1->Name = L"txtModifTratamiento1";
-			this->txtModifTratamiento1->Size = System::Drawing::Size(210, 35);
+			this->txtModifTratamiento1->Size = System::Drawing::Size(210, 42);
 			this->txtModifTratamiento1->TabIndex = 69;
 			// 
 			// lblModifTratamiento1
@@ -2689,7 +2751,7 @@ namespace TareaProgramada3 {
 			this->lblModifTratamiento1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifTratamiento1->Location = System::Drawing::Point(70, 66);
 			this->lblModifTratamiento1->Name = L"lblModifTratamiento1";
-			this->lblModifTratamiento1->Size = System::Drawing::Size(195, 30);
+			this->lblModifTratamiento1->Size = System::Drawing::Size(254, 37);
 			this->lblModifTratamiento1->TabIndex = 68;
 			this->lblModifTratamiento1->Text = L"Código Tratamiento";
 			// 
@@ -2707,9 +2769,9 @@ namespace TareaProgramada3 {
 			this->btabModifMed->Controls->Add(this->lblModifMedicacion2);
 			this->btabModifMed->Controls->Add(this->txtModifMedicacion1);
 			this->btabModifMed->Controls->Add(this->lblModifMedicacion1);
-			this->btabModifMed->Location = System::Drawing::Point(4, 39);
+			this->btabModifMed->Location = System::Drawing::Point(4, 45);
 			this->btabModifMed->Name = L"btabModifMed";
-			this->btabModifMed->Size = System::Drawing::Size(917, 457);
+			this->btabModifMed->Size = System::Drawing::Size(917, 451);
 			this->btabModifMed->TabIndex = 6;
 			this->btabModifMed->Text = L"Medicación";
 			// 
@@ -2717,7 +2779,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifMedicacion5->Location = System::Drawing::Point(392, 268);
 			this->txtModifMedicacion5->Name = L"txtModifMedicacion5";
-			this->txtModifMedicacion5->Size = System::Drawing::Size(210, 35);
+			this->txtModifMedicacion5->Size = System::Drawing::Size(210, 42);
 			this->txtModifMedicacion5->TabIndex = 66;
 			// 
 			// lblModifMedicacion5
@@ -2727,7 +2789,7 @@ namespace TareaProgramada3 {
 			this->lblModifMedicacion5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifMedicacion5->Location = System::Drawing::Point(387, 235);
 			this->lblModifMedicacion5->Name = L"lblModifMedicacion5";
-			this->lblModifMedicacion5->Size = System::Drawing::Size(116, 30);
+			this->lblModifMedicacion5->Size = System::Drawing::Size(150, 37);
 			this->lblModifMedicacion5->TabIndex = 65;
 			this->lblModifMedicacion5->Text = L"Costo Total";
 			// 
@@ -2735,7 +2797,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifMedicacion4->Location = System::Drawing::Point(392, 188);
 			this->txtModifMedicacion4->Name = L"txtModifMedicacion4";
-			this->txtModifMedicacion4->Size = System::Drawing::Size(210, 35);
+			this->txtModifMedicacion4->Size = System::Drawing::Size(210, 42);
 			this->txtModifMedicacion4->TabIndex = 64;
 			// 
 			// lblModifMedicacion4
@@ -2745,7 +2807,7 @@ namespace TareaProgramada3 {
 			this->lblModifMedicacion4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifMedicacion4->Location = System::Drawing::Point(387, 143);
 			this->lblModifMedicacion4->Name = L"lblModifMedicacion4";
-			this->lblModifMedicacion4->Size = System::Drawing::Size(70, 30);
+			this->lblModifMedicacion4->Size = System::Drawing::Size(90, 37);
 			this->lblModifMedicacion4->TabIndex = 63;
 			this->lblModifMedicacion4->Text = L"Precio";
 			// 
@@ -2753,7 +2815,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifMedicacion3->Location = System::Drawing::Point(392, 95);
 			this->txtModifMedicacion3->Name = L"txtModifMedicacion3";
-			this->txtModifMedicacion3->Size = System::Drawing::Size(210, 35);
+			this->txtModifMedicacion3->Size = System::Drawing::Size(210, 42);
 			this->txtModifMedicacion3->TabIndex = 62;
 			// 
 			// lblModifMedicacion3
@@ -2763,7 +2825,7 @@ namespace TareaProgramada3 {
 			this->lblModifMedicacion3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifMedicacion3->Location = System::Drawing::Point(387, 51);
 			this->lblModifMedicacion3->Name = L"lblModifMedicacion3";
-			this->lblModifMedicacion3->Size = System::Drawing::Size(96, 30);
+			this->lblModifMedicacion3->Size = System::Drawing::Size(125, 37);
 			this->lblModifMedicacion3->TabIndex = 61;
 			this->lblModifMedicacion3->Text = L"Cantidad";
 			// 
@@ -2787,7 +2849,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifMedicacion2->Location = System::Drawing::Point(75, 188);
 			this->txtModifMedicacion2->Name = L"txtModifMedicacion2";
-			this->txtModifMedicacion2->Size = System::Drawing::Size(210, 35);
+			this->txtModifMedicacion2->Size = System::Drawing::Size(210, 42);
 			this->txtModifMedicacion2->TabIndex = 59;
 			// 
 			// lblModifMedicacion2
@@ -2797,7 +2859,7 @@ namespace TareaProgramada3 {
 			this->lblModifMedicacion2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifMedicacion2->Location = System::Drawing::Point(70, 143);
 			this->lblModifMedicacion2->Name = L"lblModifMedicacion2";
-			this->lblModifMedicacion2->Size = System::Drawing::Size(105, 30);
+			this->lblModifMedicacion2->Size = System::Drawing::Size(133, 37);
 			this->lblModifMedicacion2->TabIndex = 58;
 			this->lblModifMedicacion2->Text = L"ID Animal";
 			// 
@@ -2805,7 +2867,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtModifMedicacion1->Location = System::Drawing::Point(75, 95);
 			this->txtModifMedicacion1->Name = L"txtModifMedicacion1";
-			this->txtModifMedicacion1->Size = System::Drawing::Size(210, 35);
+			this->txtModifMedicacion1->Size = System::Drawing::Size(210, 42);
 			this->txtModifMedicacion1->TabIndex = 57;
 			// 
 			// lblModifMedicacion1
@@ -2815,16 +2877,16 @@ namespace TareaProgramada3 {
 			this->lblModifMedicacion1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblModifMedicacion1->Location = System::Drawing::Point(70, 51);
 			this->lblModifMedicacion1->Name = L"lblModifMedicacion1";
-			this->lblModifMedicacion1->Size = System::Drawing::Size(192, 30);
+			this->lblModifMedicacion1->Size = System::Drawing::Size(249, 37);
 			this->lblModifMedicacion1->TabIndex = 56;
 			this->lblModifMedicacion1->Text = L"Código Medicación";
 			// 
 			// btabCons
 			// 
 			this->btabCons->Controls->Add(this->tabConsulta);
-			this->btabCons->Location = System::Drawing::Point(4, 42);
+			this->btabCons->Location = System::Drawing::Point(4, 48);
 			this->btabCons->Name = L"btabCons";
-			this->btabCons->Size = System::Drawing::Size(921, 499);
+			this->btabCons->Size = System::Drawing::Size(921, 493);
 			this->btabCons->TabIndex = 2;
 			this->btabCons->Text = L"Consulta";
 			this->btabCons->UseVisualStyleBackColor = true;
@@ -2853,10 +2915,10 @@ namespace TareaProgramada3 {
 			this->btabConsPais->Controls->Add(this->bBuscarPais);
 			this->btabConsPais->Controls->Add(this->txtBusqPais1);
 			this->btabConsPais->Controls->Add(this->lblBusqPais1);
-			this->btabConsPais->Location = System::Drawing::Point(4, 39);
+			this->btabConsPais->Location = System::Drawing::Point(4, 45);
 			this->btabConsPais->Name = L"btabConsPais";
 			this->btabConsPais->Padding = System::Windows::Forms::Padding(3);
-			this->btabConsPais->Size = System::Drawing::Size(917, 457);
+			this->btabConsPais->Size = System::Drawing::Size(917, 451);
 			this->btabConsPais->TabIndex = 0;
 			this->btabConsPais->Text = L"País";
 			// 
@@ -2864,7 +2926,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBusqPais2->Location = System::Drawing::Point(97, 219);
 			this->txtBusqPais2->Name = L"txtBusqPais2";
-			this->txtBusqPais2->Size = System::Drawing::Size(210, 35);
+			this->txtBusqPais2->Size = System::Drawing::Size(210, 42);
 			this->txtBusqPais2->TabIndex = 48;
 			this->txtBusqPais2->Visible = false;
 			// 
@@ -2875,7 +2937,7 @@ namespace TareaProgramada3 {
 			this->lblBusqPais2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqPais2->Location = System::Drawing::Point(92, 176);
 			this->lblBusqPais2->Name = L"lblBusqPais2";
-			this->lblBusqPais2->Size = System::Drawing::Size(131, 30);
+			this->lblBusqPais2->Size = System::Drawing::Size(168, 37);
 			this->lblBusqPais2->TabIndex = 47;
 			this->lblBusqPais2->Text = L"Nombre País";
 			this->lblBusqPais2->Visible = false;
@@ -2900,7 +2962,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBusqPais1->Location = System::Drawing::Point(97, 105);
 			this->txtBusqPais1->Name = L"txtBusqPais1";
-			this->txtBusqPais1->Size = System::Drawing::Size(210, 35);
+			this->txtBusqPais1->Size = System::Drawing::Size(210, 42);
 			this->txtBusqPais1->TabIndex = 45;
 			// 
 			// lblBusqPais1
@@ -2910,7 +2972,7 @@ namespace TareaProgramada3 {
 			this->lblBusqPais1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqPais1->Location = System::Drawing::Point(92, 59);
 			this->lblBusqPais1->Name = L"lblBusqPais1";
-			this->lblBusqPais1->Size = System::Drawing::Size(121, 30);
+			this->lblBusqPais1->Size = System::Drawing::Size(158, 37);
 			this->lblBusqPais1->TabIndex = 44;
 			this->lblBusqPais1->Text = L"Código País";
 			// 
@@ -2924,10 +2986,10 @@ namespace TareaProgramada3 {
 			this->btabConsCdd->Controls->Add(this->lblBusqCiudad2);
 			this->btabConsCdd->Controls->Add(this->txtBusqCiudad1);
 			this->btabConsCdd->Controls->Add(this->lblBusqCiudad1);
-			this->btabConsCdd->Location = System::Drawing::Point(4, 39);
+			this->btabConsCdd->Location = System::Drawing::Point(4, 45);
 			this->btabConsCdd->Name = L"btabConsCdd";
 			this->btabConsCdd->Padding = System::Windows::Forms::Padding(3);
-			this->btabConsCdd->Size = System::Drawing::Size(917, 457);
+			this->btabConsCdd->Size = System::Drawing::Size(917, 451);
 			this->btabConsCdd->TabIndex = 1;
 			this->btabConsCdd->Text = L"Ciudad";
 			// 
@@ -2935,7 +2997,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBusqCiudad3->Location = System::Drawing::Point(391, 105);
 			this->txtBusqCiudad3->Name = L"txtBusqCiudad3";
-			this->txtBusqCiudad3->Size = System::Drawing::Size(210, 35);
+			this->txtBusqCiudad3->Size = System::Drawing::Size(210, 42);
 			this->txtBusqCiudad3->TabIndex = 49;
 			this->txtBusqCiudad3->Visible = false;
 			// 
@@ -2946,7 +3008,7 @@ namespace TareaProgramada3 {
 			this->lblBusqCiudad3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqCiudad3->Location = System::Drawing::Point(386, 72);
 			this->lblBusqCiudad3->Name = L"lblBusqCiudad3";
-			this->lblBusqCiudad3->Size = System::Drawing::Size(160, 30);
+			this->lblBusqCiudad3->Size = System::Drawing::Size(207, 37);
 			this->lblBusqCiudad3->TabIndex = 48;
 			this->lblBusqCiudad3->Text = L"Nombre Ciudad";
 			this->lblBusqCiudad3->Visible = false;
@@ -2971,7 +3033,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBusqCiudad2->Location = System::Drawing::Point(95, 197);
 			this->txtBusqCiudad2->Name = L"txtBusqCiudad2";
-			this->txtBusqCiudad2->Size = System::Drawing::Size(210, 35);
+			this->txtBusqCiudad2->Size = System::Drawing::Size(210, 42);
 			this->txtBusqCiudad2->TabIndex = 46;
 			// 
 			// lblBusqCiudad2
@@ -2981,7 +3043,7 @@ namespace TareaProgramada3 {
 			this->lblBusqCiudad2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqCiudad2->Location = System::Drawing::Point(90, 164);
 			this->lblBusqCiudad2->Name = L"lblBusqCiudad2";
-			this->lblBusqCiudad2->Size = System::Drawing::Size(150, 30);
+			this->lblBusqCiudad2->Size = System::Drawing::Size(197, 37);
 			this->lblBusqCiudad2->TabIndex = 45;
 			this->lblBusqCiudad2->Text = L"Código Ciudad";
 			// 
@@ -2989,7 +3051,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBusqCiudad1->Location = System::Drawing::Point(95, 105);
 			this->txtBusqCiudad1->Name = L"txtBusqCiudad1";
-			this->txtBusqCiudad1->Size = System::Drawing::Size(210, 35);
+			this->txtBusqCiudad1->Size = System::Drawing::Size(210, 42);
 			this->txtBusqCiudad1->TabIndex = 44;
 			// 
 			// lblBusqCiudad1
@@ -2999,7 +3061,7 @@ namespace TareaProgramada3 {
 			this->lblBusqCiudad1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqCiudad1->Location = System::Drawing::Point(90, 72);
 			this->lblBusqCiudad1->Name = L"lblBusqCiudad1";
-			this->lblBusqCiudad1->Size = System::Drawing::Size(121, 30);
+			this->lblBusqCiudad1->Size = System::Drawing::Size(158, 37);
 			this->lblBusqCiudad1->TabIndex = 43;
 			this->lblBusqCiudad1->Text = L"Código País";
 			// 
@@ -3014,9 +3076,9 @@ namespace TareaProgramada3 {
 			this->btabConsClt->Controls->Add(this->bBuscarCliente);
 			this->btabConsClt->Controls->Add(this->txtBusqCliente3);
 			this->btabConsClt->Controls->Add(this->lblBusqCliente3);
-			this->btabConsClt->Location = System::Drawing::Point(4, 39);
+			this->btabConsClt->Location = System::Drawing::Point(4, 45);
 			this->btabConsClt->Name = L"btabConsClt";
-			this->btabConsClt->Size = System::Drawing::Size(917, 457);
+			this->btabConsClt->Size = System::Drawing::Size(917, 451);
 			this->btabConsClt->TabIndex = 2;
 			this->btabConsClt->Text = L"Cliente";
 			// 
@@ -3044,7 +3106,7 @@ namespace TareaProgramada3 {
 			this->lblBusqCliente4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqCliente4->Location = System::Drawing::Point(15, 17);
 			this->lblBusqCliente4->Name = L"lblBusqCliente4";
-			this->lblBusqCliente4->Size = System::Drawing::Size(159, 30);
+			this->lblBusqCliente4->Size = System::Drawing::Size(205, 37);
 			this->lblBusqCliente4->TabIndex = 58;
 			this->lblBusqCliente4->Text = L"Nombre Cliente";
 			// 
@@ -3052,14 +3114,14 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBusqCliente6->Location = System::Drawing::Point(20, 235);
 			this->txtBusqCliente6->Name = L"txtBusqCliente6";
-			this->txtBusqCliente6->Size = System::Drawing::Size(210, 35);
+			this->txtBusqCliente6->Size = System::Drawing::Size(210, 42);
 			this->txtBusqCliente6->TabIndex = 68;
 			// 
 			// txtBusqCliente4
 			// 
 			this->txtBusqCliente4->Location = System::Drawing::Point(20, 50);
 			this->txtBusqCliente4->Name = L"txtBusqCliente4";
-			this->txtBusqCliente4->Size = System::Drawing::Size(210, 35);
+			this->txtBusqCliente4->Size = System::Drawing::Size(210, 42);
 			this->txtBusqCliente4->TabIndex = 59;
 			// 
 			// lblBusqCliente6
@@ -3069,7 +3131,7 @@ namespace TareaProgramada3 {
 			this->lblBusqCliente6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqCliente6->Location = System::Drawing::Point(15, 202);
 			this->lblBusqCliente6->Name = L"lblBusqCliente6";
-			this->lblBusqCliente6->Size = System::Drawing::Size(92, 30);
+			this->lblBusqCliente6->Size = System::Drawing::Size(118, 37);
 			this->lblBusqCliente6->TabIndex = 67;
 			this->lblBusqCliente6->Text = L"Teléfono";
 			// 
@@ -3080,7 +3142,7 @@ namespace TareaProgramada3 {
 			this->lblBusqCliente5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqCliente5->Location = System::Drawing::Point(15, 109);
 			this->lblBusqCliente5->Name = L"lblBusqCliente5";
-			this->lblBusqCliente5->Size = System::Drawing::Size(100, 30);
+			this->lblBusqCliente5->Size = System::Drawing::Size(128, 37);
 			this->lblBusqCliente5->TabIndex = 61;
 			this->lblBusqCliente5->Text = L"Dirección";
 			// 
@@ -3088,14 +3150,14 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBusqCliente5->Location = System::Drawing::Point(20, 142);
 			this->txtBusqCliente5->Name = L"txtBusqCliente5";
-			this->txtBusqCliente5->Size = System::Drawing::Size(210, 35);
+			this->txtBusqCliente5->Size = System::Drawing::Size(210, 42);
 			this->txtBusqCliente5->TabIndex = 62;
 			// 
 			// txtBusqCliente2
 			// 
 			this->txtBusqCliente2->Location = System::Drawing::Point(83, 176);
 			this->txtBusqCliente2->Name = L"txtBusqCliente2";
-			this->txtBusqCliente2->Size = System::Drawing::Size(210, 35);
+			this->txtBusqCliente2->Size = System::Drawing::Size(210, 42);
 			this->txtBusqCliente2->TabIndex = 66;
 			// 
 			// lblBusqCliente2
@@ -3105,7 +3167,7 @@ namespace TareaProgramada3 {
 			this->lblBusqCliente2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqCliente2->Location = System::Drawing::Point(78, 143);
 			this->lblBusqCliente2->Name = L"lblBusqCliente2";
-			this->lblBusqCliente2->Size = System::Drawing::Size(150, 30);
+			this->lblBusqCliente2->Size = System::Drawing::Size(197, 37);
 			this->lblBusqCliente2->TabIndex = 65;
 			this->lblBusqCliente2->Text = L"Código Ciudad";
 			// 
@@ -3113,7 +3175,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBusqCliente1->Location = System::Drawing::Point(83, 84);
 			this->txtBusqCliente1->Name = L"txtBusqCliente1";
-			this->txtBusqCliente1->Size = System::Drawing::Size(210, 35);
+			this->txtBusqCliente1->Size = System::Drawing::Size(210, 42);
 			this->txtBusqCliente1->TabIndex = 64;
 			// 
 			// lblBusqCliente1
@@ -3123,7 +3185,7 @@ namespace TareaProgramada3 {
 			this->lblBusqCliente1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqCliente1->Location = System::Drawing::Point(78, 51);
 			this->lblBusqCliente1->Name = L"lblBusqCliente1";
-			this->lblBusqCliente1->Size = System::Drawing::Size(121, 30);
+			this->lblBusqCliente1->Size = System::Drawing::Size(158, 37);
 			this->lblBusqCliente1->TabIndex = 63;
 			this->lblBusqCliente1->Text = L"Código País";
 			// 
@@ -3139,7 +3201,7 @@ namespace TareaProgramada3 {
 			this->bBuscarCliente->Name = L"bBuscarCliente";
 			this->bBuscarCliente->Size = System::Drawing::Size(210, 45);
 			this->bBuscarCliente->TabIndex = 60;
-			this->bBuscarCliente->Text = L"Modificar";
+			this->bBuscarCliente->Text = L"Buscar";
 			this->bBuscarCliente->UseVisualStyleBackColor = false;
 			this->bBuscarCliente->Click += gcnew System::EventHandler(this, &PopUpMenu::bBuscarCliente_Click);
 			// 
@@ -3147,7 +3209,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBusqCliente3->Location = System::Drawing::Point(83, 269);
 			this->txtBusqCliente3->Name = L"txtBusqCliente3";
-			this->txtBusqCliente3->Size = System::Drawing::Size(210, 35);
+			this->txtBusqCliente3->Size = System::Drawing::Size(210, 42);
 			this->txtBusqCliente3->TabIndex = 57;
 			// 
 			// lblBusqCliente3
@@ -3157,7 +3219,7 @@ namespace TareaProgramada3 {
 			this->lblBusqCliente3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqCliente3->Location = System::Drawing::Point(78, 236);
 			this->lblBusqCliente3->Name = L"lblBusqCliente3";
-			this->lblBusqCliente3->Size = System::Drawing::Size(159, 30);
+			this->lblBusqCliente3->Size = System::Drawing::Size(204, 37);
 			this->lblBusqCliente3->TabIndex = 56;
 			this->lblBusqCliente3->Text = L"Número Cliente";
 			// 
@@ -3170,9 +3232,9 @@ namespace TareaProgramada3 {
 			this->btabConsMasc->Controls->Add(this->lblBusqMascota2);
 			this->btabConsMasc->Controls->Add(this->txtBusqMascota1);
 			this->btabConsMasc->Controls->Add(this->lblBusqMascota1);
-			this->btabConsMasc->Location = System::Drawing::Point(4, 39);
+			this->btabConsMasc->Location = System::Drawing::Point(4, 45);
 			this->btabConsMasc->Name = L"btabConsMasc";
-			this->btabConsMasc->Size = System::Drawing::Size(917, 457);
+			this->btabConsMasc->Size = System::Drawing::Size(917, 451);
 			this->btabConsMasc->TabIndex = 3;
 			this->btabConsMasc->Text = L"Mascota";
 			// 
@@ -3213,7 +3275,7 @@ namespace TareaProgramada3 {
 			this->lblBusqMascota11->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqMascota11->Location = System::Drawing::Point(314, 374);
 			this->lblBusqMascota11->Name = L"lblBusqMascota11";
-			this->lblBusqMascota11->Size = System::Drawing::Size(110, 25);
+			this->lblBusqMascota11->Size = System::Drawing::Size(140, 32);
 			this->lblBusqMascota11->TabIndex = 129;
 			this->lblBusqMascota11->Text = L"DD/MM/AA";
 			// 
@@ -3221,7 +3283,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBusqMascota10->Location = System::Drawing::Point(319, 336);
 			this->txtBusqMascota10->Name = L"txtBusqMascota10";
-			this->txtBusqMascota10->Size = System::Drawing::Size(210, 35);
+			this->txtBusqMascota10->Size = System::Drawing::Size(210, 42);
 			this->txtBusqMascota10->TabIndex = 128;
 			// 
 			// lblBusqMascota10
@@ -3233,7 +3295,7 @@ namespace TareaProgramada3 {
 			this->lblBusqMascota10->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqMascota10->Location = System::Drawing::Point(314, 303);
 			this->lblBusqMascota10->Name = L"lblBusqMascota10";
-			this->lblBusqMascota10->Size = System::Drawing::Size(189, 30);
+			this->lblBusqMascota10->Size = System::Drawing::Size(243, 37);
 			this->lblBusqMascota10->TabIndex = 127;
 			this->lblBusqMascota10->Text = L"Fecha Última Visita";
 			// 
@@ -3241,7 +3303,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBusqMascota9->Location = System::Drawing::Point(319, 244);
 			this->txtBusqMascota9->Name = L"txtBusqMascota9";
-			this->txtBusqMascota9->Size = System::Drawing::Size(210, 35);
+			this->txtBusqMascota9->Size = System::Drawing::Size(210, 42);
 			this->txtBusqMascota9->TabIndex = 126;
 			// 
 			// lblBusqMascota9
@@ -3251,7 +3313,7 @@ namespace TareaProgramada3 {
 			this->lblBusqMascota9->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqMascota9->Location = System::Drawing::Point(314, 211);
 			this->lblBusqMascota9->Name = L"lblBusqMascota9";
-			this->lblBusqMascota9->Size = System::Drawing::Size(95, 30);
+			this->lblBusqMascota9->Size = System::Drawing::Size(123, 37);
 			this->lblBusqMascota9->TabIndex = 125;
 			this->lblBusqMascota9->Text = L"Castrado";
 			// 
@@ -3259,7 +3321,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBusqMascota8->Location = System::Drawing::Point(319, 147);
 			this->txtBusqMascota8->Name = L"txtBusqMascota8";
-			this->txtBusqMascota8->Size = System::Drawing::Size(210, 35);
+			this->txtBusqMascota8->Size = System::Drawing::Size(210, 42);
 			this->txtBusqMascota8->TabIndex = 124;
 			// 
 			// lblBusqMascota8
@@ -3269,7 +3331,7 @@ namespace TareaProgramada3 {
 			this->lblBusqMascota8->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqMascota8->Location = System::Drawing::Point(314, 114);
 			this->lblBusqMascota8->Name = L"lblBusqMascota8";
-			this->lblBusqMascota8->Size = System::Drawing::Size(62, 30);
+			this->lblBusqMascota8->Size = System::Drawing::Size(82, 37);
 			this->lblBusqMascota8->TabIndex = 123;
 			this->lblBusqMascota8->Text = L"Color";
 			// 
@@ -3277,7 +3339,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBusqMascota7->Location = System::Drawing::Point(319, 55);
 			this->txtBusqMascota7->Name = L"txtBusqMascota7";
-			this->txtBusqMascota7->Size = System::Drawing::Size(210, 35);
+			this->txtBusqMascota7->Size = System::Drawing::Size(210, 42);
 			this->txtBusqMascota7->TabIndex = 122;
 			// 
 			// lblBusqMascota7
@@ -3287,7 +3349,7 @@ namespace TareaProgramada3 {
 			this->lblBusqMascota7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqMascota7->Location = System::Drawing::Point(314, 22);
 			this->lblBusqMascota7->Name = L"lblBusqMascota7";
-			this->lblBusqMascota7->Size = System::Drawing::Size(57, 30);
+			this->lblBusqMascota7->Size = System::Drawing::Size(73, 37);
 			this->lblBusqMascota7->TabIndex = 121;
 			this->lblBusqMascota7->Text = L"Sexo";
 			// 
@@ -3295,7 +3357,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBusqMascota6->Location = System::Drawing::Point(36, 336);
 			this->txtBusqMascota6->Name = L"txtBusqMascota6";
-			this->txtBusqMascota6->Size = System::Drawing::Size(210, 35);
+			this->txtBusqMascota6->Size = System::Drawing::Size(210, 42);
 			this->txtBusqMascota6->TabIndex = 120;
 			// 
 			// lblBusqMascota6
@@ -3305,7 +3367,7 @@ namespace TareaProgramada3 {
 			this->lblBusqMascota6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqMascota6->Location = System::Drawing::Point(31, 303);
 			this->lblBusqMascota6->Name = L"lblBusqMascota6";
-			this->lblBusqMascota6->Size = System::Drawing::Size(209, 30);
+			this->lblBusqMascota6->Size = System::Drawing::Size(266, 37);
 			this->lblBusqMascota6->TabIndex = 119;
 			this->lblBusqMascota6->Text = L"Fecha de Nacimiento";
 			// 
@@ -3313,7 +3375,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBusqMascota5->Location = System::Drawing::Point(36, 239);
 			this->txtBusqMascota5->Name = L"txtBusqMascota5";
-			this->txtBusqMascota5->Size = System::Drawing::Size(210, 35);
+			this->txtBusqMascota5->Size = System::Drawing::Size(210, 42);
 			this->txtBusqMascota5->TabIndex = 118;
 			// 
 			// lblBusqMascota5
@@ -3323,7 +3385,7 @@ namespace TareaProgramada3 {
 			this->lblBusqMascota5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqMascota5->Location = System::Drawing::Point(31, 206);
 			this->lblBusqMascota5->Name = L"lblBusqMascota5";
-			this->lblBusqMascota5->Size = System::Drawing::Size(58, 30);
+			this->lblBusqMascota5->Size = System::Drawing::Size(73, 37);
 			this->lblBusqMascota5->TabIndex = 117;
 			this->lblBusqMascota5->Text = L"Raza";
 			// 
@@ -3331,7 +3393,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBusqMascota4->Location = System::Drawing::Point(36, 147);
 			this->txtBusqMascota4->Name = L"txtBusqMascota4";
-			this->txtBusqMascota4->Size = System::Drawing::Size(210, 35);
+			this->txtBusqMascota4->Size = System::Drawing::Size(210, 42);
 			this->txtBusqMascota4->TabIndex = 116;
 			// 
 			// lblBusqMascota4
@@ -3341,7 +3403,7 @@ namespace TareaProgramada3 {
 			this->lblBusqMascota4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqMascota4->Location = System::Drawing::Point(31, 114);
 			this->lblBusqMascota4->Name = L"lblBusqMascota4";
-			this->lblBusqMascota4->Size = System::Drawing::Size(53, 30);
+			this->lblBusqMascota4->Size = System::Drawing::Size(70, 37);
 			this->lblBusqMascota4->TabIndex = 115;
 			this->lblBusqMascota4->Text = L"Tipo";
 			// 
@@ -3349,7 +3411,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBusqMascota3->Location = System::Drawing::Point(36, 55);
 			this->txtBusqMascota3->Name = L"txtBusqMascota3";
-			this->txtBusqMascota3->Size = System::Drawing::Size(210, 35);
+			this->txtBusqMascota3->Size = System::Drawing::Size(210, 42);
 			this->txtBusqMascota3->TabIndex = 114;
 			// 
 			// lblBusqMascota3
@@ -3359,7 +3421,7 @@ namespace TareaProgramada3 {
 			this->lblBusqMascota3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqMascota3->Location = System::Drawing::Point(31, 22);
 			this->lblBusqMascota3->Name = L"lblBusqMascota3";
-			this->lblBusqMascota3->Size = System::Drawing::Size(89, 30);
+			this->lblBusqMascota3->Size = System::Drawing::Size(115, 37);
 			this->lblBusqMascota3->TabIndex = 113;
 			this->lblBusqMascota3->Text = L"Nombre";
 			// 
@@ -3375,7 +3437,7 @@ namespace TareaProgramada3 {
 			this->bBuscarMascota->Name = L"bBuscarMascota";
 			this->bBuscarMascota->Size = System::Drawing::Size(210, 45);
 			this->bBuscarMascota->TabIndex = 95;
-			this->bBuscarMascota->Text = L"Insertar";
+			this->bBuscarMascota->Text = L"Buscar";
 			this->bBuscarMascota->UseVisualStyleBackColor = false;
 			this->bBuscarMascota->Click += gcnew System::EventHandler(this, &PopUpMenu::bBuscarMascota_Click);
 			// 
@@ -3383,7 +3445,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBusqMascota2->Location = System::Drawing::Point(67, 161);
 			this->txtBusqMascota2->Name = L"txtBusqMascota2";
-			this->txtBusqMascota2->Size = System::Drawing::Size(210, 35);
+			this->txtBusqMascota2->Size = System::Drawing::Size(210, 42);
 			this->txtBusqMascota2->TabIndex = 94;
 			// 
 			// lblBusqMascota2
@@ -3393,7 +3455,7 @@ namespace TareaProgramada3 {
 			this->lblBusqMascota2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqMascota2->Location = System::Drawing::Point(62, 128);
 			this->lblBusqMascota2->Name = L"lblBusqMascota2";
-			this->lblBusqMascota2->Size = System::Drawing::Size(105, 30);
+			this->lblBusqMascota2->Size = System::Drawing::Size(133, 37);
 			this->lblBusqMascota2->TabIndex = 93;
 			this->lblBusqMascota2->Text = L"ID Animal";
 			// 
@@ -3401,7 +3463,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBusqMascota1->Location = System::Drawing::Point(67, 69);
 			this->txtBusqMascota1->Name = L"txtBusqMascota1";
-			this->txtBusqMascota1->Size = System::Drawing::Size(210, 35);
+			this->txtBusqMascota1->Size = System::Drawing::Size(210, 42);
 			this->txtBusqMascota1->TabIndex = 92;
 			// 
 			// lblBusqMascota1
@@ -3411,7 +3473,7 @@ namespace TareaProgramada3 {
 			this->lblBusqMascota1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqMascota1->Location = System::Drawing::Point(62, 36);
 			this->lblBusqMascota1->Name = L"lblBusqMascota1";
-			this->lblBusqMascota1->Size = System::Drawing::Size(159, 30);
+			this->lblBusqMascota1->Size = System::Drawing::Size(204, 37);
 			this->lblBusqMascota1->TabIndex = 91;
 			this->lblBusqMascota1->Text = L"Número Cliente";
 			// 
@@ -3424,9 +3486,9 @@ namespace TareaProgramada3 {
 			this->btabConsVisita->Controls->Add(this->lblBusqVisita2);
 			this->btabConsVisita->Controls->Add(this->txtBusqVisita1);
 			this->btabConsVisita->Controls->Add(this->lblBusqVisita1);
-			this->btabConsVisita->Location = System::Drawing::Point(4, 39);
+			this->btabConsVisita->Location = System::Drawing::Point(4, 45);
 			this->btabConsVisita->Name = L"btabConsVisita";
-			this->btabConsVisita->Size = System::Drawing::Size(917, 457);
+			this->btabConsVisita->Size = System::Drawing::Size(917, 451);
 			this->btabConsVisita->TabIndex = 4;
 			this->btabConsVisita->Text = L"Visita";
 			// 
@@ -3455,7 +3517,7 @@ namespace TareaProgramada3 {
 			this->lblBusqVisita3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqVisita3->Location = System::Drawing::Point(13, 14);
 			this->lblBusqVisita3->Name = L"lblBusqVisita3";
-			this->lblBusqVisita3->Size = System::Drawing::Size(189, 30);
+			this->lblBusqVisita3->Size = System::Drawing::Size(243, 37);
 			this->lblBusqVisita3->TabIndex = 97;
 			this->lblBusqVisita3->Text = L"Fecha Última Visita";
 			// 
@@ -3468,7 +3530,7 @@ namespace TareaProgramada3 {
 			this->lblBusqVisita6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqVisita6->Location = System::Drawing::Point(13, 85);
 			this->lblBusqVisita6->Name = L"lblBusqVisita6";
-			this->lblBusqVisita6->Size = System::Drawing::Size(110, 25);
+			this->lblBusqVisita6->Size = System::Drawing::Size(140, 32);
 			this->lblBusqVisita6->TabIndex = 103;
 			this->lblBusqVisita6->Text = L"DD/MM/AA";
 			// 
@@ -3476,14 +3538,14 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBusqVisita3->Location = System::Drawing::Point(18, 47);
 			this->txtBusqVisita3->Name = L"txtBusqVisita3";
-			this->txtBusqVisita3->Size = System::Drawing::Size(210, 35);
+			this->txtBusqVisita3->Size = System::Drawing::Size(210, 42);
 			this->txtBusqVisita3->TabIndex = 98;
 			// 
 			// txtBusqVisita5
 			// 
 			this->txtBusqVisita5->Location = System::Drawing::Point(18, 251);
 			this->txtBusqVisita5->Name = L"txtBusqVisita5";
-			this->txtBusqVisita5->Size = System::Drawing::Size(210, 35);
+			this->txtBusqVisita5->Size = System::Drawing::Size(210, 42);
 			this->txtBusqVisita5->TabIndex = 102;
 			// 
 			// lblBusqVisita4
@@ -3493,7 +3555,7 @@ namespace TareaProgramada3 {
 			this->lblBusqVisita4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqVisita4->Location = System::Drawing::Point(13, 126);
 			this->lblBusqVisita4->Name = L"lblBusqVisita4";
-			this->lblBusqVisita4->Size = System::Drawing::Size(130, 30);
+			this->lblBusqVisita4->Size = System::Drawing::Size(166, 37);
 			this->lblBusqVisita4->TabIndex = 99;
 			this->lblBusqVisita4->Text = L"Total Factura";
 			// 
@@ -3504,7 +3566,7 @@ namespace TareaProgramada3 {
 			this->lblBusqVisita5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqVisita5->Location = System::Drawing::Point(13, 218);
 			this->lblBusqVisita5->Name = L"lblBusqVisita5";
-			this->lblBusqVisita5->Size = System::Drawing::Size(152, 30);
+			this->lblBusqVisita5->Size = System::Drawing::Size(196, 37);
 			this->lblBusqVisita5->TabIndex = 101;
 			this->lblBusqVisita5->Text = L"Forma de Pago";
 			// 
@@ -3512,7 +3574,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBusqVisita4->Location = System::Drawing::Point(18, 159);
 			this->txtBusqVisita4->Name = L"txtBusqVisita4";
-			this->txtBusqVisita4->Size = System::Drawing::Size(210, 35);
+			this->txtBusqVisita4->Size = System::Drawing::Size(210, 42);
 			this->txtBusqVisita4->TabIndex = 100;
 			// 
 			// bBuscarVisita
@@ -3535,7 +3597,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBusqVisita2->Location = System::Drawing::Point(208, 190);
 			this->txtBusqVisita2->Name = L"txtBusqVisita2";
-			this->txtBusqVisita2->Size = System::Drawing::Size(210, 35);
+			this->txtBusqVisita2->Size = System::Drawing::Size(210, 42);
 			this->txtBusqVisita2->TabIndex = 95;
 			// 
 			// lblBusqVisita2
@@ -3545,7 +3607,7 @@ namespace TareaProgramada3 {
 			this->lblBusqVisita2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqVisita2->Location = System::Drawing::Point(203, 157);
 			this->lblBusqVisita2->Name = L"lblBusqVisita2";
-			this->lblBusqVisita2->Size = System::Drawing::Size(105, 30);
+			this->lblBusqVisita2->Size = System::Drawing::Size(133, 37);
 			this->lblBusqVisita2->TabIndex = 94;
 			this->lblBusqVisita2->Text = L"ID Animal";
 			// 
@@ -3553,7 +3615,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBusqVisita1->Location = System::Drawing::Point(208, 78);
 			this->txtBusqVisita1->Name = L"txtBusqVisita1";
-			this->txtBusqVisita1->Size = System::Drawing::Size(210, 35);
+			this->txtBusqVisita1->Size = System::Drawing::Size(210, 42);
 			this->txtBusqVisita1->TabIndex = 93;
 			// 
 			// lblBusqVisita1
@@ -3563,7 +3625,7 @@ namespace TareaProgramada3 {
 			this->lblBusqVisita1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBusqVisita1->Location = System::Drawing::Point(203, 45);
 			this->lblBusqVisita1->Name = L"lblBusqVisita1";
-			this->lblBusqVisita1->Size = System::Drawing::Size(135, 30);
+			this->lblBusqVisita1->Size = System::Drawing::Size(177, 37);
 			this->lblBusqVisita1->TabIndex = 92;
 			this->lblBusqVisita1->Text = L"Código Visita";
 			// 
@@ -3574,9 +3636,9 @@ namespace TareaProgramada3 {
 			this->btabConsTrat->Controls->Add(this->bBuscarTratamiento);
 			this->btabConsTrat->Controls->Add(this->txtBuscarTrat1);
 			this->btabConsTrat->Controls->Add(this->lblBuscarTrat1);
-			this->btabConsTrat->Location = System::Drawing::Point(4, 39);
+			this->btabConsTrat->Location = System::Drawing::Point(4, 45);
 			this->btabConsTrat->Name = L"btabConsTrat";
-			this->btabConsTrat->Size = System::Drawing::Size(917, 457);
+			this->btabConsTrat->Size = System::Drawing::Size(917, 451);
 			this->btabConsTrat->TabIndex = 5;
 			this->btabConsTrat->Text = L"Tratamiento";
 			// 
@@ -3605,7 +3667,7 @@ namespace TareaProgramada3 {
 			this->lblBuscarTrat2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBuscarTrat2->Location = System::Drawing::Point(13, 14);
 			this->lblBuscarTrat2->Name = L"lblBuscarTrat2";
-			this->lblBuscarTrat2->Size = System::Drawing::Size(189, 30);
+			this->lblBuscarTrat2->Size = System::Drawing::Size(243, 37);
 			this->lblBuscarTrat2->TabIndex = 97;
 			this->lblBuscarTrat2->Text = L"Fecha Última Visita";
 			// 
@@ -3618,7 +3680,7 @@ namespace TareaProgramada3 {
 			this->lblBuscarTrat5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBuscarTrat5->Location = System::Drawing::Point(13, 85);
 			this->lblBuscarTrat5->Name = L"lblBuscarTrat5";
-			this->lblBuscarTrat5->Size = System::Drawing::Size(110, 25);
+			this->lblBuscarTrat5->Size = System::Drawing::Size(140, 32);
 			this->lblBuscarTrat5->TabIndex = 103;
 			this->lblBuscarTrat5->Text = L"DD/MM/AA";
 			// 
@@ -3626,14 +3688,14 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBuscarTrat2->Location = System::Drawing::Point(18, 47);
 			this->txtBuscarTrat2->Name = L"txtBuscarTrat2";
-			this->txtBuscarTrat2->Size = System::Drawing::Size(210, 35);
+			this->txtBuscarTrat2->Size = System::Drawing::Size(210, 42);
 			this->txtBuscarTrat2->TabIndex = 98;
 			// 
 			// txtBuscarTrat4
 			// 
 			this->txtBuscarTrat4->Location = System::Drawing::Point(18, 251);
 			this->txtBuscarTrat4->Name = L"txtBuscarTrat4";
-			this->txtBuscarTrat4->Size = System::Drawing::Size(210, 35);
+			this->txtBuscarTrat4->Size = System::Drawing::Size(210, 42);
 			this->txtBuscarTrat4->TabIndex = 102;
 			// 
 			// lblBuscarTrat3
@@ -3643,7 +3705,7 @@ namespace TareaProgramada3 {
 			this->lblBuscarTrat3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBuscarTrat3->Location = System::Drawing::Point(13, 126);
 			this->lblBuscarTrat3->Name = L"lblBuscarTrat3";
-			this->lblBuscarTrat3->Size = System::Drawing::Size(130, 30);
+			this->lblBuscarTrat3->Size = System::Drawing::Size(166, 37);
 			this->lblBuscarTrat3->TabIndex = 99;
 			this->lblBuscarTrat3->Text = L"Total Factura";
 			// 
@@ -3654,7 +3716,7 @@ namespace TareaProgramada3 {
 			this->lblBuscarTrat4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBuscarTrat4->Location = System::Drawing::Point(13, 218);
 			this->lblBuscarTrat4->Name = L"lblBuscarTrat4";
-			this->lblBuscarTrat4->Size = System::Drawing::Size(152, 30);
+			this->lblBuscarTrat4->Size = System::Drawing::Size(196, 37);
 			this->lblBuscarTrat4->TabIndex = 101;
 			this->lblBuscarTrat4->Text = L"Forma de Pago";
 			// 
@@ -3662,7 +3724,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBuscarTrat3->Location = System::Drawing::Point(18, 159);
 			this->txtBuscarTrat3->Name = L"txtBuscarTrat3";
-			this->txtBuscarTrat3->Size = System::Drawing::Size(210, 35);
+			this->txtBuscarTrat3->Size = System::Drawing::Size(210, 42);
 			this->txtBuscarTrat3->TabIndex = 100;
 			// 
 			// bBuscarTratamiento
@@ -3685,7 +3747,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBuscarTrat1->Location = System::Drawing::Point(215, 197);
 			this->txtBuscarTrat1->Name = L"txtBuscarTrat1";
-			this->txtBuscarTrat1->Size = System::Drawing::Size(210, 35);
+			this->txtBuscarTrat1->Size = System::Drawing::Size(210, 42);
 			this->txtBuscarTrat1->TabIndex = 116;
 			// 
 			// lblBuscarTrat1
@@ -3695,7 +3757,7 @@ namespace TareaProgramada3 {
 			this->lblBuscarTrat1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBuscarTrat1->Location = System::Drawing::Point(210, 164);
 			this->lblBuscarTrat1->Name = L"lblBuscarTrat1";
-			this->lblBuscarTrat1->Size = System::Drawing::Size(195, 30);
+			this->lblBuscarTrat1->Size = System::Drawing::Size(254, 37);
 			this->lblBuscarTrat1->TabIndex = 115;
 			this->lblBuscarTrat1->Text = L"Código Tratamiento";
 			// 
@@ -3708,9 +3770,9 @@ namespace TareaProgramada3 {
 			this->btabConsMed->Controls->Add(this->lblBuscarMedicacion2);
 			this->btabConsMed->Controls->Add(this->txtBuscarMedicacion1);
 			this->btabConsMed->Controls->Add(this->lblBuscarMedicacion1);
-			this->btabConsMed->Location = System::Drawing::Point(4, 39);
+			this->btabConsMed->Location = System::Drawing::Point(4, 45);
 			this->btabConsMed->Name = L"btabConsMed";
-			this->btabConsMed->Size = System::Drawing::Size(917, 457);
+			this->btabConsMed->Size = System::Drawing::Size(917, 451);
 			this->btabConsMed->TabIndex = 6;
 			this->btabConsMed->Text = L"Medicación";
 			// 
@@ -3745,7 +3807,7 @@ namespace TareaProgramada3 {
 			this->lblBuscarMedicacion8->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBuscarMedicacion8->Location = System::Drawing::Point(3, 172);
 			this->lblBuscarMedicacion8->Name = L"lblBuscarMedicacion8";
-			this->lblBuscarMedicacion8->Size = System::Drawing::Size(110, 25);
+			this->lblBuscarMedicacion8->Size = System::Drawing::Size(140, 32);
 			this->lblBuscarMedicacion8->TabIndex = 122;
 			this->lblBuscarMedicacion8->Text = L"DD/MM/AA";
 			// 
@@ -3753,7 +3815,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBuscarMedicacion6->Location = System::Drawing::Point(277, 138);
 			this->txtBuscarMedicacion6->Name = L"txtBuscarMedicacion6";
-			this->txtBuscarMedicacion6->Size = System::Drawing::Size(210, 35);
+			this->txtBuscarMedicacion6->Size = System::Drawing::Size(210, 42);
 			this->txtBuscarMedicacion6->TabIndex = 110;
 			// 
 			// lblBuscarMedicacion6
@@ -3763,7 +3825,7 @@ namespace TareaProgramada3 {
 			this->lblBuscarMedicacion6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBuscarMedicacion6->Location = System::Drawing::Point(272, 105);
 			this->lblBuscarMedicacion6->Name = L"lblBuscarMedicacion6";
-			this->lblBuscarMedicacion6->Size = System::Drawing::Size(96, 30);
+			this->lblBuscarMedicacion6->Size = System::Drawing::Size(125, 37);
 			this->lblBuscarMedicacion6->TabIndex = 109;
 			this->lblBuscarMedicacion6->Text = L"Cantidad";
 			// 
@@ -3774,7 +3836,7 @@ namespace TareaProgramada3 {
 			this->lblBuscarMedicacion4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBuscarMedicacion4->Location = System::Drawing::Point(3, 105);
 			this->lblBuscarMedicacion4->Name = L"lblBuscarMedicacion4";
-			this->lblBuscarMedicacion4->Size = System::Drawing::Size(189, 30);
+			this->lblBuscarMedicacion4->Size = System::Drawing::Size(243, 37);
 			this->lblBuscarMedicacion4->TabIndex = 106;
 			this->lblBuscarMedicacion4->Text = L"Fecha Última Visita";
 			// 
@@ -3785,7 +3847,7 @@ namespace TareaProgramada3 {
 			this->lblBuscarMedicacion3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBuscarMedicacion3->Location = System::Drawing::Point(3, 14);
 			this->lblBuscarMedicacion3->Name = L"lblBuscarMedicacion3";
-			this->lblBuscarMedicacion3->Size = System::Drawing::Size(195, 30);
+			this->lblBuscarMedicacion3->Size = System::Drawing::Size(254, 37);
 			this->lblBuscarMedicacion3->TabIndex = 100;
 			this->lblBuscarMedicacion3->Text = L"Código Tratamiento";
 			// 
@@ -3793,14 +3855,14 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBuscarMedicacion4->Location = System::Drawing::Point(8, 138);
 			this->txtBuscarMedicacion4->Name = L"txtBuscarMedicacion4";
-			this->txtBuscarMedicacion4->Size = System::Drawing::Size(210, 35);
+			this->txtBuscarMedicacion4->Size = System::Drawing::Size(210, 42);
 			this->txtBuscarMedicacion4->TabIndex = 107;
 			// 
 			// txtBuscarMedicacion3
 			// 
 			this->txtBuscarMedicacion3->Location = System::Drawing::Point(8, 47);
 			this->txtBuscarMedicacion3->Name = L"txtBuscarMedicacion3";
-			this->txtBuscarMedicacion3->Size = System::Drawing::Size(210, 35);
+			this->txtBuscarMedicacion3->Size = System::Drawing::Size(210, 42);
 			this->txtBuscarMedicacion3->TabIndex = 101;
 			// 
 			// lblBuscarMedicacion7
@@ -3810,7 +3872,7 @@ namespace TareaProgramada3 {
 			this->lblBuscarMedicacion7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBuscarMedicacion7->Location = System::Drawing::Point(272, 200);
 			this->lblBuscarMedicacion7->Name = L"lblBuscarMedicacion7";
-			this->lblBuscarMedicacion7->Size = System::Drawing::Size(116, 30);
+			this->lblBuscarMedicacion7->Size = System::Drawing::Size(150, 37);
 			this->lblBuscarMedicacion7->TabIndex = 102;
 			this->lblBuscarMedicacion7->Text = L"Costo Total";
 			// 
@@ -3818,14 +3880,14 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBuscarMedicacion5->Location = System::Drawing::Point(277, 46);
 			this->txtBuscarMedicacion5->Name = L"txtBuscarMedicacion5";
-			this->txtBuscarMedicacion5->Size = System::Drawing::Size(210, 35);
+			this->txtBuscarMedicacion5->Size = System::Drawing::Size(210, 42);
 			this->txtBuscarMedicacion5->TabIndex = 105;
 			// 
 			// txtBuscarMedicacion7
 			// 
 			this->txtBuscarMedicacion7->Location = System::Drawing::Point(277, 233);
 			this->txtBuscarMedicacion7->Name = L"txtBuscarMedicacion7";
-			this->txtBuscarMedicacion7->Size = System::Drawing::Size(210, 35);
+			this->txtBuscarMedicacion7->Size = System::Drawing::Size(210, 42);
 			this->txtBuscarMedicacion7->TabIndex = 103;
 			// 
 			// lblBuscarMedicacion5
@@ -3835,7 +3897,7 @@ namespace TareaProgramada3 {
 			this->lblBuscarMedicacion5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBuscarMedicacion5->Location = System::Drawing::Point(272, 13);
 			this->lblBuscarMedicacion5->Name = L"lblBuscarMedicacion5";
-			this->lblBuscarMedicacion5->Size = System::Drawing::Size(145, 30);
+			this->lblBuscarMedicacion5->Size = System::Drawing::Size(189, 37);
 			this->lblBuscarMedicacion5->TabIndex = 104;
 			this->lblBuscarMedicacion5->Text = L"Costo Unitario";
 			// 
@@ -3859,7 +3921,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBuscarMedicacion2->Location = System::Drawing::Point(114, 184);
 			this->txtBuscarMedicacion2->Name = L"txtBuscarMedicacion2";
-			this->txtBuscarMedicacion2->Size = System::Drawing::Size(210, 35);
+			this->txtBuscarMedicacion2->Size = System::Drawing::Size(210, 42);
 			this->txtBuscarMedicacion2->TabIndex = 98;
 			// 
 			// lblBuscarMedicacion2
@@ -3869,7 +3931,7 @@ namespace TareaProgramada3 {
 			this->lblBuscarMedicacion2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBuscarMedicacion2->Location = System::Drawing::Point(109, 150);
 			this->lblBuscarMedicacion2->Name = L"lblBuscarMedicacion2";
-			this->lblBuscarMedicacion2->Size = System::Drawing::Size(105, 30);
+			this->lblBuscarMedicacion2->Size = System::Drawing::Size(133, 37);
 			this->lblBuscarMedicacion2->TabIndex = 97;
 			this->lblBuscarMedicacion2->Text = L"ID Animal";
 			// 
@@ -3877,7 +3939,7 @@ namespace TareaProgramada3 {
 			// 
 			this->txtBuscarMedicacion1->Location = System::Drawing::Point(114, 91);
 			this->txtBuscarMedicacion1->Name = L"txtBuscarMedicacion1";
-			this->txtBuscarMedicacion1->Size = System::Drawing::Size(210, 35);
+			this->txtBuscarMedicacion1->Size = System::Drawing::Size(210, 42);
 			this->txtBuscarMedicacion1->TabIndex = 96;
 			// 
 			// lblBuscarMedicacion1
@@ -3887,16 +3949,16 @@ namespace TareaProgramada3 {
 			this->lblBuscarMedicacion1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lblBuscarMedicacion1->Location = System::Drawing::Point(109, 58);
 			this->lblBuscarMedicacion1->Name = L"lblBuscarMedicacion1";
-			this->lblBuscarMedicacion1->Size = System::Drawing::Size(192, 30);
+			this->lblBuscarMedicacion1->Size = System::Drawing::Size(249, 37);
 			this->lblBuscarMedicacion1->TabIndex = 95;
 			this->lblBuscarMedicacion1->Text = L"Código Medicación";
 			// 
 			// btabElim
 			// 
 			this->btabElim->Controls->Add(this->tabEliminacion);
-			this->btabElim->Location = System::Drawing::Point(4, 42);
+			this->btabElim->Location = System::Drawing::Point(4, 48);
 			this->btabElim->Name = L"btabElim";
-			this->btabElim->Size = System::Drawing::Size(921, 499);
+			this->btabElim->Size = System::Drawing::Size(921, 493);
 			this->btabElim->TabIndex = 3;
 			this->btabElim->Text = L"Eliminación";
 			this->btabElim->UseVisualStyleBackColor = true;
@@ -3920,67 +3982,386 @@ namespace TareaProgramada3 {
 			// btabElimPais
 			// 
 			this->btabElimPais->BackColor = System::Drawing::Color::Teal;
-			this->btabElimPais->Location = System::Drawing::Point(4, 39);
+			this->btabElimPais->Controls->Add(this->bEliminarPais);
+			this->btabElimPais->Controls->Add(this->txtElimPais1);
+			this->btabElimPais->Controls->Add(this->lblElimPais1);
+			this->btabElimPais->Location = System::Drawing::Point(4, 45);
 			this->btabElimPais->Name = L"btabElimPais";
 			this->btabElimPais->Padding = System::Windows::Forms::Padding(3);
-			this->btabElimPais->Size = System::Drawing::Size(917, 457);
+			this->btabElimPais->Size = System::Drawing::Size(917, 451);
 			this->btabElimPais->TabIndex = 0;
 			this->btabElimPais->Text = L"País";
+			// 
+			// bEliminarPais
+			// 
+			this->bEliminarPais->BackColor = System::Drawing::Color::Transparent;
+			this->bEliminarPais->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bEliminarPais->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bEliminarPais->ForeColor = System::Drawing::Color::White;
+			this->bEliminarPais->Location = System::Drawing::Point(92, 324);
+			this->bEliminarPais->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bEliminarPais->Name = L"bEliminarPais";
+			this->bEliminarPais->Size = System::Drawing::Size(210, 45);
+			this->bEliminarPais->TabIndex = 51;
+			this->bEliminarPais->Text = L"Eliminar";
+			this->bEliminarPais->UseVisualStyleBackColor = false;
+			this->bEliminarPais->Click += gcnew System::EventHandler(this, &PopUpMenu::bEliminarPais_Click);
+			// 
+			// txtElimPais1
+			// 
+			this->txtElimPais1->Location = System::Drawing::Point(92, 101);
+			this->txtElimPais1->Name = L"txtElimPais1";
+			this->txtElimPais1->Size = System::Drawing::Size(210, 42);
+			this->txtElimPais1->TabIndex = 50;
+			// 
+			// lblElimPais1
+			// 
+			this->lblElimPais1->AutoSize = true;
+			this->lblElimPais1->BackColor = System::Drawing::Color::Teal;
+			this->lblElimPais1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblElimPais1->Location = System::Drawing::Point(87, 55);
+			this->lblElimPais1->Name = L"lblElimPais1";
+			this->lblElimPais1->Size = System::Drawing::Size(158, 37);
+			this->lblElimPais1->TabIndex = 49;
+			this->lblElimPais1->Text = L"Código País";
 			// 
 			// btabElimCdd
 			// 
 			this->btabElimCdd->BackColor = System::Drawing::Color::Teal;
-			this->btabElimCdd->Location = System::Drawing::Point(4, 39);
+			this->btabElimCdd->Controls->Add(this->bEliminarCiudad);
+			this->btabElimCdd->Controls->Add(this->txtElimCiudad2);
+			this->btabElimCdd->Controls->Add(this->lblElimCiudad2);
+			this->btabElimCdd->Controls->Add(this->txtElimCiudad1);
+			this->btabElimCdd->Controls->Add(this->lblElimCiudad1);
+			this->btabElimCdd->Location = System::Drawing::Point(4, 45);
 			this->btabElimCdd->Name = L"btabElimCdd";
 			this->btabElimCdd->Padding = System::Windows::Forms::Padding(3);
-			this->btabElimCdd->Size = System::Drawing::Size(917, 457);
+			this->btabElimCdd->Size = System::Drawing::Size(917, 451);
 			this->btabElimCdd->TabIndex = 1;
 			this->btabElimCdd->Text = L"Ciudad";
+			// 
+			// bEliminarCiudad
+			// 
+			this->bEliminarCiudad->BackColor = System::Drawing::Color::Transparent;
+			this->bEliminarCiudad->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bEliminarCiudad->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bEliminarCiudad->ForeColor = System::Drawing::Color::White;
+			this->bEliminarCiudad->Location = System::Drawing::Point(94, 313);
+			this->bEliminarCiudad->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bEliminarCiudad->Name = L"bEliminarCiudad";
+			this->bEliminarCiudad->Size = System::Drawing::Size(210, 45);
+			this->bEliminarCiudad->TabIndex = 52;
+			this->bEliminarCiudad->Text = L"Eliminar";
+			this->bEliminarCiudad->UseVisualStyleBackColor = false;
+			this->bEliminarCiudad->Click += gcnew System::EventHandler(this, &PopUpMenu::bEliminarCiudad_Click);
+			// 
+			// txtElimCiudad2
+			// 
+			this->txtElimCiudad2->Location = System::Drawing::Point(94, 201);
+			this->txtElimCiudad2->Name = L"txtElimCiudad2";
+			this->txtElimCiudad2->Size = System::Drawing::Size(210, 42);
+			this->txtElimCiudad2->TabIndex = 51;
+			// 
+			// lblElimCiudad2
+			// 
+			this->lblElimCiudad2->AutoSize = true;
+			this->lblElimCiudad2->BackColor = System::Drawing::Color::Teal;
+			this->lblElimCiudad2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblElimCiudad2->Location = System::Drawing::Point(89, 168);
+			this->lblElimCiudad2->Name = L"lblElimCiudad2";
+			this->lblElimCiudad2->Size = System::Drawing::Size(197, 37);
+			this->lblElimCiudad2->TabIndex = 50;
+			this->lblElimCiudad2->Text = L"Código Ciudad";
+			// 
+			// txtElimCiudad1
+			// 
+			this->txtElimCiudad1->Location = System::Drawing::Point(94, 109);
+			this->txtElimCiudad1->Name = L"txtElimCiudad1";
+			this->txtElimCiudad1->Size = System::Drawing::Size(210, 42);
+			this->txtElimCiudad1->TabIndex = 49;
+			// 
+			// lblElimCiudad1
+			// 
+			this->lblElimCiudad1->AutoSize = true;
+			this->lblElimCiudad1->BackColor = System::Drawing::Color::Teal;
+			this->lblElimCiudad1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblElimCiudad1->Location = System::Drawing::Point(89, 76);
+			this->lblElimCiudad1->Name = L"lblElimCiudad1";
+			this->lblElimCiudad1->Size = System::Drawing::Size(158, 37);
+			this->lblElimCiudad1->TabIndex = 48;
+			this->lblElimCiudad1->Text = L"Código País";
 			// 
 			// btabElimClt
 			// 
 			this->btabElimClt->BackColor = System::Drawing::Color::Teal;
-			this->btabElimClt->Location = System::Drawing::Point(4, 39);
+			this->btabElimClt->Controls->Add(this->txtElimCliente2);
+			this->btabElimClt->Controls->Add(this->lblElimCliente2);
+			this->btabElimClt->Controls->Add(this->txtElimCliente1);
+			this->btabElimClt->Controls->Add(this->lblElimCliente1);
+			this->btabElimClt->Controls->Add(this->bEliminarCliente);
+			this->btabElimClt->Controls->Add(this->txtElimCliente3);
+			this->btabElimClt->Controls->Add(this->lblElimCliente3);
+			this->btabElimClt->Location = System::Drawing::Point(4, 45);
 			this->btabElimClt->Name = L"btabElimClt";
-			this->btabElimClt->Size = System::Drawing::Size(917, 457);
+			this->btabElimClt->Size = System::Drawing::Size(917, 451);
 			this->btabElimClt->TabIndex = 2;
 			this->btabElimClt->Text = L"Cliente";
+			// 
+			// txtElimCliente2
+			// 
+			this->txtElimCliente2->Location = System::Drawing::Point(78, 170);
+			this->txtElimCliente2->Name = L"txtElimCliente2";
+			this->txtElimCliente2->Size = System::Drawing::Size(210, 42);
+			this->txtElimCliente2->TabIndex = 73;
+			// 
+			// lblElimCliente2
+			// 
+			this->lblElimCliente2->AutoSize = true;
+			this->lblElimCliente2->BackColor = System::Drawing::Color::Teal;
+			this->lblElimCliente2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblElimCliente2->Location = System::Drawing::Point(73, 137);
+			this->lblElimCliente2->Name = L"lblElimCliente2";
+			this->lblElimCliente2->Size = System::Drawing::Size(197, 37);
+			this->lblElimCliente2->TabIndex = 72;
+			this->lblElimCliente2->Text = L"Código Ciudad";
+			// 
+			// txtElimCliente1
+			// 
+			this->txtElimCliente1->Location = System::Drawing::Point(78, 78);
+			this->txtElimCliente1->Name = L"txtElimCliente1";
+			this->txtElimCliente1->Size = System::Drawing::Size(210, 42);
+			this->txtElimCliente1->TabIndex = 71;
+			// 
+			// lblElimCliente1
+			// 
+			this->lblElimCliente1->AutoSize = true;
+			this->lblElimCliente1->BackColor = System::Drawing::Color::Teal;
+			this->lblElimCliente1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblElimCliente1->Location = System::Drawing::Point(73, 45);
+			this->lblElimCliente1->Name = L"lblElimCliente1";
+			this->lblElimCliente1->Size = System::Drawing::Size(158, 37);
+			this->lblElimCliente1->TabIndex = 70;
+			this->lblElimCliente1->Text = L"Código País";
+			// 
+			// bEliminarCliente
+			// 
+			this->bEliminarCliente->BackColor = System::Drawing::Color::Transparent;
+			this->bEliminarCliente->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bEliminarCliente->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bEliminarCliente->ForeColor = System::Drawing::Color::White;
+			this->bEliminarCliente->Location = System::Drawing::Point(78, 355);
+			this->bEliminarCliente->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bEliminarCliente->Name = L"bEliminarCliente";
+			this->bEliminarCliente->Size = System::Drawing::Size(210, 45);
+			this->bEliminarCliente->TabIndex = 69;
+			this->bEliminarCliente->Text = L"Eliminar";
+			this->bEliminarCliente->UseVisualStyleBackColor = false;
+			this->bEliminarCliente->Click += gcnew System::EventHandler(this, &PopUpMenu::bEliminarCliente_Click);
+			// 
+			// txtElimCliente3
+			// 
+			this->txtElimCliente3->Location = System::Drawing::Point(78, 263);
+			this->txtElimCliente3->Name = L"txtElimCliente3";
+			this->txtElimCliente3->Size = System::Drawing::Size(210, 42);
+			this->txtElimCliente3->TabIndex = 68;
+			// 
+			// lblElimCliente3
+			// 
+			this->lblElimCliente3->AutoSize = true;
+			this->lblElimCliente3->BackColor = System::Drawing::Color::Teal;
+			this->lblElimCliente3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblElimCliente3->Location = System::Drawing::Point(73, 230);
+			this->lblElimCliente3->Name = L"lblElimCliente3";
+			this->lblElimCliente3->Size = System::Drawing::Size(204, 37);
+			this->lblElimCliente3->TabIndex = 67;
+			this->lblElimCliente3->Text = L"Número Cliente";
 			// 
 			// btabElimMasc
 			// 
 			this->btabElimMasc->BackColor = System::Drawing::Color::Teal;
-			this->btabElimMasc->Location = System::Drawing::Point(4, 39);
+			this->btabElimMasc->Controls->Add(this->bEliminarMascota);
+			this->btabElimMasc->Controls->Add(this->txtElimMascota1);
+			this->btabElimMasc->Controls->Add(this->lblElimMascota1);
+			this->btabElimMasc->Location = System::Drawing::Point(4, 45);
 			this->btabElimMasc->Name = L"btabElimMasc";
-			this->btabElimMasc->Size = System::Drawing::Size(917, 457);
+			this->btabElimMasc->Size = System::Drawing::Size(917, 451);
 			this->btabElimMasc->TabIndex = 3;
 			this->btabElimMasc->Text = L"Mascota";
+			// 
+			// bEliminarMascota
+			// 
+			this->bEliminarMascota->BackColor = System::Drawing::Color::Transparent;
+			this->bEliminarMascota->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bEliminarMascota->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bEliminarMascota->ForeColor = System::Drawing::Color::White;
+			this->bEliminarMascota->Location = System::Drawing::Point(58, 285);
+			this->bEliminarMascota->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bEliminarMascota->Name = L"bEliminarMascota";
+			this->bEliminarMascota->Size = System::Drawing::Size(210, 45);
+			this->bEliminarMascota->TabIndex = 98;
+			this->bEliminarMascota->Text = L"Eliminar";
+			this->bEliminarMascota->UseVisualStyleBackColor = false;
+			this->bEliminarMascota->Click += gcnew System::EventHandler(this, &PopUpMenu::bEliminarMascota_Click);
+			// 
+			// txtElimMascota1
+			// 
+			this->txtElimMascota1->Location = System::Drawing::Point(58, 95);
+			this->txtElimMascota1->Name = L"txtElimMascota1";
+			this->txtElimMascota1->Size = System::Drawing::Size(210, 42);
+			this->txtElimMascota1->TabIndex = 97;
+			// 
+			// lblElimMascota1
+			// 
+			this->lblElimMascota1->AutoSize = true;
+			this->lblElimMascota1->BackColor = System::Drawing::Color::Teal;
+			this->lblElimMascota1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblElimMascota1->Location = System::Drawing::Point(53, 62);
+			this->lblElimMascota1->Name = L"lblElimMascota1";
+			this->lblElimMascota1->Size = System::Drawing::Size(133, 37);
+			this->lblElimMascota1->TabIndex = 96;
+			this->lblElimMascota1->Text = L"ID Animal";
 			// 
 			// btabElimVisita
 			// 
 			this->btabElimVisita->BackColor = System::Drawing::Color::Teal;
-			this->btabElimVisita->Location = System::Drawing::Point(4, 39);
+			this->btabElimVisita->Controls->Add(this->bEliminarVisita);
+			this->btabElimVisita->Controls->Add(this->txtElimVisita1);
+			this->btabElimVisita->Controls->Add(this->lblElimVisita1);
+			this->btabElimVisita->Location = System::Drawing::Point(4, 45);
 			this->btabElimVisita->Name = L"btabElimVisita";
-			this->btabElimVisita->Size = System::Drawing::Size(917, 457);
+			this->btabElimVisita->Size = System::Drawing::Size(917, 451);
 			this->btabElimVisita->TabIndex = 4;
 			this->btabElimVisita->Text = L"Visita";
+			// 
+			// bEliminarVisita
+			// 
+			this->bEliminarVisita->BackColor = System::Drawing::Color::Transparent;
+			this->bEliminarVisita->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bEliminarVisita->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bEliminarVisita->ForeColor = System::Drawing::Color::White;
+			this->bEliminarVisita->Location = System::Drawing::Point(82, 292);
+			this->bEliminarVisita->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bEliminarVisita->Name = L"bEliminarVisita";
+			this->bEliminarVisita->Size = System::Drawing::Size(210, 45);
+			this->bEliminarVisita->TabIndex = 101;
+			this->bEliminarVisita->Text = L"Eliminar";
+			this->bEliminarVisita->UseVisualStyleBackColor = false;
+			this->bEliminarVisita->Click += gcnew System::EventHandler(this, &PopUpMenu::bEliminarVisita_Click);
+			// 
+			// txtElimVisita1
+			// 
+			this->txtElimVisita1->Location = System::Drawing::Point(82, 102);
+			this->txtElimVisita1->Name = L"txtElimVisita1";
+			this->txtElimVisita1->Size = System::Drawing::Size(210, 42);
+			this->txtElimVisita1->TabIndex = 98;
+			// 
+			// lblElimVisita1
+			// 
+			this->lblElimVisita1->AutoSize = true;
+			this->lblElimVisita1->BackColor = System::Drawing::Color::Teal;
+			this->lblElimVisita1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblElimVisita1->Location = System::Drawing::Point(77, 69);
+			this->lblElimVisita1->Name = L"lblElimVisita1";
+			this->lblElimVisita1->Size = System::Drawing::Size(177, 37);
+			this->lblElimVisita1->TabIndex = 97;
+			this->lblElimVisita1->Text = L"Código Visita";
 			// 
 			// btabElimTrat
 			// 
 			this->btabElimTrat->BackColor = System::Drawing::Color::Teal;
-			this->btabElimTrat->Location = System::Drawing::Point(4, 39);
+			this->btabElimTrat->Controls->Add(this->bEliminarTratamiento);
+			this->btabElimTrat->Controls->Add(this->txtElimTrat1);
+			this->btabElimTrat->Controls->Add(this->lblElimTrat1);
+			this->btabElimTrat->Location = System::Drawing::Point(4, 45);
 			this->btabElimTrat->Name = L"btabElimTrat";
-			this->btabElimTrat->Size = System::Drawing::Size(917, 457);
+			this->btabElimTrat->Size = System::Drawing::Size(917, 451);
 			this->btabElimTrat->TabIndex = 5;
 			this->btabElimTrat->Text = L"Tratamiento";
+			// 
+			// bEliminarTratamiento
+			// 
+			this->bEliminarTratamiento->BackColor = System::Drawing::Color::Transparent;
+			this->bEliminarTratamiento->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bEliminarTratamiento->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bEliminarTratamiento->ForeColor = System::Drawing::Color::White;
+			this->bEliminarTratamiento->Location = System::Drawing::Point(69, 176);
+			this->bEliminarTratamiento->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bEliminarTratamiento->Name = L"bEliminarTratamiento";
+			this->bEliminarTratamiento->Size = System::Drawing::Size(210, 45);
+			this->bEliminarTratamiento->TabIndex = 122;
+			this->bEliminarTratamiento->Text = L"Eliminar";
+			this->bEliminarTratamiento->UseVisualStyleBackColor = false;
+			this->bEliminarTratamiento->Click += gcnew System::EventHandler(this, &PopUpMenu::bEliminarTratamiento_Click);
+			// 
+			// txtElimTrat1
+			// 
+			this->txtElimTrat1->Location = System::Drawing::Point(69, 88);
+			this->txtElimTrat1->Name = L"txtElimTrat1";
+			this->txtElimTrat1->Size = System::Drawing::Size(210, 42);
+			this->txtElimTrat1->TabIndex = 121;
+			// 
+			// lblElimTrat1
+			// 
+			this->lblElimTrat1->AutoSize = true;
+			this->lblElimTrat1->BackColor = System::Drawing::Color::Teal;
+			this->lblElimTrat1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblElimTrat1->Location = System::Drawing::Point(64, 55);
+			this->lblElimTrat1->Name = L"lblElimTrat1";
+			this->lblElimTrat1->Size = System::Drawing::Size(254, 37);
+			this->lblElimTrat1->TabIndex = 120;
+			this->lblElimTrat1->Text = L"Código Tratamiento";
 			// 
 			// btabElimMed
 			// 
 			this->btabElimMed->BackColor = System::Drawing::Color::Teal;
-			this->btabElimMed->Location = System::Drawing::Point(4, 39);
+			this->btabElimMed->Controls->Add(this->bEliminarMedicacion);
+			this->btabElimMed->Controls->Add(this->txtElimMedicacion1);
+			this->btabElimMed->Controls->Add(this->lblElimMedicacion1);
+			this->btabElimMed->Location = System::Drawing::Point(4, 45);
 			this->btabElimMed->Name = L"btabElimMed";
-			this->btabElimMed->Size = System::Drawing::Size(917, 457);
+			this->btabElimMed->Size = System::Drawing::Size(917, 451);
 			this->btabElimMed->TabIndex = 6;
 			this->btabElimMed->Text = L"Medicación";
+			// 
+			// bEliminarMedicacion
+			// 
+			this->bEliminarMedicacion->BackColor = System::Drawing::Color::Transparent;
+			this->bEliminarMedicacion->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bEliminarMedicacion->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bEliminarMedicacion->ForeColor = System::Drawing::Color::White;
+			this->bEliminarMedicacion->Location = System::Drawing::Point(76, 263);
+			this->bEliminarMedicacion->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bEliminarMedicacion->Name = L"bEliminarMedicacion";
+			this->bEliminarMedicacion->Size = System::Drawing::Size(210, 45);
+			this->bEliminarMedicacion->TabIndex = 104;
+			this->bEliminarMedicacion->Text = L"Eliminar";
+			this->bEliminarMedicacion->UseVisualStyleBackColor = false;
+			this->bEliminarMedicacion->Click += gcnew System::EventHandler(this, &PopUpMenu::bEliminarMedicacion_Click);
+			// 
+			// txtElimMedicacion1
+			// 
+			this->txtElimMedicacion1->Location = System::Drawing::Point(76, 88);
+			this->txtElimMedicacion1->Name = L"txtElimMedicacion1";
+			this->txtElimMedicacion1->Size = System::Drawing::Size(210, 42);
+			this->txtElimMedicacion1->TabIndex = 101;
+			// 
+			// lblElimMedicacion1
+			// 
+			this->lblElimMedicacion1->AutoSize = true;
+			this->lblElimMedicacion1->BackColor = System::Drawing::Color::Teal;
+			this->lblElimMedicacion1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblElimMedicacion1->Location = System::Drawing::Point(71, 55);
+			this->lblElimMedicacion1->Name = L"lblElimMedicacion1";
+			this->lblElimMedicacion1->Size = System::Drawing::Size(249, 37);
+			this->lblElimMedicacion1->TabIndex = 100;
+			this->lblElimMedicacion1->Text = L"Código Medicación";
 			// 
 			// bSalir
 			// 
@@ -4000,7 +4381,7 @@ namespace TareaProgramada3 {
 			// 
 			// PopUpMenu
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(12, 30);
+			this->AutoScaleDimensions = System::Drawing::SizeF(14, 36);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::CadetBlue;
 			this->ClientSize = System::Drawing::Size(1084, 611);
@@ -4085,6 +4466,20 @@ namespace TareaProgramada3 {
 			this->pBuscarMedicacion->PerformLayout();
 			this->btabElim->ResumeLayout(false);
 			this->tabEliminacion->ResumeLayout(false);
+			this->btabElimPais->ResumeLayout(false);
+			this->btabElimPais->PerformLayout();
+			this->btabElimCdd->ResumeLayout(false);
+			this->btabElimCdd->PerformLayout();
+			this->btabElimClt->ResumeLayout(false);
+			this->btabElimClt->PerformLayout();
+			this->btabElimMasc->ResumeLayout(false);
+			this->btabElimMasc->PerformLayout();
+			this->btabElimVisita->ResumeLayout(false);
+			this->btabElimVisita->PerformLayout();
+			this->btabElimTrat->ResumeLayout(false);
+			this->btabElimTrat->PerformLayout();
+			this->btabElimMed->ResumeLayout(false);
+			this->btabElimMed->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
@@ -4227,7 +4622,19 @@ namespace TareaProgramada3 {
 
     /*	FUNCIONES ELIMINAR  */
 
-
-
+	private: System::Void bEliminarPais_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void bEliminarCiudad_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void bEliminarCliente_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void bEliminarMascota_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void bEliminarVisita_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void bEliminarTratamiento_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void bEliminarMedicacion_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
 };
 }
