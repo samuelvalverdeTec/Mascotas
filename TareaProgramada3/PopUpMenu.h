@@ -294,20 +294,33 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Label^ lblInserTrat2;
 	private: System::Windows::Forms::TextBox^ txtInserTrat1;
 	private: System::Windows::Forms::Label^ lblInserTrat1;
-	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::Label^ label3;
+private: System::Windows::Forms::TextBox^ txtInserMedicacion6;
+
+private: System::Windows::Forms::Label^ lblInserMedicacion6;
+private: System::Windows::Forms::TextBox^ txtInserMedicacion5;
+
+
+private: System::Windows::Forms::Label^ lblInserMedicacion5;
+private: System::Windows::Forms::TextBox^ txtInserMedicacion4;
+
+
+private: System::Windows::Forms::Label^ lblInserMedicacion4;
+
 	private: System::Windows::Forms::Button^ bInserMedicacion;
-	private: System::Windows::Forms::TextBox^ textBox4;
-	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::TextBox^ textBox5;
-	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::Label^ label6;
-	private: System::Windows::Forms::TextBox^ textBox6;
-	private: System::Windows::Forms::Label^ label7;
+private: System::Windows::Forms::TextBox^ txtInserMedicacion2;
+
+private: System::Windows::Forms::Label^ lblInserMedicacion2;
+private: System::Windows::Forms::TextBox^ txtInserMedicacion1;
+
+
+private: System::Windows::Forms::Label^ lblInserMedicacion1;
+private: System::Windows::Forms::Label^ lblInserMedicacion7;
+private: System::Windows::Forms::TextBox^ txtInserMedicacion3;
+
+
+
+private: System::Windows::Forms::Label^ lblInserMedicacion3;
+
 	private: System::Windows::Forms::TextBox^ txtBusqPais2;
 	private: System::Windows::Forms::Label^ lblBusqPais2;
 	private: System::Windows::Forms::Button^ bBuscarPais;
@@ -525,20 +538,20 @@ namespace TareaProgramada3 {
 			this->txtInserTrat1 = (gcnew System::Windows::Forms::TextBox());
 			this->lblInserTrat1 = (gcnew System::Windows::Forms::Label());
 			this->btabInserMed = (gcnew System::Windows::Forms::TabPage());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->lblInserMedicacion7 = (gcnew System::Windows::Forms::Label());
+			this->txtInserMedicacion3 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserMedicacion3 = (gcnew System::Windows::Forms::Label());
+			this->txtInserMedicacion6 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserMedicacion6 = (gcnew System::Windows::Forms::Label());
+			this->txtInserMedicacion5 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserMedicacion5 = (gcnew System::Windows::Forms::Label());
+			this->txtInserMedicacion4 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserMedicacion4 = (gcnew System::Windows::Forms::Label());
 			this->bInserMedicacion = (gcnew System::Windows::Forms::Button());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->txtInserMedicacion2 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserMedicacion2 = (gcnew System::Windows::Forms::Label());
+			this->txtInserMedicacion1 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserMedicacion1 = (gcnew System::Windows::Forms::Label());
 			this->btabModif = (gcnew System::Windows::Forms::TabPage());
 			this->tabModificacion = (gcnew System::Windows::Forms::TabControl());
 			this->btabModifPais = (gcnew System::Windows::Forms::TabPage());
@@ -2012,110 +2025,110 @@ namespace TareaProgramada3 {
 			// btabInserMed
 			// 
 			this->btabInserMed->BackColor = System::Drawing::Color::Teal;
-			this->btabInserMed->Controls->Add(this->label6);
-			this->btabInserMed->Controls->Add(this->textBox6);
-			this->btabInserMed->Controls->Add(this->label7);
-			this->btabInserMed->Controls->Add(this->textBox1);
-			this->btabInserMed->Controls->Add(this->label1);
-			this->btabInserMed->Controls->Add(this->textBox2);
-			this->btabInserMed->Controls->Add(this->label2);
-			this->btabInserMed->Controls->Add(this->textBox3);
-			this->btabInserMed->Controls->Add(this->label3);
+			this->btabInserMed->Controls->Add(this->lblInserMedicacion7);
+			this->btabInserMed->Controls->Add(this->txtInserMedicacion3);
+			this->btabInserMed->Controls->Add(this->lblInserMedicacion3);
+			this->btabInserMed->Controls->Add(this->txtInserMedicacion6);
+			this->btabInserMed->Controls->Add(this->lblInserMedicacion6);
+			this->btabInserMed->Controls->Add(this->txtInserMedicacion5);
+			this->btabInserMed->Controls->Add(this->lblInserMedicacion5);
+			this->btabInserMed->Controls->Add(this->txtInserMedicacion4);
+			this->btabInserMed->Controls->Add(this->lblInserMedicacion4);
 			this->btabInserMed->Controls->Add(this->bInserMedicacion);
-			this->btabInserMed->Controls->Add(this->textBox4);
-			this->btabInserMed->Controls->Add(this->label4);
-			this->btabInserMed->Controls->Add(this->textBox5);
-			this->btabInserMed->Controls->Add(this->label5);
+			this->btabInserMed->Controls->Add(this->txtInserMedicacion2);
+			this->btabInserMed->Controls->Add(this->lblInserMedicacion2);
+			this->btabInserMed->Controls->Add(this->txtInserMedicacion1);
+			this->btabInserMed->Controls->Add(this->lblInserMedicacion1);
 			this->btabInserMed->Location = System::Drawing::Point(4, 45);
 			this->btabInserMed->Name = L"btabInserMed";
 			this->btabInserMed->Size = System::Drawing::Size(917, 451);
 			this->btabInserMed->TabIndex = 6;
 			this->btabInserMed->Text = L"Medicación";
 			// 
-			// label6
+			// lblInserMedicacion7
 			// 
-			this->label6->AutoSize = true;
-			this->label6->BackColor = System::Drawing::Color::Teal;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->lblInserMedicacion7->AutoSize = true;
+			this->lblInserMedicacion7->BackColor = System::Drawing::Color::Teal;
+			this->lblInserMedicacion7->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label6->Location = System::Drawing::Point(84, 310);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(140, 32);
-			this->label6->TabIndex = 94;
-			this->label6->Text = L"DD/MM/AA";
+			this->lblInserMedicacion7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserMedicacion7->Location = System::Drawing::Point(84, 310);
+			this->lblInserMedicacion7->Name = L"lblInserMedicacion7";
+			this->lblInserMedicacion7->Size = System::Drawing::Size(140, 32);
+			this->lblInserMedicacion7->TabIndex = 94;
+			this->lblInserMedicacion7->Text = L"DD/MM/AA";
 			// 
-			// textBox6
+			// txtInserMedicacion3
 			// 
-			this->textBox6->Location = System::Drawing::Point(89, 272);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(210, 42);
-			this->textBox6->TabIndex = 93;
+			this->txtInserMedicacion3->Location = System::Drawing::Point(89, 272);
+			this->txtInserMedicacion3->Name = L"txtInserMedicacion3";
+			this->txtInserMedicacion3->Size = System::Drawing::Size(210, 42);
+			this->txtInserMedicacion3->TabIndex = 93;
 			// 
-			// label7
+			// lblInserMedicacion3
 			// 
-			this->label7->AutoSize = true;
-			this->label7->BackColor = System::Drawing::Color::Teal;
-			this->label7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label7->Location = System::Drawing::Point(84, 239);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(243, 37);
-			this->label7->TabIndex = 92;
-			this->label7->Text = L"Fecha Última Visita";
+			this->lblInserMedicacion3->AutoSize = true;
+			this->lblInserMedicacion3->BackColor = System::Drawing::Color::Teal;
+			this->lblInserMedicacion3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserMedicacion3->Location = System::Drawing::Point(84, 239);
+			this->lblInserMedicacion3->Name = L"lblInserMedicacion3";
+			this->lblInserMedicacion3->Size = System::Drawing::Size(243, 37);
+			this->lblInserMedicacion3->TabIndex = 92;
+			this->lblInserMedicacion3->Text = L"Fecha Última Visita";
 			// 
-			// textBox1
+			// txtInserMedicacion6
 			// 
-			this->textBox1->Location = System::Drawing::Point(403, 272);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(210, 42);
-			this->textBox1->TabIndex = 77;
+			this->txtInserMedicacion6->Location = System::Drawing::Point(403, 272);
+			this->txtInserMedicacion6->Name = L"txtInserMedicacion6";
+			this->txtInserMedicacion6->Size = System::Drawing::Size(210, 42);
+			this->txtInserMedicacion6->TabIndex = 77;
 			// 
-			// label1
+			// lblInserMedicacion6
 			// 
-			this->label1->AutoSize = true;
-			this->label1->BackColor = System::Drawing::Color::Teal;
-			this->label1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label1->Location = System::Drawing::Point(398, 239);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(150, 37);
-			this->label1->TabIndex = 76;
-			this->label1->Text = L"Costo Total";
+			this->lblInserMedicacion6->AutoSize = true;
+			this->lblInserMedicacion6->BackColor = System::Drawing::Color::Teal;
+			this->lblInserMedicacion6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserMedicacion6->Location = System::Drawing::Point(398, 239);
+			this->lblInserMedicacion6->Name = L"lblInserMedicacion6";
+			this->lblInserMedicacion6->Size = System::Drawing::Size(150, 37);
+			this->lblInserMedicacion6->TabIndex = 76;
+			this->lblInserMedicacion6->Text = L"Costo Total";
 			// 
-			// textBox2
+			// txtInserMedicacion5
 			// 
-			this->textBox2->Location = System::Drawing::Point(403, 192);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(210, 42);
-			this->textBox2->TabIndex = 75;
+			this->txtInserMedicacion5->Location = System::Drawing::Point(403, 192);
+			this->txtInserMedicacion5->Name = L"txtInserMedicacion5";
+			this->txtInserMedicacion5->Size = System::Drawing::Size(210, 42);
+			this->txtInserMedicacion5->TabIndex = 75;
 			// 
-			// label2
+			// lblInserMedicacion5
 			// 
-			this->label2->AutoSize = true;
-			this->label2->BackColor = System::Drawing::Color::Teal;
-			this->label2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label2->Location = System::Drawing::Point(398, 147);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(90, 37);
-			this->label2->TabIndex = 74;
-			this->label2->Text = L"Precio";
+			this->lblInserMedicacion5->AutoSize = true;
+			this->lblInserMedicacion5->BackColor = System::Drawing::Color::Teal;
+			this->lblInserMedicacion5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserMedicacion5->Location = System::Drawing::Point(398, 147);
+			this->lblInserMedicacion5->Name = L"lblInserMedicacion5";
+			this->lblInserMedicacion5->Size = System::Drawing::Size(90, 37);
+			this->lblInserMedicacion5->TabIndex = 74;
+			this->lblInserMedicacion5->Text = L"Precio";
 			// 
-			// textBox3
+			// txtInserMedicacion4
 			// 
-			this->textBox3->Location = System::Drawing::Point(403, 99);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(210, 42);
-			this->textBox3->TabIndex = 73;
+			this->txtInserMedicacion4->Location = System::Drawing::Point(403, 99);
+			this->txtInserMedicacion4->Name = L"txtInserMedicacion4";
+			this->txtInserMedicacion4->Size = System::Drawing::Size(210, 42);
+			this->txtInserMedicacion4->TabIndex = 73;
 			// 
-			// label3
+			// lblInserMedicacion4
 			// 
-			this->label3->AutoSize = true;
-			this->label3->BackColor = System::Drawing::Color::Teal;
-			this->label3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label3->Location = System::Drawing::Point(398, 55);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(125, 37);
-			this->label3->TabIndex = 72;
-			this->label3->Text = L"Cantidad";
+			this->lblInserMedicacion4->AutoSize = true;
+			this->lblInserMedicacion4->BackColor = System::Drawing::Color::Teal;
+			this->lblInserMedicacion4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserMedicacion4->Location = System::Drawing::Point(398, 55);
+			this->lblInserMedicacion4->Name = L"lblInserMedicacion4";
+			this->lblInserMedicacion4->Size = System::Drawing::Size(125, 37);
+			this->lblInserMedicacion4->TabIndex = 72;
+			this->lblInserMedicacion4->Text = L"Cantidad";
 			// 
 			// bInserMedicacion
 			// 
@@ -2133,41 +2146,41 @@ namespace TareaProgramada3 {
 			this->bInserMedicacion->UseVisualStyleBackColor = false;
 			this->bInserMedicacion->Click += gcnew System::EventHandler(this, &PopUpMenu::bInserMedicacion_Click);
 			// 
-			// textBox4
+			// txtInserMedicacion2
 			// 
-			this->textBox4->Location = System::Drawing::Point(86, 192);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(210, 42);
-			this->textBox4->TabIndex = 70;
+			this->txtInserMedicacion2->Location = System::Drawing::Point(86, 192);
+			this->txtInserMedicacion2->Name = L"txtInserMedicacion2";
+			this->txtInserMedicacion2->Size = System::Drawing::Size(210, 42);
+			this->txtInserMedicacion2->TabIndex = 70;
 			// 
-			// label4
+			// lblInserMedicacion2
 			// 
-			this->label4->AutoSize = true;
-			this->label4->BackColor = System::Drawing::Color::Teal;
-			this->label4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label4->Location = System::Drawing::Point(81, 147);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(133, 37);
-			this->label4->TabIndex = 69;
-			this->label4->Text = L"ID Animal";
+			this->lblInserMedicacion2->AutoSize = true;
+			this->lblInserMedicacion2->BackColor = System::Drawing::Color::Teal;
+			this->lblInserMedicacion2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserMedicacion2->Location = System::Drawing::Point(81, 147);
+			this->lblInserMedicacion2->Name = L"lblInserMedicacion2";
+			this->lblInserMedicacion2->Size = System::Drawing::Size(133, 37);
+			this->lblInserMedicacion2->TabIndex = 69;
+			this->lblInserMedicacion2->Text = L"ID Animal";
 			// 
-			// textBox5
+			// txtInserMedicacion1
 			// 
-			this->textBox5->Location = System::Drawing::Point(86, 99);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(210, 42);
-			this->textBox5->TabIndex = 68;
+			this->txtInserMedicacion1->Location = System::Drawing::Point(86, 99);
+			this->txtInserMedicacion1->Name = L"txtInserMedicacion1";
+			this->txtInserMedicacion1->Size = System::Drawing::Size(210, 42);
+			this->txtInserMedicacion1->TabIndex = 68;
 			// 
-			// label5
+			// lblInserMedicacion1
 			// 
-			this->label5->AutoSize = true;
-			this->label5->BackColor = System::Drawing::Color::Teal;
-			this->label5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label5->Location = System::Drawing::Point(81, 55);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(249, 37);
-			this->label5->TabIndex = 67;
-			this->label5->Text = L"Código Medicación";
+			this->lblInserMedicacion1->AutoSize = true;
+			this->lblInserMedicacion1->BackColor = System::Drawing::Color::Teal;
+			this->lblInserMedicacion1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserMedicacion1->Location = System::Drawing::Point(81, 55);
+			this->lblInserMedicacion1->Name = L"lblInserMedicacion1";
+			this->lblInserMedicacion1->Size = System::Drawing::Size(249, 37);
+			this->lblInserMedicacion1->TabIndex = 67;
+			this->lblInserMedicacion1->Text = L"Código Medicación";
 			// 
 			// btabModif
 			// 
