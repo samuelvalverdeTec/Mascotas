@@ -27,6 +27,7 @@ public:
 	void RotacionDobleDerecha(NodoRNTratamiento*& n1, NodoRNTratamiento* n2);
 	void RotacionSimpleIzquierda(NodoRNTratamiento*& n1, NodoRNTratamiento* n2);
 	void RotacionSimpleDerecha(NodoRNTratamiento*& n1, NodoRNTratamiento* n2);
+	void EliminarTratamiento(pNodoRNTratamiento R);
 
 	void agregar_Datos_lectura(string& pDatosLinea);
 	void leer_Doc();

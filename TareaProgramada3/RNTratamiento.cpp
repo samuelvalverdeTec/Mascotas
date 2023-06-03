@@ -1,10 +1,4 @@
-/*#include "NodoBinario.h"
-#include "Binario.h"
-#include "AVL.h"
-#include "NodoAVL.h"*/
 #include "RNTratamiento.h"
-/*#include "NodoAA.h"
-#include "AA.h"*/
 
 #include <iostream>
 #include <fstream>
@@ -744,6 +738,11 @@ void RNTratamiento::RotacionSimpleIzquierda(NodoRNTratamiento*& n, NodoRNTratami
     n = n1;
 }
 
+void RNTratamiento::EliminarTratamiento(pNodoRNTratamiento R) {
+
+
+
+}
 
 NodoRNTratamiento* RNTratamiento::buscaTratamiento(NodoRNTratamiento* R, int codigoTratamiento) {
     NodoRNTratamiento* tratamiento = NULL;

@@ -16,6 +16,8 @@ public:
     BinarioVisitas() :raiz(NULL) {}
 
     void InsertaNodoVisitas(int codVisita, int IDAnimal, string ultimaVisita, int totalFactura, int formaPago);
+    void EliminarVisita(pNodoBinarioVisitas R);
+    
     void agregar_Datos_lectura(string& pDatosLinea, AVLMascotas* arbolMascotas);
     void leer_Doc(AVLMascotas* arbolMascotas);
     string fechaFormato(string dia, string mes, string anho);

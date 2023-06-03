@@ -9,6 +9,8 @@ public:
     BinarioCiudades() : raiz(NULL) {}
 
     void InsertaNodoCiudad(int codPais, int codCiudad, string nom);
+    void EliminarCiudad(pNodoBinarioCiudades R);
+
     void agregar_Datos_lectura(string& pDatosLinea, BinarioPaises* arbolPaises);
     void leer_Doc(BinarioPaises* arbolPaises);
 

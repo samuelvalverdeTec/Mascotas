@@ -105,6 +105,12 @@ pNodoBinarioPaises BinarioPaises::buscaPais(pNodoBinarioPaises R, int codPais) {
     return pais;
 }
 
+void BinarioPaises::EliminarPais(pNodoBinarioPaises R) {
+
+
+
+}
+
 void BinarioPaises::agregar_Datos_lectura(string& pDatosLinea)
 {
     std::string datos[2] = { "", "" };
@@ -176,9 +182,6 @@ void BinarioPaises::RecorreArbolPaises(NodoBinarioPaises* R, string STR, string 
     }
     //return STR;
 }
-
-
-
 
 // ************************************* CIUDADES *************************************
 
@@ -303,6 +306,11 @@ pNodoBinarioCiudades BinarioCiudades::buscaCiudadRepetida(pNodoBinarioCiudades R
     return ciudad;
 }
 
+void BinarioCiudades::EliminarCiudad(pNodoBinarioCiudades R) {
+
+
+
+}
 
 void BinarioCiudades::agregar_Datos_lectura(string& pDatosLinea, BinarioPaises* arbolPaises)
 {
@@ -506,6 +514,11 @@ pNodoBinarioVisitas BinarioVisitas::buscaVisitaRepetida(pNodoBinarioVisitas R, i
     return visita;
 }
 
+void BinarioVisitas::EliminarVisita(pNodoBinarioVisitas R) {
+
+
+
+}
 
 string BinarioVisitas::fechaFormato(string dia, string mes, string anho) {
 

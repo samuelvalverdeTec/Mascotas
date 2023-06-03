@@ -32,6 +32,7 @@ public:
 	void RotacionDobleDerecha(NodoBCliente*& n1, NodoBCliente* n2);
 	void RotacionSimpleIzquierda(NodoBCliente*& n1, NodoBCliente* n2);
 	void RotacionSimpleDerecha(NodoBCliente*& n1, NodoBCliente* n2);
+	void EliminarCliente(pNodoBCliente R);
 
 	void agregar_Datos_lectura(string& pDatosLinea, BinarioPaises* arbolPaises, BinarioCiudades* arbolCiudades);
 	void leer_Doc(BinarioPaises* arbolPaises, BinarioCiudades* arbolCiudades);

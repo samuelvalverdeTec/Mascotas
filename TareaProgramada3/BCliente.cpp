@@ -181,23 +181,13 @@ void BCliente::InsertarBalanceado(NodoBCliente*& ra, bool Hh, int num, string no
     NodoBCliente* n1;
 
     if (ra == NULL) {
-        //cout<<"crear nuevo nodo con "<<codigoPasillo<<" "<<num<<" "<<nombreProducto<<endl;
-        //ra=new NodoRNMarca(codigoPasillo, codigoProducto, num, nombreMarca);
-        //raiz = ra;
-        //cout<<ra->valor<<"q as"<<endl;
         Hh = true;
     }
     else {
-        //cout<<"q as2"<<endl;
         if (num < ra->valor) {
-            //cout<<"inserta nodo izquierdo de "<<ra->valor<<" con "<<codigoPasillo<<" "<<num<<" "<<nombreProducto<<endl;
-            //if(ra->Hizq){
-            //	cout<<"Izquierdo es nulo"<<endl;
-            //}
+           
             InsertarBalanceado(ra->Hizq, Hh, num, nombreC, dir, codPais, codCiudad, telefono, ultVisita);
-            //cout<<"arbol sin rotar: "<<endl;
-            //InordenRProductosI(ra);
-            //cout<<endl;
+            
             if (Hh) {
                 switch (ra->FB) {
                 case 1:
@@ -222,14 +212,7 @@ void BCliente::InsertarBalanceado(NodoBCliente*& ra, bool Hh, int num, string no
         }
         else {
             if (num > ra->valor) {
-                //cout<<"inserta nodo derecho de "<<ra->valor<<" con "<<codigoPasillo<<" "<<num<<" "<<nombreProducto<<endl;
-                //if(ra->Hizq){
-                //	cout<<"derecho es nulo"<<endl;
-                //}
                 InsertarBalanceado(ra->Hder, Hh, num, nombreC, dir, codPais, codCiudad, telefono, ultVisita);
-                //cout<<"arbol sin rotar: "<<endl;
-                //InordenRProductosI(ra);
-                //cout<<endl;
                 if (Hh) {
                     switch (ra->FB) {
                     case -1:
@@ -334,7 +317,11 @@ void BCliente::RotacionSimpleIzquierda(NodoBCliente*& n, NodoBCliente* n1) {
     n = n1;
 }
 
+void BCliente::EliminarCliente(pNodoBCliente R) {
 
+
+
+}
 
 NodoBCliente* BCliente::buscaCliente(NodoBCliente* R, int cedula) {
     NodoBCliente* cliente = NULL;

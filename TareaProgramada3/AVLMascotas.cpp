@@ -339,6 +339,12 @@ void AVLMascotas::RotacionSimpleIzquierda(NodoAVLMascotas*& n, NodoAVLMascotas* 
     n = n1;
 }
 
+void AVLMascotas::EliminarMascota(pNodoAVLMascotas R) {
+
+
+
+}
+
 NodoAVLMascotas* AVLMascotas::buscaMascota(NodoAVLMascotas* R, int IDAnimal) {
 
     NodoAVLMascotas* mascota = NULL;

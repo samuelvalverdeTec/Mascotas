@@ -30,6 +30,7 @@ public:
 	void RotacionDobleDerecha(NodoAVLMascotas*& n1, NodoAVLMascotas* n2);
 	void RotacionSimpleIzquierda(NodoAVLMascotas*& n1, NodoAVLMascotas* n2);
 	void RotacionSimpleDerecha(NodoAVLMascotas*& n1, NodoAVLMascotas* n2);
+	void EliminarMascota(pNodoAVLMascotas R);
 
 	NodoAVLMascotas* buscaMascota(NodoAVLMascotas* R, int IDAnimal);
 	NodoAVLMascotas* buscaMascotaRepetida(NodoAVLMascotas* R, int IDAnimal, int codCliente);

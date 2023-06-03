@@ -8,6 +8,8 @@ public:
     BinarioPaises() :raiz(NULL) {}
 
     void InsertaNodoPaises(int codPais, string nombre);
+    void EliminarPais(pNodoBinarioPaises R);
+    
     void agregar_Datos_lectura(string& pDatosLinea);
     void leer_Doc();
 

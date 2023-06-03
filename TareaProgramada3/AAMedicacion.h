@@ -28,6 +28,7 @@ public:
 	void RotacionDobleDerecha(NodoAAMedicacion*& n1, NodoAAMedicacion* n2);
 	void RotacionSimpleIzquierda(NodoAAMedicacion*& n1, NodoAAMedicacion* n2);
 	void RotacionSimpleDerecha(NodoAAMedicacion*& n1, NodoAAMedicacion* n2);
+	void EliminarMedicacion(pNodoAAMedicacion R);
 
 	void agregar_Datos_lectura(string& pDatosLinea, AVLMascotas* arbolMascotas);
 	void leer_Doc(AVLMascotas* arbolMascotas);

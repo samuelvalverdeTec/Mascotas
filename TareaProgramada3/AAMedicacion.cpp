@@ -330,6 +330,12 @@ void AAMedicacion::RotacionSimpleIzquierda(NodoAAMedicacion*& n, NodoAAMedicacio
     n = n1;
 }
 
+void AAMedicacion::EliminarMedicacion(pNodoAAMedicacion R) {
+
+
+
+}
+
 NodoAAMedicacion* AAMedicacion::buscaMedicacion(NodoAAMedicacion* R, int codigoMed) {
     NodoAAMedicacion* medicacion = NULL;
     if (R == NULL) {

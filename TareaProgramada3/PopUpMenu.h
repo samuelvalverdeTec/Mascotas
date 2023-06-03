@@ -5023,18 +5023,184 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
     /*	FUNCIONES ELIMINAR  */
 
 	private: System::Void bEliminarPais_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		String^ error = "El codigo de pais no existe.";
+		String^ notif = "País eliminado correctamente.";
+
+		int codigo = stoi(marshal_as<string, String^>(this->txtElimPais1->Text));
+
+		pNodoBinarioPaises paisBuscado = arbolPaises->buscaPais(this->arbolPaises->raiz, codigo);
+
+		if (paisBuscado != NULL) {
+			
+			paisBuscado->valor = 0;
+			paisBuscado->nombre = "";
+			MessageBox::Show(notif);
+		}
+		else {
+			MessageBox::Show(error);
+		}
 	}
 	private: System::Void bEliminarCiudad_Click(System::Object^ sender, System::EventArgs^ e) {
+	
+		String^ errorP = "El codigo de pais no existe.";
+		String^ errorC = "El codigo de ciudad ya existe.";
+		String^ notif = "Ciudad eliminada correctamente.";
+
+		int codigoP = stoi(marshal_as<string, String^>(this->txtElimCiudad1->Text));
+		int codigoC = stoi(marshal_as<string, String^>(this->txtElimCiudad2->Text));
+
+		pNodoBinarioPaises paisBuscado = arbolPaises->buscaPais(this->arbolPaises->raiz, codigoP);
+		if (paisBuscado != NULL) {
+			pNodoBinarioCiudades ciudadBuscada = arbolCiudades->buscaCiudadRepetida(arbolCiudades->raiz, codigoP, codigoC);
+			if (ciudadBuscada == NULL) {
+				ciudadBuscada->codpais = 0;
+				ciudadBuscada->valor= 0;
+				ciudadBuscada->nombre = "";
+				MessageBox::Show(notif);
+			}
+			else {
+				MessageBox::Show(errorC);
+			}
+		}
+		else {
+			MessageBox::Show(errorP);
+		}
 	}
 	private: System::Void bEliminarCliente_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		String^ errorP = "El codigo de pais no existe";
+		String^ errorCi = "El codigo de ciudad no existe";
+		String^ errorCl = "El codigo de cliente no existe";
+		String^ notif = "Cliente eliminado correctamente.";
+
+		int codigoP = stoi(marshal_as<string, String^>(this->txtElimCliente1->Text));
+		int codigoCiudad = stoi(marshal_as<string, String^>(this->txtElimCliente2->Text));
+		int codigoCliente = stoi(marshal_as<string, String^>(this->txtElimCliente3->Text));
+
+		pNodoBinarioPaises paisBuscado = arbolPaises->buscaPais(arbolPaises->raiz, codigoP);
+		if (paisBuscado != NULL) {
+			pNodoBinarioCiudades ciudadBuscada = arbolCiudades->buscaCiudadRepetida(arbolCiudades->raiz, codigoP, codigoCiudad);
+			if (ciudadBuscada != NULL) {
+				pNodoBCliente clienteBuscado = arbolClientes->buscaCliente(arbolClientes->raiz, codigoCliente);
+				if (clienteBuscado != NULL) {
+
+					clienteBuscado->codigoCiudad = 0;
+					clienteBuscado->codigoPais = 0;
+					clienteBuscado->nombre = "";
+					clienteBuscado->descuento = 0;
+					clienteBuscado->direccion = "";
+					clienteBuscado->saldo = 0;
+					clienteBuscado->telefono = 0;
+					clienteBuscado->ultimavisita = "";
+					clienteBuscado->valor = 0;
+					MessageBox::Show(notif);
+
+				}
+				else {
+					MessageBox::Show(errorCl);
+				}
+			}
+			else {
+				MessageBox::Show(errorCi);
+			}
+		}
+		else {
+			MessageBox::Show(errorP);
+		}
+
 	}
 	private: System::Void bEliminarMascota_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ error = "El ID animal no existe";
+		String^ notif = "Mascota eliminada correctamente.";
+
+		int id = stoi(marshal_as<string, String^>(this->txtElimMascota1->Text));
+
+		pNodoAVLMascotas mascotaBuscada = arbolMascotas->buscaMascota(arbolMascotas->raiz, id);
+		if (mascotaBuscada != NULL) {
+			
+			mascotaBuscada->codCliente = 0;
+			mascotaBuscada->valor = 0;
+			mascotaBuscada->nombre = "";
+			mascotaBuscada->tipoMascota = "";
+			mascotaBuscada->raza = "";
+			mascotaBuscada->fechaNacimiento = "";
+			mascotaBuscada->sexo = "";
+			mascotaBuscada->color = "";
+			mascotaBuscada->castrado = "";
+			mascotaBuscada->ultimaVisita = "";
+			
+			MessageBox::Show(notif);
+		}
+		else {
+			MessageBox::Show(error);
+		}
 	}
 	private: System::Void bEliminarVisita_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		String^ error = "El código de visita no existe";
+		String^ notif = "Visita eliminada correctamente.";
+
+		int codigo = stoi(marshal_as<string, String^>(this->txtElimVisita1->Text));
+
+		pNodoBinarioVisitas visitaBuscada = arbolVisitas->buscaVisita(arbolVisitas->raiz, codigo);
+		if (visitaBuscada != NULL) {
+
+			visitaBuscada->valor = 0;
+			visitaBuscada->IDAnimal = 0;
+			visitaBuscada->ultimaVisita = "";
+			visitaBuscada->totalFactura = 0;
+			visitaBuscada->formaPago = 0;
+
+			MessageBox::Show(notif);
+		}
+		else {
+			MessageBox::Show(error);
+		}
+
 	}
 	private: System::Void bEliminarTratamiento_Click(System::Object^ sender, System::EventArgs^ e) {
+	
+		String^ error = "El código de tratamiento no existe";
+		String^ notif = "Tratamiento eliminado correctamente.";
+
+		int codigo = stoi(marshal_as<string, String^>(this->txtElimTrat1->Text));
+
+		pNodoRNTratamiento tratamientoBuscado = arbolTratamientos->buscaTratamiento(arbolTratamientos->raiz, codigo);
+		if (tratamientoBuscado != NULL) {
+
+			tratamientoBuscado->valor = 0;
+			tratamientoBuscado->nombreTratamiento = "";
+			tratamientoBuscado->precio = 0;
+			tratamientoBuscado->cantidad = 0;
+
+			MessageBox::Show(notif);
+		}
+		else {
+			MessageBox::Show(error);
+		}
+
 	}
 	private: System::Void bEliminarMedicacion_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		String^ error = "El código de medicacion no existe";
+		String^ notif = "Medicación eliminada correctamente.";
+
+		int codigo = stoi(marshal_as<string, String^>(this->txtElimMedicacion1->Text));
+
+		pNodoAAMedicacion medicacionBuscada = arbolMedicaciones->buscaMedicacion(arbolMedicaciones->raiz, codigo);
+		if (medicacionBuscada != NULL) {
+
+			medicacionBuscada->valor = 0;
+			medicacionBuscada->IdAnimal = 0;
+			medicacionBuscada->ultimavisita = "";
+			medicacionBuscada->listaMed = 0;
+
+			MessageBox::Show(notif);
+		}
+		else {
+			MessageBox::Show(error);
+		}
 	}
 
 	/* REPORTES */
