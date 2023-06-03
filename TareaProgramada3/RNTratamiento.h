@@ -14,7 +14,7 @@ public:
 
 	RNTratamiento() :raiz(NULL) {}
 
-	void InsertaNodoTratamiento(int num, string nombre, int precioT);
+	void InsertaNodoTratamiento(int num, string nombre, int precioT, int cantidadT);
 
 	bool Hh;
 

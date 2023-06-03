@@ -394,7 +394,7 @@ string BCliente::fechaFormato(string dia, string mes, string anho) {
 
 void BCliente::agregar_Datos_lectura(string& pDatosLinea, BinarioPaises* arbolPaises, BinarioCiudades* arbolCiudades)
 {
-    std::string datos[10] = { "", "", "", "", "", "", "", "", "", "" };
+    std::string datos[11] = { "", "", "", "", "", "", "", "", "", "", "" };
     int indiceDatos = 0;
     for (int indice = 0; indice < pDatosLinea.size(); indice++) {
         if (pDatosLinea[indice] != ';') {

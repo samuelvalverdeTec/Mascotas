@@ -1,0 +1,16 @@
+Reporte 1 - Paises Registrados
+
+Codigo Pais: 12
+Nombre Pais: Costa Rica
+------------------------------------
+Codigo Pais: 23
+Nombre Pais: Estados Unidos
+------------------------------------
+Codigo Pais: 45
+Nombre Pais: Panama
+------------------------------------
+Codigo Pais: 777
+Nombre Pais: Hola
+------------------------------------
+
+

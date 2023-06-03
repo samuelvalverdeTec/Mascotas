@@ -420,33 +420,33 @@ using namespace std;
      */
      //*********************************************************************************************************************************************************
 
-void NodoRNTratamiento::InsertaBinario(int num, string nombreTratamiento, int precioT)
+void NodoRNTratamiento::InsertaBinario(int num, string nombreTratamiento, int precioT, int cantidadT)
 {
     if (num < valor) {
         if (Hizq == NULL) {
-            Hizq = new NodoRNTratamiento(num, nombreTratamiento, precioT);
+            Hizq = new NodoRNTratamiento(num, nombreTratamiento, precioT, cantidadT);
         }
         else {
-            Hizq->InsertaBinario(num, nombreTratamiento, precioT);
+            Hizq->InsertaBinario(num, nombreTratamiento, precioT, cantidadT);
         }
     }
     else {
         if (Hder == NULL) {
-            Hder = new NodoRNTratamiento(num, nombreTratamiento, precioT);
+            Hder = new NodoRNTratamiento(num, nombreTratamiento, precioT, cantidadT);
         }
         else {
-            Hder->InsertaBinario(num, nombreTratamiento, precioT);
+            Hder->InsertaBinario(num, nombreTratamiento, precioT, cantidadT);
         }
     }
 }
 
-void RNTratamiento::InsertaNodoTratamiento(int num, string nombreTratamiento, int precioT)
+void RNTratamiento::InsertaNodoTratamiento(int num, string nombreTratamiento, int precioT, int cantidadT)
 {
     if (raiz == NULL) {
-        raiz = new NodoRNTratamiento(num, nombreTratamiento, precioT);
+        raiz = new NodoRNTratamiento(num, nombreTratamiento, precioT, cantidadT);
     }
     else {
-        raiz->InsertaBinario(num, nombreTratamiento, precioT);
+        raiz->InsertaBinario(num, nombreTratamiento, precioT, cantidadT);
     }
 }
 
@@ -784,7 +784,7 @@ void RNTratamiento::agregar_Datos_lectura(string& pDatosLinea)
     }
     pNodoRNTratamiento tratamiento = buscaTratamiento(this->raiz, atoi(datos[0].c_str()));
     if (tratamiento == NULL) {
-    	this->InsertaNodoTratamiento(atoi(datos[0].c_str()), datos[1], atoi(datos[2].c_str()));
+    	this->InsertaNodoTratamiento(atoi(datos[0].c_str()), datos[1], atoi(datos[2].c_str()), atoi(datos[3].c_str()));
     }
     /*if (!this->esta_Vendedor(atoi(datos[0].c_str())))
         this->inserta(atoi(datos[0].c_str()), datos[1]);*/

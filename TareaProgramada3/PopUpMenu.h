@@ -62,6 +62,11 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Button^ bEliminarMedicacion;
 	private: System::Windows::Forms::TextBox^ txtElimMedicacion1;
 	private: System::Windows::Forms::Label^ lblElimMedicacion1;
+	private: System::Windows::Forms::Button^ bReporte1;
+	private: System::Windows::Forms::TextBox^ txtInserCliente9;
+	private: System::Windows::Forms::Label^ lblInserCliente10;
+	private: System::Windows::Forms::TextBox^ txtInserCliente8;
+	private: System::Windows::Forms::Label^ lblInserCliente9;
 	public: AAMedicacion* arbolMedicaciones;
 
 	public:
@@ -438,6 +443,7 @@ private: System::Windows::Forms::Label^ lblInserMedicacion3;
 			this->btabReps = (gcnew System::Windows::Forms::TabPage());
 			this->tabReportes = (gcnew System::Windows::Forms::TabControl());
 			this->tabR1 = (gcnew System::Windows::Forms::TabPage());
+			this->bReporte1 = (gcnew System::Windows::Forms::Button());
 			this->tabR2 = (gcnew System::Windows::Forms::TabPage());
 			this->tabR3 = (gcnew System::Windows::Forms::TabPage());
 			this->tabR4 = (gcnew System::Windows::Forms::TabPage());
@@ -754,11 +760,16 @@ private: System::Windows::Forms::Label^ lblInserMedicacion3;
 			this->txtElimMedicacion1 = (gcnew System::Windows::Forms::TextBox());
 			this->lblElimMedicacion1 = (gcnew System::Windows::Forms::Label());
 			this->bSalir = (gcnew System::Windows::Forms::Button());
+			this->txtInserCliente8 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserCliente9 = (gcnew System::Windows::Forms::Label());
+			this->txtInserCliente9 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserCliente10 = (gcnew System::Windows::Forms::Label());
 			this->btabAD->SuspendLayout();
 			this->btabSucs->SuspendLayout();
 			this->tabControl1->SuspendLayout();
 			this->btabReps->SuspendLayout();
 			this->tabReportes->SuspendLayout();
+			this->tabR1->SuspendLayout();
 			this->btabFact->SuspendLayout();
 			this->tabFacturacion->SuspendLayout();
 			this->tabPrincipal->SuspendLayout();
@@ -952,7 +963,8 @@ private: System::Windows::Forms::Label^ lblInserMedicacion3;
 			// 
 			// tabR1
 			// 
-			this->tabR1->BackColor = System::Drawing::Color::Transparent;
+			this->tabR1->BackColor = System::Drawing::Color::Teal;
+			this->tabR1->Controls->Add(this->bReporte1);
 			this->tabR1->Location = System::Drawing::Point(4, 48);
 			this->tabR1->Name = L"tabR1";
 			this->tabR1->Padding = System::Windows::Forms::Padding(3);
@@ -960,114 +972,130 @@ private: System::Windows::Forms::Label^ lblInserMedicacion3;
 			this->tabR1->TabIndex = 0;
 			this->tabR1->Text = L"Rep1";
 			// 
+			// bReporte1
+			// 
+			this->bReporte1->BackColor = System::Drawing::Color::Transparent;
+			this->bReporte1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bReporte1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bReporte1->ForeColor = System::Drawing::Color::White;
+			this->bReporte1->Location = System::Drawing::Point(43, 74);
+			this->bReporte1->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bReporte1->Name = L"bReporte1";
+			this->bReporte1->Size = System::Drawing::Size(210, 45);
+			this->bReporte1->TabIndex = 72;
+			this->bReporte1->Text = L"Generar Reporte";
+			this->bReporte1->UseVisualStyleBackColor = false;
+			this->bReporte1->Click += gcnew System::EventHandler(this, &PopUpMenu::bReporte1_Click);
+			// 
 			// tabR2
 			// 
+			this->tabR2->BackColor = System::Drawing::Color::Teal;
 			this->tabR2->Location = System::Drawing::Point(4, 48);
 			this->tabR2->Name = L"tabR2";
 			this->tabR2->Padding = System::Windows::Forms::Padding(3);
 			this->tabR2->Size = System::Drawing::Size(921, 495);
 			this->tabR2->TabIndex = 1;
 			this->tabR2->Text = L"Rep2";
-			this->tabR2->UseVisualStyleBackColor = true;
 			// 
 			// tabR3
 			// 
+			this->tabR3->BackColor = System::Drawing::Color::Teal;
 			this->tabR3->Location = System::Drawing::Point(4, 48);
 			this->tabR3->Name = L"tabR3";
 			this->tabR3->Size = System::Drawing::Size(921, 495);
 			this->tabR3->TabIndex = 2;
 			this->tabR3->Text = L"Rep3";
-			this->tabR3->UseVisualStyleBackColor = true;
 			// 
 			// tabR4
 			// 
+			this->tabR4->BackColor = System::Drawing::Color::Teal;
 			this->tabR4->Location = System::Drawing::Point(4, 48);
 			this->tabR4->Name = L"tabR4";
 			this->tabR4->Size = System::Drawing::Size(921, 495);
 			this->tabR4->TabIndex = 3;
 			this->tabR4->Text = L"Rep4";
-			this->tabR4->UseVisualStyleBackColor = true;
 			// 
 			// tabR5
 			// 
+			this->tabR5->BackColor = System::Drawing::Color::Teal;
 			this->tabR5->Location = System::Drawing::Point(4, 48);
 			this->tabR5->Name = L"tabR5";
 			this->tabR5->Size = System::Drawing::Size(921, 495);
 			this->tabR5->TabIndex = 4;
 			this->tabR5->Text = L"Rep5";
-			this->tabR5->UseVisualStyleBackColor = true;
 			// 
 			// tabR6
 			// 
+			this->tabR6->BackColor = System::Drawing::Color::Teal;
 			this->tabR6->Location = System::Drawing::Point(4, 48);
 			this->tabR6->Name = L"tabR6";
 			this->tabR6->Size = System::Drawing::Size(921, 495);
 			this->tabR6->TabIndex = 5;
 			this->tabR6->Text = L"Rep6";
-			this->tabR6->UseVisualStyleBackColor = true;
 			// 
 			// tabR7
 			// 
+			this->tabR7->BackColor = System::Drawing::Color::Teal;
 			this->tabR7->Location = System::Drawing::Point(4, 48);
 			this->tabR7->Name = L"tabR7";
 			this->tabR7->Size = System::Drawing::Size(921, 495);
 			this->tabR7->TabIndex = 6;
 			this->tabR7->Text = L"Rep7";
-			this->tabR7->UseVisualStyleBackColor = true;
 			// 
 			// tabR8
 			// 
+			this->tabR8->BackColor = System::Drawing::Color::Teal;
 			this->tabR8->Location = System::Drawing::Point(4, 48);
 			this->tabR8->Name = L"tabR8";
 			this->tabR8->Size = System::Drawing::Size(921, 495);
 			this->tabR8->TabIndex = 7;
 			this->tabR8->Text = L"Rep8";
-			this->tabR8->UseVisualStyleBackColor = true;
 			// 
 			// tabR9
 			// 
+			this->tabR9->BackColor = System::Drawing::Color::Teal;
 			this->tabR9->Location = System::Drawing::Point(4, 48);
 			this->tabR9->Name = L"tabR9";
 			this->tabR9->Size = System::Drawing::Size(921, 495);
 			this->tabR9->TabIndex = 8;
 			this->tabR9->Text = L"Rep9";
-			this->tabR9->UseVisualStyleBackColor = true;
 			// 
 			// tabR10
 			// 
+			this->tabR10->BackColor = System::Drawing::Color::Teal;
 			this->tabR10->Location = System::Drawing::Point(4, 48);
 			this->tabR10->Name = L"tabR10";
 			this->tabR10->Size = System::Drawing::Size(921, 495);
 			this->tabR10->TabIndex = 9;
 			this->tabR10->Text = L"Rep10";
-			this->tabR10->UseVisualStyleBackColor = true;
 			// 
 			// tabR11
 			// 
+			this->tabR11->BackColor = System::Drawing::Color::Teal;
 			this->tabR11->Location = System::Drawing::Point(4, 48);
 			this->tabR11->Name = L"tabR11";
 			this->tabR11->Size = System::Drawing::Size(921, 495);
 			this->tabR11->TabIndex = 10;
 			this->tabR11->Text = L"Rep11";
-			this->tabR11->UseVisualStyleBackColor = true;
 			// 
 			// tabR12
 			// 
+			this->tabR12->BackColor = System::Drawing::Color::Teal;
 			this->tabR12->Location = System::Drawing::Point(4, 48);
 			this->tabR12->Name = L"tabR12";
 			this->tabR12->Size = System::Drawing::Size(921, 495);
 			this->tabR12->TabIndex = 11;
 			this->tabR12->Text = L"Rep12";
-			this->tabR12->UseVisualStyleBackColor = true;
 			// 
 			// tabR13
 			// 
+			this->tabR13->BackColor = System::Drawing::Color::Teal;
 			this->tabR13->Location = System::Drawing::Point(4, 48);
 			this->tabR13->Name = L"tabR13";
 			this->tabR13->Size = System::Drawing::Size(921, 495);
 			this->tabR13->TabIndex = 12;
 			this->tabR13->Text = L"Rep13";
-			this->tabR13->UseVisualStyleBackColor = true;
 			// 
 			// btabFact
 			// 
@@ -1355,6 +1383,10 @@ private: System::Windows::Forms::Label^ lblInserMedicacion3;
 			// btabInserClt
 			// 
 			this->btabInserClt->BackColor = System::Drawing::Color::Teal;
+			this->btabInserClt->Controls->Add(this->txtInserCliente9);
+			this->btabInserClt->Controls->Add(this->lblInserCliente10);
+			this->btabInserClt->Controls->Add(this->txtInserCliente8);
+			this->btabInserClt->Controls->Add(this->lblInserCliente9);
 			this->btabInserClt->Controls->Add(this->lblInserCliente8);
 			this->btabInserClt->Controls->Add(this->txtInserCliente7);
 			this->btabInserClt->Controls->Add(this->lblInserCliente7);
@@ -4392,6 +4424,42 @@ private: System::Windows::Forms::Label^ lblInserMedicacion3;
 			this->bSalir->UseVisualStyleBackColor = false;
 			this->bSalir->Click += gcnew System::EventHandler(this, &PopUpMenu::bSalir_Click);
 			// 
+			// txtInserCliente8
+			// 
+			this->txtInserCliente8->Location = System::Drawing::Point(678, 207);
+			this->txtInserCliente8->Name = L"txtInserCliente8";
+			this->txtInserCliente8->Size = System::Drawing::Size(210, 42);
+			this->txtInserCliente8->TabIndex = 73;
+			// 
+			// lblInserCliente9
+			// 
+			this->lblInserCliente9->AutoSize = true;
+			this->lblInserCliente9->BackColor = System::Drawing::Color::Teal;
+			this->lblInserCliente9->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserCliente9->Location = System::Drawing::Point(673, 174);
+			this->lblInserCliente9->Name = L"lblInserCliente9";
+			this->lblInserCliente9->Size = System::Drawing::Size(142, 37);
+			this->lblInserCliente9->TabIndex = 72;
+			this->lblInserCliente9->Text = L"Descuento";
+			// 
+			// txtInserCliente9
+			// 
+			this->txtInserCliente9->Location = System::Drawing::Point(678, 304);
+			this->txtInserCliente9->Name = L"txtInserCliente9";
+			this->txtInserCliente9->Size = System::Drawing::Size(210, 42);
+			this->txtInserCliente9->TabIndex = 75;
+			// 
+			// lblInserCliente10
+			// 
+			this->lblInserCliente10->AutoSize = true;
+			this->lblInserCliente10->BackColor = System::Drawing::Color::Teal;
+			this->lblInserCliente10->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserCliente10->Location = System::Drawing::Point(673, 271);
+			this->lblInserCliente10->Name = L"lblInserCliente10";
+			this->lblInserCliente10->Size = System::Drawing::Size(84, 37);
+			this->lblInserCliente10->TabIndex = 74;
+			this->lblInserCliente10->Text = L"Saldo";
+			// 
 			// PopUpMenu
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(14, 36);
@@ -4414,6 +4482,7 @@ private: System::Windows::Forms::Label^ lblInserMedicacion3;
 			this->tabControl1->ResumeLayout(false);
 			this->btabReps->ResumeLayout(false);
 			this->tabReportes->ResumeLayout(false);
+			this->tabR1->ResumeLayout(false);
 			this->btabFact->ResumeLayout(false);
 			this->tabFacturacion->ResumeLayout(false);
 			this->tabPrincipal->ResumeLayout(false);
@@ -4528,6 +4597,9 @@ private: System::Windows::Forms::Label^ lblInserMedicacion3;
 	/*	FUNCIONES INSERTAR  */
 
 	private: System::Void bInserPais_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ exito = "El pais fue insertado correctamente";
+		String^ error = "El codigo de pais ya existe";
+
 		String^ codPais = this->txtInserPais1->Text;
 		String^ nomPais = this->txtInserPais2->Text;
 
@@ -4536,23 +4608,186 @@ private: System::Windows::Forms::Label^ lblInserMedicacion3;
 
 		pNodoBinarioPaises paisBuscado = arbolPaises->buscaPais(this->arbolPaises->raiz, codigo);
 
-
 		if (paisBuscado == NULL) {
 			this->arbolPaises->InsertaNodoPaises(codigo, nombre);
+			MessageBox::Show(exito);
 		}
 		else {
-			//messagebox
+			MessageBox::Show(error);
 		}
 	}
 	private: System::Void bInserCiudad_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ exito = "La ciudad fue insertada correctamente";
+		String^ errorP = "El codigo de pais no existe";
+		String^ errorC = "El codigo de ciudad ya existe";
+
+		String^ codPais = this->txtInserCiudad1->Text;
+		String^ codCiudad = this->txtInserCiudad2->Text;
+		String^ nomCiudad = this->txtInserCiudad3->Text;
+
+		int codigoP = stoi(marshal_as<string, String^>(codPais));
+		int codigoC = stoi(marshal_as<string, String^>(codCiudad));
+		string nombreC = marshal_as<string, String^>(nomCiudad);
+
+		pNodoBinarioPaises paisBuscado = arbolPaises->buscaPais(arbolPaises->raiz, codigoP);
+		if (paisBuscado != NULL) {
+			pNodoBinarioCiudades ciudadBuscada = arbolCiudades->buscaCiudadRepetida(arbolCiudades->raiz, codigoP, codigoC);
+			if (ciudadBuscada == NULL) {
+				arbolCiudades->InsertaNodoCiudad(codigoP, codigoC, nombreC);
+				MessageBox::Show(exito);
+			}
+			else {
+				MessageBox::Show(errorC);
+			}
+		}
+		else {
+			MessageBox::Show(errorP);
+		}
+
 	}
 	private: System::Void bInserCliente_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ exito = "El cliente fue insertado correctamente";
+		String^ errorP = "El codigo de pais no existe";
+		String^ errorC = "El codigo de ciudad no existe";
+		String^ error = "El codigo de cliente ya existe";
+
+		String^ codCliente = this->txtInserCliente1->Text;
+		String^ nomCliente = this->txtInserCliente2->Text;
+		String^ dirCliente = this->txtInserCliente3->Text;
+		String^ codPais = this->txtInserCliente4->Text;
+		String^ codCiudad = this->txtInserCliente5->Text;
+		String^ telCliente = this->txtInserCliente6->Text;
+		String^ ultVisitaC = this->txtInserCliente7->Text;
+		String^ descuentoC = this->txtInserCliente8->Text;
+		String^ saldoC = this->txtInserCliente9->Text;
+
+		int codigoCliente = stoi(marshal_as<string, String^>(codCliente));
+		string nombreCliente = marshal_as<string, String^>(nomCliente);
+		string direccionCliente = marshal_as<string, String^>(dirCliente);
+		int codigoPais = stoi(marshal_as<string, String^>(codPais));
+		int codigoCiudad = stoi(marshal_as<string, String^>(codCiudad));
+		int telefonoCliente = stoi(marshal_as<string, String^>(telCliente));
+		string ultimaVisitaC = marshal_as<string, String^>(ultVisitaC);
+		int descuentoCliente = stoi(marshal_as<string, String^>(descuentoC));
+		int saldoCliente = stoi(marshal_as<string, String^>(saldoC));
+
+		pNodoBinarioPaises paisBuscado = arbolPaises->buscaPais(arbolPaises->raiz, codigoPais);
+		if (paisBuscado != NULL) {
+			pNodoBinarioCiudades ciudadBuscada = arbolCiudades->buscaCiudadRepetida(arbolCiudades->raiz, codigoPais, codigoCiudad);
+			if (ciudadBuscada != NULL) {
+				pNodoBCliente clienteBuscado = arbolClientes->buscaCliente(arbolClientes->raiz, codigoCliente);//buscaClienteRepetido(arbolClientes.raiz, codCliente, codPaisCiudadCliente, codCiudadCliente);
+				if (clienteBuscado == NULL) {
+					arbolClientes->InsertaNodoCliente(codigoCliente, nombreCliente, direccionCliente, codigoPais, codigoCiudad, telefonoCliente, ultimaVisitaC, descuentoCliente, saldoCliente);
+					MessageBox::Show(exito);
+				}
+				else {
+					MessageBox::Show(error);
+				}
+			}
+			else {
+				MessageBox::Show(errorC);
+			}
+		}
+		else {
+			MessageBox::Show(errorP);
+		}
 	}
 	private: System::Void bInserMascota_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ exito = "La mascota fue insertada correctamente";
+		String^ errorC = "El codigo de cliente no existe";
+		String^ error = "El codigo de animal ya existe";
+
+		String^ codCliente = this->txtInserMascota1->Text;
+		String^ codAnimal = this->txtInserMascota2->Text;
+		String^ nomAnimal = this->txtInserMascota3->Text;
+		String^ tipo = this->txtInserMascota4->Text;
+		String^ raza = this->txtInserMascota5->Text;
+		String^ fNacimiento = this->txtInserMascota6->Text;
+		String^ ultVisita = this->txtInserMascota10->Text;
+		String^ sexo = this->txtInserMascota7->Text;
+		String^ color = this->txtInserMascota8->Text;
+		String^ castrado = this->txtInserMascota9->Text;
+
+		int codigoCliente = stoi(marshal_as<string, String^>(codCliente));
+		int codigoAnimal = stoi(marshal_as<string, String^>(codAnimal));
+		string nombreAnimal = marshal_as<string, String^>(nomAnimal);
+		string tipoAnimal = marshal_as<string, String^>(tipo);
+		string razaAnimal = marshal_as<string, String^>(raza);
+		string fechaNacimiento = marshal_as<string, String^>(fNacimiento);
+		string ultimaVisita = marshal_as<string, String^>(ultVisita);
+		string sexoAnimal = marshal_as<string, String^>(sexo);
+		string colorAnimal = marshal_as<string, String^>(color);
+		string castradoAnimal = marshal_as<string, String^>(castrado);
+
+		pNodoBCliente clienteBuscado = arbolClientes->buscaCliente(arbolClientes->raiz, codigoCliente);
+		if (clienteBuscado != NULL) {
+			pNodoAVLMascotas mascotaBuscada = arbolMascotas->buscaMascota(arbolMascotas->raiz, codigoAnimal);//buscaMascotaRepetida(arbolMascotas.raiz, codMascota, codClienteMascota);
+			if (mascotaBuscada == NULL) {
+				arbolMascotas->InsertaNodoMascota(codigoCliente, codigoAnimal, nombreAnimal, tipoAnimal, razaAnimal, fechaNacimiento, sexoAnimal, colorAnimal, castradoAnimal, ultimaVisita);
+				MessageBox::Show(exito);
+			}
+			else {
+				MessageBox::Show(error);
+			}
+		}
+		else {
+			MessageBox::Show(errorC);
+		}
 	}
 	private: System::Void bInserVisita_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ exito = "La visita fue insertada correctamente";
+		String^ errorM = "El codigo de animal no existe";
+		String^ error = "El codigo de visita ya existe";
+
+		String^ codVisita = this->txtInserVisita1->Text;
+		String^ codAnimal = this->txtInserVisita2->Text;
+		String^ ultVisita = this->txtInserVisita3->Text;
+		String^ tFactura = this->txtInserVisita4->Text;
+		String^ fPago = this->txtInserVisita5->Text;
+
+		int codigoVisita = stoi(marshal_as<string, String^>(codVisita));
+		int codigoAnimal = stoi(marshal_as<string, String^>(codAnimal));
+		string ultimaVisita = marshal_as<string, String^>(ultVisita);
+		int totalFactura = stoi(marshal_as<string, String^>(tFactura));
+		int formaPago = stoi(marshal_as<string, String^>(fPago));
+
+		pNodoAVLMascotas mascotaBuscada = arbolMascotas->buscaMascota(arbolMascotas->raiz, codigoAnimal);
+		if (mascotaBuscada != NULL) {
+			pNodoBinarioVisitas visitaBuscada = arbolVisitas->buscaVisita(arbolVisitas->raiz, codigoVisita);
+			if (visitaBuscada == NULL) {
+				arbolVisitas->InsertaNodoVisitas(codigoVisita, codigoAnimal, ultimaVisita, totalFactura, formaPago);
+				MessageBox::Show(exito);
+			}
+			else {
+				MessageBox::Show(error);
+			}
+		}
+		else {
+			MessageBox::Show(errorM);
+		}
 	}
 	private: System::Void binserTratamiento_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ exito = "El tratamiento fue insertado correctamente";
+		String^ error = "El codigo de tratamiento ya existe";
+
+		String^ codTratamiento = this->txtInserTrat1->Text;
+		String^ nomTratamiento = this->txtInserTrat2->Text;
+		String^ precioU = this->txtInserTrat3->Text;
+		String^ cantidad = this->txtInserTrat4->Text;
+
+		int codigoTratamiento = stoi(marshal_as<string, String^>(codTratamiento));
+		string nombreTratamiento = marshal_as<string, String^>(nomTratamiento);
+		int precioUnitario = stoi(marshal_as<string, String^>(precioU));
+		int cantidadTratamiento = stoi(marshal_as<string, String^>(cantidad));
+
+		pNodoRNTratamiento tratamientoBuscado = arbolTratamientos->buscaTratamiento(arbolTratamientos->raiz, codigoTratamiento);
+		if (tratamientoBuscado == NULL) {
+			arbolTratamientos->InsertaNodoTratamiento(codigoTratamiento, nombreTratamiento, precioUnitario, cantidadTratamiento);
+			MessageBox::Show(exito);
+		}
+		else {
+			MessageBox::Show(error);
+		}
 	}
 	private: System::Void bInserMedicacion_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
@@ -4648,6 +4883,16 @@ private: System::Windows::Forms::Label^ lblInserMedicacion3;
 	private: System::Void bEliminarTratamiento_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void bEliminarMedicacion_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+
+	/* REPORTES */
+	private: System::Void bReporte1_Click(System::Object^ sender, System::EventArgs^ e) {
+		string str = "Reporte 1 - Paises Registrados\n\n";
+		string nombreReporte = "Reporte1-Paises";
+		arbolPaises->CreaReporte1(nombreReporte);
+		arbolPaises->RecorreArbolPaises(arbolPaises->raiz, str, nombreReporte);
+
+		MessageBox::Show("Reporte 1 generado correctamente");
 	}
 };
 }
