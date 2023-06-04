@@ -30,7 +30,7 @@ void main() {
 	arbolMascotas->leer_Doc(arbolClientes);
 	arbolVisitas->leer_Doc(arbolMascotas);	
 	arbolTratamientos->leer_Doc();
-	//arbolMedicaciones->leer_Doc();
+	arbolMedicaciones->leer_Doc(arbolMascotas);
 	
 
 	Application::EnableVisualStyles();

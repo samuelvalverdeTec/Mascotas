@@ -10,8 +10,8 @@ class NodoAAMedicacion {
 
 public:
 
-    NodoAAMedicacion(int idAnimal, int num, string ultVisita, int LMed, int costU, int cant, int costT, NodoAAMedicacion* der = NULL, NodoAAMedicacion* izq = NULL, NodoAAMedicacion* sig = NULL, NodoAAMedicacion* ant = NULL) :
-        Hizq(izq), Hder(der), IdAnimal(idAnimal), valor(num), ultimavisita(ultVisita), listaMed(LMed), costoUnidad(costU), cantidad(cant), costoTotal(costT), siguiente(sig), anterior(ant), FB(0) 
+    NodoAAMedicacion(int idAnimal, int num, string ultVisita, int LMed, int costU, int cant, int costT, int cantRes, NodoAAMedicacion* der = NULL, NodoAAMedicacion* izq = NULL, NodoAAMedicacion* sig = NULL, NodoAAMedicacion* ant = NULL) :
+        Hizq(izq), Hder(der), IdAnimal(idAnimal), valor(num), ultimavisita(ultVisita), listaMed(LMed), costoUnidad(costU), cantidad(cant), costoTotal(costT), cantidadResetada(cantRes), siguiente(sig), anterior(ant), FB(0) 
     {
 
     }
@@ -23,10 +23,11 @@ public:
     int costoUnidad;
     int cantidad;
     int costoTotal;
+    int cantidadResetada;
     int FB;
     NodoAAMedicacion* Hizq, * Hder, * siguiente, * anterior;
 
-    void InsertaBinario(int idAnimal, int num, string ultVisita, int LMed, int costU, int cant, int costT);
+    void InsertaBinario(int idAnimal, int num, string ultVisita, int LMed, int costU, int cant, int costT, int cantRes);
     void PreordenRMedicaciones(NodoAAMedicacion* R);
     void InordenRMedicaciones(NodoAAMedicacion* R);
     void PostordenRMedicaciones(NodoAAMedicacion* R);

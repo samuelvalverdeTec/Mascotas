@@ -15,7 +15,7 @@ public:
 
 	AAMedicacion() :raiz(NULL) {}
 
-	void InsertaNodoMedicacion(int idAnimal, int num, string ultVisita, int LMed, int costU, int cant, int costT);
+	void InsertaNodoMedicacion(int idAnimal, int num, string ultVisita, int LMed, int costU, int cant, int costT, int cantRes);
 
 	bool Hh;
 

@@ -70,6 +70,15 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Button^ bReporte4;
 	private: System::Windows::Forms::TextBox^ txtRep4;
 	private: System::Windows::Forms::Label^ lblRep4;
+	private: System::Windows::Forms::TextBox^ txtInserMedicacion3;
+
+	private: System::Windows::Forms::Label^ lblInserMedicacion3;
+	private: System::Windows::Forms::TextBox^ txtInserMedicacion8;
+
+	private: System::Windows::Forms::Label^ lblInserMedicacion8;
+	private: System::Windows::Forms::Label^ lblBuscarMedicacion9;
+	private: System::Windows::Forms::TextBox^ txtBuscarMedicacion8;
+
 	public: AAMedicacion* arbolMedicaciones;
 
 	public:
@@ -302,32 +311,47 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Label^ lblInserTrat2;
 	private: System::Windows::Forms::TextBox^ txtInserTrat1;
 	private: System::Windows::Forms::Label^ lblInserTrat1;
+private: System::Windows::Forms::TextBox^ txtInserMedicacion7;
+
+private: System::Windows::Forms::Label^ lblInserMedicacion7;
 private: System::Windows::Forms::TextBox^ txtInserMedicacion6;
+
+
 
 private: System::Windows::Forms::Label^ lblInserMedicacion6;
 private: System::Windows::Forms::TextBox^ txtInserMedicacion5;
 
 
+
+
 private: System::Windows::Forms::Label^ lblInserMedicacion5;
+
+
+
+
+	private: System::Windows::Forms::Button^ bInserMedicacion;
+private: System::Windows::Forms::TextBox^ txtInserMedicacion1;
+
+private: System::Windows::Forms::Label^ lblInserMedicacion1;
 private: System::Windows::Forms::TextBox^ txtInserMedicacion4;
+
+
 
 
 private: System::Windows::Forms::Label^ lblInserMedicacion4;
 
-	private: System::Windows::Forms::Button^ bInserMedicacion;
+private: System::Windows::Forms::Label^ lblInserMedicacion12;
 private: System::Windows::Forms::TextBox^ txtInserMedicacion2;
 
+
+
+
+
 private: System::Windows::Forms::Label^ lblInserMedicacion2;
-private: System::Windows::Forms::TextBox^ txtInserMedicacion1;
-
-
-private: System::Windows::Forms::Label^ lblInserMedicacion1;
-private: System::Windows::Forms::Label^ lblInserMedicacion7;
-private: System::Windows::Forms::TextBox^ txtInserMedicacion3;
 
 
 
-private: System::Windows::Forms::Label^ lblInserMedicacion3;
+
 
 	private: System::Windows::Forms::TextBox^ txtBusqPais2;
 	private: System::Windows::Forms::Label^ lblBusqPais2;
@@ -454,6 +478,9 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 			this->tabR2 = (gcnew System::Windows::Forms::TabPage());
 			this->tabR3 = (gcnew System::Windows::Forms::TabPage());
 			this->tabR4 = (gcnew System::Windows::Forms::TabPage());
+			this->bReporte4 = (gcnew System::Windows::Forms::Button());
+			this->txtRep4 = (gcnew System::Windows::Forms::TextBox());
+			this->lblRep4 = (gcnew System::Windows::Forms::Label());
 			this->tabR5 = (gcnew System::Windows::Forms::TabPage());
 			this->tabR6 = (gcnew System::Windows::Forms::TabPage());
 			this->tabR7 = (gcnew System::Windows::Forms::TabPage());
@@ -555,20 +582,24 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 			this->txtInserTrat1 = (gcnew System::Windows::Forms::TextBox());
 			this->lblInserTrat1 = (gcnew System::Windows::Forms::Label());
 			this->btabInserMed = (gcnew System::Windows::Forms::TabPage());
-			this->lblInserMedicacion7 = (gcnew System::Windows::Forms::Label());
+			this->txtInserMedicacion8 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserMedicacion8 = (gcnew System::Windows::Forms::Label());
 			this->txtInserMedicacion3 = (gcnew System::Windows::Forms::TextBox());
 			this->lblInserMedicacion3 = (gcnew System::Windows::Forms::Label());
+			this->lblInserMedicacion12 = (gcnew System::Windows::Forms::Label());
+			this->txtInserMedicacion2 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserMedicacion2 = (gcnew System::Windows::Forms::Label());
+			this->txtInserMedicacion7 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserMedicacion7 = (gcnew System::Windows::Forms::Label());
 			this->txtInserMedicacion6 = (gcnew System::Windows::Forms::TextBox());
 			this->lblInserMedicacion6 = (gcnew System::Windows::Forms::Label());
 			this->txtInserMedicacion5 = (gcnew System::Windows::Forms::TextBox());
 			this->lblInserMedicacion5 = (gcnew System::Windows::Forms::Label());
-			this->txtInserMedicacion4 = (gcnew System::Windows::Forms::TextBox());
-			this->lblInserMedicacion4 = (gcnew System::Windows::Forms::Label());
 			this->bInserMedicacion = (gcnew System::Windows::Forms::Button());
-			this->txtInserMedicacion2 = (gcnew System::Windows::Forms::TextBox());
-			this->lblInserMedicacion2 = (gcnew System::Windows::Forms::Label());
 			this->txtInserMedicacion1 = (gcnew System::Windows::Forms::TextBox());
 			this->lblInserMedicacion1 = (gcnew System::Windows::Forms::Label());
+			this->txtInserMedicacion4 = (gcnew System::Windows::Forms::TextBox());
+			this->lblInserMedicacion4 = (gcnew System::Windows::Forms::Label());
 			this->btabModif = (gcnew System::Windows::Forms::TabPage());
 			this->tabModificacion = (gcnew System::Windows::Forms::TabControl());
 			this->btabModifPais = (gcnew System::Windows::Forms::TabPage());
@@ -717,6 +748,8 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 			this->lblBuscarTrat1 = (gcnew System::Windows::Forms::Label());
 			this->btabConsMed = (gcnew System::Windows::Forms::TabPage());
 			this->pBuscarMedicacion = (gcnew System::Windows::Forms::Panel());
+			this->lblBuscarMedicacion9 = (gcnew System::Windows::Forms::Label());
+			this->txtBuscarMedicacion8 = (gcnew System::Windows::Forms::TextBox());
 			this->lblBuscarMedicacion8 = (gcnew System::Windows::Forms::Label());
 			this->txtBuscarMedicacion6 = (gcnew System::Windows::Forms::TextBox());
 			this->lblBuscarMedicacion6 = (gcnew System::Windows::Forms::Label());
@@ -770,9 +803,6 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 			this->txtElimMedicacion1 = (gcnew System::Windows::Forms::TextBox());
 			this->lblElimMedicacion1 = (gcnew System::Windows::Forms::Label());
 			this->bSalir = (gcnew System::Windows::Forms::Button());
-			this->txtRep4 = (gcnew System::Windows::Forms::TextBox());
-			this->lblRep4 = (gcnew System::Windows::Forms::Label());
-			this->bReporte4 = (gcnew System::Windows::Forms::Button());
 			this->btabAD->SuspendLayout();
 			this->btabSucs->SuspendLayout();
 			this->tabControl1->SuspendLayout();
@@ -1028,6 +1058,40 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 			this->tabR4->Size = System::Drawing::Size(921, 495);
 			this->tabR4->TabIndex = 3;
 			this->tabR4->Text = L"Rep4";
+			// 
+			// bReporte4
+			// 
+			this->bReporte4->BackColor = System::Drawing::Color::Transparent;
+			this->bReporte4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bReporte4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bReporte4->ForeColor = System::Drawing::Color::White;
+			this->bReporte4->Location = System::Drawing::Point(71, 172);
+			this->bReporte4->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bReporte4->Name = L"bReporte4";
+			this->bReporte4->Size = System::Drawing::Size(291, 45);
+			this->bReporte4->TabIndex = 73;
+			this->bReporte4->Text = L"Generar Reporte";
+			this->bReporte4->UseVisualStyleBackColor = false;
+			this->bReporte4->Click += gcnew System::EventHandler(this, &PopUpMenu::bReporte4_Click);
+			// 
+			// txtRep4
+			// 
+			this->txtRep4->Location = System::Drawing::Point(71, 92);
+			this->txtRep4->Name = L"txtRep4";
+			this->txtRep4->Size = System::Drawing::Size(210, 42);
+			this->txtRep4->TabIndex = 68;
+			// 
+			// lblRep4
+			// 
+			this->lblRep4->AutoSize = true;
+			this->lblRep4->BackColor = System::Drawing::Color::Teal;
+			this->lblRep4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblRep4->Location = System::Drawing::Point(66, 59);
+			this->lblRep4->Name = L"lblRep4";
+			this->lblRep4->Size = System::Drawing::Size(204, 37);
+			this->lblRep4->TabIndex = 67;
+			this->lblRep4->Text = L"Número Cliente";
 			// 
 			// tabR5
 			// 
@@ -2106,110 +2170,150 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 			// btabInserMed
 			// 
 			this->btabInserMed->BackColor = System::Drawing::Color::Teal;
-			this->btabInserMed->Controls->Add(this->lblInserMedicacion7);
+			this->btabInserMed->Controls->Add(this->txtInserMedicacion8);
+			this->btabInserMed->Controls->Add(this->lblInserMedicacion8);
 			this->btabInserMed->Controls->Add(this->txtInserMedicacion3);
 			this->btabInserMed->Controls->Add(this->lblInserMedicacion3);
+			this->btabInserMed->Controls->Add(this->lblInserMedicacion12);
+			this->btabInserMed->Controls->Add(this->txtInserMedicacion2);
+			this->btabInserMed->Controls->Add(this->lblInserMedicacion2);
+			this->btabInserMed->Controls->Add(this->txtInserMedicacion7);
+			this->btabInserMed->Controls->Add(this->lblInserMedicacion7);
 			this->btabInserMed->Controls->Add(this->txtInserMedicacion6);
 			this->btabInserMed->Controls->Add(this->lblInserMedicacion6);
 			this->btabInserMed->Controls->Add(this->txtInserMedicacion5);
 			this->btabInserMed->Controls->Add(this->lblInserMedicacion5);
-			this->btabInserMed->Controls->Add(this->txtInserMedicacion4);
-			this->btabInserMed->Controls->Add(this->lblInserMedicacion4);
 			this->btabInserMed->Controls->Add(this->bInserMedicacion);
-			this->btabInserMed->Controls->Add(this->txtInserMedicacion2);
-			this->btabInserMed->Controls->Add(this->lblInserMedicacion2);
 			this->btabInserMed->Controls->Add(this->txtInserMedicacion1);
 			this->btabInserMed->Controls->Add(this->lblInserMedicacion1);
+			this->btabInserMed->Controls->Add(this->txtInserMedicacion4);
+			this->btabInserMed->Controls->Add(this->lblInserMedicacion4);
 			this->btabInserMed->Location = System::Drawing::Point(4, 45);
 			this->btabInserMed->Name = L"btabInserMed";
 			this->btabInserMed->Size = System::Drawing::Size(917, 451);
 			this->btabInserMed->TabIndex = 6;
 			this->btabInserMed->Text = L"Medicación";
 			// 
-			// lblInserMedicacion7
+			// txtInserMedicacion8
 			// 
-			this->lblInserMedicacion7->AutoSize = true;
-			this->lblInserMedicacion7->BackColor = System::Drawing::Color::Teal;
-			this->lblInserMedicacion7->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->lblInserMedicacion7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->lblInserMedicacion7->Location = System::Drawing::Point(84, 310);
-			this->lblInserMedicacion7->Name = L"lblInserMedicacion7";
-			this->lblInserMedicacion7->Size = System::Drawing::Size(140, 32);
-			this->lblInserMedicacion7->TabIndex = 94;
-			this->lblInserMedicacion7->Text = L"DD/MM/AA";
+			this->txtInserMedicacion8->Location = System::Drawing::Point(663, 185);
+			this->txtInserMedicacion8->Name = L"txtInserMedicacion8";
+			this->txtInserMedicacion8->Size = System::Drawing::Size(210, 42);
+			this->txtInserMedicacion8->TabIndex = 98;
+			// 
+			// lblInserMedicacion8
+			// 
+			this->lblInserMedicacion8->AutoSize = true;
+			this->lblInserMedicacion8->BackColor = System::Drawing::Color::Teal;
+			this->lblInserMedicacion8->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserMedicacion8->Location = System::Drawing::Point(656, 145);
+			this->lblInserMedicacion8->Name = L"lblInserMedicacion8";
+			this->lblInserMedicacion8->Size = System::Drawing::Size(240, 37);
+			this->lblInserMedicacion8->TabIndex = 97;
+			this->lblInserMedicacion8->Text = L"Cantidad Recetada";
 			// 
 			// txtInserMedicacion3
 			// 
-			this->txtInserMedicacion3->Location = System::Drawing::Point(89, 272);
+			this->txtInserMedicacion3->Location = System::Drawing::Point(87, 322);
 			this->txtInserMedicacion3->Name = L"txtInserMedicacion3";
 			this->txtInserMedicacion3->Size = System::Drawing::Size(210, 42);
-			this->txtInserMedicacion3->TabIndex = 93;
+			this->txtInserMedicacion3->TabIndex = 96;
 			// 
 			// lblInserMedicacion3
 			// 
 			this->lblInserMedicacion3->AutoSize = true;
 			this->lblInserMedicacion3->BackColor = System::Drawing::Color::Teal;
 			this->lblInserMedicacion3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->lblInserMedicacion3->Location = System::Drawing::Point(84, 239);
+			this->lblInserMedicacion3->Location = System::Drawing::Point(82, 278);
 			this->lblInserMedicacion3->Name = L"lblInserMedicacion3";
-			this->lblInserMedicacion3->Size = System::Drawing::Size(243, 37);
-			this->lblInserMedicacion3->TabIndex = 92;
-			this->lblInserMedicacion3->Text = L"Fecha Última Visita";
+			this->lblInserMedicacion3->Size = System::Drawing::Size(254, 37);
+			this->lblInserMedicacion3->TabIndex = 95;
+			this->lblInserMedicacion3->Text = L"Código Tratamiento";
+			// 
+			// lblInserMedicacion12
+			// 
+			this->lblInserMedicacion12->AutoSize = true;
+			this->lblInserMedicacion12->BackColor = System::Drawing::Color::Teal;
+			this->lblInserMedicacion12->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lblInserMedicacion12->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserMedicacion12->Location = System::Drawing::Point(81, 230);
+			this->lblInserMedicacion12->Name = L"lblInserMedicacion12";
+			this->lblInserMedicacion12->Size = System::Drawing::Size(140, 32);
+			this->lblInserMedicacion12->TabIndex = 94;
+			this->lblInserMedicacion12->Text = L"DD/MM/AA";
+			// 
+			// txtInserMedicacion2
+			// 
+			this->txtInserMedicacion2->Location = System::Drawing::Point(86, 192);
+			this->txtInserMedicacion2->Name = L"txtInserMedicacion2";
+			this->txtInserMedicacion2->Size = System::Drawing::Size(210, 42);
+			this->txtInserMedicacion2->TabIndex = 93;
+			// 
+			// lblInserMedicacion2
+			// 
+			this->lblInserMedicacion2->AutoSize = true;
+			this->lblInserMedicacion2->BackColor = System::Drawing::Color::Teal;
+			this->lblInserMedicacion2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserMedicacion2->Location = System::Drawing::Point(80, 159);
+			this->lblInserMedicacion2->Name = L"lblInserMedicacion2";
+			this->lblInserMedicacion2->Size = System::Drawing::Size(243, 37);
+			this->lblInserMedicacion2->TabIndex = 92;
+			this->lblInserMedicacion2->Text = L"Fecha Última Visita";
+			// 
+			// txtInserMedicacion7
+			// 
+			this->txtInserMedicacion7->Location = System::Drawing::Point(663, 88);
+			this->txtInserMedicacion7->Name = L"txtInserMedicacion7";
+			this->txtInserMedicacion7->Size = System::Drawing::Size(210, 42);
+			this->txtInserMedicacion7->TabIndex = 77;
+			// 
+			// lblInserMedicacion7
+			// 
+			this->lblInserMedicacion7->AutoSize = true;
+			this->lblInserMedicacion7->BackColor = System::Drawing::Color::Teal;
+			this->lblInserMedicacion7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserMedicacion7->Location = System::Drawing::Point(658, 55);
+			this->lblInserMedicacion7->Name = L"lblInserMedicacion7";
+			this->lblInserMedicacion7->Size = System::Drawing::Size(150, 37);
+			this->lblInserMedicacion7->TabIndex = 76;
+			this->lblInserMedicacion7->Text = L"Costo Total";
 			// 
 			// txtInserMedicacion6
 			// 
-			this->txtInserMedicacion6->Location = System::Drawing::Point(403, 272);
+			this->txtInserMedicacion6->Location = System::Drawing::Point(383, 282);
 			this->txtInserMedicacion6->Name = L"txtInserMedicacion6";
 			this->txtInserMedicacion6->Size = System::Drawing::Size(210, 42);
-			this->txtInserMedicacion6->TabIndex = 77;
+			this->txtInserMedicacion6->TabIndex = 75;
 			// 
 			// lblInserMedicacion6
 			// 
 			this->lblInserMedicacion6->AutoSize = true;
 			this->lblInserMedicacion6->BackColor = System::Drawing::Color::Teal;
 			this->lblInserMedicacion6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->lblInserMedicacion6->Location = System::Drawing::Point(398, 239);
+			this->lblInserMedicacion6->Location = System::Drawing::Point(378, 237);
 			this->lblInserMedicacion6->Name = L"lblInserMedicacion6";
-			this->lblInserMedicacion6->Size = System::Drawing::Size(150, 37);
-			this->lblInserMedicacion6->TabIndex = 76;
-			this->lblInserMedicacion6->Text = L"Costo Total";
+			this->lblInserMedicacion6->Size = System::Drawing::Size(90, 37);
+			this->lblInserMedicacion6->TabIndex = 74;
+			this->lblInserMedicacion6->Text = L"Precio";
 			// 
 			// txtInserMedicacion5
 			// 
-			this->txtInserMedicacion5->Location = System::Drawing::Point(403, 192);
+			this->txtInserMedicacion5->Location = System::Drawing::Point(383, 189);
 			this->txtInserMedicacion5->Name = L"txtInserMedicacion5";
 			this->txtInserMedicacion5->Size = System::Drawing::Size(210, 42);
-			this->txtInserMedicacion5->TabIndex = 75;
+			this->txtInserMedicacion5->TabIndex = 73;
 			// 
 			// lblInserMedicacion5
 			// 
 			this->lblInserMedicacion5->AutoSize = true;
 			this->lblInserMedicacion5->BackColor = System::Drawing::Color::Teal;
 			this->lblInserMedicacion5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->lblInserMedicacion5->Location = System::Drawing::Point(398, 147);
+			this->lblInserMedicacion5->Location = System::Drawing::Point(378, 145);
 			this->lblInserMedicacion5->Name = L"lblInserMedicacion5";
-			this->lblInserMedicacion5->Size = System::Drawing::Size(90, 37);
-			this->lblInserMedicacion5->TabIndex = 74;
-			this->lblInserMedicacion5->Text = L"Precio";
-			// 
-			// txtInserMedicacion4
-			// 
-			this->txtInserMedicacion4->Location = System::Drawing::Point(403, 99);
-			this->txtInserMedicacion4->Name = L"txtInserMedicacion4";
-			this->txtInserMedicacion4->Size = System::Drawing::Size(210, 42);
-			this->txtInserMedicacion4->TabIndex = 73;
-			// 
-			// lblInserMedicacion4
-			// 
-			this->lblInserMedicacion4->AutoSize = true;
-			this->lblInserMedicacion4->BackColor = System::Drawing::Color::Teal;
-			this->lblInserMedicacion4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->lblInserMedicacion4->Location = System::Drawing::Point(398, 55);
-			this->lblInserMedicacion4->Name = L"lblInserMedicacion4";
-			this->lblInserMedicacion4->Size = System::Drawing::Size(125, 37);
-			this->lblInserMedicacion4->TabIndex = 72;
-			this->lblInserMedicacion4->Text = L"Cantidad";
+			this->lblInserMedicacion5->Size = System::Drawing::Size(125, 37);
+			this->lblInserMedicacion5->TabIndex = 72;
+			this->lblInserMedicacion5->Text = L"Cantidad";
 			// 
 			// bInserMedicacion
 			// 
@@ -2227,41 +2331,41 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 			this->bInserMedicacion->UseVisualStyleBackColor = false;
 			this->bInserMedicacion->Click += gcnew System::EventHandler(this, &PopUpMenu::bInserMedicacion_Click);
 			// 
-			// txtInserMedicacion2
-			// 
-			this->txtInserMedicacion2->Location = System::Drawing::Point(86, 192);
-			this->txtInserMedicacion2->Name = L"txtInserMedicacion2";
-			this->txtInserMedicacion2->Size = System::Drawing::Size(210, 42);
-			this->txtInserMedicacion2->TabIndex = 70;
-			// 
-			// lblInserMedicacion2
-			// 
-			this->lblInserMedicacion2->AutoSize = true;
-			this->lblInserMedicacion2->BackColor = System::Drawing::Color::Teal;
-			this->lblInserMedicacion2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->lblInserMedicacion2->Location = System::Drawing::Point(81, 147);
-			this->lblInserMedicacion2->Name = L"lblInserMedicacion2";
-			this->lblInserMedicacion2->Size = System::Drawing::Size(133, 37);
-			this->lblInserMedicacion2->TabIndex = 69;
-			this->lblInserMedicacion2->Text = L"ID Animal";
-			// 
 			// txtInserMedicacion1
 			// 
-			this->txtInserMedicacion1->Location = System::Drawing::Point(86, 99);
+			this->txtInserMedicacion1->Location = System::Drawing::Point(84, 100);
 			this->txtInserMedicacion1->Name = L"txtInserMedicacion1";
 			this->txtInserMedicacion1->Size = System::Drawing::Size(210, 42);
-			this->txtInserMedicacion1->TabIndex = 68;
+			this->txtInserMedicacion1->TabIndex = 70;
 			// 
 			// lblInserMedicacion1
 			// 
 			this->lblInserMedicacion1->AutoSize = true;
 			this->lblInserMedicacion1->BackColor = System::Drawing::Color::Teal;
 			this->lblInserMedicacion1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->lblInserMedicacion1->Location = System::Drawing::Point(81, 55);
+			this->lblInserMedicacion1->Location = System::Drawing::Point(79, 55);
 			this->lblInserMedicacion1->Name = L"lblInserMedicacion1";
-			this->lblInserMedicacion1->Size = System::Drawing::Size(249, 37);
-			this->lblInserMedicacion1->TabIndex = 67;
-			this->lblInserMedicacion1->Text = L"Código Medicación";
+			this->lblInserMedicacion1->Size = System::Drawing::Size(133, 37);
+			this->lblInserMedicacion1->TabIndex = 69;
+			this->lblInserMedicacion1->Text = L"ID Animal";
+			// 
+			// txtInserMedicacion4
+			// 
+			this->txtInserMedicacion4->Location = System::Drawing::Point(383, 95);
+			this->txtInserMedicacion4->Name = L"txtInserMedicacion4";
+			this->txtInserMedicacion4->Size = System::Drawing::Size(210, 42);
+			this->txtInserMedicacion4->TabIndex = 68;
+			// 
+			// lblInserMedicacion4
+			// 
+			this->lblInserMedicacion4->AutoSize = true;
+			this->lblInserMedicacion4->BackColor = System::Drawing::Color::Teal;
+			this->lblInserMedicacion4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblInserMedicacion4->Location = System::Drawing::Point(376, 55);
+			this->lblInserMedicacion4->Name = L"lblInserMedicacion4";
+			this->lblInserMedicacion4->Size = System::Drawing::Size(249, 37);
+			this->lblInserMedicacion4->TabIndex = 67;
+			this->lblInserMedicacion4->Text = L"Código Medicación";
 			// 
 			// btabModif
 			// 
@@ -3859,6 +3963,8 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 			// pBuscarMedicacion
 			// 
 			this->pBuscarMedicacion->BackColor = System::Drawing::Color::Teal;
+			this->pBuscarMedicacion->Controls->Add(this->lblBuscarMedicacion9);
+			this->pBuscarMedicacion->Controls->Add(this->txtBuscarMedicacion8);
 			this->pBuscarMedicacion->Controls->Add(this->lblBuscarMedicacion8);
 			this->pBuscarMedicacion->Controls->Add(this->txtBuscarMedicacion6);
 			this->pBuscarMedicacion->Controls->Add(this->lblBuscarMedicacion6);
@@ -3874,9 +3980,27 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 			this->pBuscarMedicacion->Location = System::Drawing::Point(382, 44);
 			this->pBuscarMedicacion->Name = L"pBuscarMedicacion";
 			this->pBuscarMedicacion->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->pBuscarMedicacion->Size = System::Drawing::Size(499, 275);
+			this->pBuscarMedicacion->Size = System::Drawing::Size(499, 312);
 			this->pBuscarMedicacion->TabIndex = 121;
 			this->pBuscarMedicacion->Visible = false;
+			// 
+			// lblBuscarMedicacion9
+			// 
+			this->lblBuscarMedicacion9->AutoSize = true;
+			this->lblBuscarMedicacion9->BackColor = System::Drawing::Color::Teal;
+			this->lblBuscarMedicacion9->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblBuscarMedicacion9->Location = System::Drawing::Point(15, 222);
+			this->lblBuscarMedicacion9->Name = L"lblBuscarMedicacion9";
+			this->lblBuscarMedicacion9->Size = System::Drawing::Size(240, 37);
+			this->lblBuscarMedicacion9->TabIndex = 123;
+			this->lblBuscarMedicacion9->Text = L"Cantidad Recetada";
+			// 
+			// txtBuscarMedicacion8
+			// 
+			this->txtBuscarMedicacion8->Location = System::Drawing::Point(20, 255);
+			this->txtBuscarMedicacion8->Name = L"txtBuscarMedicacion8";
+			this->txtBuscarMedicacion8->Size = System::Drawing::Size(210, 42);
+			this->txtBuscarMedicacion8->TabIndex = 124;
 			// 
 			// lblBuscarMedicacion8
 			// 
@@ -4459,40 +4583,6 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 			this->bSalir->UseVisualStyleBackColor = false;
 			this->bSalir->Click += gcnew System::EventHandler(this, &PopUpMenu::bSalir_Click);
 			// 
-			// txtRep4
-			// 
-			this->txtRep4->Location = System::Drawing::Point(71, 92);
-			this->txtRep4->Name = L"txtRep4";
-			this->txtRep4->Size = System::Drawing::Size(210, 42);
-			this->txtRep4->TabIndex = 68;
-			// 
-			// lblRep4
-			// 
-			this->lblRep4->AutoSize = true;
-			this->lblRep4->BackColor = System::Drawing::Color::Teal;
-			this->lblRep4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->lblRep4->Location = System::Drawing::Point(66, 59);
-			this->lblRep4->Name = L"lblRep4";
-			this->lblRep4->Size = System::Drawing::Size(204, 37);
-			this->lblRep4->TabIndex = 67;
-			this->lblRep4->Text = L"Número Cliente";
-			// 
-			// bReporte4
-			// 
-			this->bReporte4->BackColor = System::Drawing::Color::Transparent;
-			this->bReporte4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->bReporte4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->bReporte4->ForeColor = System::Drawing::Color::White;
-			this->bReporte4->Location = System::Drawing::Point(71, 172);
-			this->bReporte4->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->bReporte4->Name = L"bReporte4";
-			this->bReporte4->Size = System::Drawing::Size(291, 45);
-			this->bReporte4->TabIndex = 73;
-			this->bReporte4->Text = L"Generar Reporte";
-			this->bReporte4->UseVisualStyleBackColor = false;
-			this->bReporte4->Click += gcnew System::EventHandler(this, &PopUpMenu::bReporte4_Click);
-			// 
 			// PopUpMenu
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(14, 36);
@@ -4825,6 +4915,42 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 		}
 	}
 	private: System::Void bInserMedicacion_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ errorA = "El codigo de animal no existe";
+		String^ error = "El codigo de medicacion ya existe";
+		String^ exito = "La medicacion fue insertada correctamente";
+
+		String^ codAnimal = this->txtInserMedicacion1->Text;
+		String^ ultVisita = this->txtInserMedicacion2->Text;
+		String^ codTratamiento = this->txtInserMedicacion3->Text;
+		String^ codMedicacion = this->txtInserMedicacion4->Text;
+		String^ cantidad = this->txtInserMedicacion5->Text;
+		String^ precio = this->txtInserMedicacion6->Text;
+		String^ cTotal = this->txtInserMedicacion7->Text;
+		String^ cantidadRecet = this->txtInserMedicacion8->Text;
+
+		int codigoAnimal = stoi(marshal_as<string, String^>(codAnimal));
+		string ultimaVisita = marshal_as<string, String^>(ultVisita);
+		int codigoTratamiento = stoi(marshal_as<string, String^>(codTratamiento));
+		int codigoMedicacion = stoi(marshal_as<string, String^>(codMedicacion));
+		int cantidadM = stoi(marshal_as<string, String^>(cantidad));
+		int precioM = stoi(marshal_as<string, String^>(precio));
+		int costoTotalM = stoi(marshal_as<string, String^>(cTotal));
+		int cantidadRecetada = stoi(marshal_as<string, String^>(cantidadRecet));
+
+		pNodoAVLMascotas mascotaBuscada = arbolMascotas->buscaMascota(arbolMascotas->raiz, codigoAnimal);
+		if (mascotaBuscada != NULL) {
+			pNodoAAMedicacion medicacionBuscada = arbolMedicaciones->buscaMedicacionRepetida2(arbolMedicaciones->raiz, codigoMedicacion, codigoAnimal);
+			if (medicacionBuscada == NULL) {
+				arbolMedicaciones->InsertaNodoMedicacion(codigoAnimal, codigoMedicacion, ultimaVisita, codigoTratamiento, precioM, cantidadM, costoTotalM, cantidadRecetada);
+				MessageBox::Show(exito);
+			}
+			else {
+				MessageBox::Show(error);
+			}
+		}
+		else {
+			MessageBox::Show(errorA);
+		}
 	}
 
 		   /*	FUNCIONES MODIFICAR  */
@@ -5003,6 +5129,38 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 		}
 	}
 	private: System::Void bModifMedicacion_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ errorA = "El codigo de animal no existe";
+		String^ error = "El codigo de medicacion no existe";
+		String^ exito = "La medicacion fue modificada correctamente";
+
+		String^ codAnimal = this->txtModifMedicacion2->Text;
+		String^ codMedicacion = this->txtModifMedicacion1->Text;
+		String^ cantidad = this->txtModifMedicacion3->Text;
+		String^ precio = this->txtModifMedicacion4->Text;
+		String^ cTotal = this->txtModifMedicacion5->Text;
+
+		int codigoAnimal = stoi(marshal_as<string, String^>(codAnimal));
+		int codigoMedicacion = stoi(marshal_as<string, String^>(codMedicacion));
+		int cantidadM = stoi(marshal_as<string, String^>(cantidad));
+		int precioM = stoi(marshal_as<string, String^>(precio));
+		int costoTotalM = stoi(marshal_as<string, String^>(cTotal));
+
+		pNodoAVLMascotas mascotaBuscada = arbolMascotas->buscaMascota(arbolMascotas->raiz, codigoAnimal);
+		if (mascotaBuscada != NULL) {
+			pNodoAAMedicacion medicacionBuscada = arbolMedicaciones->buscaMedicacionRepetida2(arbolMedicaciones->raiz, codigoMedicacion, codigoAnimal);
+			if (medicacionBuscada != NULL) {
+				medicacionBuscada->cantidad = cantidadM;
+				medicacionBuscada->costoUnidad = precioM;
+				medicacionBuscada->costoTotal = costoTotalM;
+				MessageBox::Show(exito);
+			}
+			else {
+				MessageBox::Show(error);
+			}
+		}
+		else {
+			MessageBox::Show(errorA);
+		}
 	}
 
 	/*	FUNCIONES BUSCAR  */
@@ -5180,6 +5338,35 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 
 	}
 	private: System::Void bBuscarMedicacion_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ errorA = "El codigo de animal no existe";
+		String^ error = "El codigo de medicacion no existe";
+
+		String^ codAnimal = this->txtBuscarMedicacion2->Text;
+		String^ codMedicacion = this->txtBuscarMedicacion1->Text;
+
+		int codigoAnimal = stoi(marshal_as<string, String^>(codAnimal));
+		int codigoMedicacion = stoi(marshal_as<string, String^>(codMedicacion));
+
+		pNodoAVLMascotas mascotaBuscada = arbolMascotas->buscaMascota(arbolMascotas->raiz, codigoAnimal);
+		if (mascotaBuscada != NULL) {
+			pNodoAAMedicacion medicacionBuscada = arbolMedicaciones->buscaMedicacionRepetida2(arbolMedicaciones->raiz, codigoMedicacion, codigoAnimal);
+			if (medicacionBuscada != NULL) {
+				this->txtBuscarMedicacion3->Text = marshal_as<String^, string>(to_string(medicacionBuscada->listaMed));
+				this->txtBuscarMedicacion4->Text = marshal_as<String^, string>(medicacionBuscada->ultimavisita);
+				this->txtBuscarMedicacion5->Text = marshal_as<String^, string>(to_string(medicacionBuscada->costoUnidad));
+				this->txtBuscarMedicacion6->Text = marshal_as<String^, string>(to_string(medicacionBuscada->cantidad));
+				this->txtBuscarMedicacion7->Text = marshal_as<String^, string>(to_string(medicacionBuscada->costoTotal));
+				this->txtBuscarMedicacion8->Text = marshal_as<String^, string>(to_string(medicacionBuscada->cantidadResetada));
+
+				this->pBuscarMedicacion->Show();
+			}
+			else {
+				MessageBox::Show(error);
+			}
+		}
+		else {
+			MessageBox::Show(errorA);
+		}
 	}
 
     /*	FUNCIONES ELIMINAR  */
@@ -5357,6 +5544,10 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 			medicacionBuscada->IdAnimal = 0;
 			medicacionBuscada->ultimavisita = "";
 			medicacionBuscada->listaMed = 0;
+			medicacionBuscada->costoTotal = 0;
+			medicacionBuscada->costoUnidad = 0;
+			medicacionBuscada->cantidad = 0;
+			medicacionBuscada->cantidadResetada = 0;
 
 			MessageBox::Show(notif);
 		}
@@ -5393,5 +5584,6 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 			MessageBox::Show("El codigo de cliente no existe");
 		}
 	}
+
 };
 }
