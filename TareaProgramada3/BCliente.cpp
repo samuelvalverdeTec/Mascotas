@@ -513,6 +513,55 @@ void BCliente::escribirReporte8(pNodoBCliente cliente, string STR, string nomArc
 }
 
 
+void BCliente::CreaReporte10(string nombre) {
+
+    ofstream fout(nombre + ".txt");		// se crea el archivo
+
+    fout << "Reporte - Cliente con Mas Descuento" << endl;
+    fout << "\n" << endl;
+
+    fout << endl;
+    fout.close();
+
+}
+
+pNodoBCliente BCliente::RecorreArbolDescuento(NodoBCliente* R, int desc) {
+
+    NodoBCliente* cliente = NULL;
+
+    if (R == NULL) {
+        return cliente;
+    }
+    else {
+        if (R->descuento >= desc) {
+            cliente = R;
+            return cliente;
+        }
+        else {
+            cliente = this->RecorreArbolDescuento(R->Hizq, desc);
+            if (cliente != NULL) {
+                return cliente;
+            }
+            else {
+                cliente = this->RecorreArbolDescuento(R->Hder, desc);
+                return cliente;
+            }
+        }
+    }
+    return cliente;
+
+}
+
+void BCliente::escribirReporte10(pNodoBCliente cliente, string STR, string nomArch) {
+
+    STR += "Codigo Cliente: " + to_string(cliente->valor) + "\nNombre: " + cliente->nombre + "\nDireccion: " + cliente->direccion + "\nCodigo Pais: " + to_string(cliente->codigoPais)
+        + "\nCodigo Ciudad: " + to_string(cliente->codigoCiudad) + "\nTelefono: " + to_string(cliente->telefono) + "\nUltima Visita: " + cliente->ultimavisita
+        + "\nDescuento: " + to_string(cliente->descuento) + "\nSaldo: " + to_string(cliente->saldo) + "\n" + "------------------------------------" + "\n";
+
+    this->EscribeReporte(nomArch, STR);
+}
+
+
 
 
 

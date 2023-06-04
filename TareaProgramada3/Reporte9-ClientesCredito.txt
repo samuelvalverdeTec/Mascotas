@@ -1,0 +1,22 @@
+Reporte 9 - Clientes de CreditoCodigo Cliente: 777
+Nombre Cliente: Samuel Valverde
+Direccion Cliente: Curridabat
+Codigo Pais: 12
+Codigo Ciudad: 123
+Telefono: 45678
+Ultima Visita: 23/04/23
+Descuento Cliente: 3
+Saldo Cliente: 65432
+------------------------------------
+Codigo Cliente: 12345
+Nombre Cliente: Juan Perez
+Direccion Cliente: Las Cotorras
+Codigo Pais: 12
+Codigo Ciudad: 123
+Telefono: 45678
+Ultima Visita: 23/04/23
+Descuento Cliente: 3
+Saldo Cliente: 10000
+------------------------------------
+
+

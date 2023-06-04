@@ -47,6 +47,8 @@ public:
 	void CreaReporte8(string nombre);
 	pNodoBCliente RecorreArbolSaldo(NodoBCliente* R, int s);
 	void escribirReporte8(pNodoBCliente cliente, string STR, string nomArch);
-
+	void CreaReporte10(string nombre);
+	pNodoBCliente RecorreArbolDescuento(NodoBCliente* R, int desc);
+	void escribirReporte10(pNodoBCliente cliente, string STR, string nomArch);
 
 };

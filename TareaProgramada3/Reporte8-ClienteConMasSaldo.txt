@@ -1,0 +1,14 @@
+Reporte 8 - Cliente con mas Saldo
+
+Codigo Cliente: 12345
+Nombre: Juan Perez
+Direccion: Las Cotorras
+Codigo Pais: 12
+Codigo Ciudad: 123
+Telefono: 45678
+Ultima Visita: 23/04/23
+Descuento: 3
+Saldo: 10000
+------------------------------------
+
+

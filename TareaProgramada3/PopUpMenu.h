@@ -78,6 +78,25 @@ namespace TareaProgramada3 {
 	private: System::Windows::Forms::Label^ lblInserMedicacion8;
 	private: System::Windows::Forms::Label^ lblBuscarMedicacion9;
 	private: System::Windows::Forms::TextBox^ txtBuscarMedicacion8;
+	private: System::Windows::Forms::Button^ bReporte2;
+	private: System::Windows::Forms::TextBox^ txtRep2;
+	private: System::Windows::Forms::Label^ lblRep2;
+	private: System::Windows::Forms::Button^ bReporte3;
+	private: System::Windows::Forms::Button^ bReporte5;
+	private: System::Windows::Forms::TextBox^ txtRep5;
+	private: System::Windows::Forms::Label^ lblRep5;
+	private: System::Windows::Forms::Button^ bReporte6;
+	private: System::Windows::Forms::Button^ bReporte7;
+	private: System::Windows::Forms::TextBox^ txt1Rep7;
+
+
+	private: System::Windows::Forms::Label^ lbl1Rep7;
+	private: System::Windows::Forms::TextBox^ txt2Rep7;
+	private: System::Windows::Forms::Label^ lbl2Rep7;
+	private: System::Windows::Forms::Button^ bReporte8;
+	private: System::Windows::Forms::Button^ bReporte9;
+	private: System::Windows::Forms::Button^ bReporte10;
+
 
 	public: AAMedicacion* arbolMedicaciones;
 
@@ -461,6 +480,7 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(PopUpMenu::typeid));
 			this->bExit = (gcnew System::Windows::Forms::Button());
 			this->btabCont = (gcnew System::Windows::Forms::TabPage());
 			this->btabAD = (gcnew System::Windows::Forms::TabPage());
@@ -476,16 +496,31 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 			this->tabR1 = (gcnew System::Windows::Forms::TabPage());
 			this->bReporte1 = (gcnew System::Windows::Forms::Button());
 			this->tabR2 = (gcnew System::Windows::Forms::TabPage());
+			this->bReporte2 = (gcnew System::Windows::Forms::Button());
+			this->txtRep2 = (gcnew System::Windows::Forms::TextBox());
+			this->lblRep2 = (gcnew System::Windows::Forms::Label());
 			this->tabR3 = (gcnew System::Windows::Forms::TabPage());
+			this->bReporte3 = (gcnew System::Windows::Forms::Button());
 			this->tabR4 = (gcnew System::Windows::Forms::TabPage());
 			this->bReporte4 = (gcnew System::Windows::Forms::Button());
 			this->txtRep4 = (gcnew System::Windows::Forms::TextBox());
 			this->lblRep4 = (gcnew System::Windows::Forms::Label());
 			this->tabR5 = (gcnew System::Windows::Forms::TabPage());
+			this->bReporte5 = (gcnew System::Windows::Forms::Button());
+			this->txtRep5 = (gcnew System::Windows::Forms::TextBox());
+			this->lblRep5 = (gcnew System::Windows::Forms::Label());
 			this->tabR6 = (gcnew System::Windows::Forms::TabPage());
+			this->bReporte6 = (gcnew System::Windows::Forms::Button());
 			this->tabR7 = (gcnew System::Windows::Forms::TabPage());
+			this->txt2Rep7 = (gcnew System::Windows::Forms::TextBox());
+			this->lbl2Rep7 = (gcnew System::Windows::Forms::Label());
+			this->bReporte7 = (gcnew System::Windows::Forms::Button());
+			this->txt1Rep7 = (gcnew System::Windows::Forms::TextBox());
+			this->lbl1Rep7 = (gcnew System::Windows::Forms::Label());
 			this->tabR8 = (gcnew System::Windows::Forms::TabPage());
+			this->bReporte8 = (gcnew System::Windows::Forms::Button());
 			this->tabR9 = (gcnew System::Windows::Forms::TabPage());
+			this->bReporte9 = (gcnew System::Windows::Forms::Button());
 			this->tabR10 = (gcnew System::Windows::Forms::TabPage());
 			this->tabR11 = (gcnew System::Windows::Forms::TabPage());
 			this->tabR12 = (gcnew System::Windows::Forms::TabPage());
@@ -803,13 +838,22 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 			this->txtElimMedicacion1 = (gcnew System::Windows::Forms::TextBox());
 			this->lblElimMedicacion1 = (gcnew System::Windows::Forms::Label());
 			this->bSalir = (gcnew System::Windows::Forms::Button());
+			this->bReporte10 = (gcnew System::Windows::Forms::Button());
 			this->btabAD->SuspendLayout();
 			this->btabSucs->SuspendLayout();
 			this->tabControl1->SuspendLayout();
 			this->btabReps->SuspendLayout();
 			this->tabReportes->SuspendLayout();
 			this->tabR1->SuspendLayout();
+			this->tabR2->SuspendLayout();
+			this->tabR3->SuspendLayout();
 			this->tabR4->SuspendLayout();
+			this->tabR5->SuspendLayout();
+			this->tabR6->SuspendLayout();
+			this->tabR7->SuspendLayout();
+			this->tabR8->SuspendLayout();
+			this->tabR9->SuspendLayout();
+			this->tabR10->SuspendLayout();
 			this->btabFact->SuspendLayout();
 			this->tabFacturacion->SuspendLayout();
 			this->tabPrincipal->SuspendLayout();
@@ -887,7 +931,7 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 			// 
 			// btabAD
 			// 
-			this->btabAD->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->btabAD->BackColor = System::Drawing::Color::Teal;
 			this->btabAD->Controls->Add(this->AcercaDe);
 			this->btabAD->ForeColor = System::Drawing::Color::White;
 			this->btabAD->Location = System::Drawing::Point(4, 48);
@@ -902,9 +946,9 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 			this->AcercaDe->AutoSize = true;
 			this->AcercaDe->Location = System::Drawing::Point(24, 25);
 			this->AcercaDe->Name = L"AcercaDe";
-			this->AcercaDe->Size = System::Drawing::Size(386, 37);
+			this->AcercaDe->Size = System::Drawing::Size(1071, 259);
 			this->AcercaDe->TabIndex = 0;
-			this->AcercaDe->Text = L"Nosotros somos Fauna Life y ....";
+			this->AcercaDe->Text = resources->GetString(L"AcercaDe.Text");
 			// 
 			// btabSucs
 			// 
@@ -1031,6 +1075,9 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 			// tabR2
 			// 
 			this->tabR2->BackColor = System::Drawing::Color::Teal;
+			this->tabR2->Controls->Add(this->bReporte2);
+			this->tabR2->Controls->Add(this->txtRep2);
+			this->tabR2->Controls->Add(this->lblRep2);
 			this->tabR2->Location = System::Drawing::Point(4, 48);
 			this->tabR2->Name = L"tabR2";
 			this->tabR2->Padding = System::Windows::Forms::Padding(3);
@@ -1038,14 +1085,65 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 			this->tabR2->TabIndex = 1;
 			this->tabR2->Text = L"Rep2";
 			// 
+			// bReporte2
+			// 
+			this->bReporte2->BackColor = System::Drawing::Color::Transparent;
+			this->bReporte2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bReporte2->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bReporte2->ForeColor = System::Drawing::Color::White;
+			this->bReporte2->Location = System::Drawing::Point(66, 171);
+			this->bReporte2->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bReporte2->Name = L"bReporte2";
+			this->bReporte2->Size = System::Drawing::Size(291, 45);
+			this->bReporte2->TabIndex = 76;
+			this->bReporte2->Text = L"Generar Reporte";
+			this->bReporte2->UseVisualStyleBackColor = false;
+			this->bReporte2->Click += gcnew System::EventHandler(this, &PopUpMenu::bReporte2_Click);
+			// 
+			// txtRep2
+			// 
+			this->txtRep2->Location = System::Drawing::Point(66, 91);
+			this->txtRep2->Name = L"txtRep2";
+			this->txtRep2->Size = System::Drawing::Size(210, 42);
+			this->txtRep2->TabIndex = 75;
+			// 
+			// lblRep2
+			// 
+			this->lblRep2->AutoSize = true;
+			this->lblRep2->BackColor = System::Drawing::Color::Teal;
+			this->lblRep2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblRep2->Location = System::Drawing::Point(61, 58);
+			this->lblRep2->Name = L"lblRep2";
+			this->lblRep2->Size = System::Drawing::Size(158, 37);
+			this->lblRep2->TabIndex = 74;
+			this->lblRep2->Text = L"Código Pais";
+			// 
 			// tabR3
 			// 
 			this->tabR3->BackColor = System::Drawing::Color::Teal;
+			this->tabR3->Controls->Add(this->bReporte3);
 			this->tabR3->Location = System::Drawing::Point(4, 48);
 			this->tabR3->Name = L"tabR3";
 			this->tabR3->Size = System::Drawing::Size(921, 495);
 			this->tabR3->TabIndex = 2;
 			this->tabR3->Text = L"Rep3";
+			// 
+			// bReporte3
+			// 
+			this->bReporte3->BackColor = System::Drawing::Color::Transparent;
+			this->bReporte3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bReporte3->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bReporte3->ForeColor = System::Drawing::Color::White;
+			this->bReporte3->Location = System::Drawing::Point(67, 91);
+			this->bReporte3->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bReporte3->Name = L"bReporte3";
+			this->bReporte3->Size = System::Drawing::Size(291, 45);
+			this->bReporte3->TabIndex = 77;
+			this->bReporte3->Text = L"Generar Reporte";
+			this->bReporte3->UseVisualStyleBackColor = false;
+			this->bReporte3->Click += gcnew System::EventHandler(this, &PopUpMenu::bReporte3_Click);
 			// 
 			// tabR4
 			// 
@@ -1096,51 +1194,197 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 			// tabR5
 			// 
 			this->tabR5->BackColor = System::Drawing::Color::Teal;
+			this->tabR5->Controls->Add(this->bReporte5);
+			this->tabR5->Controls->Add(this->txtRep5);
+			this->tabR5->Controls->Add(this->lblRep5);
 			this->tabR5->Location = System::Drawing::Point(4, 48);
 			this->tabR5->Name = L"tabR5";
 			this->tabR5->Size = System::Drawing::Size(921, 495);
 			this->tabR5->TabIndex = 4;
 			this->tabR5->Text = L"Rep5";
 			// 
+			// bReporte5
+			// 
+			this->bReporte5->BackColor = System::Drawing::Color::Transparent;
+			this->bReporte5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bReporte5->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bReporte5->ForeColor = System::Drawing::Color::White;
+			this->bReporte5->Location = System::Drawing::Point(84, 181);
+			this->bReporte5->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bReporte5->Name = L"bReporte5";
+			this->bReporte5->Size = System::Drawing::Size(291, 45);
+			this->bReporte5->TabIndex = 76;
+			this->bReporte5->Text = L"Generar Reporte";
+			this->bReporte5->UseVisualStyleBackColor = false;
+			this->bReporte5->Click += gcnew System::EventHandler(this, &PopUpMenu::bReporte5_Click);
+			// 
+			// txtRep5
+			// 
+			this->txtRep5->Location = System::Drawing::Point(84, 101);
+			this->txtRep5->Name = L"txtRep5";
+			this->txtRep5->Size = System::Drawing::Size(210, 42);
+			this->txtRep5->TabIndex = 75;
+			// 
+			// lblRep5
+			// 
+			this->lblRep5->AutoSize = true;
+			this->lblRep5->BackColor = System::Drawing::Color::Teal;
+			this->lblRep5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lblRep5->Location = System::Drawing::Point(79, 68);
+			this->lblRep5->Name = L"lblRep5";
+			this->lblRep5->Size = System::Drawing::Size(204, 37);
+			this->lblRep5->TabIndex = 74;
+			this->lblRep5->Text = L"Número Animal";
+			// 
 			// tabR6
 			// 
 			this->tabR6->BackColor = System::Drawing::Color::Teal;
+			this->tabR6->Controls->Add(this->bReporte6);
 			this->tabR6->Location = System::Drawing::Point(4, 48);
 			this->tabR6->Name = L"tabR6";
 			this->tabR6->Size = System::Drawing::Size(921, 495);
 			this->tabR6->TabIndex = 5;
 			this->tabR6->Text = L"Rep6";
 			// 
+			// bReporte6
+			// 
+			this->bReporte6->BackColor = System::Drawing::Color::Transparent;
+			this->bReporte6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bReporte6->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bReporte6->ForeColor = System::Drawing::Color::White;
+			this->bReporte6->Location = System::Drawing::Point(60, 85);
+			this->bReporte6->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bReporte6->Name = L"bReporte6";
+			this->bReporte6->Size = System::Drawing::Size(291, 45);
+			this->bReporte6->TabIndex = 77;
+			this->bReporte6->Text = L"Generar Reporte";
+			this->bReporte6->UseVisualStyleBackColor = false;
+			this->bReporte6->Click += gcnew System::EventHandler(this, &PopUpMenu::bReporte6_Click);
+			// 
 			// tabR7
 			// 
 			this->tabR7->BackColor = System::Drawing::Color::Teal;
+			this->tabR7->Controls->Add(this->txt2Rep7);
+			this->tabR7->Controls->Add(this->lbl2Rep7);
+			this->tabR7->Controls->Add(this->bReporte7);
+			this->tabR7->Controls->Add(this->txt1Rep7);
+			this->tabR7->Controls->Add(this->lbl1Rep7);
 			this->tabR7->Location = System::Drawing::Point(4, 48);
 			this->tabR7->Name = L"tabR7";
 			this->tabR7->Size = System::Drawing::Size(921, 495);
 			this->tabR7->TabIndex = 6;
 			this->tabR7->Text = L"Rep7";
 			// 
+			// txt2Rep7
+			// 
+			this->txt2Rep7->Location = System::Drawing::Point(83, 203);
+			this->txt2Rep7->Name = L"txt2Rep7";
+			this->txt2Rep7->Size = System::Drawing::Size(210, 42);
+			this->txt2Rep7->TabIndex = 81;
+			// 
+			// lbl2Rep7
+			// 
+			this->lbl2Rep7->AutoSize = true;
+			this->lbl2Rep7->BackColor = System::Drawing::Color::Teal;
+			this->lbl2Rep7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lbl2Rep7->Location = System::Drawing::Point(78, 170);
+			this->lbl2Rep7->Name = L"lbl2Rep7";
+			this->lbl2Rep7->Size = System::Drawing::Size(240, 37);
+			this->lbl2Rep7->TabIndex = 80;
+			this->lbl2Rep7->Text = L"Ultima Medicación";
+			// 
+			// bReporte7
+			// 
+			this->bReporte7->BackColor = System::Drawing::Color::Transparent;
+			this->bReporte7->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bReporte7->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bReporte7->ForeColor = System::Drawing::Color::White;
+			this->bReporte7->Location = System::Drawing::Point(83, 281);
+			this->bReporte7->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bReporte7->Name = L"bReporte7";
+			this->bReporte7->Size = System::Drawing::Size(291, 45);
+			this->bReporte7->TabIndex = 79;
+			this->bReporte7->Text = L"Generar Reporte";
+			this->bReporte7->UseVisualStyleBackColor = false;
+			this->bReporte7->Click += gcnew System::EventHandler(this, &PopUpMenu::bReporte7_Click);
+			// 
+			// txt1Rep7
+			// 
+			this->txt1Rep7->Location = System::Drawing::Point(83, 100);
+			this->txt1Rep7->Name = L"txt1Rep7";
+			this->txt1Rep7->Size = System::Drawing::Size(210, 42);
+			this->txt1Rep7->TabIndex = 78;
+			// 
+			// lbl1Rep7
+			// 
+			this->lbl1Rep7->AutoSize = true;
+			this->lbl1Rep7->BackColor = System::Drawing::Color::Teal;
+			this->lbl1Rep7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->lbl1Rep7->Location = System::Drawing::Point(78, 67);
+			this->lbl1Rep7->Name = L"lbl1Rep7";
+			this->lbl1Rep7->Size = System::Drawing::Size(204, 37);
+			this->lbl1Rep7->TabIndex = 77;
+			this->lbl1Rep7->Text = L"Número Animal";
+			// 
 			// tabR8
 			// 
 			this->tabR8->BackColor = System::Drawing::Color::Teal;
+			this->tabR8->Controls->Add(this->bReporte8);
 			this->tabR8->Location = System::Drawing::Point(4, 48);
 			this->tabR8->Name = L"tabR8";
 			this->tabR8->Size = System::Drawing::Size(921, 495);
 			this->tabR8->TabIndex = 7;
 			this->tabR8->Text = L"Rep8";
 			// 
+			// bReporte8
+			// 
+			this->bReporte8->BackColor = System::Drawing::Color::Transparent;
+			this->bReporte8->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bReporte8->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bReporte8->ForeColor = System::Drawing::Color::White;
+			this->bReporte8->Location = System::Drawing::Point(53, 92);
+			this->bReporte8->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bReporte8->Name = L"bReporte8";
+			this->bReporte8->Size = System::Drawing::Size(291, 45);
+			this->bReporte8->TabIndex = 80;
+			this->bReporte8->Text = L"Generar Reporte";
+			this->bReporte8->UseVisualStyleBackColor = false;
+			this->bReporte8->Click += gcnew System::EventHandler(this, &PopUpMenu::bReporte8_Click);
+			// 
 			// tabR9
 			// 
 			this->tabR9->BackColor = System::Drawing::Color::Teal;
+			this->tabR9->Controls->Add(this->bReporte9);
 			this->tabR9->Location = System::Drawing::Point(4, 48);
 			this->tabR9->Name = L"tabR9";
 			this->tabR9->Size = System::Drawing::Size(921, 495);
 			this->tabR9->TabIndex = 8;
 			this->tabR9->Text = L"Rep9";
 			// 
+			// bReporte9
+			// 
+			this->bReporte9->BackColor = System::Drawing::Color::Transparent;
+			this->bReporte9->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bReporte9->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bReporte9->ForeColor = System::Drawing::Color::White;
+			this->bReporte9->Location = System::Drawing::Point(54, 84);
+			this->bReporte9->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bReporte9->Name = L"bReporte9";
+			this->bReporte9->Size = System::Drawing::Size(291, 45);
+			this->bReporte9->TabIndex = 81;
+			this->bReporte9->Text = L"Generar Reporte";
+			this->bReporte9->UseVisualStyleBackColor = false;
+			this->bReporte9->Click += gcnew System::EventHandler(this, &PopUpMenu::bReporte9_Click);
+			// 
 			// tabR10
 			// 
 			this->tabR10->BackColor = System::Drawing::Color::Teal;
+			this->tabR10->Controls->Add(this->bReporte10);
 			this->tabR10->Location = System::Drawing::Point(4, 48);
 			this->tabR10->Name = L"tabR10";
 			this->tabR10->Size = System::Drawing::Size(921, 495);
@@ -4583,6 +4827,22 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 			this->bSalir->UseVisualStyleBackColor = false;
 			this->bSalir->Click += gcnew System::EventHandler(this, &PopUpMenu::bSalir_Click);
 			// 
+			// bReporte10
+			// 
+			this->bReporte10->BackColor = System::Drawing::Color::Transparent;
+			this->bReporte10->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bReporte10->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bReporte10->ForeColor = System::Drawing::Color::White;
+			this->bReporte10->Location = System::Drawing::Point(49, 84);
+			this->bReporte10->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->bReporte10->Name = L"bReporte10";
+			this->bReporte10->Size = System::Drawing::Size(291, 45);
+			this->bReporte10->TabIndex = 82;
+			this->bReporte10->Text = L"Generar Reporte";
+			this->bReporte10->UseVisualStyleBackColor = false;
+			this->bReporte10->Click += gcnew System::EventHandler(this, &PopUpMenu::bReporte10_Click);
+			// 
 			// PopUpMenu
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(14, 36);
@@ -4606,8 +4866,19 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 			this->btabReps->ResumeLayout(false);
 			this->tabReportes->ResumeLayout(false);
 			this->tabR1->ResumeLayout(false);
+			this->tabR2->ResumeLayout(false);
+			this->tabR2->PerformLayout();
+			this->tabR3->ResumeLayout(false);
 			this->tabR4->ResumeLayout(false);
 			this->tabR4->PerformLayout();
+			this->tabR5->ResumeLayout(false);
+			this->tabR5->PerformLayout();
+			this->tabR6->ResumeLayout(false);
+			this->tabR7->ResumeLayout(false);
+			this->tabR7->PerformLayout();
+			this->tabR8->ResumeLayout(false);
+			this->tabR9->ResumeLayout(false);
+			this->tabR10->ResumeLayout(false);
 			this->btabFact->ResumeLayout(false);
 			this->tabFacturacion->ResumeLayout(false);
 			this->tabPrincipal->ResumeLayout(false);
@@ -5565,14 +5836,35 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 
 		MessageBox::Show("Reporte 1 generado correctamente");
 	}
+	private: System::Void bReporte2_Click(System::Object^ sender, System::EventArgs^ e) {
+		string str = "Reporte 2 - Ciudades de Pais\n\n";
+		string nombreReporte = "Reporte2-CiudadesDePais";
+		String^ codigoP = this->txtRep2->Text;
+		int codPais = stoi(marshal_as<string, String^>(codigoP));
+		pNodoBinarioPaises paisBuscado = arbolPaises->buscaPais(arbolPaises->raiz, codPais);
+		if (paisBuscado != NULL) {
+			arbolCiudades->CreaReporte2(nombreReporte);
+			arbolCiudades->RecorreArbolCiudades(arbolCiudades->raiz, str, nombreReporte, codPais);
+
+			MessageBox::Show("Reporte 2 generado correctamente");
+		}
+		else {
+			MessageBox::Show("El codigo de pais no existe");
+		}
+	}
+	private: System::Void bReporte3_Click(System::Object^ sender, System::EventArgs^ e) {
+		string str = "Reporte 3 - Clientes Registrados\n\n";
+		string nombreReporte = "Reporte3-Clientes";
+		arbolClientes->CreaReporte3(nombreReporte);
+		arbolClientes->RecorreArbolClientes(arbolClientes->raiz, str, nombreReporte);
+
+		MessageBox::Show("Reporte 3 generado correctamente");
+	}
 	private: System::Void bReporte4_Click(System::Object^ sender, System::EventArgs^ e) {
 		string str = "Reporte 4 - Mascotas de Cliente\n\n";
 		string nombreReporte = "Reporte4-MascotasCliente";
-
 		String^ codCl = this->txtRep4->Text;
-
 		int codCliente = stoi(marshal_as<string, String^>(codCl));
-
 		pNodoBCliente clienteBuscado = arbolClientes->buscaCliente(arbolClientes->raiz, codCliente);
 		if (clienteBuscado != NULL) {
 			arbolMascotas->CreaReporte4(nombreReporte);
@@ -5584,6 +5876,77 @@ private: System::Windows::Forms::TextBox^ txtBusqTrat1;
 			MessageBox::Show("El codigo de cliente no existe");
 		}
 	}
+	private: System::Void bReporte5_Click(System::Object^ sender, System::EventArgs^ e) {
+		string str = "Reporte 5 - Visitas de Mascota\n\n";
+		string nombreReporte = "Reporte5-VisitasMascota";
+		String^ codMasc = this->txtRep5->Text;
+		int codMascota = stoi(marshal_as<string, String^>(codMasc));
+		pNodoAVLMascotas mascotaBuscada = arbolMascotas->buscaMascota(arbolMascotas->raiz, codMascota);
+		if (mascotaBuscada != NULL) {
+			arbolVisitas->CreaReporte5(nombreReporte);
+			arbolVisitas->RecorreArbolVisitas(arbolVisitas->raiz, str, nombreReporte, codMascota);
 
+			MessageBox::Show("Reporte 5 generado correctamente");
+		}
+		else {
+			MessageBox::Show("El codigo de mascota no existe");
+		}
+	}
+	private: System::Void bReporte6_Click(System::Object^ sender, System::EventArgs^ e) {
+		string str = "Reporte 6 - Tratamientos\n\n";
+		string nombreReporte = "Reporte6-Tratamientos";
+		arbolTratamientos->CreaReporte6(nombreReporte);
+		arbolTratamientos->RecorreArbolTratamientos(arbolTratamientos->raiz, str, nombreReporte);
+
+		MessageBox::Show("Reporte 6 generado correctamente");
+	}
+	private: System::Void bReporte7_Click(System::Object^ sender, System::EventArgs^ e) {
+		string str = "Reporte 7 - Medicamentos de Mascota\n\n";
+		string nombreReporte = "Reporte7-MedicamentosMascota";
+		String^ codMasc = this->txt1Rep7->Text;
+		String^ codMed = this->txt2Rep7->Text;
+		int codMascota = stoi(marshal_as<string, String^>(codMasc));
+		int ultimaMedicacion = stoi(marshal_as<string, String^>(codMed));
+		pNodoAVLMascotas mascotaBuscada = arbolMascotas->buscaMascota(arbolMascotas->raiz, codMascota);
+		if (mascotaBuscada != NULL) {
+			arbolMedicaciones->CreaReporte7(nombreReporte);
+			arbolMedicaciones->RecorreArbolMedicaciones(arbolMedicaciones->raiz, codMascota, ultimaMedicacion, str, nombreReporte);
+
+			MessageBox::Show("Reporte 7 generado correctamente");
+		}
+		else {
+			MessageBox::Show("El codigo de mascota no existe");
+		}
+	}
+	private: System::Void bReporte8_Click(System::Object^ sender, System::EventArgs^ e) {
+		string str = "Reporte 8 - Cliente con mas Saldo\n\n";
+		string nombreReporte = "Reporte8-ClienteConMasSaldo";
+		pNodoBCliente cliente = arbolClientes->raiz;
+		int saldoBase = 0;
+		arbolClientes->CreaReporte8(nombreReporte);
+		cliente = arbolClientes->RecorreArbolSaldo(arbolClientes->raiz, saldoBase);
+		arbolClientes->escribirReporte8(cliente, str, nombreReporte);
+
+		MessageBox::Show("Reporte 8 generado correctamente");
+	}
+	private: System::Void bReporte9_Click(System::Object^ sender, System::EventArgs^ e) {
+		string str = "Reporte 9 - Clientes de Credito";
+		string nombreReporte = "Reporte9-ClientesCredito";
+		arbolVisitas->CreaReporte9(nombreReporte);
+		arbolVisitas->RecorreArbolVisitasMascotasClientes(arbolVisitas->raiz, arbolMascotas, arbolClientes, str, nombreReporte);
+
+		MessageBox::Show("Reporte 9 generado correctamente");
+	}
+	private: System::Void bReporte10_Click(System::Object^ sender, System::EventArgs^ e) {
+		string str = "Reporte 9 - Cliente con mas Descuento\n\n";
+		string nombreReporte = "Reporte10-ClientesConMasDescuento";
+		pNodoBCliente cliente = arbolClientes->raiz;
+		int descBase = 0;
+		arbolClientes->CreaReporte10(nombreReporte);
+		cliente = arbolClientes->RecorreArbolDescuento(arbolClientes->raiz, descBase);
+		arbolClientes->escribirReporte10(cliente, str, nombreReporte);
+
+		MessageBox::Show("Reporte 10 generado correctamente");
+	}
 };
 }

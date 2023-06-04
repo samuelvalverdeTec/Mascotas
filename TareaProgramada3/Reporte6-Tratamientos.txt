@@ -1,0 +1,12 @@
+Reporte 6 - Tratamientos
+
+Codigo Tratamiento: 980
+Nombre: Neobol
+Precio Unitario: 3450
+------------------------------------
+Codigo Tratamiento: 90
+Nombre: Tabs
+Precio Unitario: 34506
+------------------------------------
+
+

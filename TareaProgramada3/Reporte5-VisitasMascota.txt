@@ -1,0 +1,10 @@
+Reporte 5 - Visitas de Mascota
+
+Codigo Mascota: 111
+Codigo Visita: 1234
+Ultima Visita: 04/11/22
+Total Factura: 1212
+Forma Pago: 1
+------------------------------------
+
+

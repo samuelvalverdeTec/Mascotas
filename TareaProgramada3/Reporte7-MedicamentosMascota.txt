@@ -1,0 +1,12 @@
+Reporte 7 - Medicamentos de Mascota
+
+ID animal: 111
+Codigo Medicacion: 12345
+Ultima visita: 01/01/23
+Lista de Medicamentos: 980
+Costo Unitario: 1000
+Cantidad: 5
+Costo Total: 5000
+------------------------------------
+
+

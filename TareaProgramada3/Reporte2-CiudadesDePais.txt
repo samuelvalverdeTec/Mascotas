@@ -1,0 +1,12 @@
+Reporte 2 - Ciudades de Pais
+
+Codigo Pais: 12
+Codigo Ciudad: 123
+Nombre Ciudad: Heredia
+------------------------------------
+Codigo Pais: 12
+Codigo Ciudad: 456
+Nombre Ciudad: Tres Rios
+------------------------------------
+
+

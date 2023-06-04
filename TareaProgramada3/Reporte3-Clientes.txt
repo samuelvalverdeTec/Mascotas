@@ -1,0 +1,24 @@
+Reporte 3 - Clientes Registrados
+
+Codigo Cliente: 12345
+Nombre: Juan Perez
+Direccion: Las Cotorras
+Codigo Pais: 12
+Codigo Ciudad: 123
+Telefono: 45678
+Ultima Visita: 23/04/23
+Descuento: 3
+Saldo: 10000
+------------------------------------
+Codigo Cliente: 777
+Nombre: Samuel Valverde
+Direccion: Curridabat
+Codigo Pais: 12
+Codigo Ciudad: 123
+Telefono: 45678
+Ultima Visita: 23/04/23
+Descuento: 3
+Saldo: 65432
+------------------------------------
+
+
